@@ -9,7 +9,7 @@ export default function Header() {
 
 <div className={`container ${style.container}`}>
     
-    <Link href="/">
+    <Link href="/" id={style.headerLogo}>
     <Image src="/images/logo.svg" alt="logo" width={145} height={130}/>
     </Link>
 

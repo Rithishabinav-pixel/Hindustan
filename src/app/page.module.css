@@ -3,14 +3,25 @@ display: flex;
 flex-direction: column;
 }
 
-.full_height_section{
+@media (min-width:1201px) {
+  .full_height_section{
   min-height: 100vh;
   max-height: 100vh;
+  height: 100vh;
   overflow: hidden;
-  /* position: sticky !important;
-  top: 0; */
+}
+}
+
+.full_height_section{
   background-color: var(--pageBG);
 }
+
+.sticky{
+    position: sticky !important;
+  top: 0;
+  z-index: 2;
+}
+
 
 .banner_section{
  padding: 0;
@@ -26,7 +37,13 @@ flex-direction: column;
   position: absolute;
   top: 0;
   left: 0;
-  
+}
+
+.bannerTitle{
+max-width: 690px;
+font-size: 48px;
+line-height: 56px;
+margin-top: 50px;
 }
 
 .video{
@@ -48,13 +65,16 @@ flex-direction: column;
 
 .bannerContent_container{
   margin: auto auto 0 auto;
+    position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
 }
 
 .bannerContent{
   display: flex;
-  position: relative;
-  z-index: 2;
  justify-content: space-between;
  align-items: flex-end;
   height: 100%;
@@ -67,14 +87,6 @@ flex-direction: column;
   line-height: 32px;
 }
 
-.topContent{
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  text-align: center;
-  align-items: center;
-  margin: auto;
-}
 
 .topContent .common_heading{
   text-align: center;
@@ -84,11 +96,13 @@ flex-direction: column;
 .topContent_left{
   text-align: left;
   align-items: flex-start;
+    margin: unset;
 }
 
 .standard_section .topContent{
   width: 100%;
   max-width: 665px;
+
 }
 
 .standard_section .topContent p{
@@ -119,4 +133,343 @@ max-width: 530px;
   background-size: 100% auto;
   width: 100%;
   background-repeat: no-repeat;
+}
+
+.redefiningsection{
+  z-index: 2;
+  display: flex;
+  background-image: url('/images/redefine_drone.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 60vw;
+}
+
+.redefiningsection .redefining_container{
+  height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.redefiningsection .topContent{
+  max-width: 520px;
+}
+
+.why_hindustan_container .topContent,
+.tech_container .topContent,
+.drone_system_container .topContent,
+.pilot_training_container .topContent{
+  max-width: 660px;
+}
+
+.why_hindustan{
+  background-image: url('/images/why_hindustan_bg.png');
+  background-size: cover;
+  background-position: top left;
+  position: relative;
+}
+
+.why_hindustan::before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(to top, rgba(0, 0, 0, 0.5),transparent);
+}
+
+.why_hindustan_container,
+.drone_system_container,
+.pilot_training_container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.why_hindustan_cards{
+  margin-top: auto;
+  display: flex;
+  gap: 30px;
+}
+
+.why_choose_card{
+  width: calc(25% - 22.5px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.why_choose_card h3{
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.tech{
+  z-index: 2;
+   min-height: fit-content;
+  max-height: fit-content;
+  height: fit-content;
+}
+
+.tech_contents_container{
+  margin-top: 40px;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.tech_contents_container aside{
+  width: 35%;
+}
+
+.tech_contents_container aside ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tech_contents_container aside ul li{
+  padding-bottom: 24px;
+  font-size: 24px;
+  line-height: 32px;
+  transition: 0.3s all;
+font-weight: 300;
+opacity: 0.5;
+position: relative;
+cursor: pointer;
+}
+
+.tech_contents_container aside ul li:hover{
+  opacity: 1;
+}
+
+.tech_contents_container aside ul li::before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, #404FD7 0%, #404FD7 50.3%, rgba(64, 79, 215, 0.00) 100%);
+bottom: 0;
+left: 0;
+  transition: 0.3s all;
+}
+
+.tech_contents_container aside ul li:global(.active){
+  font-weight:700;
+  opacity: 1;
+}
+
+.tech_selection{
+  width: 65%;
+  position: relative;
+}
+
+.tech_selection::before{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(0, 6, 36, 0.00) 42.53%, #000419 79.18%);
+  content: "";
+}
+
+.tech_selection .tech_selecetdImage{
+  width: 100%;
+  height: auto;
+}
+
+.tech_selection_content{
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+}
+
+.tech_selection_content h4{
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.drone_system{
+  background-image: url('/images/drone_system_bg.png');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-blend-mode:screen;
+}
+
+.drone_system_container .topContent p{
+  width: 80%;
+}
+
+.drone_system_card{
+  width: calc(33.33% - 20px);
+}
+
+:global(.swiper) {
+  padding: 80px 0 !important;
+}
+
+.drone_slider :global(.swiper-slide) {
+  opacity: 0.4;
+  transition: 0.3s all
+}
+
+.drone_slider :global(.swiper-slide) h3{
+  display: none;
+  opacity: 0;
+margin-top: 20px;
+  text-align: center;
+}
+
+.drone_slider :global(.swiper-slide) img{
+  width: 100%;
+  height: auto;
+}
+
+.drone_slider :global(.swiper-slide-active) {
+  opacity: 1;
+ 
+  transform: scale(1.3) !important;
+}
+
+.drone_slider :global(.swiper-slide-active) .drone_slider_img{
+     background-image: url("/images/slider_h.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+
+
+.drone_slider :global(.swiper-slide-active) h3{
+  display: block;
+  opacity: 1;
+  font-weight: 600;
+}
+
+.drone_slider_nav{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.drone_slider_btn{
+  width: 42px;
+  height: 42px;
+  border-radius: 42px;
+  border: solid white 1px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.pilot_training{
+  background-image: url('/images/pilot_training_bg.png');
+  background-size: cover;
+  background-position: top center;
+}
+
+.pilot_training_container .topContent.pilot_training_content{
+  margin-top: auto;
+  max-width: 630px;
+}
+
+.insights{
+   background-color: var(--pageBG);
+}
+
+.insights_container .topContent{
+  max-width: 100%;
+}
+
+.insight_cards{
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.insight_card,
+.insight_card_content{
+  display: flex;
+  flex-direction: column;
+}
+
+.insight_card{
+  gap: 24px;
+    width: calc(33.33% - 20px);
+}
+
+.insight_feature_image{
+  width: 100%;
+  height: auto;
+}
+
+.insight_card_content{
+  gap: 16px;
+}
+
+.insight_card_content .insight_btn img{
+  width: 12px;
+  height: 12px;
+}
+
+/* ──  responsive ── */
+
+/* for laptop */
+@media (max-width: 1400px) {
+
+  .why_choose_card img{
+    width: 60px;
+    height: auto;
+  }
+
+ .why_hindustan_container .topContent,
+.tech_container .topContent,
+.drone_system_container .topContent,
+.pilot_training_container .topContent{
+  max-width: 500px;
+}
+
+.bannerContent_text,
+.tech_contents_container aside ul li,
+ .why_choose_card h3{
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.bannerTitle{
+font-size: 36px;
+line-height: 42px;
+margin-top: 30px;
+}
+
+}
+
+/* for tablet */
+
+@media (max-width: 1200px) {
+  .drone_slider :global(.swiper-slide-active) {
+    transform: scale(1.15) !important;
+  }
+ 
+}
+
+/* for mobile */
+
+@media (max-width: 767px) {
+  .drone_slider :global(.swiper-slide-active) {
+    transform: scale(1.05) !important;
+  }
+
+  :global(.swiper) {
+    padding: 40px 0 !important;
+  }
 }

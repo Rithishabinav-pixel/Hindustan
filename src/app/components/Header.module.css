@@ -23,3 +23,16 @@
 .header_common_btn img{
     width: 24px;
 }
+
+/* responsive css */
+
+/* laptop */
+@media (max-width:1400px){
+#headerLogo{
+    width: 100px;
+}
+#headerLogo img{
+    width: 100%;
+    height: auto;
+}
+}

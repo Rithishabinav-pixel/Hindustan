@@ -8,13 +8,23 @@
 :root {
   --font-montserrat: 'Montserrat', sans-serif;
   --green:#148F3F;
+  --darkGreen:#0f7c35;
   --pageBG:#000419;
   --transition:0.3s all;
 }
 
-p{
+p,a{
   font-size: 16px;
   line-height: 24px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+a,button{
+  transition: var(--transition);
 }
 
 body{
@@ -29,8 +39,14 @@ body{
   margin: auto;
 }
 
+.padding_left_only{
+  max-width: 100%;
+  padding-left: calc((100vw - 1290px) / 2);
+  padding-right: 0;
+}
+
 .common_section{
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 body {
@@ -93,4 +109,55 @@ text-transform: uppercase;
 
 .common_btn:hover span{
   color: var(--green);
+}
+
+.topContent{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+}
+
+.topContent_left{
+  text-align: left;
+  align-items: flex-start;
+    margin: unset;
+}
+
+/* ── AOS (Animation on Scroll) ── */
+body.aos-initialized [data-animate] {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+body.aos-initialized [data-animate="fade-up"] {
+  transform: translateY(40px);
+}
+
+body.aos-initialized [data-animate="fade-down"] {
+  transform: translateY(-40px);
+}
+
+body.aos-initialized [data-animate].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* for laptop view */
+@media (max-width: 1400px){
+
+  .topContent{
+    gap: 16px;
+  }
+  .common_section{
+  padding: 50px 0;
+}
+
+.common_heading {
+    font-size: 34px;
+    line-height: 42px;
+}
 }
