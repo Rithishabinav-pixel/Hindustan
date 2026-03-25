@@ -10,17 +10,18 @@ flex-direction: column;
   height: 100vh;
   overflow: hidden;
 }
+.sticky{
+    position: sticky !important;
+  top: 0;
+  z-index: 2;
+}
 }
 
 .full_height_section{
   background-color: var(--pageBG);
 }
 
-.sticky{
-    position: sticky !important;
-  top: 0;
-  z-index: 2;
-}
+
 
 
 .banner_section{
@@ -70,7 +71,6 @@ margin-top: 50px;
   height: 100%;
   display: flex;
   flex-direction: column;
-
 }
 
 .bannerContent{
@@ -133,6 +133,11 @@ max-width: 530px;
   background-size: 100% auto;
   width: 100%;
   background-repeat: no-repeat;
+}
+
+.standard_section_image{
+  width: 100%;
+  height: auto;
 }
 
 .redefiningsection{
@@ -234,16 +239,21 @@ max-width: 530px;
 
 .tech_contents_container aside ul li{
   padding-bottom: 24px;
-  font-size: 24px;
+cursor: pointer;
+position: relative;
+
+}
+
+.tech_contents_container aside ul li div{
+ font-size: 24px;
   line-height: 32px;
   transition: 0.3s all;
 font-weight: 300;
 opacity: 0.5;
-position: relative;
-cursor: pointer;
+
 }
 
-.tech_contents_container aside ul li:hover{
+.tech_contents_container aside ul li:hover div{
   opacity: 1;
 }
 
@@ -258,7 +268,7 @@ left: 0;
   transition: 0.3s all;
 }
 
-.tech_contents_container aside ul li:global(.active){
+.tech_contents_container aside ul li div.tabActive{
   font-weight:700;
   opacity: 1;
 }
@@ -312,8 +322,12 @@ left: 0;
   width: calc(33.33% - 20px);
 }
 
-:global(.swiper) {
+.drone_slider :global(.swiper) {
   padding: 80px 0 !important;
+    background-image: url("/images/slider_h.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: auto 80%;
 }
 
 .drone_slider :global(.swiper-slide) {
@@ -335,16 +349,19 @@ margin-top: 20px;
 
 .drone_slider :global(.swiper-slide-active) {
   opacity: 1;
- 
   transform: scale(1.3) !important;
 }
 
-.drone_slider :global(.swiper-slide-active) .drone_slider_img{
+.droneSlider_nav{
+  margin-top: 0;
+}
+
+/* .drone_slider :global(.swiper-slide-active) .drone_slider_img{
      background-image: url("/images/slider_h.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto 100%;
-}
+} */
 
 
 
@@ -354,22 +371,9 @@ margin-top: 20px;
   font-weight: 600;
 }
 
-.drone_slider_nav{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
 
-.drone_slider_btn{
-  width: 42px;
-  height: 42px;
-  border-radius: 42px;
-  border: solid white 1px;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-}
+
+
 
 .pilot_training{
   background-image: url('/images/pilot_training_bg.png');
@@ -391,8 +395,6 @@ margin-top: 20px;
 }
 
 .insight_cards{
-  display: flex;
-  gap: 30px;
   margin-top: 40px;
 }
 
@@ -404,7 +406,7 @@ margin-top: 20px;
 
 .insight_card{
   gap: 24px;
-    width: calc(33.33% - 20px);
+    width: 100%;
 }
 
 .insight_feature_image{
@@ -425,6 +427,8 @@ margin-top: 20px;
 
 /* for laptop */
 @media (max-width: 1400px) {
+
+  
 
   .why_choose_card img{
     width: 60px;
@@ -456,20 +460,290 @@ margin-top: 30px;
 /* for tablet */
 
 @media (max-width: 1200px) {
+
+  .insight_cards {
+    margin-top: 30px;
+}
+
+ .drone_slider :global(.swiper) {
+  padding: 60px 0 !important;
+}
+
+  .drone_models .topContent,
+  .pilot_training .topContent,
+  .insights_container .topContent{
+            max-width: 500px;
+  }
+
+  .drone_system{
+    background-image: none;
+  }
+
+  .tech_selection_content {
+    bottom: 20px;
+    left: 20px;
+}
+
+.drone_system_Mobileimage{
+  width: 100%;
+  height: auto;
+}
+
+  .tech_selection_mobile .tech_selecetdImage{
+  width: 100%;
+  height: auto;
+}
+
+  .tech_selection_mobile{
+ animation: showtech_selection 0.5s forwards linear;
+  transform: translateY(20px);
+  opacity: 0;
+  /* will-change: transform; */
+  }
+
+@keyframes showtech_selection {
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+  .tech_contents_container aside {
+    width: 100%;
+}
+
+.tech_contents_container aside ul li{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  padding-right: 40px;
+}
+
+.tech_contents_container aside ul li::before{
+  position: absolute;
+  content: "";
+  background-image: url("/images/accordion-icon.svg");
+  width: 24px;
+  height: 16px;
+  background-size: cover;
+  left: unset;
+  right: 0;
+  top: 6px;
+  opacity: 0.5;
+}
+
+.tech_contents_container aside ul li:has(.tabActive)::before{
+transform: rotate(180deg);
+opacity: 1;
+}
+
+.tech_contents_container aside ul li div{
+  font-size: 20px;
+  line-height: 28px;
+  opacity: 1;
+}
+
+  .why_hindustan_container,
+  .drone_system_container,
+  .pilot_training_container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .why_hindustan_cards{
+    flex-wrap: wrap;
+    gap: 40px 20px;
+  }
+
+  .why_choose_card {
+    gap: 16px;
+    width: calc(50% - 10px);
+}
+
+.why_hindustan{
+  background-position: 70% 0px;
+}
+
+
+  .redefiningsection .redefining_container{
+    gap: 16px;
+  }
+
+   .redefiningsection{
+    display: flex;
+    flex-direction: column;
+   }
+
+  .stats{
+    flex-wrap: wrap;
+  }
+
+  .stat_card{
+    padding: 0;
+    width: calc(50% - 15px);
+     text-align: left;
+    align-items: flex-start;
+  }
+
+  .redefiningsection_Mobileimage{
+    width: 80%;
+    height: auto;
+    margin-top: -20vw;
+    margin-left: auto;
+  }
+
+
+  .standard_section,
+  .drone_system{
+    padding: 0;
+  }
+
+  .standard_section,
+  .redefiningsection{
+    background-image: none;
+  }
+
+  .standard_section_image{
+    float: left;
+  }
+
   .drone_slider :global(.swiper-slide-active) {
     transform: scale(1.15) !important;
   }
+
+  .bannerContent_container {
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+    }
+  .bannerContent{
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.bannerContent_text{
+  width: 100%;
+  max-width: 560px;
+}
+
+.banner_section{
+ padding-bottom: 50px;
+}
+
  
 }
 
 /* for mobile */
 
 @media (max-width: 767px) {
+
+  .pilot_training{
+    min-height: 850px;
+    height: 850px;
+    background-image: url("/images/pilot_training_bg_m.png");
+  }
+
+  .tech_contents_container aside ul li div{
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+.tech_selection_content h4 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+  .tech_selection_content{
+    position: static;
+  }
+
+  .why_hindustan_container .topContent{
+    padding: 0 20px;
+  }
+
+  .singleDroneImage{
+    animation: singleDroneImage 4s infinite alternate linear;
+  }
+
+  @keyframes singleDroneImage {
+    to{
+      transform: translateY(20px);
+    }
+  }
+
+  
+.why_hindustan{
+  background-image: url('/images/why_hindustan_bg_m.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  position: relative;
+  min-height: 1100px;
+  height: 1100px;
+}
+
+.why_hindustan_container,
+.pilot_training_container{
+  height: 100%;
+}
+
+.why_hindustan_container{
+  padding: 0;
+}
+
+.why_hindustan::before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+background: linear-gradient(180deg, rgba(0,0,0,0.6) 23.18%, rgba(0,0,0,0) 45.67%, rgba(0,0,0,0.6) 74.35%);
+top: 0;
+left: 0;
+opacity: 0.5;
+}
+
+.why_hindustan_cards {
+        flex-wrap: wrap;
+        gap: 30px 20px;
+    }
+
+    .why_hindustan_cards:not(.drone_system_cards) {
+      flex-wrap: nowrap;
+      overflow: auto;
+      margin: auto 0 0 20px;
+    }
+
+    .why_hindustan_cards:not(.drone_system_cards) .why_choose_card{
+      min-width: 75%;
+    }
+
+  .why_choose_card {
+      width: 100%;
+    }
+
   .drone_slider :global(.swiper-slide-active) {
     transform: scale(1.05) !important;
   }
 
-  :global(.swiper) {
+  .bannerContent_text {
+       font-size: 16px;
+       line-height: 24px;
+    }
+
+  .bannerTitle {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .drone_slider :global(.swiper) {
     padding: 40px 0 !important;
+        background-position: 0% 30%;
+    background-repeat: no-repeat;
+    background-size: 100% 75%;
   }
 }

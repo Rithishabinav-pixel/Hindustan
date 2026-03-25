@@ -173,6 +173,24 @@ const insightdata = [
     description:"Lorem ipsum dolor sit amet consectetur. Vel cras nisl morbi neque diam. Pulvinar adipiscing non sapien sit quam tristique. ",
     slug:"/"
   },
+  {
+    image:"/images/insight1.png",
+    title:"Lorem ipsum dolor",
+    description:"Lorem ipsum dolor sit amet consectetur. Vel cras nisl morbi neque diam. Pulvinar adipiscing non sapien sit quam tristique. ",
+    slug:"/"
+  },
+  {
+    image:"/images/insight2.png",
+    title:"Lorem ipsum dolor",
+    description:"Lorem ipsum dolor sit amet consectetur. Vel cras nisl morbi neque diam. Pulvinar adipiscing non sapien sit quam tristique. ",
+    slug:"/"
+  },
+  {
+    image:"/images/insight3.png",
+    title:"Lorem ipsum dolor",
+    description:"Lorem ipsum dolor sit amet consectetur. Vel cras nisl morbi neque diam. Pulvinar adipiscing non sapien sit quam tristique. ",
+    slug:"/"
+  },
 ]
 
 
@@ -209,6 +227,41 @@ useEffect(() => {
 
   return () => observer.disconnect();
 }, []);
+
+
+// for parralax
+
+useEffect(() => {
+  const elements = document.querySelectorAll(".parralax_bg");
+
+  const handleScroll = () => {
+    elements.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // when element enters viewport → rect.top < windowHeight
+      // when reaches top → rect.top = 0
+
+      const progress = Math.min(
+        Math.max((windowHeight - rect.top) / windowHeight, 0),
+        1
+      );
+
+      // 110% → 100%
+      const scale = 110 - progress * 10;
+
+      el.style.backgroundSize = `${scale}%`;
+    });
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
+
   return (
    <>
 
@@ -301,6 +354,10 @@ useEffect(() => {
 
 </div>
 
+{mobile && 
+<Image className={style.standard_section_image} src="/images/standard_img_m.webp" width={1920} height={1080} alt="" />
+}
+
 </div>
 
    </section>
@@ -317,17 +374,25 @@ useEffect(() => {
          <span>KNOW MORE</span>
         </Link>
    </div>
+
 </div>
+{mobile && 
+<Image className={style.redefiningsection_Mobileimage} src="/images/mobile_drone.svg" width={361} height={310} alt="" />
+}
     </section>
 
 
 {/* Why Hindustan */}
-   <section className={`common_section ${style.full_height_section} ${style.why_hindustan} ${style.sticky}`}>
+   <section className={`common_section parralax_bg ${style.full_height_section} ${style.why_hindustan} ${style.sticky}`}>
     <div className={`container ${style.why_hindustan_container}`}>
       <div className={`topContent ${style.topContent} ${style.topContent_left}`}>
         <h2 data-animate="fade-up" className="common_heading">Why Hindustan Drones Lead the Way</h2>
         <p data-animate="fade-up" data-animate-delay="100">Our advanced drone systems, intelligent analytics, and expert support deliver reliable aerial operations that industries depend on for precision.</p>
       </div>
+
+      {mobile && 
+<Image className={style.singleDroneImage} src="/images/why_hindustan_drone.png" width={414} height={218} alt="" />
+}
 
 <div className={style.why_hindustan_cards}>
 {whyChoose.map((card,index)=>(
@@ -366,7 +431,7 @@ useEffect(() => {
         
 
         <div
-          className={isActive ? "active" : ""}
+          className={isActive ? `${style.tabActive}` : ""}
           onClick={() => setActiveTech(item)}
         >
           {item.title}
@@ -438,7 +503,7 @@ useEffect(() => {
 
 
 {/* Drone System */}
-   <section className={`common_section ${style.full_height_section} ${style.drone_system} ${style.sticky}`}>
+   <section className={`common_section parralax_bg ${style.full_height_section} ${style.drone_system} ${style.sticky}`}>
     <div className={ `container ${style.drone_system_container}`}>
        <div className={`topContent ${style.topContent} ${style.topContent_left}`}>
         <h2 data-animate="fade-up" className="common_heading">Intelligent Drone Systems & Solutions</h2>
@@ -448,9 +513,11 @@ useEffect(() => {
          <span>KNOW MORE</span>
         </Link>
       </div>
+{mobile && 
+<Image className={style.drone_system_Mobileimage} src="/images/tech_driving_m.png" width={669} height={300} alt="" />
+}
 
-
-<div className={style.why_hindustan_cards}>
+<div className={`${style.why_hindustan_cards} ${style.drone_system_cards}`}>
 {droneData.map((card,index)=>(
   <div data-animate="fade-up" data-animate-delay={index * 100} className={`${style.why_choose_card} ${style.drone_system_card}`} key={index}>
     <Image src={card.icon} alt={card.title} width={80} height={80}/>
@@ -485,8 +552,8 @@ useEffect(() => {
   <Swiper
     modules={[Navigation]}
     navigation={{
-      prevEl: ".custom-prev",
-      nextEl: ".custom-next",
+      prevEl: ".droneSwiper_custom-prev",
+      nextEl: ".droneSwiper_custom-next",
     }}
     slidesPerView={1}
     centeredSlides={true}
@@ -523,11 +590,11 @@ useEffect(() => {
 </div>
 
 
- <div className={style.drone_slider_nav}>
-  <div className={`custom-prev ${style.drone_slider_btn} ${style.drone_slider_btn_prev}`}>
+ <div className={`slider_nav ${style.droneSlider_nav}`}>
+  <div className={`droneSwiper_custom-prev custom_slider_btn custom_slider_btn `}>
     <Image src="/images/slider_arrow_left.svg" width={12} height={12} alt=""/>
   </div>
-  <div className={`custom-next ${style.drone_slider_btn} ${style.drone_slider_btn_next}`}>
+  <div className={`droneSwiper_custom-next custom_slider_btn `}>
     <Image src="/images/slider_arrow_right.svg" width={12} height={12} alt=""/>
   </div>
   </div>
@@ -536,7 +603,7 @@ useEffect(() => {
 
 
    {/* Pilot Training */}
-   <section className={`common_section ${style.full_height_section} ${style.pilot_training} ${style.sticky}`}>
+   <section className={`common_section parralax_bg ${style.full_height_section} ${style.pilot_training} ${style.sticky}`}>
 <div className={`container ${style.pilot_training_container}`}>
      <div className={`topContent ${style.topContent} ${style.topContent_left}`}>
         <h2 data-animate="fade-up" className="common_heading">Professional Drone Pilot Training</h2>
@@ -570,7 +637,7 @@ useEffect(() => {
 
 <div className={style.insight_cards}>
 
-  {insightdata.map((data,index)=>(
+  {/* {insightdata.map((data,index)=>(
       <div data-animate="fade-up" data-animate-delay={index * 100} className={style.insight_card} key={index}>
     <Image className={style.insight_feature_image} src={data.image} width={410} height={305} alt={data.title}/>
     <div className={style.insight_card_content}>
@@ -582,11 +649,76 @@ useEffect(() => {
         </Link>
     </div>
   </div>
+  ))} */}
+
+  <Swiper
+  modules={[Navigation]}
+  navigation={{
+    prevEl: ".custom-prev",
+    nextEl: ".custom-next",
+  }}
+  slidesPerView={1}
+  centeredSlides={false}
+  loop={true}
+  spaceBetween={30}
+  breakpoints={{
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1201: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  }}
+  className="insightSwiper"
+>
+  {insightdata.map((data, index) => (
+    <SwiperSlide key={index}>
+   <div
+  {...(!mobile && {
+    "data-animate": "fade-up",
+    "data-animate-delay": index * 100,
+  })}
+  className={style.insight_card}
+>
+        <Image
+          className={style.insight_feature_image}
+          src={data.image}
+          width={410}
+          height={305}
+          alt={data.title}
+        />
+
+        <div className={style.insight_card_content}>
+          <h3>{data.title}</h3>
+          <p>{data.description}</p>
+
+          <Link href="#" className={`common_btn ${style.insight_btn}`}>
+            <span>EXPLORE MORE</span>
+            <Image
+              src="/images/slider_arrow_right.svg"
+              alt=""
+              width={12}
+              height={12}
+            />
+          </Link>
+        </div>
+      </div>
+    </SwiperSlide>
   ))}
+</Swiper>
 
 </div>
 
-
+<div className="slider_nav">
+  <div className={`custom-prev custom_slider_btn `}>
+    <Image src="/images/slider_arrow_left.svg" width={12} height={12} alt=""/>
+  </div>
+  <div className={`custom-next custom_slider_btn `}>
+    <Image src="/images/slider_arrow_right.svg" width={12} height={12} alt=""/>
+  </div>
+  </div>
 
 
     </div>
