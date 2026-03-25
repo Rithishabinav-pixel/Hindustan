@@ -27,7 +27,7 @@ flex-direction: column;
 .banner_section{
  padding: 0;
  position: relative;
- padding-bottom: 80px;
+ padding: 180px 0 80px 0;
   display: flex;
   flex-direction: column;
 }
@@ -44,7 +44,6 @@ flex-direction: column;
 max-width: 690px;
 font-size: 48px;
 line-height: 56px;
-margin-top: 50px;
 }
 
 .video{
@@ -311,7 +310,7 @@ left: 0;
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center center;
-  background-blend-mode:screen;
+  /* background-blend-mode:screen; */
 }
 
 .drone_system_container .topContent p{
@@ -452,7 +451,10 @@ margin-top: 20px;
 .bannerTitle{
 font-size: 36px;
 line-height: 42px;
-margin-top: 30px;
+}
+
+.banner_section{
+ padding: 120px 0 80px 0;
 }
 
 }
@@ -460,6 +462,10 @@ margin-top: 30px;
 /* for tablet */
 
 @media (max-width: 1200px) {
+
+  .banner_section{
+ padding: 160px 0 50px 0;
+}
 
   .insight_cards {
     margin-top: 30px;
@@ -496,15 +502,15 @@ margin-top: 30px;
 
   .tech_selection_mobile{
  animation: showtech_selection 0.5s forwards linear;
-  transform: translateY(20px);
-  opacity: 0;
+  max-height: 0;
+  transition: 0.3s all;
+  overflow: hidden;
   /* will-change: transform; */
   }
 
 @keyframes showtech_selection {
   to{
-    transform: translateY(0);
-    opacity: 1;
+   max-height: 1000px;
   }
 }
 
@@ -516,11 +522,15 @@ margin-top: 30px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  position: relative;
-  padding-right: 40px;
+
 }
 
-.tech_contents_container aside ul li::before{
+.tech_contents_container aside ul li>div:nth-child(1){
+  padding-right: 40px;
+  position: relative;
+}
+
+.tech_contents_container aside ul li>div:nth-child(1)::before{
   position: absolute;
   content: "";
   background-image: url("/images/accordion-icon.svg");
@@ -533,7 +543,7 @@ margin-top: 30px;
   opacity: 0.5;
 }
 
-.tech_contents_container aside ul li:has(.tabActive)::before{
+.tech_contents_container aside ul li:has(.tabActive) div:nth-child(1)::before{
 transform: rotate(180deg);
 opacity: 1;
 }
@@ -640,6 +650,11 @@ opacity: 1;
 
 @media (max-width: 767px) {
 
+   .banner_section{
+ padding: 120px 0 50px 0;
+}
+
+
   .pilot_training{
     min-height: 850px;
     height: 850px;
@@ -669,6 +684,8 @@ opacity: 1;
 
   .singleDroneImage{
     animation: singleDroneImage 4s infinite alternate linear;
+    width: 90%;
+    height: auto;
   }
 
   @keyframes singleDroneImage {
@@ -714,7 +731,7 @@ opacity: 0.5;
 
     .why_hindustan_cards:not(.drone_system_cards) {
       flex-wrap: nowrap;
-      overflow: auto;
+      overflow-x: auto;
       margin: auto 0 0 20px;
     }
 
@@ -741,7 +758,7 @@ opacity: 0.5;
     }
 
     .drone_slider :global(.swiper) {
-    padding: 40px 0 !important;
+    padding: 40px 20px !important;
         background-position: 0% 30%;
     background-repeat: no-repeat;
     background-size: 100% 75%;

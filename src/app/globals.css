@@ -8,6 +8,7 @@
 :root {
   --font-montserrat: 'Montserrat', sans-serif;
   --green:#148F3F;
+  --orange:#FB4F14;
   --darkGreen:#0f7c35;
   --pageBG:#000419;
   --transition:0.3s all;
@@ -75,12 +76,12 @@ text-transform: uppercase;
 
 }
 
-.common_btn img{
+.common_btn svg{
   width: 32px;
   height: 32px;
 }
 
-.common_btn img.fan{
+.common_btn svg.fan{
   animation: btn_fan_animation 5s infinite linear;
     transition: var(--transition);
 
@@ -92,8 +93,16 @@ text-transform: uppercase;
   }
 }
 
-.common_btn:hover img.fan{
+.common_btn:hover svg.fan{
  animation-play-state: paused;
+}
+
+.common_btn svg path{
+  transition: var(--transition);
+}
+
+.common_btn:hover svg path{
+stroke: var(--orange);
 }
 
 .common_btn span{
@@ -107,9 +116,9 @@ text-transform: uppercase;
 
 }
 
-.common_btn:hover span{
+/* .common_btn:hover span{
   color: var(--green);
-}
+} */
 
 .topContent{
   display: flex;
@@ -163,11 +172,16 @@ body.aos-initialized [data-animate].aos-animate {
   margin-top: 40px;
 }
 
-.parralax_bg {
-  background-size: 110%;
+
+/* only dektop */
+
+@media  (min-width:1201px) {
+  .parralax_bg {
+  background-size:150%;
   background-position: center;
   background-repeat: no-repeat;
   transition: background-size 0.1s linear;
+}
 }
 
 /* for laptop view */
@@ -183,6 +197,12 @@ body.aos-initialized [data-animate].aos-animate {
 .common_heading {
     font-size: 40px;
     line-height: 48px;
+}
+}
+
+@media screen and (min-width:1201px) and (max-width:1310px) {
+  .padding_left_only{
+  padding-left: clamp(20px,calc((100vw - 1290px) / 2),20px);
 }
 }
 

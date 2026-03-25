@@ -13,6 +13,7 @@ import { Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import ButtonFan from "./components/UI/ButtonFan";
 
 // why choose hindustan data
 const whyChoose = [
@@ -44,61 +45,63 @@ const techdata = [
   {
     "title": "Agriculture & Farming",
     "description": "Drone intelligence helps farmers monitor crop health, map fields, and optimise spraying operations, improving yields, reducing resource use, and enabling more efficient, data-driven agriculture.",
-    "image": "agriculture_farming.png",
+    "image": "agriculture_farming.mp4",
+    "feature_image":"agriculture_farming.png",
     "slug": ""
   },
   {
     "title": "Construction & Infrastructure",
     "description": "Drone solutions enable accurate site mapping, progress tracking, and structural inspections, helping construction teams improve planning, reduce risks, and enhance project efficiency with real-time data insights.",
-    "image": "agriculture_farming.png",
+    "image": "agriculture_farming.mp4",
+    "feature_image":"agriculture_farming.png",
     "slug": ""
   },
   {
     "title": "Media, Entertainment & Marketing",
     "description": "Aerial drone technology captures cinematic visuals and dynamic perspectives, empowering brands and creators to produce engaging content, elevate storytelling, and deliver impactful marketing experiences.",
-    "image": "agriculture_farming.png",
+    "image": "agriculture_farming.mp4",
     "slug": ""
   },
   {
     "title": "Mining & Extractives",
     "description": "Drones provide precise surveying, volumetric analysis, and site monitoring, enabling mining operations to improve safety, optimise resource management, and make informed decisions with accurate data.",
-    "image": "agriculture_farming.png",
+    "image": "agriculture_farming.mp4",
     "slug": ""
   },
   {
     "title": "Inspection",
     "description": "Drone-based inspections allow safe and efficient assessment of assets, reducing manual risks while delivering high-resolution data for faster analysis and maintenance planning.",
-    "image": "agriculture_farming.png",
+    "image": "agriculture_farming.mp4",
     "slug": ""
   },
   {
     "title": "Energy & Utilities",
     "description": "Drones support inspection and monitoring of power lines, solar farms, and infrastructure, helping utilities enhance reliability, reduce downtime, and maintain critical assets with greater efficiency.",
-    "image": "agriculture_farming.png",
+    "image": "agriculture_farming.mp4",
     "slug": ""
   },
   {
     "title": "Security, Surveillance & Emergency",
     "description": "Drone technology enhances real-time surveillance and rapid response capabilities, supporting security operations, disaster management, and emergency services with improved situational awareness.",
-    "image": "agriculture_farming.png",
+    "image": "agriculture_farming.mp4",
     "slug": ""
   },
   {
     "title": "Environmental, Research & Survey",
     "description": "Drones assist in environmental monitoring, data collection, and research activities, enabling accurate surveys and insights that support conservation, analysis, and informed decision-making.",
-    "image": "agriculture_farming.png",
+    "image": "agriculture_farming.mp4",
     "slug": ""
   },
   {
     "title": "Logistics & Delivery",
     "description": "Drone delivery systems streamline logistics by enabling faster, cost-effective transportation of goods, especially in remote or hard-to-reach areas, improving efficiency and accessibility.",
-    "image": "agriculture_farming.png",
+    "image": "agriculture_farming.mp4",
     "slug": ""
   },
   {
     "title": "Residential & Property",
     "description": "Drones provide high-quality aerial views and property insights, helping real estate professionals showcase listings, assess properties, and deliver enhanced visual experiences to clients.",
-    "image": "agriculture_farming.png",
+    "image": "agriculture_farming.mp4",
     "slug": ""
   }
 ]
@@ -233,7 +236,7 @@ useEffect(() => {
 
 useEffect(() => {
   const elements = document.querySelectorAll(".parralax_bg");
-
+if(mobile) return
   const handleScroll = () => {
     elements.forEach((el) => {
       const rect = el.getBoundingClientRect();
@@ -255,12 +258,13 @@ useEffect(() => {
   };
 
   window.addEventListener("scroll", handleScroll);
+  
   handleScroll();
 
   return () => {
     window.removeEventListener("scroll", handleScroll);
   };
-}, []);
+}, [mobile]);
 
   return (
    <>
@@ -275,11 +279,20 @@ useEffect(() => {
 
    <div className={style.banner_video_container}>
     {!mobile && (
-       <video width="1920" height="1029" loop muted autoPlay preload="none" playsInline className={style.video}>
-      <source src="/images/hp_hero_banner.mp4" type="video/mp4" />
-     
-      Your browser does not support the video tag.
-    </video>
+       <video
+  width="1920"
+  height="1029"
+  loop
+  muted
+  autoPlay
+  preload="none"
+  playsInline
+  poster="/images/hp_hero_banner.webp"  
+  className={style.video}
+>
+  <source src="/images/hp_hero_banner.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
     )}
 
    </div>
@@ -288,17 +301,26 @@ useEffect(() => {
 
     <h1 className={`common_heading ${style.bannerTitle}`}>Next-Gen Drone Systems Critical Operations</h1>
     {mobile && (
-       <video width="1920" height="1029" loop muted autoPlay preload="none" playsInline className={style.video}>
-      <source src="/images/hp_hero_banner.mp4" type="video/mp4" />
-     
-      Your browser does not support the video tag.
-    </video>
+      <video
+  width="1920"
+  height="1029"
+  loop
+  muted
+  autoPlay
+  preload="none"
+  playsInline
+  poster="/images/hp_hero_banner.webp" 
+  className={style.video}
+>
+  <source src="/images/hp_hero_banner.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
     )}
 
    <div className={style.bannerContent}>
     <p data-animate="fade-up" className={style.bannerContent_text}>Engineered with advanced sensors and AI analytics, our drone systems deliver real-time aerial intelligence for complex operations.</p>
     <Link data-animate="fade-up" data-animate-delay="150" href="#" className="common_btn">
-         <Image className="fan" src="/images/btn_fan.svg" alt="" width={32} height={32}/>
+         <ButtonFan/>
          <span> KNOW MORE</span>
         </Link>
    </div>
@@ -317,7 +339,7 @@ useEffect(() => {
     <h2 data-animate="fade-up" className="common_heading">A New Standard in Aerial Intelligence</h2>
     <p data-animate="fade-up" data-animate-delay="100">Our growing mission footprint reflects the scale and reliability behind every aerial intelligence.</p>
      <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
-         <Image className="fan" src="/images/btn_fan.svg" alt="" width={32} height={32}/>
+         <ButtonFan/>
          <span>KNOW MORE</span>
         </Link>
   </div>
@@ -370,7 +392,7 @@ useEffect(() => {
    <div className={`topContent ${style.topContent} ${style.topContent_left}`}>
     <p data-animate="fade-up" data-animate-delay="100">Hindustan Drone Services (HDS) brings together advanced drone systems, intelligent analytics, and certified expertise to deliver reliable aerial operations, helping industries capture precise data, improve efficiency, and make smarter decisions.</p>
     <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
-         <Image className="fan" src="/images/btn_fan.svg" alt="" width={32} height={32}/>
+         <ButtonFan/>
          <span>KNOW MORE</span>
         </Link>
    </div>
@@ -396,7 +418,8 @@ useEffect(() => {
 
 <div className={style.why_hindustan_cards}>
 {whyChoose.map((card,index)=>(
-  <div data-animate="fade-up" data-animate-delay={index * 100} className={style.why_choose_card} key={index}>
+  <div key={index} {...(!mobile && {"data-animate": "fade-up", "data-animate-delay": index * 100,})}
+  className={style.why_choose_card} >
     <Image src={card.icon} alt={card.title} width={80} height={80}/>
     <h3>{card.title}</h3>
     <p>{card.description}</p>
@@ -415,7 +438,7 @@ useEffect(() => {
         <h2 data-animate="fade-up" className="common_heading">Drone Tech Driving Industry Forward</h2>
         <p data-animate="fade-up" data-animate-delay="100">Our advanced drone services empower industries to monitor assets, improve efficiency, and unlock new opportunities from the sky.</p>
          <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
-         <Image className="fan" src="/images/btn_fan.svg" alt="" width={32} height={32}/>
+         <ButtonFan/>
          <span>KNOW MORE</span>
         </Link>
       </div>
@@ -440,26 +463,29 @@ useEffect(() => {
         {/* for mobile */}
         {mobile && isActive && (
           <div className={style.tech_selection_mobile}>
-            <img
-              className={style.tech_selecetdImage}
-              src={`/images/${item.image}`}
-              width={1055}
-              height={776}
-              alt={item.title}
-            />
+    
+
+             <video
+  width="1055"
+  height="776"
+  loop
+  muted
+  autoPlay
+  preload="none"
+  playsInline
+  poster={`/images/${item.feature_image}`}
+  className={style.tech_selecetdImage}
+>
+  <source  src={`/images/${item.image}`} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
             <div className={`topContent ${style.tech_selection_content}`}>
               <h4>{item.title}</h4>
               <p>{item.description}</p>
 
               <Link href="#" className="common_btn">
-                <Image
-                  className="fan"
-                  src="/images/btn_fan.svg"
-                  alt=""
-                  width={32}
-                  height={32}
-                />
+                <ButtonFan/>
                 <span>KNOW MORE</span>
               </Link>
             </div>
@@ -476,20 +502,29 @@ useEffect(() => {
 
 {!mobile && (
   <div className={style.tech_selection}>
-    <img
-      className={style.tech_selecetdImage}
-      src={`/images/${activeTech.image}`}
-      width={1055}
-      height={776}
-      alt={activeTech.title}
-    />
+ 
+
+    <video
+  width="1920"
+  height="1029"
+  loop
+  muted
+  autoPlay
+  preload="none"
+  playsInline
+  poster={`/images/${activeTech.feature_image}`}
+  className={style.tech_selecetdImage}
+>
+  <source  src={`/images/${activeTech.image}`} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
     <div className={`topContent ${style.tech_selection_content} ${style.topContent} ${style.topContent_left}`}>
       <h4>{activeTech.title}</h4>
       <p>{activeTech.description}</p>
 
       <Link href="#" className="common_btn">
-        <Image className="fan" src="/images/btn_fan.svg" alt="" width={32} height={32}/>
+        <ButtonFan/>
         <span>KNOW MORE</span>
       </Link>
     </div>
@@ -509,7 +544,7 @@ useEffect(() => {
         <h2 data-animate="fade-up" className="common_heading">Intelligent Drone Systems & Solutions</h2>
         <p data-animate="fade-up" data-animate-delay="100">Our drone solutions are designed to deliver reliable aerial capabilities for modern industries.</p>
          <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
-         <Image className="fan" src="/images/btn_fan.svg" alt="" width={32} height={32}/>
+         <ButtonFan/>
          <span>KNOW MORE</span>
         </Link>
       </div>
@@ -538,7 +573,7 @@ useEffect(() => {
         <h2 data-animate="fade-up" className="common_heading">Explore Our Advanced Drone Models</h2>
         <p data-animate="fade-up" data-animate-delay="100">Discover the perfect drone solution for your industry needs. </p>
          <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
-         <Image className="fan" src="/images/btn_fan.svg" alt="" width={32} height={32}/>
+         <ButtonFan/>
          <span>KNOW MORE</span>
         </Link>
       </div>
@@ -613,7 +648,7 @@ useEffect(() => {
        <p data-animate="fade-up">At Hindustan Drone Services, we believe powerful technology should come with the confidence to use it well. Our professional drone training equips individuals and teams with the knowledge needed to operate drones safely, efficiently, and with precision.</p>
        <p data-animate="fade-up" data-animate-delay="100">Through hands-on guidance and practical learning, participants understand flight controls, safety protocols, mission planning, and real-world applications, helping them unlock the full potential of modern drone technology.</p>
       <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
-         <Image className="fan" src="/images/btn_fan.svg" alt="" width={32} height={32}/>
+         <ButtonFan/>
          <span>KNOW MORE</span>
         </Link>
       </div>
@@ -629,7 +664,7 @@ useEffect(() => {
         <h2 data-animate="fade-up" className="common_heading">Latest Insights from the Drone Industry</h2>
         <p data-animate="fade-up" data-animate-delay="100">Our blog offers in-depth articles, case studies, and expert opinions on everything drone-related.</p>
          <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
-         <Image className="fan" src="/images/btn_fan.svg" alt="" width={32} height={32}/>
+         <ButtonFan/>
          <span>View All Articles</span>
         </Link>
       </div>

@@ -80,53 +80,67 @@ export default function Footer() {
             <div className={style.footer_links_single}>
                 <ul>
                     <h3>Products</h3>
-                    <li> <Link href="#">Agricultural – Spray and Spread</Link> </li>
-                    <li> <Link href="#">Cleaning – Photovoltaic</Link> </li>
-                    <li> <Link href="#">Cleaning – Building</Link> </li>
-                    <li> <Link href="#">Carrier & Logistics</Link> </li>
-                    <li> <Link href="#">Medical Logistics</Link> </li>
-                    <li> <Link href="#">Consumer & Content Creation</Link> </li>
-                    <li> <Link href="#">Professional Cinematography</Link> </li>
-                    <li> <Link href="#">Industrial & Enterprise</Link> </li>
-                    <li> <Link href="#">Public Safety</Link> </li>
-                    <li> <Link href="#">Rescue & Search</Link> </li>
+                    <li> <Link href="#">AgriFlow HDS40</Link> </li>
+                    <li> <Link href="#">AgriFlow HDS-SEED</Link> </li>
+                    <li> <Link href="#">SolarShine HDS40B</Link> </li>
+                    <li> <Link href="#">SkyWash HDS40A</Link> </li>
+                    <li> <Link href="#">CargoLift HDS20A</Link> </li>
+                    <li> <Link href="#">TerraMap HDS4P</Link> </li>
+                    <li> <Link href="#">VigilCore M4TD</Link> </li>
+                    <li> <Link href="#">InfraScan M400</Link> </li>
                 </ul>
             </div>
         </div>
 
-         {/* footer links column */}
+        {/* footer links column */}
         <div className={style.footer_links}>
             <div className={style.footer_links_single}>
                 <ul>
-                    <h3>Get in touch with us</h3>
-                    <li> <Link href="#"> <Image src="/images/footer_call.svg" width={24} height={24} alt=''/> +91 9154749191</Link> </li>
-                    <li> <Link href="#"><Image src="/images/footer_mail.svg" width={24} height={24} alt=''/>info@hindustandrones.io</Link> </li>
-                    <li> <Link href="#"><Image src="/images/footer_map.svg" width={24} height={24} alt=''/>Hindustan Drone Services<br/>
-                    Private Limited<br/>
-Unit No.1011A, Level 1, Sky One<br/>
-(Wing A), Prestige SkyTech,<br/>
-Financial District,<br/>Nanakramguda, Hyderabad - 500 032, Telangana.</Link> </li>
-                   
+                    <h3>Industries</h3>
+                    <li> <Link href="#">Agriculture</Link> </li>
+                    <li> <Link href="#">Public Safety</Link> </li>
+                    <li> <Link href="#">Utilities</Link> </li>
+                    <li> <Link href="#">Security</Link> </li>
+                    <li> <Link href="#">Construction</Link> </li>
+                    <li> <Link href="#">Engineering</Link> </li>
+                    <li> <Link href="#">Transportation</Link> </li>
+                    <li> <Link href="#">Oil & Gas</Link> </li>
+                    <li> <Link href="#">Education</Link> </li>
                 </ul>
             </div>
         </div>
+
+        
 
     </div>
 
 {/* footer bottom bar */}
 <div className={`container ${style.footer_bottom_container}`}>
 
-    <Link href="/" id={style.footerLogo}>
-     <Image src="/images/logo.svg" alt="logo" width={145} height={130}/>
-    </Link>
+   
 
     <div className={style.footer_bottom_content}>
-        <p className={style.footer_bottom_content_links}>
-            <span><Link href="">Terms of Service</Link></span> 
-            <span><Link href=""> Privacy Policy</Link></span> 
-            </p>
-        <p>Copyright © {year} HindustanDrones, All Rights Reserved.</p>
+         <Link href="/" id={style.footerLogo}>
+     <Image src="/images/logo.svg" alt="logo" width={145} height={130}/>
+    </Link>
+      
+        <p> © {year} HindustanDrones, All Rights Reserved.</p>
     </div>
+
+     {/* footer links column */}
+        <div className={style.footer_links}>
+            <div className={style.footer_links_single}>
+                <ul>
+                    <h3>Get in touch with us</h3>
+                    <li> <Link href="#"> <Image src="/images/footer_call.svg" width={24} height={24} alt=''/> +91 9154749191</Link> </li>
+                    <li> <Link href="#"><Image src="/images/footer_mail.svg" width={24} height={24} alt=''/>info@hindustandrones.io</Link> </li>
+                    <li> <Link href="#"><Image src="/images/footer_map.svg" width={24} height={24} alt=''/>Hindustan Drone Services Private Limited<br/>
+Unit No.1011A, Level 1, Sky One (Wing A), Prestige SkyTech,<br/>
+Financial District, Nanakramguda, Hyderabad - 500 032.</Link> </li>
+                   
+                </ul>
+            </div>
+        </div>
 
     {/* footer bottom bar  news letter */}
 
@@ -137,6 +151,10 @@ Financial District,<br/>Nanakramguda, Hyderabad - 500 032, Telangana.</Link> </l
     <input type='email' placeholder='Enter your email address'></input>
     <button className="form_btn">Submit</button>
 </form>
+  <p className={style.footer_bottom_content_links}>
+            <span><Link href="">Terms of Service</Link></span> 
+            <span><Link href=""> Privacy Policy</Link></span> 
+            </p>
 </div>
 
 </div>
