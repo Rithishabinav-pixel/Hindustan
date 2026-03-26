@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(node -e \"console.log\\(require\\(''./node_modules/prisma/package.json''\\).version\\)\")",
+      "Bash(npx prisma:*)",
+      "Bash(ls src/app/admin/*.js)"
     ]
   }
 }

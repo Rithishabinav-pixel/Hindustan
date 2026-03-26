@@ -142,7 +142,7 @@ max-width: 530px;
 .redefiningsection{
   z-index: 2;
   display: flex;
-  background-image: url('/images/redefine_drone.png');
+  background-image: url('/images/redefine_drone.webp');
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 60vw;
@@ -167,7 +167,7 @@ max-width: 530px;
 }
 
 .why_hindustan{
-  background-image: url('/images/why_hindustan_bg.png');
+  background-image: url('/images/why_hindustan_bg.webp');
   background-size: cover;
   background-position: top left;
   position: relative;
@@ -306,7 +306,7 @@ left: 0;
 }
 
 .drone_system{
-  background-image: url('/images/drone_system_bg.png');
+  background-image: url('/images/drone_system_bg.webp');
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center center;
@@ -701,7 +701,7 @@ opacity: 1;
 
   
 .why_hindustan{
-  background-image: url('/images/why_hindustan_bg_m.png');
+  background-image: url('/images/why_hindustan_bg_m.webp');
   background-repeat: no-repeat;
   background-size: 100% auto;
   position: relative;

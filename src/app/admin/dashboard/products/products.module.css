@@ -1,0 +1,151 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.pageTitle {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btnPrimary {
+  padding: 10px 20px;
+  background: #148f3f;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.btnPrimary:hover {
+  background: #0f7c35;
+}
+
+.tableWrap {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.th {
+  text-align: left;
+  padding: 13px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.tr:not(:last-child) {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.tr:hover {
+  background: #fafafa;
+}
+
+.td {
+  padding: 12px 20px;
+  font-size: 14px;
+  color: #374151;
+  font-family: var(--font-montserrat), sans-serif;
+  vertical-align: middle;
+}
+
+.thumbnail {
+  width: 78px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  display: block;
+}
+
+.link {
+  color: #1d4ed8;
+  text-decoration: none;
+  font-size: 13px;
+  word-break: break-all;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.rowActions {
+  display: flex;
+  gap: 8px;
+}
+
+.btnEdit {
+  padding: 5px 12px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d4ed8;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.btnEdit:hover {
+  background: #dbeafe;
+}
+
+.btnDelete {
+  padding: 5px 12px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #dc2626;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.btnDelete:hover {
+  background: #fee2e2;
+}
+
+.empty {
+  padding: 48px 24px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+  font-family: var(--font-montserrat), sans-serif;
+}

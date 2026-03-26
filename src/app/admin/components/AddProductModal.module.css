@@ -1,0 +1,50 @@
+.fileInput {
+  padding: 8px 0;
+  font-size: 13px;
+  color: #374151;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.sizeNote {
+  font-size: 11px;
+  color: #9ca3af;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.optionalNote {
+  font-weight: 400;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.currentImage {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.thumb {
+  width: 78px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.currentLabel {
+  font-size: 12px;
+  color: #6b7280;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.preview {
+  display: block;
+  margin-top: 8px;
+  width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+}

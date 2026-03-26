@@ -1,0 +1,4 @@
+/* Hides the global site Footer when on any admin page */
+body.admin-page footer {
+  display: none !important;
+}

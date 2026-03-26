@@ -1,0 +1,108 @@
+'use client'
+import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
+import styles from './Sidebar.module.css'
+
+export default function Sidebar() {
+  const pathname = usePathname()
+  const router = useRouter()
+
+  async function handleLogout() {
+    await fetch('/api/admin/logout', { method: 'POST' })
+    router.push('/admin/login')
+  }
+
+  return (
+    <aside className={styles.sidebar}>
+      <div className={styles.logoWrap}>
+        <Image
+          src="/images/logo.svg"
+          alt="Hindustan Drones"
+          width={130}
+          height={42}
+          priority
+        />
+      </div>
+
+      <nav className={styles.nav}>
+        <ul className={styles.navList}>
+          <li>
+            <Link
+              href="/admin/dashboard/users"
+              className={`${styles.navLink} ${
+                pathname.startsWith('/admin/dashboard/users')
+                  ? styles.active
+                  : ''
+              }`}
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+              Users
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/admin/dashboard/products"
+              className={`${styles.navLink} ${
+                pathname.startsWith('/admin/dashboard/products')
+                  ? styles.active
+                  : ''
+              }`}
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+              </svg>
+              Products
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
+      <div className={styles.bottom}>
+        <button className={styles.logoutBtn} onClick={handleLogout}>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+            <polyline points="16 17 21 12 16 7" />
+            <line x1="21" y1="12" x2="9" y2="12" />
+          </svg>
+          Logout
+        </button>
+      </div>
+    </aside>
+  )
+}

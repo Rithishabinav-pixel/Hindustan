@@ -46,14 +46,14 @@ const techdata = [
     "title": "Agriculture & Farming",
     "description": "Drone intelligence helps farmers monitor crop health, map fields, and optimise spraying operations, improving yields, reducing resource use, and enabling more efficient, data-driven agriculture.",
     "image": "agriculture_farming.mp4",
-    "feature_image":"agriculture_farming.png",
+    "feature_image":"agriculture_farming.webp",
     "slug": ""
   },
   {
     "title": "Construction & Infrastructure",
     "description": "Drone solutions enable accurate site mapping, progress tracking, and structural inspections, helping construction teams improve planning, reduce risks, and enhance project efficiency with real-time data insights.",
     "image": "agriculture_farming.mp4",
-    "feature_image":"agriculture_farming.png",
+    "feature_image":"agriculture_farming.webp",
     "slug": ""
   },
   {
