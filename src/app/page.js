@@ -130,27 +130,27 @@ const droneData = [
 const droneSlider = [
   {
     title: "Drone Model 1",
-    image: "drone_model1"
+    image: "/images/drone_model1.png"
   },
   {
     title: "Drone Model 2",
-    image: "drone_model2"
+    image: "/images/drone_model2.png"
   },
   {
     title: "Drone Model 3",
-    image: "drone_model3"
+    image: "/images/drone_model3.png"
   },
   {
     title: "Drone Model 1",
-    image: "drone_model1"
+    image: "/images/drone_model1.png"
   },
   {
     title: "Drone Model 2",
-    image: "drone_model2"
+    image: "/images/drone_model2.png"
   },
   {
     title: "Drone Model 3",
-    image: "drone_model3"
+    image: "/images/drone_model3.png"
   }
 ];
 
@@ -567,7 +567,7 @@ if(mobile) return
    </section>
 
    {/* Drone Models*/}
-   <section className={`common_section ${style.full_height_section} ${style.drone_models} ${style.sticky}`}>
+   <section className={`common_section product_section ${style.full_height_section} ${style.drone_models} ${style.sticky}`}>
 <div className={`container ${style.drone_models_container}`}>
     <div className={`topContent ${style.topContent}`}>
         <h2 data-animate="fade-up" className="common_heading">Explore Our Advanced Drone Models</h2>
@@ -610,7 +610,7 @@ if(mobile) return
       <SwiperSlide key={index}>
         <div className="drone_card">
           <div className={style.drone_slider_img}>
-          <Image src={`/images/${item.image}.png`} alt={item.title} width={520} height={320}  />
+          <Image src={`${item.image}`} alt={item.title} width={520} height={320}  />
           </div>
           <h3>{item.title}</h3>
         </div>
@@ -672,19 +672,7 @@ if(mobile) return
 
 <div className={style.insight_cards}>
 
-  {/* {insightdata.map((data,index)=>(
-      <div data-animate="fade-up" data-animate-delay={index * 100} className={style.insight_card} key={index}>
-    <Image className={style.insight_feature_image} src={data.image} width={410} height={305} alt={data.title}/>
-    <div className={style.insight_card_content}>
-      <h3>{data.title}</h3>
-      <p>{data.description} </p>
-       <Link href="#" className={`common_btn ${style.insight_btn}`}>
-         <span>EXPLORE MORE</span>
-         <Image className="" src="/images/slider_arrow_right.svg" alt="" width={12} height={12}/>
-        </Link>
-    </div>
-  </div>
-  ))} */}
+
 
   <Swiper
   modules={[Navigation]}

@@ -12,6 +12,7 @@
   --darkGreen:#0f7c35;
   --pageBG:#000419;
   --transition:0.3s all;
+  --productBg :#000624;
 }
 
 p,a{
@@ -30,6 +31,8 @@ a,button{
 
 body{
   color: white;
+  font-family: var(--font-montserrat);
+  background-color: var(--pageBG);
 }
 
 
@@ -50,10 +53,6 @@ body{
   padding: 80px 0;
 }
 
-body {
-  font-family: var(--font-montserrat);
-  background-color: var(--pageBG);
-}
 
 .common_heading{
   font-size: 48px;
@@ -173,6 +172,130 @@ body.aos-initialized [data-animate].aos-animate {
 }
 
 
+.no_padding_bottom{
+  padding-bottom: 0;
+}
+
+/* products slider */
+.product_section{
+  background-color: var(--productBg);
+}
+
+.product_slider .swiper {
+  padding: 80px 0 !important;
+    background-image: url("/images/slider_h.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: auto 80%;
+  margin-top: 20px;
+}
+
+.product_slider .swiper-slide {
+  opacity: 0.4;
+  transition: 0.3s all
+}
+
+.product_slider .swiper-slide h3{
+  display: none;
+  opacity: 0;
+margin-top: 20px;
+  text-align: center;
+}
+
+.product_slider .swiper-slide img{
+  width: 100%;
+  height: auto;
+}
+
+.product_slider .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1.3) !important;
+}
+
+.productSlider_nav{
+  margin-top: 0;
+}
+
+.product_slider .swiper-slide-active h3{
+  display: block;
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* faq style */
+
+.faq_section{
+
+}
+
+.faq_section .container{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.faq {
+  width: 100%;
+  max-width: 850px;
+  margin: auto;
+}
+.faq button{
+width: 100%;
+text-align: left;
+font-size: 24px;
+line-height: 32px;
+background: none;
+border: none;
+color: white;
+opacity: 0.5;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  padding-right: 40px;
+}
+
+.faq button::before{
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 50%;
+  background-image: url('/images/faq_arrow.svg');
+  height: 24px;
+  width: 24px;
+  background-size: cover;
+  transform: translateY(-50%) rotate(-180deg);
+  transition: var(--transition);
+}
+
+
+.faq div[data-state=open] button,
+.faq button:hover{
+  opacity: 1;
+}
+
+.faq div[data-state=open] button::before{
+  transform: translateY(-50%) rotate(0);
+}
+
+.faq>div>div{
+  padding: 24px 0;
+   display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.faq>div>div::before{
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  opacity: 0.6;
+background: linear-gradient(90deg, #404FD7 0%, #404FD7 50.3%, rgba(64, 79, 215, 0.00) 100%);
+}
+
+
 /* only dektop */
 
 @media  (min-width:1201px) {
@@ -208,6 +331,19 @@ body.aos-initialized [data-animate].aos-animate {
 
 /* for tablet view */
 @media (max-width: 1200px){
+
+  .faq_section .container{
+  gap: 30px;
+}
+
+   .product_slider .swiper {
+  padding: 60px 0 !important;
+}
+
+ .product_slider .swiper-slide-active {
+    transform: scale(1.15) !important;
+  }
+
   .slider_nav{
     margin-top: 30px;
   }
@@ -220,10 +356,32 @@ body.aos-initialized [data-animate].aos-animate {
     padding-left: 20px;
     padding-right: 20px;
 }
+.faq button{
+  font-size: 20px;
+  line-height: 24px;
+}
+
 }
 
 /* for mobile view */
 @media (max-width: 767px){
+
+  .faq > div > div {
+    padding: 20px 0;
+}
+
+
+
+   .product_slider .swiper-slide-active {
+    transform: scale(1.05) !important;
+  }
+   .product_slider .swiper {
+    padding: 40px 20px !important;
+        background-position: 0% 30%;
+    background-repeat: no-repeat;
+    background-size: 100% 75%;
+    margin-top: 0;
+  }
     .common_heading {
         font-size: 32px;
         line-height: 40px;
