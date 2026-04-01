@@ -406,6 +406,7 @@ margin-top: 20px;
 .insight_card_content{
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .insight_card{
@@ -553,11 +554,20 @@ transform: rotate(180deg);
 opacity: 1;
 }
 
+.tech_contents_container aside ul li div.tech_selection_mobile{
+  position: relative;
+}
+
 .tech_contents_container aside ul li div{
   font-size: 20px;
   line-height: 28px;
   opacity: 1;
 }
+
+ .tech_contents_container,
+  .stats{
+  margin-top: 30px;
+ }
 
   .why_hindustan_container,
   .drone_system_container,
@@ -578,7 +588,8 @@ opacity: 1;
 }
 
 .why_hindustan{
-  background-position: 70% 0px;
+  background-position: left;
+  background-size: auto 100% !important;
 }
 
 
@@ -663,7 +674,7 @@ opacity: 1;
   .pilot_training{
     min-height: 850px;
     height: 850px;
-    background-image: url("/images/pilot_training_bg_m.png");
+    background-image: url("/images/pilot_training_bg_m.webp");
   }
 
   .tech_contents_container aside ul li div{
@@ -703,7 +714,7 @@ opacity: 1;
 .why_hindustan{
   background-image: url('/images/why_hindustan_bg_m.webp');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% auto !important;
   position: relative;
   min-height: 1100px;
   height: 1100px;

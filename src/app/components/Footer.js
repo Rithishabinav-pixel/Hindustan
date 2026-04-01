@@ -2,6 +2,8 @@ import React from 'react'
 import style from "./Footer.module.css"
 import Link from 'next/link'
 import Image from 'next/image'
+import NewsletterForm from './NewsletterForm'
+import ButtonFan from './UI/ButtonFan'
 
 export default function Footer() {
 
@@ -16,7 +18,7 @@ export default function Footer() {
             <h2 className='common_heading'>Ready to see how far drone intelligence can take you?</h2>
             <p>Partner with Hindustan Drone Services to explore the future of drone technology. Connect with our team to explore the possibilities.</p>
              <Link href="#" className="common_btn">
-         <Image className="fan" src="/images/btn_fan.svg" alt="" width={32} height={32}/>
+         <ButtonFan/>
          <span>Contact Us</span>
         </Link>
         </div>
@@ -32,8 +34,8 @@ export default function Footer() {
         {/* footer links column */}
         <div className={style.footer_links}>
             <div className={style.footer_links_single}>
+                <h3>Quick Links</h3>
                 <ul>
-                    <h3>Quick Links</h3>
                     <li> <Link href="#">Home</Link> </li>
                     <li> <Link href="#">About Us</Link> </li>
                     <li> <Link href="#">Blog</Link> </li>
@@ -41,15 +43,15 @@ export default function Footer() {
                 </ul>
             </div>
              <div className={style.footer_links_single}>
+                <h3>Technology</h3>
                 <ul>
-                    <h3>Technology</h3>
                     <li> <Link href="#">Advanced AI Models Overview</Link> </li>
                     <li> <Link href="#">Drone Manufacturing, Assembly & Services</Link> </li>
                 </ul>
             </div>
               <div className={style.footer_links_single}>
+                <h3>Training</h3>
                 <ul>
-                    <h3>Training</h3>
                     <li> <Link href="#">Comprehensive Drone Training</Link> </li>
                     <li> <Link href="#">Certification & Skill Development</Link> </li>
                 </ul>
@@ -59,8 +61,8 @@ export default function Footer() {
         {/* footer links column */}
         <div className={style.footer_links}>
             <div className={style.footer_links_single}>
+                <h3>Services</h3>
                 <ul>
-                    <h3>Services</h3>
                     <li> <Link href="#">Agriculture & Farming</Link> </li>
                     <li> <Link href="#">Construction & Infrastructure</Link> </li>
                     <li> <Link href="#">Media, Entertainment & Marketing</Link> </li>
@@ -78,8 +80,8 @@ export default function Footer() {
          {/* footer links column */}
         <div className={style.footer_links}>
             <div className={style.footer_links_single}>
+                <h3>Products</h3>
                 <ul>
-                    <h3>Products</h3>
                     <li> <Link href="#">AgriFlow HDS40</Link> </li>
                     <li> <Link href="#">AgriFlow HDS-SEED</Link> </li>
                     <li> <Link href="#">SolarShine HDS40B</Link> </li>
@@ -95,8 +97,8 @@ export default function Footer() {
         {/* footer links column */}
         <div className={style.footer_links}>
             <div className={style.footer_links_single}>
+                <h3>Industries</h3>
                 <ul>
-                    <h3>Industries</h3>
                     <li> <Link href="#">Agriculture</Link> </li>
                     <li> <Link href="#">Public Safety</Link> </li>
                     <li> <Link href="#">Utilities</Link> </li>
@@ -130,8 +132,8 @@ export default function Footer() {
      {/* footer links column */}
         <div className={style.footer_links}>
             <div className={style.footer_links_single}>
+                <h3>Get in touch with us</h3>
                 <ul>
-                    <h3>Get in touch with us</h3>
                     <li> <Link href="#"> <Image src="/images/footer_call.svg" width={24} height={24} alt=''/> +91 9154749191</Link> </li>
                     <li> <Link href="#"><Image src="/images/footer_mail.svg" width={24} height={24} alt=''/>info@hindustandrones.io</Link> </li>
                     <li> <Link href="#"><Image src="/images/footer_map.svg" width={24} height={24} alt=''/>Hindustan Drone Services Private Limited<br/>
@@ -147,10 +149,11 @@ Financial District, Nanakramguda, Hyderabad - 500 032.</Link> </li>
 <div className={style.footerNewsletter}>
 <h3>Subscribe to our Newsletter</h3>
 <p>Subscribe for insights, updates, and stories from the evolving world of drone technology.</p>
-<form>
-    <input type='email' placeholder='Enter your email address'></input>
-    <button className="form_btn">Submit</button>
-</form>
+
+{/* newsletter form  */}
+
+<NewsletterForm btnClassName="form_btn" />
+
   <p className={style.footer_bottom_content_links}>
             <span><Link href="">Terms of Service</Link></span> 
             <span><Link href=""> Privacy Policy</Link></span> 

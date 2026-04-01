@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
-import Footer from "./components/Footer";
+import ConditionalFooter from "./components/ConditionalFooter";
 import AOSProvider from "./components/AOSProvider";
 import LenisProvider from "./components/LenisProvider";
 
@@ -32,11 +32,11 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable}`}
     >
-      <body>
+      <body suppressHydrationWarning>
         <LenisProvider />
         <AOSProvider />
         {children}
-        <Footer />
+        <ConditionalFooter />
       </body>
      
     </html>

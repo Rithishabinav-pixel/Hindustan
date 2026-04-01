@@ -1,0 +1,366 @@
+.heroContainerImage_container{
+    position: relative;
+}
+
+.heroContainerImage_content{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+
+.imageContent1{
+    font-size: 24px;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 420px;
+    margin-left: auto;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.imageContent2{
+  font-size: 48px;
+    line-height: 56px;
+   font-weight: 400;
+   text-align: left;
+    width: 100%;
+    max-width: 700px;
+    background: linear-gradient(101deg, #000419 3.66%, #3C3C3C 58.39%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.missionVision_container :global(.topContent){
+    max-width: 630px;
+}
+
+.missionVision_container,
+.teamContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.missionVision_content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.missionVision_contentImage img{
+    width: 100%;
+    height: auto;
+}
+
+.missionVision_contentImage{
+       width: calc(60% - 10px);
+
+}
+
+.missionVision_contentText{
+    width: calc(40% - 10px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.missionVision_contentText h3,
+.missionVision_contentText p{
+font-size: 24px;
+line-height: 32px;
+}
+
+.whyIndustries_section{
+    height: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-position-y: 100%;
+    background-image: url('/images/why_industries_bg.webp');
+}
+
+
+.whyIndustries_section::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.00) 52.62%);
+}
+
+.whyIndustries_topContent{
+    color: rgb(255, 255, 255);
+      
+}
+
+.teamContainer_topContent,
+.whyIndustries_topContent{
+  max-width: 670px;
+}
+
+.whyIndustries_container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+
+.whyIndustries_slider{
+    margin-top: auto;
+}
+
+.whyIndustriesCard h3{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.certified_section{
+    min-height: 100vh;
+    background-image: url("/images/certified_bg.webp");
+    background-size: 100% auto;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+.certified_section::before{
+    background: linear-gradient(185deg, rgba(0, 0, 0, 0.40) 4.35%, rgba(0, 0, 0, 0.00) 38.68%, rgba(0, 0, 0, 0.00) 46.16%, rgba(0, 0, 0, 0.00) 62.44%, rgba(0, 0, 0, 0.40) 72.41%);
+}
+
+.certifiedContainer .topContent,
+:global(.certifiedSwiper){
+    max-width: 972px;
+}
+
+:global(.certifiedSwiper){
+    margin-top: 24px;
+}
+
+:global(.certifiedSwiper) .whyIndustriesCard{
+    display: flex;
+    justify-content: center;
+}
+
+:global(.certifiedSwiper) .whyIndustriesCard img{
+    height:45px;
+    width: auto;
+}
+
+
+.teamscards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 140px;
+}
+
+.teamcard{
+    width: 33.33%;
+    max-width: 300px;
+    gap: 30px;
+}
+
+.teamcard,
+.teamContent{
+    display: flex;
+    flex-direction: column;
+}
+
+.teamContent{
+    gap: 16px;
+}
+
+.teamContent h3{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.teamImage img{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.teamcard:nth-child(4){
+    margin-left: auto;
+}
+
+/* responsive */
+
+/* laptop */
+@media (max-width:1400px){
+
+    .teamContent h3{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+}
+
+/* tablet */
+@media (max-width:1200px){
+
+    .missionVision_container,
+.teamContainer{
+    gap: 30px;
+}
+
+    .teamscards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.teamcard{
+    width:calc(33.33% - 13.33px);
+    max-width: unset;
+    gap: 20px;
+}
+
+.teamContent{
+    gap: 8px;
+}
+
+    :global(.certifiedSwiper) {
+       max-width: calc(100% - 40px);
+       margin-top: 30px;
+    }
+
+    .certified_section_Mobileimage{
+        width: 100%;
+        height: auto;
+    }
+
+    .certified_section{
+    min-height: unset;
+}
+
+   .certifiedContainer{
+    padding-left: 0;
+    padding-right: 0;
+   }
+
+
+.certified_section::before,
+.certified_section{
+    background:none;
+}
+
+    .certifiedContainer .topContent{
+        max-width: 670px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .whyIndustries_section{
+    min-height: 70vh;
+    height: 70vh;
+    background-image: url('/images/why_industries_bg_m.webp');
+}
+
+.whyIndustriesCard h3{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+    .missionVision_contentImage{
+       width: 100%;
+
+}
+
+.missionVision_contentText{
+    width: calc(50% - 10px);
+}
+
+.missionVision_contentText h3,
+.missionVision_contentText p{
+font-size: 20px;
+line-height: 28px;
+}
+
+.imageContent1{
+    font-size: 20px;
+    line-height: 28px;
+    max-width: 350px;
+}
+
+.imageContent2{
+  font-size: 34px;
+    line-height: 42px;
+    max-width: 450px;
+}
+
+  .heroContainerImage_content{
+    padding: 20px;
+  }
+
+}
+
+/* mobile */
+
+@media (max-width:767px){
+
+    .teamcard{
+    width: 100%;
+}
+
+    :global(.certifiedSwiper) .whyIndustriesCard img{
+    height:35px;
+}
+
+
+    .whyIndustries_section {
+        height: 90vh;
+        min-height: 90vh;
+    }
+
+    .missionVision_contentText{
+    width:100%;
+}
+
+.missionVision_contentText h3,
+.missionVision_contentText p{
+font-size: 16px;
+line-height: 24px;
+}
+
+    .imageContent1,
+    .imageContent2{
+        color: white;
+         font-size: 16px;
+        line-height: 24px;
+        max-width: 100%;
+
+       
+    }
+
+     .imageContent1{
+
+        text-align: left;
+        margin-top: 20px;
+     }
+
+    .imageContent2{
+     background: none;
+background-clip: unset;
+-webkit-background-clip: unset;
+-webkit-text-fill-color: unset;
+}
+
+    .heroContainerImage_content{
+        position: static;
+        padding: 0;
+        gap: 16px;
+    }
+
+}

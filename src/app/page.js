@@ -14,6 +14,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import ButtonFan from "./components/UI/ButtonFan";
+import LinkArrow from "./components/UI/LinkArrow";
 
 // why choose hindustan data
 const whyChoose = [
@@ -670,7 +671,7 @@ if(mobile) return
       </div>
 
 
-<div className={style.insight_cards}>
+<div className={style.insight_cards} data-animate="fade-up" data-animate-delay="100">
 
 
 
@@ -698,12 +699,7 @@ if(mobile) return
 >
   {insightdata.map((data, index) => (
     <SwiperSlide key={index}>
-   <div
-  {...(!mobile && {
-    "data-animate": "fade-up",
-    "data-animate-delay": index * 100,
-  })}
-  className={style.insight_card}
+   <div className={style.insight_card}
 >
         <Image
           className={style.insight_feature_image}
@@ -717,14 +713,9 @@ if(mobile) return
           <h3>{data.title}</h3>
           <p>{data.description}</p>
 
-          <Link href="#" className={`common_btn ${style.insight_btn}`}>
+          <Link href="#" className={`common_btn link_btn ${style.insight_btn}`}>
             <span>EXPLORE MORE</span>
-            <Image
-              src="/images/slider_arrow_right.svg"
-              alt=""
-              width={12}
-              height={12}
-            />
+           <LinkArrow/>
           </Link>
         </div>
       </div>
@@ -736,10 +727,11 @@ if(mobile) return
 
 <div className="slider_nav">
   <div className={`custom-prev custom_slider_btn `}>
-    <Image src="/images/slider_arrow_left.svg" width={12} height={12} alt=""/>
+    {/* <Image src="/images/slider_arrow_left.svg" width={12} height={12} alt=""/> */}
+    <LinkArrow/>
   </div>
   <div className={`custom-next custom_slider_btn `}>
-    <Image src="/images/slider_arrow_right.svg" width={12} height={12} alt=""/>
+   <LinkArrow/>
   </div>
   </div>
 

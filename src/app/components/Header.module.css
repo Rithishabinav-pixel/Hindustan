@@ -72,6 +72,10 @@ width: 94px;
 #headerLogo{
     width: 100px;
 }
+ .header.fixed #headerLogo{
+    width: 90px;
+ }
+
 #headerLogo img{
     width: 100%;
     height: auto;
@@ -87,5 +91,9 @@ width: 94px;
     #headerLogo{
         width: 80px;
     }
+
+    .header.fixed #headerLogo{
+width: 70px;
+}
 }
 

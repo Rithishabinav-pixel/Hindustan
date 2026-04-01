@@ -1,0 +1,244 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.pageTitle {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.loading {
+  padding: 48px 24px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.errorBanner {
+  padding: 14px 20px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  color: #dc2626;
+  font-size: 14px;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.input {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #111827;
+  font-family: var(--font-montserrat), sans-serif;
+  outline: none;
+  transition: border-color 0.15s;
+  background: #fff;
+}
+
+.input:focus {
+  border-color: #148f3f;
+}
+
+.input:disabled {
+  background: #f9fafb;
+  color: #9ca3af;
+}
+
+.textarea {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #111827;
+  font-family: var(--font-montserrat), sans-serif;
+  outline: none;
+  transition: border-color 0.15s;
+  background: #fff;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.textarea:focus {
+  border-color: #148f3f;
+}
+
+.textarea:disabled {
+  background: #f9fafb;
+  color: #9ca3af;
+}
+
+/* Repeater */
+.repeaterHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.repeaterItem {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #f9fafb;
+}
+
+.repeaterTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.repeaterLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.btnAdd {
+  padding: 8px 16px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1d4ed8;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.btnAdd:hover {
+  background: #dbeafe;
+}
+
+.btnRemove {
+  padding: 5px 12px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #dc2626;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.btnRemove:hover {
+  background: #fee2e2;
+}
+
+/* Form actions */
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btnCancel {
+  padding: 10px 24px;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.btnCancel:hover {
+  background: #f9fafb;
+}
+
+.btnSave {
+  padding: 10px 28px;
+  background: #148f3f;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.btnSave:hover {
+  background: #0f7c35;
+}
+
+.btnSave:disabled,
+.btnCancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# uploaded resumes (keep directory, ignore files)
+/public/uploads/resumes/*
+!/public/uploads/resumes/.gitkeep

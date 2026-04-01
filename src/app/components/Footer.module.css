@@ -26,14 +26,19 @@
     gap: 24px;
 }
 
-.footer_links_single ul{
+.footer_links_single ul,
+.footer_links_single{
       display: flex;
     flex-direction: column;
     gap: 16px;
-    list-style: none;
 }
 
-.footer_links_single ul h3{
+.footer_links_single ul{
+    list-style: none;
+
+}
+
+.footer_links_single h3{
     font-weight: 500;
 }
 
@@ -112,7 +117,7 @@
 }
 
 .footerNewsletter h3{
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .footerNewsletter form{

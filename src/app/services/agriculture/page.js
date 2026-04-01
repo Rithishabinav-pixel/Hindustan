@@ -5,13 +5,14 @@ import style from '../Service.module.css';
 import Link from 'next/link';
 import ButtonFan from '@/app/components/UI/ButtonFan';
 import Image from 'next/image';
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/navigation";
 
 import * as Accordion from "@radix-ui/react-accordion";
+import LinkArrow from '@/app/components/UI/LinkArrow';
 
 
 // sub services contents
@@ -156,15 +157,14 @@ export default function page() {
           const rect = el.getBoundingClientRect();
           const windowHeight = window.innerHeight;
     
-          // when element enters viewport → rect.top < windowHeight
-          // when reaches top → rect.top = 0
+        
     
           const progress = Math.min(
             Math.max((windowHeight - rect.top) / windowHeight, 0),
             1
           );
     
-          // 110% → 100%
+        
           const scale = 110 - progress * 10;
     
           el.style.backgroundSize = `${scale}% 100%`;
@@ -188,15 +188,15 @@ export default function page() {
 
    {/* service - hero section */}
 
-<section className={`common_section  ${style.hero_section}`}>
+<section className={`common_section innerpage_hero_section `}>
 
 
-   <div className={`container ${style.heroSection_container}`}>
+   <div className={`container innerpage_heroContainer `}>
 
 {/* service hero section title */}
-<h1 data-animate="fade-up" data-animate-delay="100" className={`common_heading ${style.heroSection_title}`}>Revolutionising Modern Farming with Precision Drone Technology</h1>
+<h1 data-animate="fade-up" data-animate-delay="100" className={`common_heading`}>Revolutionising Modern Farming with Precision Drone Technology</h1>
 
-<div  className={`topContent topContent_left ${style.heroSection_content}`}>
+<div  className={`topContent topContent_left  innerpage_heroContainer_content`}>
   {/* service hero section description */}
   <p data-animate="fade-up" data-animate-delay="150">HDS delivers end-to-end drone-based agricultural services for farmers, agribusinesses, cooperatives, and government bodies across India — improving productivity, sustainability, and resource efficiency through aerial imaging, AI, and precision application.</p>
    {/* service hero section button */}
@@ -206,9 +206,9 @@ export default function page() {
         </Link>
 </div>
 
-<div data-animate="fade-up" data-animate-delay="250" className={style.heroSection_image}>
+<div data-animate="fade-up" data-animate-delay="250" className={`innerpage_heroContainer_image `}>
 {/* service hero section image */}
-<Image className={style.standard_section_image} src="/images/services/agriculture/service_agriculture_hero.png" width={1290} height={700} alt="" />
+<Image src="/images/services/agriculture/service_agriculture_hero.png" width={1290} height={700} alt="" />
 
 </div>
 
@@ -337,10 +337,10 @@ export default function page() {
 
  <div className={`slider_nav ${style.droneSlider_nav}`}>
   <div className={`benefitsSwiper_custom-prev custom_slider_btn custom_slider_btn `}>
-    <Image src="/images/slider_arrow_left.svg" width={12} height={12} alt=""/>
+     <LinkArrow/>
   </div>
   <div className={`benefitsSwiper_custom-next custom_slider_btn `}>
-    <Image src="/images/slider_arrow_right.svg" width={12} height={12} alt=""/>
+    <LinkArrow/>
   </div>
   </div>
 
@@ -417,16 +417,16 @@ export default function page() {
 
  <div className={`slider_nav productSlider_nav ${style.productsdata_nav}`}>
   <div className={`droneSwiper_custom-prev custom_slider_btn custom_slider_btn `}>
-    <Image src="/images/slider_arrow_left.svg" width={12} height={12} alt=""/>
+       <LinkArrow/>
   </div>
   <div className={`droneSwiper_custom-next custom_slider_btn `}>
-    <Image src="/images/slider_arrow_right.svg" width={12} height={12} alt=""/>
+        <LinkArrow/>
   </div>
   </div>
 
    </section>
 
-   {/* service FAQ */}
+   {/* service FAQ section */}
  <section className={`common_section ${style.faq_section} faq_section`}>
 <div className={`container ${style.faqContainer}`}>
  <div className={`topContent ${style.topContent}`}>

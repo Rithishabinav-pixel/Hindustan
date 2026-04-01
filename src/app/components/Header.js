@@ -103,7 +103,7 @@ export default function Header() {
         {/* footer links column */}
         <div className={`${footerStyle.footer_links} ${menuStyle.menu_link_container}`}>
             <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`}>
-                <ul>
+                <ul className={menuStyle.noAccordion}>
                     <li> <Link href="#">Home</Link> </li>
                     <li> <Link href="#">About Us</Link> </li>
                     <li> <Link href="#">Blog</Link> </li>
@@ -111,15 +111,15 @@ export default function Header() {
                 </ul>
             </div>
              <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`}>
+                <h3>Technology</h3>
                 <ul>
-                    <h3>Technology</h3>
                     <li> <Link href="#">Advanced AI Models Overview</Link> </li>
                     <li> <Link href="#">Drone Manufacturing, Assembly & Services</Link> </li>
                 </ul>
             </div>
              <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`}>
+                <h3>Training</h3>
                 <ul>
-                    <h3>Training</h3>
                     <li> <Link href="#">Comprehensive Drone Training</Link> </li>
                     <li> <Link href="#">Certification & Skill Development</Link> </li>
                 </ul>
@@ -129,8 +129,8 @@ export default function Header() {
         {/* footer links column */}
         <div className={`${footerStyle.footer_links} ${menuStyle.menu_link_container}`}>
            <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`}>
+                <h3>Services</h3>
                 <ul>
-                    <h3>Services</h3>
                     <li> <Link href="#">Agriculture & Farming</Link> </li>
                     <li> <Link href="#">Construction & Infrastructure</Link> </li>
                     <li> <Link href="#">Media, Entertainment & Marketing</Link> </li>
@@ -148,8 +148,8 @@ export default function Header() {
          {/* footer links column */}
         <div className={`${footerStyle.footer_links} ${menuStyle.menu_link_container}`}>
            <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`}>
+                <h3>Products</h3>
                 <ul>
-                    <h3>Products</h3>
                     <li> <Link href="#">AgriFlow HDS40</Link> </li>
                     <li> <Link href="#">AgriFlow HDS-SEED</Link> </li>
                     <li> <Link href="#">SolarShine HDS40B</Link> </li>
@@ -165,8 +165,8 @@ export default function Header() {
         {/* footer links column */}
         <div className={`${footerStyle.footer_links} ${menuStyle.menu_link_container}`}>
             <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`}>
+                <h3>Industries</h3>
                 <ul>
-                    <h3>Industries</h3>
                     <li> <Link href="#">Agriculture</Link> </li>
                     <li> <Link href="#">Public Safety</Link> </li>
                     <li> <Link href="#">Utilities</Link> </li>

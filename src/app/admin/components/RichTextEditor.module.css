@@ -1,0 +1,131 @@
+.wrap {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  transition: border-color 0.15s;
+}
+
+.wrap:focus-within {
+  border-color: #148f3f;
+}
+
+.disabled {
+  background: #f9fafb;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 10px;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  flex-wrap: wrap;
+}
+
+.toolBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 28px;
+  padding: 0 6px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 13px;
+  color: #374151;
+  cursor: pointer;
+  font-family: var(--font-montserrat), sans-serif;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.toolBtn:hover {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+}
+
+.toolBtnActive {
+  background: #dcfce7;
+  border-color: #86efac;
+  color: #148f3f;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background: #e5e7eb;
+  margin: 0 4px;
+}
+
+/* Editor content area */
+.editorContent {
+  min-height: 160px;
+  cursor: text;
+}
+
+/* ProseMirror styles */
+.editorContent :global(.ProseMirror) {
+  min-height: 160px;
+  padding: 12px 14px;
+  outline: none;
+  font-size: 14px;
+  color: #111827;
+  font-family: var(--font-montserrat), sans-serif;
+  line-height: 1.7;
+}
+
+.editorContent :global(.ProseMirror p) {
+  margin: 0 0 8px;
+}
+
+.editorContent :global(.ProseMirror p:last-child) {
+  margin-bottom: 0;
+}
+
+.editorContent :global(.ProseMirror ul),
+.editorContent :global(.ProseMirror ol) {
+  padding-left: 20px;
+  margin: 0 0 8px;
+}
+
+.editorContent :global(.ProseMirror li) {
+  margin-bottom: 4px;
+}
+
+.editorContent :global(.ProseMirror strong) {
+  font-weight: 700;
+}
+
+.editorContent :global(.ProseMirror em) {
+  font-style: italic;
+}
+
+.editorContent :global(.ProseMirror u) {
+  text-decoration: underline;
+}
+
+.editorContent :global(.ProseMirror-placeholder) {
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+/* Source HTML textarea */
+.source {
+  width: 100%;
+  min-height: 160px;
+  padding: 12px 14px;
+  border: none;
+  outline: none;
+  resize: vertical;
+  font-size: 12px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #374151;
+  background: #f8f9fa;
+  box-sizing: border-box;
+  line-height: 1.6;
+}

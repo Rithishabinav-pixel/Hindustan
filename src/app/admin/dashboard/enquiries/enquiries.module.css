@@ -1,0 +1,132 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.pageTitle {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+/* ── Tabs ─────────────────────────────────────────────────────────────────── */
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.tab {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.tab:hover {
+  color: #374151;
+}
+
+.tabActive {
+  color: #148f3f;
+  border-bottom-color: #148f3f;
+}
+
+/* ── Table ────────────────────────────────────────────────────────────────── */
+.tableWrap {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.th {
+  text-align: left;
+  padding: 13px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.tr:not(:last-child) {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.tr:hover {
+  background: #fafafa;
+}
+
+.td {
+  padding: 12px 20px;
+  font-size: 14px;
+  color: #374151;
+  font-family: var(--font-montserrat), sans-serif;
+  vertical-align: top;
+}
+
+.messageCell {
+  max-width: 320px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.5;
+}
+
+.dateBadge {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.empty {
+  padding: 48px 24px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.resumeLink {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #f0faf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #148f3f;
+  text-decoration: none;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.resumeLink:hover {
+  background: #dcfce7;
+}

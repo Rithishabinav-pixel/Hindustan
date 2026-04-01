@@ -1,0 +1,206 @@
+.careerhero_section{
+        padding: 190px 20px 0px 20px;
+}
+
+.heroContainer{
+    padding: 32px;
+    background-color: #000624;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.heroContainer h1{
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.jobOverview,
+.jobOverview div{
+    display: flex;
+    align-items: center;
+}
+
+.jobOverview{
+    gap: 24px;
+}
+
+.jobOverview div{
+    gap: 16px;
+    width: 100%;
+    max-width: 202px;
+}
+
+.jobOverview div img{
+    filter: invert(1) brightness(100);
+}
+
+.jobDetailContainer{
+    display: flex;
+    gap: 30px;
+}
+
+.jobDetailContainer .content{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.jobDetailContainer .content .detail,
+.jobDetailContainer .content .detail div{
+      display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.jobDetailContainer .content .detail div ul{
+    padding-left: 20px;
+    line-height: 24px;
+}
+
+.jobDetailContainer .content .detail h3{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+}
+
+.jobDetailContainer  .contactForm{
+    width: 45%;
+}
+
+.jobDetailContainer  .contactForm h3{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.jobDetailContainer  .contactForm form textarea{
+    height: 180px;
+}
+
+.jobDetailContainer .contactForm form .fileLabel{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: solid rgba(255, 255, 255, 0.5) 1px;
+    padding-bottom: 16px;
+    cursor: pointer;
+}
+
+.acceptBox{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.acceptBox .checkbox{
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+.acceptBox .checkbox img{
+    width: 100%;
+    height: auto;
+}
+
+/* responsive */
+
+/* laptop */
+@media (max-width:1400px){
+
+     .heroContainer{
+        gap: 16px;
+     }
+
+     .jobDetailContainer .content{
+    gap: 30px;
+}
+
+.jobDetailContainer .content .detail,
+.jobDetailContainer .content .detail div{
+    gap: 10px;
+}
+
+    .heroContainer h1{
+    font-size: 36px;
+    line-height: 44px;
+}
+
+  .hero_section {
+    padding: 190px 20px 0px 20px;
+}
+}
+
+
+
+/* tablet */
+
+@media (max-width:1200px) {
+
+    .jobOverview div img{
+        width: 20px;
+        height: auto;
+    }
+
+        .jobOverview div {
+            gap: 12px;
+        }
+
+         .jobDetailContainer .content{
+    gap: 30px;
+}
+
+.jobDetailContainer  .contactForm,
+  .jobDetailContainer .content{
+    width: 100%;
+}
+
+
+    .jobDetailContainer{
+    flex-direction: column;
+    gap: 50px;
+}
+
+ .careerhero_section {
+    padding: 170px 20px 0px 20px;
+}
+}
+
+
+/* mobile */
+@media (max-width:767px) {
+
+    .jobOverview{
+   flex-direction: column;
+   gap: 16px;
+   align-items: flex-start;
+}
+
+.jobOverview div{
+    width: 100%;
+    max-width: 100%;
+}
+
+     .heroContainer h1{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+    .heroContainer{
+        padding: 20px;
+    }
+
+      .careerhero_section {
+    padding: 120px 20px 0 20px;
+}
+
+.jobDetailContainer .content .detail h3{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+}

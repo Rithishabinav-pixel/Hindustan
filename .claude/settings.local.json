@@ -4,7 +4,11 @@
       "Bash(npm install:*)",
       "Bash(node -e \"console.log\\(require\\(''./node_modules/prisma/package.json''\\).version\\)\")",
       "Bash(npx prisma:*)",
-      "Bash(ls src/app/admin/*.js)"
+      "Bash(ls src/app/admin/*.js)",
+      "Bash(\"d:/Rithish/hindustan/public/uploads/resumes/.gitkeep\")",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(node -e \"const {execSync}=require\\(''child_process''\\); try{const out=execSync\\(''npx prisma db push'',{timeout:50000,encoding:''utf8'',stdio:''pipe''}\\); console.log\\(out\\);}catch\\(e\\){console.error\\(e.stdout||''''\\); console.error\\(e.stderr||''''\\);}\")",
+      "Bash(node -e \"require\\(''@tiptap/react''\\); console.log\\(''ok''\\)\")"
     ]
   }
 }
