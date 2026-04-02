@@ -108,9 +108,9 @@ export default function page() {
         <div className={`container ${style.heroSection_container}`}>
 
   <div className={`topContent ${style.topContent}`}>
-        <h1 data-animate="fade-up" data-animate-delay="100" className="common_heading">Technology Powering The Future Of Drone Innovation</h1>
-        <p data-animate="fade-up" data-animate-delay="200">Our drone technologies combine advanced engineering, intelligent analytics, and precision systems to deliver reliable aerial solutions across industries.</p>
-       <Link data-animate="fade-up" data-animate-delay="300" href="#" className="common_btn">
+        <h1 data-animate="fade-up" data-animate-delay="150" className="common_heading">Technology Powering The Future Of Drone Innovation</h1>
+        <p data-animate="fade-up" data-animate-delay="300">Our drone technologies combine advanced engineering, intelligent analytics, and precision systems to deliver reliable aerial solutions across industries.</p>
+       <Link data-animate="fade-up" data-animate-delay="450" href="#" className="common_btn">
          <ButtonFan/>
          <span>Enquire Now</span>
         </Link>
@@ -123,9 +123,9 @@ export default function page() {
     {/* video section */}
     <section className={style.videoSection}>
 
-      <div className={style.videoSection_img}>
-        <Image src="/images/tech_ai.svg" className={style.ai_bg} height={598} width={599} alt="Ai Technology" priority/>
-        <Image src="/images/tech_ai_text.webp" className={style.ai_text} height={598} width={599} alt="Ai Technology" priority/>
+      <div className={style.videoSection_img} data-animate="fade-up" data-animate-delay="600">
+        <Image src="/images/tech_ai.svg"  className={style.ai_bg} height={598} width={598} alt="Ai Technology" priority/>
+        <Image src="/images/tech_ai_text.webp" className={style.ai_text} height={598} width={598} alt="Ai Technology" priority/>
 
       </div>
 
@@ -157,7 +157,7 @@ export default function page() {
 
  <div className={`topContent ${style.topContent} `}>
         <h2 data-animate="fade-up" className="common_heading">AI MODELS — Intelligent Analytics Powering DaaS</h2>
-        <p data-animate="fade-up" data-animate-delay="100">At the heart of every HDS operation is a proprietary suite of AI models that transform raw drone data — imagery, thermal feeds, LiDAR scans, and sensor telemetry — into precise, actionable intelligence. </p>
+        <p data-animate="fade-up" data-animate-delay="150">At the heart of every HDS operation is a proprietary suite of AI models that transform raw drone data — imagery, thermal feeds, LiDAR scans, and sensor telemetry — into precise, actionable intelligence. </p>
 
       </div>
 

@@ -1,0 +1,22 @@
+.toolIcon {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.blogEditor :global(.ProseMirror) {
+  min-height: 300px;
+}
+
+.blogEditor :global(.ProseMirror img) {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.blogEditor :global(.ProseMirror a) {
+  color: #148f3f;
+  text-decoration: underline;
+  cursor: pointer;
+}

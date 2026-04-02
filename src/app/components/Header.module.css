@@ -83,6 +83,17 @@ width: 94px;
 }
 
 
+/* tablet */
+@media (max-width:1200px){
+.header{
+       padding: 8px 0;
+}
+}
+
+
+
+/* mobile */
+
 @media (max-width:767px){
     .header_contact_btn{
         display: none;

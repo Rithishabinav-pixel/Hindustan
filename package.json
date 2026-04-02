@@ -11,6 +11,8 @@
   "dependencies": {
     "@prisma/client": "6.19.2",
     "@radix-ui/react-accordion": "^1.2.12",
+    "@tiptap/extension-image": "^3.22.0",
+    "@tiptap/extension-link": "^3.22.0",
     "@tiptap/extension-underline": "^3.22.0",
     "@tiptap/pm": "^3.22.0",
     "@tiptap/react": "^3.22.0",

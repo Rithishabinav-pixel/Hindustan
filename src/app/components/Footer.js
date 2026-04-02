@@ -15,9 +15,9 @@ export default function Footer() {
    <section className={`common_section ${style.footer_cta_section}`}>
     <div className={`container`}>
         <div className={`topContent ${style.footer_cta_topContent}`}>
-            <h2 className='common_heading'>Ready to see how far drone intelligence can take you?</h2>
-            <p>Partner with Hindustan Drone Services to explore the future of drone technology. Connect with our team to explore the possibilities.</p>
-             <Link href="#" className="common_btn">
+            <h2 className='common_heading' data-animate="fade-up">Ready to see how far drone intelligence can take you?</h2>
+            <p data-animate="fade-up" data-animate-delay="150">Partner with Hindustan Drone Services to explore the future of drone technology. Connect with our team to explore the possibilities.</p>
+             <Link href="#" className="common_btn" data-animate="fade-up" data-animate-delay="300">
          <ButtonFan/>
          <span>Contact Us</span>
         </Link>

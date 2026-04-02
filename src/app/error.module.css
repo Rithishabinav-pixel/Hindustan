@@ -1,0 +1,114 @@
+.errorContainer{
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.errorContainer .container{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.errorCode{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.errorCode h2{
+    font-size: 250px;
+    line-height: 250px;
+    font-weight: 400;
+}
+
+.errorContainer p{
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+}
+
+.errorCode img {
+    width: 250px;
+    height: auto;
+    animation: rotateStages 3s forwards ease-out;
+    transform: rotate(-720deg);
+    transition: 0.5s all;
+}
+
+@keyframes rotateStages {
+    95%{
+        transform: rotate(2deg);    
+
+    }
+     90%,100% {
+        transform: rotate(0deg);    
+    }
+}
+
+/* responsive */
+
+/* laptop */
+
+@media (max-width:1400px)  {
+
+    .errorCode h2{
+    font-size: 200px;
+    line-height: 200px;
+}
+
+.errorCode img {
+    width: 200px;
+}
+    
+}
+
+
+/* laptop */
+
+@media (max-width:1400px)  {
+
+    .errorContainer{
+    min-height: 70vh;
+    gap: 20px;
+}
+
+    .errorCode h2{
+    font-size: 150px;
+    line-height: 150px;
+}
+
+.errorCode img {
+    width: 150px;
+}
+    
+}
+
+
+/* mobile */
+
+@media (max-width:1400px)  {
+
+    .errorContainer{
+    min-height: 50vh;
+    margin-top: 60px;
+}
+
+    .errorCode h2{
+    font-size: 130px;
+    line-height: 130px;
+}
+
+.errorCode img {
+    width: 130px;
+}
+
+.errorCode{
+    gap: 10px;
+}
+    
+}

@@ -8,7 +8,8 @@
       "Bash(\"d:/Rithish/hindustan/public/uploads/resumes/.gitkeep\")",
       "Bash(echo \"EXIT:$?\")",
       "Bash(node -e \"const {execSync}=require\\(''child_process''\\); try{const out=execSync\\(''npx prisma db push'',{timeout:50000,encoding:''utf8'',stdio:''pipe''}\\); console.log\\(out\\);}catch\\(e\\){console.error\\(e.stdout||''''\\); console.error\\(e.stderr||''''\\);}\")",
-      "Bash(node -e \"require\\(''@tiptap/react''\\); console.log\\(''ok''\\)\")"
+      "Bash(node -e \"require\\(''@tiptap/react''\\); console.log\\(''ok''\\)\")",
+      "Bash(node -e \"const {execSync}=require\\('child_process'\\); try{const out=execSync\\('npx prisma db push --skip-generate',{timeout:50000,encoding:'utf8',stdio:'pipe'}\\); console.log\\(out\\);}catch\\(e\\){console.error\\(e.stdout||''\\); console.error\\(e.stderr||''\\);}\")"
     ]
   }
 }
