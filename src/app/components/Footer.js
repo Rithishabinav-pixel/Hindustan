@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import style from "./Footer.module.css"
 import Link from 'next/link'
 import Image from 'next/image'
@@ -7,11 +8,21 @@ import ButtonFan from './UI/ButtonFan'
 
 export default function Footer() {
 
- const year = new Date().getFullYear();
+  const year = new Date().getFullYear();
+
+  const [openSections, setOpenSections] = useState(new Set());
+  function toggleSection(key) {
+    setOpenSections(prev => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
+  }
 
   return (
    <>
-   
+
    <section className={`common_section ${style.footer_cta_section}`}>
     <div className={`container`}>
         <div className={`topContent ${style.footer_cta_topContent}`}>
@@ -33,8 +44,8 @@ export default function Footer() {
 
         {/* footer links column */}
         <div className={style.footer_links}>
-            <div className={style.footer_links_single}>
-                <h3>Quick Links</h3>
+            <div className={style.footer_links_single} data-accordion={openSections.has(0) ? "open" : "closed"}>
+                <h3 onClick={() => toggleSection(0)}>Quick Links<span className={style.accordion_icon} aria-hidden="true">{openSections.has(0) ? '–' : '+'}</span></h3>
                 <ul>
                     <li> <Link href="#">Home</Link> </li>
                     <li> <Link href="#">About Us</Link> </li>
@@ -42,15 +53,15 @@ export default function Footer() {
                     <li> <Link href="#">Contact Us </Link> </li>
                 </ul>
             </div>
-             <div className={style.footer_links_single}>
-                <h3>Technology</h3>
+             <div className={style.footer_links_single} data-accordion={openSections.has(1) ? "open" : "closed"}>
+                <h3 onClick={() => toggleSection(1)}>Technology<span className={style.accordion_icon} aria-hidden="true">{openSections.has(1) ? '–' : '+'}</span></h3>
                 <ul>
                     <li> <Link href="#">Advanced AI Models Overview</Link> </li>
                     <li> <Link href="#">Drone Manufacturing, Assembly & Services</Link> </li>
                 </ul>
             </div>
-              <div className={style.footer_links_single}>
-                <h3>Training</h3>
+              <div className={style.footer_links_single} data-accordion={openSections.has(2) ? "open" : "closed"}>
+                <h3 onClick={() => toggleSection(2)}>Training<span className={style.accordion_icon} aria-hidden="true">{openSections.has(2) ? '–' : '+'}</span></h3>
                 <ul>
                     <li> <Link href="#">Comprehensive Drone Training</Link> </li>
                     <li> <Link href="#">Certification & Skill Development</Link> </li>
@@ -60,8 +71,8 @@ export default function Footer() {
 
         {/* footer links column */}
         <div className={style.footer_links}>
-            <div className={style.footer_links_single}>
-                <h3>Services</h3>
+            <div className={style.footer_links_single} data-accordion={openSections.has(3) ? "open" : "closed"}>
+                <h3 onClick={() => toggleSection(3)}>Services<span className={style.accordion_icon} aria-hidden="true">{openSections.has(3) ? '–' : '+'}</span></h3>
                 <ul>
                     <li> <Link href="#">Agriculture & Farming</Link> </li>
                     <li> <Link href="#">Construction & Infrastructure</Link> </li>
@@ -79,8 +90,8 @@ export default function Footer() {
 
          {/* footer links column */}
         <div className={style.footer_links}>
-            <div className={style.footer_links_single}>
-                <h3>Products</h3>
+            <div className={style.footer_links_single} data-accordion={openSections.has(4) ? "open" : "closed"}>
+                <h3 onClick={() => toggleSection(4)}>Products<span className={style.accordion_icon} aria-hidden="true">{openSections.has(4) ? '–' : '+'}</span></h3>
                 <ul>
                     <li> <Link href="#">AgriFlow HDS40</Link> </li>
                     <li> <Link href="#">AgriFlow HDS-SEED</Link> </li>
@@ -96,8 +107,8 @@ export default function Footer() {
 
         {/* footer links column */}
         <div className={style.footer_links}>
-            <div className={style.footer_links_single}>
-                <h3>Industries</h3>
+            <div className={style.footer_links_single} data-accordion={openSections.has(5) ? "open" : "closed"}>
+                <h3 onClick={() => toggleSection(5)}>Industries<span className={style.accordion_icon} aria-hidden="true">{openSections.has(5) ? '–' : '+'}</span></h3>
                 <ul>
                     <li> <Link href="#">Agriculture</Link> </li>
                     <li> <Link href="#">Public Safety</Link> </li>
@@ -112,34 +123,32 @@ export default function Footer() {
             </div>
         </div>
 
-        
+
 
     </div>
 
 {/* footer bottom bar */}
 <div className={`container ${style.footer_bottom_container}`}>
 
-   
-
     <div className={style.footer_bottom_content}>
          <Link href="/" id={style.footerLogo}>
      <Image src="/images/logo.svg" alt="logo" width={145} height={130}/>
     </Link>
-      
+
         <p> © {year} HindustanDrones, All Rights Reserved.</p>
     </div>
 
      {/* footer links column */}
         <div className={style.footer_links}>
             <div className={style.footer_links_single}>
-                <h3>Get in touch with us</h3>
+                <h3 onClick={() => toggleSection(6)}>Get in touch with us</h3>
                 <ul>
                     <li> <Link href="#"> <Image src="/images/footer_call.svg" width={24} height={24} alt=''/> +91 9154749191</Link> </li>
                     <li> <Link href="#"><Image src="/images/footer_mail.svg" width={24} height={24} alt=''/>info@hindustandrones.io</Link> </li>
                     <li> <Link href="#"><Image src="/images/footer_map.svg" width={24} height={24} alt=''/>Hindustan Drone Services Private Limited<br/>
 Unit No.1011A, Level 1, Sky One (Wing A), Prestige SkyTech,<br/>
 Financial District, Nanakramguda, Hyderabad - 500 032.</Link> </li>
-                   
+
                 </ul>
             </div>
         </div>
@@ -155,8 +164,8 @@ Financial District, Nanakramguda, Hyderabad - 500 032.</Link> </li>
 <NewsletterForm btnClassName="form_btn" />
 
   <p className={style.footer_bottom_content_links}>
-            <span><Link href="">Terms of Service</Link></span> 
-            <span><Link href=""> Privacy Policy</Link></span> 
+            <span><Link href="">Terms of Service</Link></span>
+            <span><Link href=""> Privacy Policy</Link></span>
             </p>
 </div>
 

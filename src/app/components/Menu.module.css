@@ -78,12 +78,6 @@ display: none;
 }
 
 
-.menu_link_container {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.3s ease-in-out;
-}
-
 
 .menu_container .menu_link_container:nth-child(1) {
   transition-delay: 0.5s;
@@ -176,20 +170,42 @@ display: none;
 
 /* mobile */
 @media (max-width:767px) {
+
+    .section{
+    overflow-y: scroll;
+    min-height: 100vh;
+    max-height: 100vh;
+    height: auto;
+}
+
+     .menuLinks_single h3{
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: capitalize;
+}  
+    
     .menu_container{
         margin-top: 50px;
     }
-    .menuLinks_single ul:not(.noAccordion) {
-        max-height: 28px;
+
+     .menu_container,
+      .menu_link_container{
+        gap: 16px;
+     }
+
+
+
+    /* Collapsed state — only sections with data-accordion are affected;
+       the Quick Links group (no data-accordion) is untouched */
+    .menuLinks_single[data-accordion] ul {
+        max-height: 0;
         overflow: hidden;
-        transition: 0.3s ease-in;
+        transition:  0.3s ease;
     }
-      .menuLinks_single ul:hover{
-        animation: showsubmenu 0.3s forwards linear;
-      }
-      @keyframes showsubmenu {
-        to{
-            max-height: 1000px;
-        }
-      }
+
+    /* Expanded state */
+    .menuLinks_single[data-accordion="open"] ul {
+        max-height: 800px;
+        margin-top: 16px;
+    }
 }

@@ -126,10 +126,17 @@
   margin-top: 0;
 }
 
+
+
 /* responsive */
 
 /* tablet */
 @media (max-width:1200px){
+
+    .product_section .topContent{
+    width: 100%;
+    max-width: 500px;
+}
 
     .benefitsCard{
     gap: 8px;

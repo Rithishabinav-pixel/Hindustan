@@ -4,6 +4,8 @@
     background-size: cover;
 }
 
+
+
 .footer_cta_topContent{
     max-width:850px;
 }
@@ -40,6 +42,8 @@
 
 .footer_links_single h3{
     font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
 }
 
 .footer_links_single ul li a{
@@ -164,6 +168,9 @@
 }
 
 
+/* accordion icon: hidden on desktop/tablet, shown only in mobile media query below */
+.accordion_icon { display: none; }
+
 /* responsive */
 
 /* laptop */
@@ -194,6 +201,11 @@
 /* tablet */
 
 @media (max-width:1200px){
+
+    .footer_links_single h3{
+    font-size: 20px;
+    line-height:28px;
+}
 
     .footer_bottom_container .footer_links{
     width: 100%;
@@ -239,15 +251,65 @@
 
 /* Mobile */
 @media (max-width:767px) {
+
+    .footer_links,
+    .footer_container{
+        gap: 20px;
+    }
+
+      .footer_links_single h3{
+    font-size: 18px;
+    line-height:26px;
+}
+
     .footer_container {
         padding: 50px 20px;
     }
     .footer_links{
         width: 100%;
     }
-    
+
 .footerNewsletter form input::placeholder{
      font-size: 14px;
     line-height: 22px;
 }
+
+/* ── Accordion (mobile only) ── */
+
+/* Show icon, make it part of the flex row */
+.accordion_icon {
+    display: inline;
+    flex-shrink: 0;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+/* Remove gap between h3 and ul so closed sections have no phantom space */
+.footer_links_single[data-accordion] {
+    gap: 0;
+}
+
+/* Make the entire h3 clickable with a flex row so icon sits on the right */
+.footer_links_single[data-accordion] h3 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
+
+/* Collapsed state */
+.footer_links_single[data-accordion] ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+/* Expanded state — margin-top restores the spacing that gap used to provide */
+.footer_links_single[data-accordion="open"] ul {
+    max-height: 800px;
+    margin-top: 16px;
+}
+
 }

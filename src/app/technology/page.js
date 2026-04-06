@@ -162,7 +162,7 @@ export default function page() {
       </div>
 
 
-      <div className={style.tableSection_table} data-animate="fade-up" data-animate-delay="100">
+      <div className={`${style.tableSection_table}`} >
 
         <div className={`${style.row} ${style.row_head}`}>
          <div className={style.data}><p>AI Model</p></div>
@@ -172,7 +172,7 @@ export default function page() {
         </div>
 
         {AIModelsData.map((item,index)=>(
-           <div className={`${style.row} ${style.row_body}`} key={index}>
+           <div className={`${style.row} ${style.row_body}`} key={index} data-animate="fade-up" data-animate-delay="100" >
 
             {mobile && 
             <div className={`${style.mobile_data_image}`}> <Image src={item.image} alt={item.ai_model} width={188} height={125} /> </div>

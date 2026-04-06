@@ -204,11 +204,10 @@ export default function ServicePageContent({ service }) {
               loop={true}
               spaceBetween={30}
               breakpoints={{
-                768:  { slidesPerView: 2, spaceBetween: 60 },
-                1201: { slidesPerView: 3, spaceBetween: 120 },
-              }}
-              className="productsSwiper"
-            >
+                768: {slidesPerView: 2, spaceBetween: 60,},
+                1201: {slidesPerView: 3,spaceBetween: 120},
+                }}
+              className="productsSwiper">
               {products.map((product, index) => (
                 <SwiperSlide key={index}>
                   <div className="product_card">

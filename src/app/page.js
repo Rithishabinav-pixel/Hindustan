@@ -200,6 +200,20 @@ const insightdata = [
 
 export default function Home() {
 
+
+const tabRef = useRef(null);
+
+const handleClick = (item, e) => {
+  // Capture the li before setTimeout — React recycles synthetic events after the handler returns.
+  const li = e.currentTarget.closest('li');
+  setActiveTech(item);
+  setTimeout(() => {
+    if (!li) return;
+    const top = li.getBoundingClientRect().top + window.scrollY - 100;
+    window.scrollTo({ behavior: 'smooth', top });
+  }, 0);
+};
+
   const statsRef = useRef(null);
 const [startCount, setStartCount] = useState(false);
 
@@ -446,7 +460,7 @@ if(mobile) return
 
      <div className={style.tech_contents_container}>
   <aside>
-<ul>
+<ul ref={tabRef}>
   {techdata.map((item, index) => {
     const isActive = activeTech.title === item.title;
 
@@ -455,11 +469,11 @@ if(mobile) return
         
 
         <div
-          className={isActive ? `${style.tabActive}` : ""}
-          onClick={() => setActiveTech(item)}
-        >
-          {item.title}
-        </div>
+  className={isActive ? `${style.tabActive}` : ""}
+  onClick={(e) => handleClick(item, e)}
+>
+  {item.title}
+</div>
 
         {/* for mobile */}
         {mobile && isActive && (

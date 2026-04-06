@@ -6,7 +6,6 @@
 
 html,body{
   user-select: none;
-  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar{
@@ -268,6 +267,7 @@ margin-top: 20px;
   flex-direction: column;
   gap: 40px;
 }
+
 .faq {
   width: 100%;
   max-width: 850px;
@@ -458,6 +458,11 @@ background: none;
 
 /* for tablet view */
 @media (max-width: 1200px){
+
+  .faq{
+    margin: unset;
+    max-width: 100%;
+  }
 
   .desktop_break{
     display: none;

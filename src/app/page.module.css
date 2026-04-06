@@ -621,10 +621,13 @@ opacity: 1;
   }
 
 
-  .standard_section,
-  .drone_system{
+  .standard_section{
     padding: 0;
   }
+
+   .drone_system{
+    padding: 0 0 50px 0;
+   }
 
   .standard_section,
   .redefiningsection{

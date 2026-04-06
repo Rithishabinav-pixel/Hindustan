@@ -300,17 +300,18 @@ export default function page() {
       prevEl: ".benefitsSwiper_custom-prev",
       nextEl: ".benefitsSwiper_custom-next",
     }}
+    centeredSlides={true}
     slidesPerView={1}
     loop={true}
     spaceBetween={30}
     breakpoints={{
       768: {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: 60,
       },
       1201: {
-        slidesPerView: 4,
-        spaceBetween: 30,
+        slidesPerView: 3,
+        spaceBetween: 120,
       },
     }}
     className="benefitsSwiper"

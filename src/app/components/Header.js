@@ -11,7 +11,22 @@ import footerStyle from "./Footer.module.css"
 export default function Header() {
 
  const [isFixed, setIsFixed] = useState(false);
- const [menuShow,setMenuShow] = useState(false)
+ const [menuShow, setMenuShow] = useState(false);
+ const [menuOpenSections, setMenuOpenSections] = useState(new Set());
+
+ // Reset all accordion sections whenever the menu is opened
+ useEffect(() => {
+   if (menuShow) setMenuOpenSections(new Set());
+ }, [menuShow]);
+
+ function toggleMenuSection(key) {
+   setMenuOpenSections(prev => {
+     const next = new Set(prev);
+     if (next.has(key)) next.delete(key);
+     else next.add(key);
+     return next;
+   });
+ }
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -47,9 +62,9 @@ export default function Header() {
     
     <Link href="/" id={style.headerLogo}>
     {isFixed? (
-  <Image src="/images/logo_f.svg" alt="logo" width={90} height={80.5}/>
+  <Image src="/images/logo_f.svg" alt="logo" width={90} loading="eager" height={80.5}/>
     ):
-    (  <Image src="/images/logo.svg" alt="logo" width={145} height={130}/>)}
+    (  <Image src="/images/logo.svg" alt="logo" width={145} height={130} loading="eager" />)}
   
     </Link>
 
@@ -110,15 +125,15 @@ export default function Header() {
                     <li> <Link href="#">Contact Us </Link> </li>
                 </ul>
             </div>
-             <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`}>
-                <h3>Technology</h3>
+             <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`} data-accordion={menuOpenSections.has(0) ? "open" : "closed"}>
+                <h3 onClick={() => toggleMenuSection(0)}>Technology<span className={footerStyle.accordion_icon} aria-hidden="true">{menuOpenSections.has(0) ? '–' : '+'}</span></h3>
                 <ul>
                     <li> <Link href="#">Advanced AI Models Overview</Link> </li>
                     <li> <Link href="#">Drone Manufacturing, Assembly & Services</Link> </li>
                 </ul>
             </div>
-             <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`}>
-                <h3>Training</h3>
+             <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`} data-accordion={menuOpenSections.has(1) ? "open" : "closed"}>
+                <h3 onClick={() => toggleMenuSection(1)}>Training<span className={footerStyle.accordion_icon} aria-hidden="true">{menuOpenSections.has(1) ? '–' : '+'}</span></h3>
                 <ul>
                     <li> <Link href="#">Comprehensive Drone Training</Link> </li>
                     <li> <Link href="#">Certification & Skill Development</Link> </li>
@@ -128,8 +143,8 @@ export default function Header() {
 
         {/* footer links column */}
         <div className={`${footerStyle.footer_links} ${menuStyle.menu_link_container}`}>
-           <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`}>
-                <h3>Services</h3>
+           <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`} data-accordion={menuOpenSections.has(2) ? "open" : "closed"}>
+                <h3 onClick={() => toggleMenuSection(2)}>Services<span className={footerStyle.accordion_icon} aria-hidden="true">{menuOpenSections.has(2) ? '–' : '+'}</span></h3>
                 <ul>
                     <li> <Link href="#">Agriculture & Farming</Link> </li>
                     <li> <Link href="#">Construction & Infrastructure</Link> </li>
@@ -147,8 +162,8 @@ export default function Header() {
 
          {/* footer links column */}
         <div className={`${footerStyle.footer_links} ${menuStyle.menu_link_container}`}>
-           <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`}>
-                <h3>Products</h3>
+           <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`} data-accordion={menuOpenSections.has(3) ? "open" : "closed"}>
+                <h3 onClick={() => toggleMenuSection(3)}>Products<span className={footerStyle.accordion_icon} aria-hidden="true">{menuOpenSections.has(3) ? '–' : '+'}</span></h3>
                 <ul>
                     <li> <Link href="#">AgriFlow HDS40</Link> </li>
                     <li> <Link href="#">AgriFlow HDS-SEED</Link> </li>
@@ -164,8 +179,8 @@ export default function Header() {
 
         {/* footer links column */}
         <div className={`${footerStyle.footer_links} ${menuStyle.menu_link_container}`}>
-            <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`}>
-                <h3>Industries</h3>
+            <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`} data-accordion={menuOpenSections.has(4) ? "open" : "closed"}>
+                <h3 onClick={() => toggleMenuSection(4)}>Industries<span className={footerStyle.accordion_icon} aria-hidden="true">{menuOpenSections.has(4) ? '–' : '+'}</span></h3>
                 <ul>
                     <li> <Link href="#">Agriculture</Link> </li>
                     <li> <Link href="#">Public Safety</Link> </li>
