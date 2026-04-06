@@ -361,28 +361,28 @@ if(mobile) return
 
 
 <div className={style.stats} ref={statsRef}>
-  <div className={style.stat_card}>
+  <div className={style.stat_card} data-animate="fade-up" >
   <h3 className="common_heading">
     <Counter end={120} suffix="+" start={startCount} />
   </h3>
   <p>Successful Drone Missions Delivered</p>
 </div>
 
-<div className={style.stat_card}>
+<div className={style.stat_card} data-animate="fade-up" data-animate-delay={`${mobile?"0":"100"}`}>
   <h3 className="common_heading">
     <Counter end={20} suffix="+" start={startCount} />
   </h3>
   <p>Industries Served with Aerial Intelligence</p>
 </div>
 
-<div className={style.stat_card}>
+<div className={style.stat_card} data-animate="fade-up" data-animate-delay={`${mobile?"0":"200"}`}>
   <h3 className="common_heading">
     <Counter end={98} suffix="%" start={startCount} />
   </h3>
   <p>Successful Mission Completion Rate</p>
 </div>
 
-<div className={style.stat_card}>
+<div className={style.stat_card} data-animate="fade-up" data-animate-delay={`${mobile?"0":"300"}`}>
   <h3 className="common_heading">
     <Counter end={1200} suffix="+" start={startCount} />
   </h3>
@@ -458,7 +458,7 @@ if(mobile) return
         </Link>
       </div>
 
-     <div className={style.tech_contents_container}>
+     <div className={style.tech_contents_container} data-animate="fade-up" data-animate-delay="100">
   <aside>
 <ul ref={tabRef}>
   {techdata.map((item, index) => {
@@ -594,7 +594,7 @@ if(mobile) return
       </div>
 </div>
 
-<div className={style.drone_slider}>
+<div className={style.drone_slider} data-animate="fade-up" data-animate-delay="100">
  
 <>
 
