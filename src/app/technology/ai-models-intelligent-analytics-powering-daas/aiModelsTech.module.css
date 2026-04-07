@@ -55,7 +55,6 @@ position: absolute;
 top: 0;
 left: 0;
 animation: aiBg 60s infinite alternate linear;
-
 }
 
 @keyframes aiBg {
