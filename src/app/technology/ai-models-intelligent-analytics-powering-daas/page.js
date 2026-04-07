@@ -1,9 +1,9 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import style from './Technology.module.css'
+import style from './aiModelsTech.module.css'
 import Link from 'next/link'
-import ButtonFan from '../components/UI/ButtonFan'
-import Header from '../components/Header'
+import ButtonFan from '../../components/UI/ButtonFan'
+import Header from '../../components/Header'
 import Image from 'next/image'
 
 

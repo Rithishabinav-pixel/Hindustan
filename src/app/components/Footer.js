@@ -5,8 +5,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import NewsletterForm from './NewsletterForm'
 import ButtonFan from './UI/ButtonFan'
+import { usePathname } from "next/navigation";
+
 
 export default function Footer() {
+
+  const pathname = usePathname();
 
   const year = new Date().getFullYear();
 
@@ -28,7 +32,7 @@ export default function Footer() {
         <div className={`topContent ${style.footer_cta_topContent}`}>
             <h2 className='common_heading' data-animate="fade-up">Ready to see how far drone intelligence can take you?</h2>
             <p data-animate="fade-up" data-animate-delay="150">Partner with Hindustan Drone Services to explore the future of drone technology. Connect with our team to explore the possibilities.</p>
-             <Link href="#" className="common_btn" data-animate="fade-up" data-animate-delay="300">
+             <Link href="/contact-us" className="common_btn" data-animate="fade-up" data-animate-delay="300">
          <ButtonFan/>
          <span>Contact Us</span>
         </Link>
@@ -42,87 +46,106 @@ export default function Footer() {
    <footer className={style.footer_section}>
     <div className={`container ${style.footer_container}`}>
 
-        {/* footer links column */}
-        <div className={style.footer_links}>
-            <div className={style.footer_links_single} data-accordion={openSections.has(0) ? "open" : "closed"}>
-                <h3 onClick={() => toggleSection(0)}>Quick Links<span className={style.accordion_icon} aria-hidden="true">{openSections.has(0) ? '–' : '+'}</span></h3>
-                <ul>
-                    <li> <Link href="#">Home</Link> </li>
-                    <li> <Link href="#">About Us</Link> </li>
-                    <li> <Link href="#">Blog</Link> </li>
-                    <li> <Link href="#">Contact Us </Link> </li>
-                </ul>
-            </div>
-             <div className={style.footer_links_single} data-accordion={openSections.has(1) ? "open" : "closed"}>
-                <h3 onClick={() => toggleSection(1)}>Technology<span className={style.accordion_icon} aria-hidden="true">{openSections.has(1) ? '–' : '+'}</span></h3>
-                <ul>
-                    <li> <Link href="#">Advanced AI Models Overview</Link> </li>
-                    <li> <Link href="#">Drone Manufacturing, Assembly & Services</Link> </li>
-                </ul>
-            </div>
-              <div className={style.footer_links_single} data-accordion={openSections.has(2) ? "open" : "closed"}>
-                <h3 onClick={() => toggleSection(2)}>Training<span className={style.accordion_icon} aria-hidden="true">{openSections.has(2) ? '–' : '+'}</span></h3>
-                <ul>
-                    <li> <Link href="#">Comprehensive Drone Training</Link> </li>
-                    <li> <Link href="#">Certification & Skill Development</Link> </li>
-                </ul>
-            </div>
-        </div>
+     {/* footer links column */}
+<div className={style.footer_links}>
+    <div className={style.footer_links_single} data-accordion={openSections.has(0) ? "open" : "closed"}>
+        <h3 onClick={() => toggleSection(0)}>
+            Quick Links
+            <span className={style.accordion_icon} aria-hidden="true">
+                {openSections.has(0) ? '–' : '+'}
+            </span>
+        </h3>
+        <ul>
+            <li>
+                <Link href="/" className={pathname === "/" ? style.active : ""}>Home</Link>
+            </li>
+            <li>
+                <Link href="/about-us" className={pathname === "/about-us" ? style.active : ""}>About Us</Link>
+            </li>
+            <li>
+                <Link href="/training" className={pathname === "/training" ? style.active : ""}>Training</Link>
+            </li>
+            <li>
+                <Link href="/blog" className={pathname === "/blog" ? style.active : ""}>Blog</Link>
+            </li>
+            <li>
+                <Link href="/contact-us" className={pathname === "/contact-us" ? style.active : ""}>Contact Us</Link>
+            </li>
+        </ul>
+    </div>
 
-        {/* footer links column */}
-        <div className={style.footer_links}>
-            <div className={style.footer_links_single} data-accordion={openSections.has(3) ? "open" : "closed"}>
-                <h3 onClick={() => toggleSection(3)}>Services<span className={style.accordion_icon} aria-hidden="true">{openSections.has(3) ? '–' : '+'}</span></h3>
-                <ul>
-                    <li> <Link href="#">Agriculture & Farming</Link> </li>
-                    <li> <Link href="#">Construction & Infrastructure</Link> </li>
-                    <li> <Link href="#">Media, Entertainment & Marketing</Link> </li>
-                    <li> <Link href="#">Mining & Extractives</Link> </li>
-                    <li> <Link href="#">Inspection</Link> </li>
-                    <li> <Link href="#">Energy & Utilities</Link> </li>
-                    <li> <Link href="#">Security, Surveillance & Emergency</Link> </li>
-                    <li> <Link href="#">Environmental, Research & Survey</Link> </li>
-                    <li> <Link href="#">Logistics & Delivery</Link> </li>
-                    <li> <Link href="#">Residential & Property</Link> </li>
-                </ul>
-            </div>
-        </div>
+    <div className={style.footer_links_single} data-accordion={openSections.has(1) ? "open" : "closed"}>
+        <h3 onClick={() => toggleSection(1)}>Technology<span className={style.accordion_icon} aria-hidden="true">{openSections.has(1) ? '–' : '+'}</span></h3>
+        <ul>
+            <li><Link href="/technology/ai-models-intelligent-analytics-powering-daas" className={pathname === "/technology/ai-models-intelligent-analytics-powering-daas" ? style.active : ""}>Advanced AI Models Overview</Link></li>
+            <li><Link href="#">Drone Manufacturing, Assembly & Services</Link></li>
+        </ul>
+    </div>
+</div>
 
-         {/* footer links column */}
-        <div className={style.footer_links}>
-            <div className={style.footer_links_single} data-accordion={openSections.has(4) ? "open" : "closed"}>
-                <h3 onClick={() => toggleSection(4)}>Products<span className={style.accordion_icon} aria-hidden="true">{openSections.has(4) ? '–' : '+'}</span></h3>
-                <ul>
-                    <li> <Link href="#">AgriFlow HDS40</Link> </li>
-                    <li> <Link href="#">AgriFlow HDS-SEED</Link> </li>
-                    <li> <Link href="#">SolarShine HDS40B</Link> </li>
-                    <li> <Link href="#">SkyWash HDS40A</Link> </li>
-                    <li> <Link href="#">CargoLift HDS20A</Link> </li>
-                    <li> <Link href="#">TerraMap HDS4P</Link> </li>
-                    <li> <Link href="#">VigilCore M4TD</Link> </li>
-                    <li> <Link href="#">InfraScan M400</Link> </li>
-                </ul>
-            </div>
-        </div>
+{/* footer links column */}
+<div className={style.footer_links}>
+    <div className={style.footer_links_single} data-accordion={openSections.has(3) ? "open" : "closed"}>
+        <h3 onClick={() => toggleSection(3)}>
+            Services
+            <span className={style.accordion_icon} aria-hidden="true">
+                {openSections.has(3) ? '–' : '+'}
+            </span>
+        </h3>
+        <ul>
+            <li><Link href="/services/agriculture"className={pathname === "/services/agriculture" ? style.active : ""}>Agriculture & Farming</Link></li>
+            <li><Link href="#">Construction & Infrastructure</Link></li>
+            <li><Link href="#">Media, Entertainment & Marketing</Link></li>
+            <li><Link href="#">Mining & Extractives</Link></li>
+            <li><Link href="#">Inspection</Link></li>
+            <li><Link href="#">Energy & Utilities</Link></li>
+            <li><Link href="#">Security, Surveillance & Emergency</Link></li>
+            <li><Link href="#">Environmental, Research & Survey</Link></li>
+            <li><Link href="#">Logistics & Delivery</Link></li>
+            <li><Link href="#">Residential & Property</Link></li>
+        </ul>
+    </div>
+</div>
 
-        {/* footer links column */}
-        <div className={style.footer_links}>
-            <div className={style.footer_links_single} data-accordion={openSections.has(5) ? "open" : "closed"}>
-                <h3 onClick={() => toggleSection(5)}>Industries<span className={style.accordion_icon} aria-hidden="true">{openSections.has(5) ? '–' : '+'}</span></h3>
-                <ul>
-                    <li> <Link href="#">Agriculture</Link> </li>
-                    <li> <Link href="#">Public Safety</Link> </li>
-                    <li> <Link href="#">Utilities</Link> </li>
-                    <li> <Link href="#">Security</Link> </li>
-                    <li> <Link href="#">Construction</Link> </li>
-                    <li> <Link href="#">Engineering</Link> </li>
-                    <li> <Link href="#">Transportation</Link> </li>
-                    <li> <Link href="#">Oil & Gas</Link> </li>
-                    <li> <Link href="#">Education</Link> </li>
-                </ul>
-            </div>
+{/* footer links column */}
+<div className={style.footer_links}>
+    <div className={style.footer_links_single} data-accordion={openSections.has(4) ? "open" : "closed"}>
+        <h3 onClick={() => toggleSection(4)}>Products<span className={style.accordion_icon} aria-hidden="true">{openSections.has(4) ? '–' : '+'}</span></h3>
+        <ul>
+            <li><Link href="#">AgriFlow HDS40</Link> </li>
+            <li> <Link href="#">AgriFlow HDS-SEED</Link> </li> 
+            <li> <Link href="#">SolarShine HDS40B</Link> </li>
+            <li> <Link href="#">SkyWash HDS40A</Link> </li>
+            <li> <Link href="#">CargoLift HDS20A</Link> </li>
+            <li> <Link href="#">TerraMap HDS4P</Link> </li>
+            <li> <Link href="#">VigilCore M4TD</Link> </li>
+            <li> <Link href="#">InfraScan M400</Link> </li>
+            </ul> 
         </div>
+</div>
 
+{/* footer links column */}
+<div className={style.footer_links}>
+    <div className={style.footer_links_single} data-accordion={openSections.has(5) ? "open" : "closed"}>
+        <h3 onClick={() => toggleSection(5)}>
+            Industries
+            <span className={style.accordion_icon} aria-hidden="true">
+                {openSections.has(5) ? '–' : '+'}
+            </span>
+        </h3>
+        <ul>
+            <li><Link href="/industries/agriculture" className={pathname === "/industries/agriculture" ? style.active : ""}>Agriculture</Link></li>
+            <li><Link href="#">Public Safety</Link></li>
+            <li><Link href="#">Utilities</Link></li>
+            <li><Link href="#">Security</Link></li>
+            <li><Link href="#">Construction</Link></li>
+            <li><Link href="#">Engineering</Link></li>
+            <li><Link href="#">Transportation</Link></li>
+            <li><Link href="#">Oil & Gas</Link></li>
+            <li><Link href="#">Education</Link></li>
+        </ul>
+    </div>
+</div>
 
 
     </div>
@@ -143,11 +166,11 @@ export default function Footer() {
             <div className={style.footer_links_single}>
                 <h3 onClick={() => toggleSection(6)}>Get in touch with us</h3>
                 <ul>
-                    <li> <Link href="#"> <Image src="/images/footer_call.svg" width={24} height={24} alt=''/> +91 9154749191</Link> </li>
-                    <li> <Link href="#"><Image src="/images/footer_mail.svg" width={24} height={24} alt=''/>info@hindustandrones.io</Link> </li>
-                    <li> <Link href="#"><Image src="/images/footer_map.svg" width={24} height={24} alt=''/>Hindustan Drone Services Private Limited<br/>
+                    <li> <a href="tel:+919154749191"> <Image src="/images/footer_call.svg" width={24} height={24} alt=''/> +91 9154749191</a> </li>
+                    <li> <a href="mailto:info@hindustandrones.io"><Image src="/images/footer_mail.svg" width={24} height={24} alt=''/>info@hindustandrones.io</a> </li>
+                    <li> <a href="https://maps.app.goo.gl/NKNtSUGuwNSj4rLG7" target='_blank'><Image src="/images/footer_map.svg" width={24} height={24} alt=''/>Hindustan Drone Services Private Limited<br/>
 Unit No.1011A, Level 1, Sky One (Wing A), Prestige SkyTech,<br/>
-Financial District, Nanakramguda, Hyderabad - 500 032.</Link> </li>
+Financial District, Nanakramguda, Hyderabad - 500 032.</a> </li>
 
                 </ul>
             </div>
