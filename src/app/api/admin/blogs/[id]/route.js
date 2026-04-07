@@ -17,7 +17,7 @@ async function saveFile(file, dir) {
   return filename
 }
 
-export async function GET(request, { params }) {
+export async function GET(_request, { params }) {
   try {
     const { id: rawId } = await params
     const id = parseInt(rawId)
@@ -101,7 +101,7 @@ export async function PUT(request, { params }) {
   }
 }
 
-export async function DELETE(request, { params }) {
+export async function DELETE(_request, { params }) {
   try {
     const { id: rawId } = await params
     const id = parseInt(rawId)
