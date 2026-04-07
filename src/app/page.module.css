@@ -142,7 +142,7 @@ max-width: 530px;
 .redefiningsection{
   z-index: 2;
   display: flex;
-  background-image: url('/images/redefine_drone.webp');
+  background-image: url('/images/redefine_drone.svg');
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 60vw;

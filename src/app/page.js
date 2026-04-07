@@ -283,6 +283,13 @@ if(mobile) return
 
   return (
    <>
+   <link
+        rel="preload"
+        as="image"
+        href="/images/hp_hero_banner.webp"
+        fetchPriority="high"
+      />
+
 
    <main className={style.main}>
 
@@ -300,7 +307,7 @@ if(mobile) return
   loop
   muted
   autoPlay
-  preload="none"
+  preload="metadata"
   playsInline
   poster="/images/hp_hero_banner.webp"  
   className={style.video}
@@ -333,8 +340,8 @@ if(mobile) return
     )}
 
    <div className={style.bannerContent}>
-    <p data-animate="fade-up" className={style.bannerContent_text}>Engineered with advanced sensors and AI analytics, our drone systems deliver real-time aerial intelligence for complex operations.</p>
-    <Link data-animate="fade-up" data-animate-delay="150" href="#" className="common_btn">
+    <p  className={style.bannerContent_text}>Engineered with advanced sensors and AI analytics, our drone systems deliver real-time aerial intelligence for complex operations.</p>
+    <Link href="/about-us" className="common_btn">
          <ButtonFan/>
          <span> KNOW MORE</span>
         </Link>

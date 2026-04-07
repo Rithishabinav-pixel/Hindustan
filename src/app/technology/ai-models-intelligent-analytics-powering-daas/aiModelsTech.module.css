@@ -45,16 +45,15 @@
     z-index: 2;
 }
 
-.videoSection_img img{
-    width: 100%;
-    height: auto;
-}
+
 
 .videoSection_img img.ai_bg{
 position: absolute;
 top: 0;
 left: 0;
 animation: aiBg 60s infinite alternate linear;
+width: 100%;
+height: auto;
 }
 
 @keyframes aiBg {
@@ -66,6 +65,8 @@ animation: aiBg 60s infinite alternate linear;
 .videoSection_img img.ai_text{
 position: relative;
 z-index: 2;
+width: 100%;
+height: auto;
 }
 
 .tableSection{
