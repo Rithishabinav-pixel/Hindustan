@@ -16,6 +16,11 @@ export default function ContactForm() {
 
   function handleChange(e) {
     const { name, value } = e.target
+    if (name === 'phone') {
+      const digits = value.replace(/\D/g, '').slice(0, 10)
+      setFields((prev) => ({ ...prev, phone: digits }))
+      return
+    }
     setFields((prev) => ({ ...prev, [name]: value }))
   }
 
@@ -87,6 +92,13 @@ export default function ContactForm() {
           placeholder="Phone Number"
           value={fields.phone}
           onChange={handleChange}
+          onPaste={(e) => {
+            e.preventDefault()
+            const pasted = e.clipboardData.getData('text').replace(/\D/g, '').slice(0, 10)
+            setFields((prev) => ({ ...prev, phone: pasted }))
+          }}
+          inputMode="numeric"
+          maxLength={10}
           disabled={loading}
         />
         <input
