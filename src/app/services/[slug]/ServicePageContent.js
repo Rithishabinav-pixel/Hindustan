@@ -45,10 +45,16 @@ export default function ServicePageContent({ service }) {
     window.dispatchEvent(new Event('aos:refresh'))
   }, [])
 
+
   const subItems     = Array.isArray(service.subServicesItems) ? service.subServicesItems : []
   const benefitItems = Array.isArray(service.benefitsItems)    ? service.benefitsItems    : []
   const faqItems     = Array.isArray(service.faqItems)         ? service.faqItems         : []
   const products     = Array.isArray(service.products)         ? service.products         : []
+  // Swiper loop+centeredSlides+slidesPerView:3 needs ≥6 slides to fill both adjacent slots.
+  // Duplicate items cyclically when the real list is too short (same as agriculture's 6 hardcoded items).
+  const loopProducts = products.length > 0 && products.length < 7
+    ? Array.from({ length: 7 }, (_, i) => products[i % products.length])
+    : products
 
   const bgDesktop = service.benefitsBgDesktop || ''
   const bgMobile  = service.benefitsBgMobile  || bgDesktop
@@ -125,7 +131,7 @@ export default function ServicePageContent({ service }) {
           <div className={`container ${style.benefits_container}`}>
             <div className={`topContent topContent_left ${style.benefits_topContent}`}>
               {service.benefitsTitle && (
-                <h2 data-animate="fade-up" className={`common_heading ${style.benefits_title}`}>
+                <h2 data-animate="fade-up" className={`common_heading black ${style.benefits_title}`}>
                   {service.benefitsTitle}
                 </h2>
               )}
@@ -188,7 +194,7 @@ export default function ServicePageContent({ service }) {
               {service.productsDescription && (
                 <p data-animate="fade-up" data-animate-delay="100">{service.productsDescription}</p>
               )}
-              <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
+              <Link data-animate="fade-up" data-animate-delay="200" href={service.productsLink || '#'} className="common_btn">
                 <ButtonFan />
                 <span>KNOW MORE</span>
               </Link>
@@ -198,21 +204,28 @@ export default function ServicePageContent({ service }) {
           <div className={`product_slider ${style.productSlider}`}>
             <Swiper
               modules={[Navigation]}
-              navigation={{ prevEl: '.droneSwiper_custom-prev', nextEl: '.droneSwiper_custom-next' }}
+              navigation={{
+                prevEl: '.droneSwiper_custom-prev',
+                nextEl: '.droneSwiper_custom-next',
+              }}
               slidesPerView={1}
               centeredSlides={true}
               loop={true}
               spaceBetween={30}
+              initialSlide={0}
+              observer={true}
+              observeParents={true}
               breakpoints={{
-                768: {slidesPerView: 2, spaceBetween: 60,},
-                1201: {slidesPerView: 3,spaceBetween: 120},
-                }}
-              className="productsSwiper">
-              {products.map((product, index) => (
+                768: { slidesPerView: 2, spaceBetween: 60 },
+                1201: { slidesPerView: 3, spaceBetween: 120 },
+              }}
+              className="productsSwiper"
+            >
+              {loopProducts.map((product, index) => (
                 <SwiperSlide key={index}>
                   <div className="product_card">
                     <div className="product_card_image">
-                      <Image src={product.image} alt={product.name} width={520} height={320} />
+                      <Image src={product.image} alt={product.name} width={520} height={320} loading={index === 0 ? "eager" : "lazy"} />
                     </div>
                     <h3>{product.name}</h3>
                   </div>

@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import style from "./Footer.module.css"
 import Link from 'next/link'
 import Image from 'next/image'
@@ -15,6 +15,15 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   const [openSections, setOpenSections] = useState(new Set());
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+    fetch('/api/admin/services')
+      .then(r => r.json())
+      .then(data => { if (Array.isArray(data)) setServices(data); })
+      .catch(() => {});
+  }, []);
+
   function toggleSection(key) {
     setOpenSections(prev => {
       const next = new Set(prev);
@@ -84,6 +93,7 @@ export default function Footer() {
 </div>
 
 {/* footer links column */}
+{/* services links */}
 <div className={style.footer_links}>
     <div className={style.footer_links_single} data-accordion={openSections.has(3) ? "open" : "closed"}>
         <h3 onClick={() => toggleSection(3)}>
@@ -93,16 +103,13 @@ export default function Footer() {
             </span>
         </h3>
         <ul>
-            <li><Link href="/services/agriculture"className={pathname === "/services/agriculture" ? style.active : ""}>Agriculture & Farming</Link></li>
-            <li><Link href="#">Construction & Infrastructure</Link></li>
-            <li><Link href="#">Media, Entertainment & Marketing</Link></li>
-            <li><Link href="#">Mining & Extractives</Link></li>
-            <li><Link href="#">Inspection</Link></li>
-            <li><Link href="#">Energy & Utilities</Link></li>
-            <li><Link href="#">Security, Surveillance & Emergency</Link></li>
-            <li><Link href="#">Environmental, Research & Survey</Link></li>
-            <li><Link href="#">Logistics & Delivery</Link></li>
-            <li><Link href="#">Residential & Property</Link></li>
+            {services.length > 0 ? services.map(s => (
+              <li key={s.id}>
+                <Link href={`/services/${s.slug}`} className={pathname === `/services/${s.slug}` ? style.active : ""}>{s.name}</Link>
+              </li>
+            )) : (
+              <li><span>Loading...</span></li>
+            )}
         </ul>
     </div>
 </div>
@@ -112,7 +119,7 @@ export default function Footer() {
     <div className={style.footer_links_single} data-accordion={openSections.has(4) ? "open" : "closed"}>
         <h3 onClick={() => toggleSection(4)}>Products<span className={style.accordion_icon} aria-hidden="true">{openSections.has(4) ? '–' : '+'}</span></h3>
         <ul>
-            <li><Link href="#">AgriFlow HDS40</Link> </li>
+            <li><Link href="/products/agriflow-hds40">AgriFlow HDS40</Link> </li>
             <li> <Link href="#">AgriFlow HDS-SEED</Link> </li> 
             <li> <Link href="#">SolarShine HDS40B</Link> </li>
             <li> <Link href="#">SkyWash HDS40A</Link> </li>
@@ -155,7 +162,7 @@ export default function Footer() {
 
     <div className={style.footer_bottom_content}>
          <Link href="/" id={style.footerLogo}>
-     <Image src="/images/logo.svg" alt="logo" width={145} height={130}/>
+     <Image src="/images/logo.svg" alt="logo" width={145} height={130} loading="eager" />
     </Link>
 
         <p> © {year} HindustanDrones, All Rights Reserved.</p>

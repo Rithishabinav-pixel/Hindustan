@@ -17,6 +17,14 @@ export default function Header() {
  const [isFixed, setIsFixed] = useState(false);
  const [menuShow, setMenuShow] = useState(false);
  const [menuOpenSections, setMenuOpenSections] = useState(new Set());
+ const [services, setServices] = useState([]);
+
+ useEffect(() => {
+   fetch('/api/admin/services')
+     .then(r => r.json())
+     .then(data => { if (Array.isArray(data)) setServices(data); })
+     .catch(() => {});
+ }, []);
 
  useEffect(() => {
    if (menuShow) setMenuOpenSections(new Set());
@@ -70,7 +78,7 @@ export default function Header() {
     </Link>
 
     <nav className={style.nav}>
-        <Link href="#" className={`common_btn ${style.header_contact_btn}`}>
+        <Link href="/contact-us" className={`common_btn ${style.header_contact_btn}`}>
          <ButtonFan/>
          <span> Contact Us</span>
         </Link>
@@ -117,6 +125,7 @@ export default function Header() {
 <div className={`container ${footerStyle.footer_container} ${menuStyle.menu_container}`}>
 
         {/* footer links column */}
+        {/* services links */}
         <div className={`${footerStyle.footer_links} ${menuStyle.menu_link_container}`}>
             <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`}>
                 <ul className={menuStyle.noAccordion}>
@@ -152,16 +161,13 @@ export default function Header() {
            <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`} data-accordion={menuOpenSections.has(2) ? "open" : "closed"}>
                 <h3 onClick={() => toggleMenuSection(2)}>Services<span className={footerStyle.accordion_icon} aria-hidden="true">{menuOpenSections.has(2) ? '–' : '+'}</span></h3>
                 <ul>
-                     <li><Link href="/services/agriculture"className={pathname === "/services/agriculture"? footerStyle.active :""}>Agriculture & Farming</Link></li>
-                    <li> <Link href="#">Construction & Infrastructure</Link> </li>
-                    <li> <Link href="#">Media, Entertainment & Marketing</Link> </li>
-                    <li> <Link href="#">Mining & Extractives</Link> </li>
-                    <li> <Link href="#">Inspection</Link> </li>
-                    <li> <Link href="#">Energy & Utilities</Link> </li>
-                    <li> <Link href="#">Security, Surveillance & Emergency</Link> </li>
-                    <li> <Link href="#">Environmental, Research & Survey</Link> </li>
-                    <li> <Link href="#">Logistics & Delivery</Link> </li>
-                    <li> <Link href="#">Residential & Property</Link> </li>
+                    {services.length > 0 ? services.map(s => (
+                      <li key={s.id}>
+                        <Link href={`/services/${s.slug}`} className={pathname === `/services/${s.slug}` ? footerStyle.active : ""}>{s.name}</Link>
+                      </li>
+                    )) : (
+                      <li><span>Loading...</span></li>
+                    )}
                 </ul>
             </div>
         </div>
@@ -171,7 +177,7 @@ export default function Header() {
            <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`} data-accordion={menuOpenSections.has(3) ? "open" : "closed"}>
                 <h3 onClick={() => toggleMenuSection(3)}>Products<span className={footerStyle.accordion_icon} aria-hidden="true">{menuOpenSections.has(3) ? '–' : '+'}</span></h3>
                 <ul>
-                    <li> <Link href="#">AgriFlow HDS40</Link> </li>
+                    <li> <Link href="/products/agriflow-hds40">AgriFlow HDS40</Link> </li>
                     <li> <Link href="#">AgriFlow HDS-SEED</Link> </li>
                     <li> <Link href="#">SolarShine HDS40B</Link> </li>
                     <li> <Link href="#">SkyWash HDS40A</Link> </li>

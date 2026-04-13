@@ -79,6 +79,7 @@ export default function ServiceForm({ serviceId }) {
   // ── products ──
   const [productsTitle, setProductsTitle]               = useState('')
   const [productsDescription, setProductsDescription]   = useState('')
+  const [productsLink, setProductsLink]                 = useState('')
   const [allProducts, setAllProducts]                   = useState([])
   const [selectedProductIds, setSelectedProductIds]     = useState([])
 
@@ -143,6 +144,7 @@ export default function ServiceForm({ serviceId }) {
 
         setProductsTitle(d.productsTitle ?? '')
         setProductsDescription(d.productsDescription ?? '')
+        setProductsLink(d.productsLink ?? '')
         setSelectedProductIds(Array.isArray(d.selectedProductIds) ? d.selectedProductIds.map(Number) : [])
 
         setFaqTitle(d.faqTitle ?? '')
@@ -244,6 +246,7 @@ export default function ServiceForm({ serviceId }) {
 
       fd.append('productsTitle', productsTitle)
       fd.append('productsDescription', productsDescription)
+      fd.append('productsLink', productsLink)
       fd.append('selectedProductIds', JSON.stringify(selectedProductIds))
 
       fd.append('faqTitle', faqTitle)
@@ -511,6 +514,12 @@ export default function ServiceForm({ serviceId }) {
                   <input type="text" className={s.input} value={productsDescription}
                     onChange={(e) => setProductsDescription(e.target.value)} placeholder="Short description" />
                 </div>
+              </div>
+
+              <div className={s.field}>
+                <label className={s.label}>Products Button Link</label>
+                <input type="text" className={s.input} value={productsLink}
+                  onChange={(e) => setProductsLink(e.target.value)} placeholder="e.g. /products or https://..." />
               </div>
 
               <div className={s.field}>

@@ -1,0 +1,232 @@
+body{
+    background-image: url("/images/product_bg.svg");
+    background-size: 60% auto;
+    background-position: top right;
+    background-repeat: no-repeat;
+    animation: light 1s infinite alternate linear;
+}
+
+
+.productHeroSection .topContent{
+    margin: unset;
+    text-align: left;
+    align-items: flex-start;
+max-width: 990px;
+}
+
+.heroImage{
+    width: 65%;
+    margin-left: auto;
+    background: none;
+    padding-bottom: 80px
+}
+
+.heroImage img{
+    width: 100%;
+    height: auto;
+}
+
+.heroImage div image{
+    float: left;
+}
+
+
+.specification_section{
+    height: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-position: right center;
+    background-image: url('/images/products/agriflow-hds40/specs_bg.webp');
+}
+
+
+.specification_section::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 6, 36, 0.00) 42.53%, #000419 79.18%);
+}
+
+.specification_topContent{
+    color: rgb(255, 255, 255);
+    max-width: 670px;
+      
+}
+
+
+.specification_container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+
+.specification_slider{
+    margin-top: auto;
+}
+
+.specificationCard{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.specificationCard h3{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+.specificationCard img{
+    width: 80px;
+    height: auto;
+    float: left;
+}
+
+.tables_section{
+    background-color: #000624;
+}
+
+.tables_container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 30px;
+}
+
+.tables_container .singleTable{
+    width: calc(50% - 15px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.tables_container .singleTable .table_heading{
+font-size: 32px;
+line-height: 48px;
+font-weight: 500;
+}
+
+
+.tables_container .singleTable ul li{
+    padding: 24px 0;
+    display: flex;
+    position: relative;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.tables_container .singleTable ul li::before,
+.tables_container .singleTable ul li:nth-child(1)::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    opacity: 0.6;
+background: linear-gradient(90deg, #404FD7 0%, #404FD7 50.3%, rgba(64, 79, 215, 0.00) 100%);
+}
+
+.tables_container .singleTable ul li:nth-child(1)::after{
+bottom: unset;
+top: 0;
+}
+
+
+.tables_container .singleTable ul li .lable,
+.tables_container .singleTable ul li .value{
+width: calc(50% - 10px);
+min-width: calc(50% - 10px);
+max-width: calc(50% - 10px);
+font-size: 16px;
+line-height: 24px;
+opacity: 0.6;
+}
+
+.tables_container .singleTable ul li:nth-child(1) .lable,
+.tables_container .singleTable ul li:nth-child(1) .value{
+    opacity: 1;
+}
+
+.tables_container .singleTable ul li .lable{
+    font-weight: 500;
+}
+
+.tables_container .singleTable ul li .value{
+    font-weight: 400;
+    text-align: right;
+}
+
+
+
+/* responsive */
+
+/* laptop */
+@media (max-width:1400px){
+.heroImage{
+    padding-bottom: 50px;
+}
+
+.tables_container .singleTable .table_heading{
+font-size: 24px;
+line-height: 32px;
+}
+
+}
+
+
+/* tablet */
+@media (max-width:1200px){
+
+    .specificationCard h3{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+    .heroImage{
+        width: 100%;
+        max-width: 700px;
+        margin: 14px auto 0 auto;
+        padding: 0 20px 50px 20px;
+    }
+
+        .specification_section{
+    min-height: 800px;
+    height: 800px;
+    background-image: url('/images/products/agriflow-hds40/specs_bg_t.webp');
+
+}
+
+}
+
+
+
+/* mobile */
+@media (max-width:767px){
+
+    .tables_container{
+    gap: 50px;
+}
+
+.tables_container .singleTable{
+    width:100%;
+    gap: 20px;
+}
+
+.tables_container .singleTable ul li{
+    padding: 20px 0;
+}
+
+
+      .specification_section {
+        height: 840px;
+        min-height: 840px;
+    background-image: url('/images/products/agriflow-hds40/specs_bg_m.webp');
+
+    }
+    
+}

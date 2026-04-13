@@ -15,22 +15,22 @@ import "swiper/css/navigation";
 // why industries cards data 
   const whyIndustriesdata = [
     {
-      icon:"/images/services/agriculture/bi1.svg",
+      icon:"/images/about_us_dummy_icon.svg",
       title:"Industry-Focused Drone Solutions",
       description:"We understand the unique challenges of different industries and provide drone systems tailored to specific operational needs."
     },
      {
-      icon:"/images/services/agriculture/bi1.svg",
+      icon:"/images/about_us_dummy_icon.svg",
       title:"Advanced Technology Integration",
       description:"Our drones leverage modern technologies including AI analytics, precision sensors, and intelligent flight systems."
     },
      {
-      icon:"/images/services/agriculture/bi1.svg",
+      icon:"/images/about_us_dummy_icon.svg",
       title:"End-To-End Drone Support",
       description:"From consultation and deployment to training and maintenance, we provide complete support for your drone ecosystem."
     },
      {
-      icon:"/images/services/agriculture/bi1.svg",
+      icon:"/images/about_us_dummy_icon.svg",
       title:"Reliable Performance In Real Environments",
       description:"Our solutions are designed to operate efficiently across challenging terrains, industrial sites, and large operational areas."
     }

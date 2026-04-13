@@ -277,7 +277,7 @@ export default function page() {
 
 <div className={`topContent topContent_left ${style.benefits_topContent}`} >
   {/* benefits section title */}
-  <h2 data-animate="fade-up" className={`common_heading ${style.benefits_title}`}>Benefits Of Using Drones In Agriculture</h2>
+  <h2 data-animate="fade-up" className={`common_heading black ${style.benefits_title}`}>Benefits Of Using Drones In Agriculture</h2>
 
   {/* benefits section description */}
   <p data-animate="fade-up" data-animate-delay="150">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>

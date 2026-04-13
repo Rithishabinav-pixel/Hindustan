@@ -152,6 +152,10 @@ const droneSlider = [
   {
     title: "Drone Model 3",
     image: "/images/drone_model3.png"
+  },
+  {
+    title: "Drone Model 1",
+    image: "/images/drone_model1.png"
   }
 ];
 
@@ -191,6 +195,12 @@ const insightdata = [
   },
   {
     image:"/images/insight3.png",
+    title:"Lorem ipsum dolor",
+    description:"Lorem ipsum dolor sit amet consectetur. Vel cras nisl morbi neque diam. Pulvinar adipiscing non sapien sit quam tristique. ",
+    slug:"/"
+  },
+  {
+    image:"/images/insight1.png",
     title:"Lorem ipsum dolor",
     description:"Lorem ipsum dolor sit amet consectetur. Vel cras nisl morbi neque diam. Pulvinar adipiscing non sapien sit quam tristique. ",
     slug:"/"
@@ -363,7 +373,7 @@ if(mobile) return
   <div className={`topContent ${style.topContent}`}>
     <h2 data-animate="fade-up" className="common_heading">A New Standard in Aerial Intelligence</h2>
     <p data-animate="fade-up" data-animate-delay="100">Our growing mission footprint reflects the scale and reliability behind every aerial intelligence.</p>
-     <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
+     <Link data-animate="fade-up" data-animate-delay="200" href="/about-us" className="common_btn">
          <ButtonFan/>
          <span>KNOW MORE</span>
         </Link>

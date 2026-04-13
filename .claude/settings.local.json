@@ -10,7 +10,9 @@
       "Bash(node -e \"const {execSync}=require\\(''child_process''\\); try{const out=execSync\\(''npx prisma db push'',{timeout:50000,encoding:''utf8'',stdio:''pipe''}\\); console.log\\(out\\);}catch\\(e\\){console.error\\(e.stdout||''''\\); console.error\\(e.stderr||''''\\);}\")",
       "Bash(node -e \"require\\(''@tiptap/react''\\); console.log\\(''ok''\\)\")",
       "Bash(node -e \"const {execSync}=require\\('child_process'\\); try{const out=execSync\\('npx prisma db push --skip-generate',{timeout:50000,encoding:'utf8',stdio:'pipe'}\\); console.log\\(out\\);}catch\\(e\\){console.error\\(e.stdout||''\\); console.error\\(e.stderr||''\\);}\")",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(grep -n \"productsDescription\\\\|productsTitle\\\\|productsLink\" d:/Rithish/hindustan/src/app/api/admin/services/[id]/route.js)",
+      "Bash(grep -n \"productsTitle\\\\|productsDescription\\\\|productsLink\\\\|selectedProductIds\" d:/Rithish/hindustan/src/app/api/admin/services/[id]/route.js)"
     ]
   }
 }

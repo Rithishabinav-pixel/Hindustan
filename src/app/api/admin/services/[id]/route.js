@@ -150,6 +150,7 @@ export async function PUT(request, { params }) {
     // ── products ──
     const productsTitle       = formData.get('productsTitle')?.toString() ?? ''
     const productsDescription = formData.get('productsDescription')?.toString() ?? ''
+    const productsLink        = formData.get('productsLink')?.toString() ?? ''
     const rawProductIds = formData.get('selectedProductIds')
     const selectedProductIds = rawProductIds ? JSON.parse(rawProductIds) : []
 
@@ -179,7 +180,7 @@ export async function PUT(request, { params }) {
         heroTitle, heroDescription, heroButtonName, heroButtonLink, heroImage,
         subServicesTitle, subServicesItems,
         benefitsTitle, benefitsDescription, benefitsBgDesktop, benefitsBgMobile, benefitsItems,
-        productsTitle, productsDescription, selectedProductIds,
+        productsTitle, productsDescription, productsLink, selectedProductIds,
         faqTitle, faqItems,
         seoMetaTitle, seoMetaDescription, seoMetaKeywords,
         seoOgTitle, seoOgDescription, seoOgImage, seoCanonicalUrl,

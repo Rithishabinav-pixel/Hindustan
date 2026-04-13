@@ -55,6 +55,7 @@ model Service {
 
   productsTitle       String?
   productsDescription String?
+  productsLink        String?
   selectedProductIds  Json?
 
   faqTitle String?
