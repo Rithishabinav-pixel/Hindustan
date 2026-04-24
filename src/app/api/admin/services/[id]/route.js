@@ -122,6 +122,7 @@ export async function PUT(request, { params }) {
     // ── benefits ──
     const benefitsTitle       = formData.get('benefitsTitle')?.toString() ?? ''
     const benefitsDescription = formData.get('benefitsDescription')?.toString() ?? ''
+    const benefitsTheme       = formData.get('benefitsTheme')?.toString() ?? 'dark'
     let benefitsBgDesktop = formData.get('benefitsBgDesktopExisting')?.toString() ?? existing.benefitsBgDesktop ?? ''
     let benefitsBgMobile  = formData.get('benefitsBgMobileExisting')?.toString() ?? existing.benefitsBgMobile ?? ''
     const bgDesktopFile = formData.get('benefitsBgDesktop')
@@ -179,7 +180,7 @@ export async function PUT(request, { params }) {
         name, slug,
         heroTitle, heroDescription, heroButtonName, heroButtonLink, heroImage,
         subServicesTitle, subServicesItems,
-        benefitsTitle, benefitsDescription, benefitsBgDesktop, benefitsBgMobile, benefitsItems,
+        benefitsTitle, benefitsDescription, benefitsTheme, benefitsBgDesktop, benefitsBgMobile, benefitsItems,
         productsTitle, productsDescription, productsLink, selectedProductIds,
         faqTitle, faqItems,
         seoMetaTitle, seoMetaDescription, seoMetaKeywords,

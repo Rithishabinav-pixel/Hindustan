@@ -77,6 +77,9 @@ export default function Footer() {
             <li>
                 <Link href="/blog" className={pathname === "/blog" ? style.active : ""}>Blog</Link>
             </li>
+             <li>
+                <Link href="/blog" className={pathname === "/career" ? style.active : ""}>Career</Link>
+            </li>
             <li>
                 <Link href="/contact-us" className={pathname === "/contact-us" ? style.active : ""}>Contact Us</Link>
             </li>

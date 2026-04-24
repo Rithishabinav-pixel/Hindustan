@@ -477,6 +477,10 @@ background: none;
 /* for tablet view */
 @media (max-width: 1200px){
 
+   .parralax_bg{
+    background-size: cover !important;
+   }
+
   .faq{
     margin: unset;
     max-width: 100%;

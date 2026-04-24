@@ -19,27 +19,27 @@ import LinkArrow from '@/app/components/UI/LinkArrow';
 
 const iconGrid = [
   {
-    icon: "/images/industries/agriculture/ic1.svg",
+    icon: "/images/industries/transportation/ic1.svg",
     title: "Bridge Inspection",
     desc: "We inspect structural components without requiring complex access setups, enabling faster and safer assessment of critical areas."
   },
   {
-    icon: "/images/industries/agriculture/ic2.svg",
+    icon: "/images/industries/transportation/ic2.svg",
     title: "Road Condition Analysis",
     desc: "We capture high-resolution imagery to detect cracks, potholes, and surface degradation across road networks."
   },
   {
-    icon: "/images/industries/agriculture/ic3.svg",
+    icon: "/images/industries/transportation/ic3.svg",
     title: "Railway Monitoring",
     desc: "We monitor track surroundings for slope instability, vegetation growth, and encroachment risks along railway corridors."
   },
   {
-    icon: "/images/industries/agriculture/ic4.svg",
+    icon: "/images/industries/transportation/ic4.svg",
     title: "Port & Jetty Inspection",
     desc: "We conduct detailed inspections of coastal and marine infrastructure without the need for manual or vessel-based access."
   },
   {
-    icon: "/images/industries/agriculture/ic5.svg",
+    icon: "/images/industries/transportation/ic5.svg",
     title: "Right of Way (ROW) Monitoring",
     desc: "We help identify encroachments and obstructions along transport corridors to support compliance and safety."
   }
@@ -49,28 +49,51 @@ const iconGrid = [
 // slider data
 const droneSlider = [
   {
-    title: "Drone Model 1",
-    image: "/images/drone_model1.png"
+    title: "AgriFlow HDS40",
+    image: "/images/products/agriflow-hds40.png",
+    slug:"/products/agriflow-hds40"
   },
   {
-    title: "Drone Model 2",
-    image: "/images/drone_model2.png"
+    title: "AgriFlow HDS-SEED",
+    image: "/images/products/agriflow-hds40.png",
+    slug:"/products/agriflow-hds40"
+
   },
   {
-    title: "Drone Model 3",
-    image: "/images/drone_model3.png"
+    title: "SolarShine HDS40B",
+    image: "/images/products/solarshine.png",
+    slug:"/products/solarshine-hds40b"
+
   },
   {
-    title: "Drone Model 1",
-    image: "/images/drone_model1.png"
+    title: "SkyWash HDS40A",
+    image: "/images/products/skywash.png",
+    slug:"/products/skywash-hds40a"
+
   },
   {
-    title: "Drone Model 2",
-    image: "/images/drone_model2.png"
+    title: "CargoLift HDS20A",
+    image: "/images/products/cargolift.png",
+    slug:"/products/cargolift-hds20a"
+
   },
   {
-    title: "Drone Model 3",
-    image: "/images/drone_model3.png"
+    title: "TerraMap HDS4P",
+    image: "/images/products/terramap.png",
+    slug:"/products/terramap-hds4p"
+
+  },
+  {
+    title: "VigilCore M4TD",
+    image: "/images/products/vigilcore.png",
+    slug:"/products/vigilcore-m4td"
+
+  },
+  {
+    title: "InfraScan M400",
+   image: "/images/products/infrascan.png",
+    slug:"/products/infrascan-m400"
+
   }
 ];
 
@@ -139,14 +162,14 @@ export default function page() {
       </div>
 
       <div className={style.contentImage} data-animate="fade-up" data-animate-delay="200">
-        <Image src="/images/industries/agriculture/agriculture_side_image.webp" width={630} height={460} alt="" />
+        <Image src="/images/industries/transportation/transportation_side_image.webp" width={630} height={460} alt="" />
 
       </div>
 
         </div>
 
          <div className={style.image} data-animate="fade-up" data-animate-delay="200">
-        <Image src="/images/industries/agriculture/agriculture_overview_image.webp" width={410} height={539} alt="" />
+        <Image src="/images/industries/transportation/transportation_overview_image.webp" width={410} height={539} alt="" />
 
       </div>
 
@@ -173,7 +196,7 @@ export default function page() {
       </div>
 
       <div className={style.contentImage} data-animate="fade-up" data-animate-delay="200">
-        <Image src="/images/industries/agriculture/help_side_image.webp" width={520} height={721} alt="" />
+        <Image src="/images/industries/transportation/help_side_image.webp" width={520} height={721} alt="" />
 
       </div>
 
@@ -242,12 +265,12 @@ export default function page() {
   >
     {droneSlider.map((item, index) => (
       <SwiperSlide key={index}>
-        <div className="drone_card">
+        <Link href={`${item.slug}`} className="drone_card">
           <div className={style.drone_slider_img}>
           <Image src={`${item.image}`} alt={item.title} width={520} height={320}  />
           </div>
           <h3>{item.title}</h3>
-        </div>
+        </Link>
       </SwiperSlide>
     ))}
   </Swiper>

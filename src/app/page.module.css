@@ -145,7 +145,7 @@ max-width: 530px;
   background-image: url('/images/redefine_drone.svg');
   background-repeat: no-repeat;
   background-position: top right;
-  background-size: 60vw;
+  background-size: 55vw;
 }
 
 .redefiningsection .redefining_container{
@@ -421,6 +421,15 @@ margin-top: 20px;
 
 .insight_card_content{
   gap: 16px;
+}
+
+.insight_card_content p{
+  overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 3;
+line-clamp: 3;
+-webkit-box-orient: vertical;
 }
 
 .insight_card_content .insight_btn img{

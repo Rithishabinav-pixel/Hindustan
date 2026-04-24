@@ -19,7 +19,8 @@ export async function PUT(request, { params }) {
       )
     }
 
-    const updateData = { name: name.trim(), link: link.trim() }
+    const slug = formData.get('slug')?.toString().trim() || name.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    const updateData = { name: name.trim(), slug, link: link.trim() }
 
     if (imageFile && imageFile.size > 0) {
       // Delete old image

@@ -131,12 +131,12 @@ export default function ServicePageContent({ service }) {
           <div className={`container ${style.benefits_container}`}>
             <div className={`topContent topContent_left ${style.benefits_topContent}`}>
               {service.benefitsTitle && (
-                <h2 data-animate="fade-up" className={`common_heading black ${style.benefits_title}`}>
+                <h2 data-animate="fade-up" className={`common_heading${(service.benefitsTheme ?? 'dark') === 'dark' ? ' black' : ''} ${style.benefits_title}`}>
                   {service.benefitsTitle}
                 </h2>
               )}
               {service.benefitsDescription && (
-                <p data-animate="fade-up" data-animate-delay="150">{service.benefitsDescription}</p>
+                <p data-animate="fade-up" data-animate-delay="150" className={(service.benefitsTheme ?? 'dark') === 'light' ? style.white : undefined}>{service.benefitsDescription}</p>
               )}
             </div>
 
@@ -223,12 +223,12 @@ export default function ServicePageContent({ service }) {
             >
               {loopProducts.map((product, index) => (
                 <SwiperSlide key={index}>
-                  <div className="product_card">
+                  <Link href={`/products/${product.slug || product.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`} className="product_card">
                     <div className="product_card_image">
                       <Image src={product.image} alt={product.name} width={520} height={320} loading={index === 0 ? "eager" : "lazy"} />
                     </div>
                     <h3>{product.name}</h3>
-                  </div>
+                  </Link>
                 </SwiperSlide>
               ))}
             </Swiper>

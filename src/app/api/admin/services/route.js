@@ -24,7 +24,7 @@ async function saveFileAsync(file, dir) {
 export async function GET() {
   try {
     const services = await prisma.service.findMany({
-      orderBy: { createdAt: 'desc' },
+      orderBy: { createdAt: 'asc' },
       select: { id: true, name: true, slug: true, createdAt: true },
     })
     return NextResponse.json(services)
@@ -84,6 +84,7 @@ export async function POST(request) {
     // ── benefits ──
     const benefitsTitle       = formData.get('benefitsTitle')?.toString() ?? ''
     const benefitsDescription = formData.get('benefitsDescription')?.toString() ?? ''
+    const benefitsTheme       = formData.get('benefitsTheme')?.toString() ?? 'dark'
     let benefitsBgDesktop = ''
     let benefitsBgMobile  = ''
     const bgDesktopFile = formData.get('benefitsBgDesktop')
@@ -139,7 +140,7 @@ export async function POST(request) {
         name, slug,
         heroTitle, heroDescription, heroButtonName, heroButtonLink, heroImage,
         subServicesTitle, subServicesItems,
-        benefitsTitle, benefitsDescription, benefitsBgDesktop, benefitsBgMobile, benefitsItems,
+        benefitsTitle, benefitsDescription, benefitsTheme, benefitsBgDesktop, benefitsBgMobile, benefitsItems,
         productsTitle, productsDescription, productsLink, selectedProductIds,
         faqTitle, faqItems,
         seoMetaTitle, seoMetaDescription, seoMetaKeywords,

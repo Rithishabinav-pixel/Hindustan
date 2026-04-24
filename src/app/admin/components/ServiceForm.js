@@ -70,6 +70,7 @@ export default function ServiceForm({ serviceId }) {
   // ── benefits ──
   const [benefitsTitle, setBenefitsTitle]               = useState('')
   const [benefitsDescription, setBenefitsDescription]   = useState('')
+  const [benefitsTheme, setBenefitsTheme]               = useState('dark')
   const [bgDesktopFile, setBgDesktopFile]               = useState(null)
   const [bgDesktopExisting, setBgDesktopExisting]       = useState('')
   const [bgMobileFile, setBgMobileFile]                 = useState(null)
@@ -135,6 +136,7 @@ export default function ServiceForm({ serviceId }) {
 
         setBenefitsTitle(d.benefitsTitle ?? '')
         setBenefitsDescription(d.benefitsDescription ?? '')
+        setBenefitsTheme(d.benefitsTheme ?? 'dark')
         setBgDesktopExisting(d.benefitsBgDesktop ?? '')
         setBgMobileExisting(d.benefitsBgMobile ?? '')
         const bi = Array.isArray(d.benefitsItems) && d.benefitsItems.length > 0
@@ -231,6 +233,7 @@ export default function ServiceForm({ serviceId }) {
 
       fd.append('benefitsTitle', benefitsTitle)
       fd.append('benefitsDescription', benefitsDescription)
+      fd.append('benefitsTheme', benefitsTheme)
       if (bgDesktopFile) fd.append('benefitsBgDesktop', bgDesktopFile)
       if (bgMobileFile)  fd.append('benefitsBgMobile', bgMobileFile)
       if (isEdit) {
@@ -447,6 +450,18 @@ export default function ServiceForm({ serviceId }) {
                   <input type="text" className={s.input} value={benefitsDescription}
                     onChange={(e) => setBenefitsDescription(e.target.value)} placeholder="Short description" />
                 </div>
+              </div>
+
+              <div className={s.field}>
+                <label className={s.label}>Theme</label>
+                <select
+                  className={s.input}
+                  value={benefitsTheme}
+                  onChange={(e) => setBenefitsTheme(e.target.value)}
+                >
+                  <option value="dark">Dark</option>
+                  <option value="light">Light</option>
+                </select>
               </div>
 
               <div className={s.grid2}>

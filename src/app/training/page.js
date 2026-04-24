@@ -14,88 +14,113 @@ import LinkArrow from '@/app/components/UI/LinkArrow';
 
 const faqData = [
   {
-    title:"How are drones used in agriculture?",
-    content:"Drones are used in agriculture for crop monitoring, aerial spraying, field mapping, and soil analysis. They capture high-resolution aerial data that helps farmers identify crop health issues, irrigation problems, and pest infestations quickly and efficiently."
+    title: "Do I need prior experience to enrol in these programmes?",
+    content: "No prior experience is required for most programmes. We offer structured learning paths that start with fundamentals and gradually move into advanced applications, making them suitable for both beginners and working professionals."
   },
-   {
-    title:"What are the benefits of using drones for farming?",
-    content:"Drones are used in agriculture for crop monitoring, aerial spraying, field mapping, and soil analysis. They capture high-resolution aerial data that helps farmers identify crop health issues, irrigation problems, and pest infestations quickly and efficiently."
+  {
+    title: "Will I receive certification after completing the training?",
+    content: "Yes, participants receive certification upon successful completion of the programme. This validates your skills and can support career opportunities across industries that use drone-based operations."
   },
-   {
-    title:"Can drones help detect crop diseases early?",
-    content:"Drones are used in agriculture for crop monitoring, aerial spraying, field mapping, and soil analysis. They capture high-resolution aerial data that helps farmers identify crop health issues, irrigation problems, and pest infestations quickly and efficiently."
+  {
+    title: "Are these courses focused on practical, hands-on learning?",
+    content: "Yes, the training places a strong emphasis on practical, hands-on learning. Participants work with real equipment and scenarios to build confidence in actual operating conditions."
   },
-   {
-    title:"Are agricultural drones suitable for large farms?",
-    content:"Drones are used in agriculture for crop monitoring, aerial spraying, field mapping, and soil analysis. They capture high-resolution aerial data that helps farmers identify crop health issues, irrigation problems, and pest infestations quickly and efficiently."
+  {
+    title: "What kind of career opportunities can this training lead to?",
+    content: "Training can open opportunities in agriculture, media, infrastructure inspection, mapping, and more. It also supports freelance work and specialised drone service roles across industries."
   },
-   {
-    title:"Do I need special training to operate agricultural drones?",
-    content:"Drones are used in agriculture for crop monitoring, aerial spraying, field mapping, and soil analysis. They capture high-resolution aerial data that helps farmers identify crop health issues, irrigation problems, and pest infestations quickly and efficiently."
+  {
+    title: "Do you provide drones and equipment during training?",
+    content: "Yes, all necessary drones and equipment are provided during the training sessions, ensuring participants can focus on learning without needing personal equipment."
   },
-    {
-    title:"Can drones be used for pesticide and fertilizer spraying?",
-    content:"Drones are used in agriculture for crop monitoring, aerial spraying, field mapping, and soil analysis. They capture high-resolution aerial data that helps farmers identify crop health issues, irrigation problems, and pest infestations quickly and efficiently."
-  },
-]
+  {
+    title: "Can organisations enrol teams for customised training programmes?",
+    content: "Yes, HDSL offers customised training programmes tailored for organisations, enabling teams to build relevant skills aligned with specific operational requirements."
+  }
+];
 
 
 // stack data
 const trainingStacks = [
   {
     id: 1,
-    title: "Professional Applications (Intermediate)",
+    title: "Aerial Photography and Videography",
     sticky: true,
     bg: "training_stack1",
     tabletBg: "training_stack1t",
     mobileImg: "training_stack1m",
     desc: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est .<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+      "Master the art of capturing compelling aerial visuals with precision and control. Our programme covers everything from framing and camera movement to lighting and storytelling techniques, all tailored for drone-based visuals. Ideal for creators, media professionals, and businesses looking to produce high-quality content that stands out across platforms and real-world projects."
     ],
     btnText: "APPLY NOW",
-    link: "#"
+    link: "/contact-us"
   },
   {
     id: 2,
-    title: "Technical Skills (Data Processing)",
+    title: "Sites and Cloud Processing",
     sticky: true,
     bg: "training_stack2",
     tabletBg: "training_stack2t",
     mobileImg: "training_stack2m",
     desc: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est .<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+      "Learn how to manage, process, and analyse aerial data using modern cloud-based platforms. Our training focuses on practical workflows that convert raw flight data into structured outputs for reporting and decision-making. Designed for professionals working with mapping, surveying, and site monitoring, this programme empowers you with reliable and organised data processing capabilities."
     ],
     btnText: "APPLY NOW",
-    link: "#"
+    link: "/contact-us"
   },
   {
     id: 3,
-    title: "Specialised Industry Programs",
+    title: "Advanced Mapping and Surveying",
+    sticky: true,
+    bg: "training_stack4",
+    tabletBg: "training_stack4t",
+    mobileImg: "training_stack4m",
+    desc: [
+      "Develop the skills required to execute high-accuracy mapping missions using drones. This programme covers flight planning, data capture techniques, and output generation for surveying and mapping applications. Ideal for infrastructure, land assessment, and planning professionals seeking efficient and scalable aerial mapping solutions."
+    ],
+    btnText: "APPLY NOW",
+    link: "/contact-us"
+  },
+  {
+    id: 4,
+    title: "Tower and Turbine Inspections",
     sticky: true,
     bg: "training_stack3",
     tabletBg: "training_stack3t",
     mobileImg: "training_stack3m",
     desc: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est .<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+      "Through this programme, gain expertise in conducting inspections of towers, turbines, and critical infrastructure using drones. Our training focuses on safety protocols, navigation in complex environments, and capturing inspection-grade data. Tailored for professionals working in energy, telecom, and infrastructure sectors where accuracy and safety are critical."
     ],
     btnText: "APPLY NOW",
-    link: "#"
+    link: "/contact-us"
   },
   {
-    id: 4,
-    title: "Enterprise Training (For Corporate Teams)",
-    sticky: false,
-    bg: "training_stack4",
-    tabletBg: "training_stack4t",
-    mobileImg: "training_stack4m",
-   desc: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est .<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+    id: 5,
+    title: "Fast Moving Subject Tracking",
+    sticky: true,
+    bg: "training_stack5",
+    tabletBg: "training_stack5t",
+    mobileImg: "training_stack5m",
+    desc: [
+      "Learn advanced drone control techniques with our training programme to track and capture fast-moving subjects with precision. This focuses on coordination, motion control, and real-time adjustments required for dynamic environments. It’s suitable for sports, events, and action-based filming where timing and control are essential."
     ],
     btnText: "APPLY NOW",
-    link: "#"
+    link: "/contact-us"
+  },
+  {
+    id: 6,
+    title: "Wedding Filmmaking Mastery",
+    sticky: false,
+    bg: "training_stack6",
+    tabletBg: "training_stack6t",
+    mobileImg: "training_stack6m",
+    desc: [
+      "Understand how to integrate drone cinematography into wedding and event storytelling. Our training covers composition, timing, and seamless coordination with ground crews. Designed for filmmakers looking to elevate their work with cinematic aerial visuals that enhance storytelling and create memorable visual experiences."
+    ],
+    btnText: "APPLY NOW",
+    link: "/contact-us"
   }
 ];
-
 
 export default function Training() {
 
@@ -150,7 +175,7 @@ useEffect(() => {
 
   <p data-animate="fade-up" data-animate-delay="150">HDS offers India's most comprehensive drone training and certification programs — equipping individuals, enterprises, and government teams with the skills to fly, operate, process, and deploy drone technology across real-world applications.</p>
 
-   <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
+   <Link data-animate="fade-up" data-animate-delay="200" href="/contact-us" className="common_btn">
          <ButtonFan/>
          <span>Enquire Now</span>
         </Link>

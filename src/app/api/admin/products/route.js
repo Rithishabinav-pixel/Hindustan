@@ -14,6 +14,10 @@ export async function GET() {
   }
 }
 
+function toSlug(str) {
+  return str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+}
+
 export async function POST(request) {
   try {
     const formData = await request.formData()
@@ -36,9 +40,12 @@ export async function POST(request) {
     const buffer = Buffer.from(await imageFile.arrayBuffer())
     fs.writeFileSync(path.join(uploadDir, filename), buffer)
 
+    const slug = formData.get('slug')?.toString().trim() || toSlug(name.trim())
+
     const product = await prisma.product.create({
       data: {
         name: name.trim(),
+        slug,
         image: `/uploads/products/${filename}`,
         link: link.trim(),
       },

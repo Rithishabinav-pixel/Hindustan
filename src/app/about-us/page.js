@@ -158,7 +158,7 @@ export default function AboutUs() {
 
   <p data-animate="fade-up" data-animate-delay="150">Hindustan Drones delivers advanced UAV solutions tailored for industries that demand precision, efficiency, and reliability. From aerial intelligence to drone deployment, we help organizations unlock the full potential of drone technology.</p>
 
-   <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
+   <Link data-animate="fade-up" data-animate-delay="200" href="/contact-us" className="common_btn">
          <ButtonFan/>
          <span>REACH US</span>
         </Link>

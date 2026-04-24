@@ -7,6 +7,7 @@ export default function AddProductModal({ product, onClose, onSuccess }) {
   const isEdit = Boolean(product)
   const [name, setName] = useState(product?.name ?? '')
   const [link, setLink] = useState(product?.link ?? '')
+  const [slug, setSlug] = useState(product?.slug ?? '')
   const [imageFile, setImageFile] = useState(null)
   const [previewUrl, setPreviewUrl] = useState(null)
   const [error, setError] = useState('')
@@ -32,6 +33,7 @@ export default function AddProductModal({ product, onClose, onSuccess }) {
     try {
       const formData = new FormData()
       formData.append('name', name)
+      formData.append('slug', slug || name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))
       formData.append('link', link)
       if (imageFile) formData.append('image', imageFile)
 
@@ -81,7 +83,11 @@ export default function AddProductModal({ product, onClose, onSuccess }) {
                 type="text"
                 className={styles.input}
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => {
+                  const val = e.target.value
+                  setName(val)
+                  setSlug(val.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))
+                }}
                 placeholder="Enter product name"
                 required
               />

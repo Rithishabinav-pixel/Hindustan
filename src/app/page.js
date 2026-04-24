@@ -44,168 +44,144 @@ const whyChoose = [
 //  Tech Driving data
 const techdata = [
   {
-    "title": "Agriculture & Farming",
-    "description": "Drone intelligence helps farmers monitor crop health, map fields, and optimise spraying operations, improving yields, reducing resource use, and enabling more efficient, data-driven agriculture.",
-    "image": "agriculture_farming.mp4",
-    "feature_image":"agriculture_farming.webp",
-    "slug": ""
+    title: "Agricultural Drone Operations",
+    description: "Our agricultural drone intelligence enables farmers to monitor crop health, map fields, and optimise spraying operations, improving yields, reducing resource use, and driving sustainable, data-driven agriculture practices.",
+    image: "agriculture_farming.mp4",
+    slug: "/services/agricultural-drone-services"
   },
   {
-    "title": "Construction & Infrastructure",
-    "description": "Drone solutions enable accurate site mapping, progress tracking, and structural inspections, helping construction teams improve planning, reduce risks, and enhance project efficiency with real-time data insights.",
-    "image": "agriculture_farming.mp4",
-    "feature_image":"agriculture_farming.webp",
-    "slug": ""
+    title: "Solar Panel Inspection & Cleaning",
+    description: "We combine thermal imaging and precision cleaning techniques to optimise solar panel performance, detect faults and ensure maximum efficiency across large-scale installations, all while reducing maintenance costs and increasing asset longevity.",
+    image: "agriculture_farming.mp4",
+    slug: "/services/solar-panel-inspection-cleaning"
   },
   {
-    "title": "Media, Entertainment & Marketing",
-    "description": "Aerial drone technology captures cinematic visuals and dynamic perspectives, empowering brands and creators to produce engaging content, elevate storytelling, and deliver impactful marketing experiences.",
-    "image": "agriculture_farming.mp4",
-    "slug": ""
+    title: "High-Rise Power Wash",
+    description: "Our drones provide efficient high-rise cleaning solutions, ensuring consistent, streak-free results for windows and facades while reducing safety risks and eliminating the need for scaffolding or rope access systems.",
+    image: "agriculture_farming.mp4",
+    slug: "/services/high-rise-power-wash"
   },
   {
-    "title": "Mining & Extractives",
-    "description": "Drones provide precise surveying, volumetric analysis, and site monitoring, enabling mining operations to improve safety, optimise resource management, and make informed decisions with accurate data.",
-    "image": "agriculture_farming.mp4",
-    "slug": ""
+    title: "Logistics & Delivery",
+    description: "We streamline logistics with fast, reliable drone delivery, enabling faster transportation to remote or hard-to-reach areas. Our services improve accessibility, reduce transit times, and ensure critical supplies reach their destinations efficiently.",
+    image: "agriculture_farming.mp4",
+    slug: "/services/logistics-delivery-services"
   },
   {
-    "title": "Inspection",
-    "description": "Drone-based inspections allow safe and efficient assessment of assets, reducing manual risks while delivering high-resolution data for faster analysis and maintenance planning.",
-    "image": "agriculture_farming.mp4",
-    "slug": ""
+    title: "Surveying & Mapping",
+    description: "From 3D mapping to volumetric analysis, our drones capture precise spatial data for infrastructure, land assessment, and project planning. We help clients make faster, data-driven decisions with high-accuracy surveys and real-time insights.",
+    image: "agriculture_farming.mp4",
+    slug: "/services/surveying-mapping-services"
   },
   {
-    "title": "Energy & Utilities",
-    "description": "Drones support inspection and monitoring of power lines, solar farms, and infrastructure, helping utilities enhance reliability, reduce downtime, and maintain critical assets with greater efficiency.",
-    "image": "agriculture_farming.mp4",
-    "slug": ""
+    title: "Media & Aerial Cinematography",
+    description: "We provide high-quality aerial photography and videography services, offering cinematic visuals for real estate, events, and marketing. Our drones deliver dynamic perspectives that elevate content creation with seamless execution and stunning results.",
+    image: "agriculture_farming.mp4",
+    slug: "/services/media-aerial-cinematography"
   },
   {
-    "title": "Security, Surveillance & Emergency",
-    "description": "Drone technology enhances real-time surveillance and rapid response capabilities, supporting security operations, disaster management, and emergency services with improved situational awareness.",
-    "image": "agriculture_farming.mp4",
-    "slug": ""
+    title: "Security & Surveillance",
+    description: "Enhance your security operations with real-time aerial monitoring, perimeter patrols, and crowd management solutions. Our drones deliver actionable insights and ensure improved response times in high-risk environments or large-scale events.",
+    image: "agriculture_farming.mp4",
+    slug: "/services/security-surveillance-services"
   },
   {
-    "title": "Environmental, Research & Survey",
-    "description": "Drones assist in environmental monitoring, data collection, and research activities, enabling accurate surveys and insights that support conservation, analysis, and informed decision-making.",
-    "image": "agriculture_farming.mp4",
-    "slug": ""
+    title: "Infrastructure Monitoring",
+    description: "We offer continuous aerial monitoring of infrastructure projects, enabling better tracking of construction progress, identifying risks early, and ensuring regulatory compliance without disrupting ongoing operations.",
+    image: "agriculture_farming.mp4",
+    slug: "/services/infrastructure-monitoring"
   },
   {
-    "title": "Logistics & Delivery",
-    "description": "Drone delivery systems streamline logistics by enabling faster, cost-effective transportation of goods, especially in remote or hard-to-reach areas, improving efficiency and accessibility.",
-    "image": "agriculture_farming.mp4",
-    "slug": ""
+    title: "Industrial Inspection",
+    description: "Our drones provide detailed inspections of industrial plants, pipelines, and critical infrastructure, helping detect faults, reduce downtime, and ensure safety compliance without manual access or costly disruptions.",
+    image: "agriculture_farming.mp4",
+    slug: "/services/industrial-inspection-services"
   },
   {
-    "title": "Residential & Property",
-    "description": "Drones provide high-quality aerial views and property insights, helping real estate professionals showcase listings, assess properties, and deliver enhanced visual experiences to clients.",
-    "image": "agriculture_farming.mp4",
-    "slug": ""
+    title: "Public Safety & Emergency Response",
+    description: "From rapid damage assessment to real-time monitoring, we support emergency teams with aerial intelligence, enabling faster response times and improved decision-making during critical incidents or large-scale events.",
+    image: "agriculture_farming.mp4",
+    slug: "/services/public-safety-emergency-response"
+  },
+  {
+    title: "Energy & Utilities Inspection",
+    description: "We provide high-precision aerial inspection solutions for energy and utilities infrastructure, monitoring power lines, solar farms, and pipelines, ensuring reliability, safety, and regulatory compliance while reducing manual inspection risks.",
+    image: "agriculture_farming.mp4",
+    slug: "/services/energy-utilities-inspection"
   }
-]
-
+];
 
 // Drone Card Datas
 const droneData = [
   {
-    title:"AI Intelligence Systems",
-    description:"Our AI-driven systems transform aerial data into actionable insights, helping organisations monitor environments, detect risks early, and act with greater clarity.",
-    icon:"/images/ai_powered.svg"
-  },
-   {
-    title:"Drone Manufacturing & Assembly",
-    description:"We design and assemble high-performance drone systems engineered for reliability, adaptability, and precision across demanding operational environments.",
-    icon:"/images/seamless.svg"
-  },
-   {
-    title:"Autonomous Drone Operations",
-    description:"Our certified pilots deploy intelligent drone missions that capture critical aerial data, enabling organisations to inspect, monitor, and manage assets more effectively.",
-    icon:"/images/smart.svg"
-  }
-]
-
-
-const droneSlider = [
-  {
-    title: "Drone Model 1",
-    image: "/images/drone_model1.png"
+    title: "AI Intelligence Systems",
+    description: "Our AI-driven systems transform aerial data into actionable insights, helping organisations monitor environments, detect risks early, and lead with precision.",
+    icon: "/images/ai_powered.svg"
   },
   {
-    title: "Drone Model 2",
-    image: "/images/drone_model2.png"
+    title: "Drone Manufacturing & Assembly",
+    description: "We design and assemble high-performance drone systems engineered for reliability, adaptability, and precision across demanding operational environments.",
+    icon: "/images/seamless.svg"
   },
   {
-    title: "Drone Model 3",
-    image: "/images/drone_model3.png"
-  },
-  {
-    title: "Drone Model 1",
-    image: "/images/drone_model1.png"
-  },
-  {
-    title: "Drone Model 2",
-    image: "/images/drone_model2.png"
-  },
-  {
-    title: "Drone Model 3",
-    image: "/images/drone_model3.png"
-  },
-  {
-    title: "Drone Model 1",
-    image: "/images/drone_model1.png"
+    title: "Autonomous Drone Operations",
+    description: "Our certified pilots deploy intelligent drone missions that capture critical aerial data, enabling organisations to inspect, monitor, and manage assets effectively.",
+    icon: "/images/smart.svg"
   }
 ];
 
 
-// Insight data
+const droneSlider = [
+  {
+    title: "AgriFlow HDS40",
+    image: "/images/products/agriflow-hds40.png",
+    slug:"/products/agriflow-hds40"
+  },
+  {
+    title: "AgriFlow HDS-SEED",
+    image: "/images/products/agriflow-hds40.png",
+    slug:"/products/agriflow-hds40"
 
-const insightdata = [
-  {
-    image:"/images/insight1.png",
-    title:"Lorem ipsum dolor",
-    description:"Lorem ipsum dolor sit amet consectetur. Vel cras nisl morbi neque diam. Pulvinar adipiscing non sapien sit quam tristique. ",
-    slug:"/"
   },
   {
-    image:"/images/insight2.png",
-    title:"Lorem ipsum dolor",
-    description:"Lorem ipsum dolor sit amet consectetur. Vel cras nisl morbi neque diam. Pulvinar adipiscing non sapien sit quam tristique. ",
-    slug:"/"
+    title: "SolarShine HDS40B",
+    image: "/images/products/solarshine.png",
+    slug:"/products/solarshine-hds40b"
+
   },
   {
-    image:"/images/insight3.png",
-    title:"Lorem ipsum dolor",
-    description:"Lorem ipsum dolor sit amet consectetur. Vel cras nisl morbi neque diam. Pulvinar adipiscing non sapien sit quam tristique. ",
-    slug:"/"
+    title: "SkyWash HDS40A",
+    image: "/images/products/skywash.png",
+    slug:"/products/skywash-hds40a"
+
   },
   {
-    image:"/images/insight1.png",
-    title:"Lorem ipsum dolor",
-    description:"Lorem ipsum dolor sit amet consectetur. Vel cras nisl morbi neque diam. Pulvinar adipiscing non sapien sit quam tristique. ",
-    slug:"/"
+    title: "CargoLift HDS20A",
+    image: "/images/products/cargolift.png",
+    slug:"/products/cargolift-hds20a"
+
   },
   {
-    image:"/images/insight2.png",
-    title:"Lorem ipsum dolor",
-    description:"Lorem ipsum dolor sit amet consectetur. Vel cras nisl morbi neque diam. Pulvinar adipiscing non sapien sit quam tristique. ",
-    slug:"/"
+    title: "TerraMap HDS4P",
+    image: "/images/products/terramap.png",
+    slug:"/products/terramap-hds4p"
+
   },
   {
-    image:"/images/insight3.png",
-    title:"Lorem ipsum dolor",
-    description:"Lorem ipsum dolor sit amet consectetur. Vel cras nisl morbi neque diam. Pulvinar adipiscing non sapien sit quam tristique. ",
-    slug:"/"
+    title: "VigilCore M4TD",
+    image: "/images/products/vigilcore.png",
+    slug:"/products/vigilcore-m4td"
+
   },
   {
-    image:"/images/insight1.png",
-    title:"Lorem ipsum dolor",
-    description:"Lorem ipsum dolor sit amet consectetur. Vel cras nisl morbi neque diam. Pulvinar adipiscing non sapien sit quam tristique. ",
-    slug:"/"
-  },
-]
+    title: "InfraScan M400",
+   image: "/images/products/infrascan.png",
+    slug:"/products/infrascan-m400"
+
+  }
+];
+
+
 
 
 export default function Home() {
@@ -219,6 +195,29 @@ const tabRef = useRef(null);
 const [startCount, setStartCount] = useState(false);
 
 const [activeTech, setActiveTech] = useState(techdata[0]);
+
+const [insightdata, setInsightdata] = useState([]);
+
+useEffect(() => {
+  fetch('/api/blogs?page=1&limit=100')
+    .then(r => r.json())
+    .then(data => {
+      if (Array.isArray(data.blogs)) {
+        setInsightdata(
+          data.blogs
+            .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
+            .slice(0, 6)
+            .map(b => ({
+              image: b.featuredImage || '/images/insight1.png',
+              title: b.title,
+              description: b.shortDescription || '',
+              slug: b.slug,
+            }))
+        );
+      }
+    })
+    .catch(() => {});
+}, []);
 
  const [mobile, setMobile] = useState(false);
 
@@ -423,10 +422,10 @@ if(mobile) return
 {/* Redefining Section */}
     <section className={`common_section ${style.full_height_section} ${style.redefiningsection} ${style.sticky}`}>
 <div className={`container ${style.redefining_container}`}>
-   <h2 data-animate="fade-up" className="common_heading">Redefining <br className="desktop_break"/>the Future of Drones</h2>
+   <h2 data-animate="fade-up" className="common_heading">Defining the Future<br className="desktop_break"/>of Drone Services</h2>
    <div className={`topContent ${style.topContent} ${style.topContent_left}`}>
-    <p data-animate="fade-up" data-animate-delay="100">Hindustan Drone Services (HDS) brings together advanced drone systems, intelligent analytics, and certified expertise to deliver reliable aerial operations, helping industries capture precise data, improve efficiency, and make smarter decisions.</p>
-    <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
+    <p data-animate="fade-up" data-animate-delay="100">Hindustan Drone Services (HDSL) is defining the future of aerial solutions through a cutting-edge Drone-as-a-Service (DaaS) model. Our scalable, app-based platform connects businesses with certified drone pilots and service providers, offering on-demand access to precision-driven solutions across various industries. By eliminating intermediaries and streamlining workflows, we bring unmatched speed, transparency, and efficiency to traditionally fragmented operations. Positioned at the forefront of the digital service economy, HDSL is redefining how industries access and utilise aerial intelligence, empowering smarter, more efficient real-time decisions.</p>
+    <Link data-animate="fade-up" data-animate-delay="200" href="/about-us" className="common_btn">
          <ButtonFan/>
          <span>KNOW MORE</span>
         </Link>
@@ -443,7 +442,7 @@ if(mobile) return
    <section className={`common_section parralax_bg ${style.full_height_section} ${style.why_hindustan} ${style.sticky}`}>
     <div className={`container ${style.why_hindustan_container}`}>
       <div className={`topContent ${style.topContent} ${style.topContent_left}`}>
-        <h2 data-animate="fade-up" className="common_heading">Why Hindustan Drones Lead the Way</h2>
+        <h2 data-animate="fade-up" className="common_heading">Why Hindustan Drones Leads the Way</h2>
         <p data-animate="fade-up" data-animate-delay="100">Our advanced drone systems, intelligent analytics, and expert support deliver reliable aerial operations that industries depend on for precision.</p>
       </div>
 
@@ -470,12 +469,12 @@ if(mobile) return
 <section className={`common_section ${style.full_height_section} ${style.tech}`}>
   <div className={`container padding_left_only ${style.tech_container}`}>
      <div className={`topContent ${style.topContent} ${style.topContent_left}`}>
-        <h2 data-animate="fade-up" className="common_heading">Drone Tech Driving Industry Forward</h2>
-        <p data-animate="fade-up" data-animate-delay="100">Our advanced drone services empower industries to monitor assets, improve efficiency, and unlock new opportunities from the sky.</p>
-         <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
+        <h2 data-animate="fade-up" className="common_heading">Elevating Industries with Data-Driven Drone Services</h2>
+        <p data-animate="fade-up" data-animate-delay="100">Our advanced drone services help businesses across multiple sectors monitor assets, improve operational efficiency, and unlock new opportunities using aerial intelligence and data-driven insights.</p>
+         {/* <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
          <ButtonFan/>
          <span>KNOW MORE</span>
-        </Link>
+        </Link> */}
       </div>
 
      <div className={style.tech_contents_container} data-animate="fade-up" data-animate-delay="100">
@@ -519,7 +518,7 @@ if(mobile) return
               <h4>{item.title}</h4>
               <p>{item.description}</p>
 
-              <Link href="#" className="common_btn">
+              <Link href={item.slug} className="common_btn">
                 <ButtonFan/>
                 <span>KNOW MORE</span>
               </Link>
@@ -558,7 +557,7 @@ if(mobile) return
       <h4>{activeTech.title}</h4>
       <p>{activeTech.description}</p>
 
-      <Link href="#" className="common_btn">
+      <Link href={activeTech.slug} className="common_btn">
         <ButtonFan/>
         <span>KNOW MORE</span>
       </Link>
@@ -578,7 +577,7 @@ if(mobile) return
        <div className={`topContent ${style.topContent} ${style.topContent_left}`}>
         <h2 data-animate="fade-up" className="common_heading">Intelligent Drone Systems & Solutions</h2>
         <p data-animate="fade-up" data-animate-delay="100">Our drone solutions are designed to deliver reliable aerial capabilities for modern industries.</p>
-         <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
+         <Link data-animate="fade-up" data-animate-delay="200" href="/technology/ai-models-intelligent-analytics-powering-daas" className="common_btn">
          <ButtonFan/>
          <span>KNOW MORE</span>
         </Link>
@@ -607,10 +606,10 @@ if(mobile) return
     <div className={`topContent ${style.topContent}`}>
         <h2 data-animate="fade-up" className="common_heading">Explore Our Advanced Drone Models</h2>
         <p data-animate="fade-up" data-animate-delay="100">Discover the perfect drone solution for your industry needs. </p>
-         <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
+         {/* <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
          <ButtonFan/>
          <span>KNOW MORE</span>
-        </Link>
+        </Link> */}
       </div>
 </div>
 
@@ -643,12 +642,12 @@ if(mobile) return
   >
     {droneSlider.map((item, index) => (
       <SwiperSlide key={index}>
-        <div className="drone_card">
+         <Link href={`${item.slug}`} className="drone_card">
           <div className={style.drone_slider_img}>
           <Image src={`${item.image}`} alt={item.title} width={520} height={320}  />
           </div>
           <h3>{item.title}</h3>
-        </div>
+        </Link>
       </SwiperSlide>
     ))}
   </Swiper>
@@ -682,7 +681,7 @@ if(mobile) return
         <div className={`topContent ${style.topContent} ${style.topContent_left} ${style.pilot_training_content}`}>
        <p data-animate="fade-up">At Hindustan Drone Services, we believe powerful technology should come with the confidence to use it well. Our professional drone training equips individuals and teams with the knowledge needed to operate drones safely, efficiently, and with precision.</p>
        <p data-animate="fade-up" data-animate-delay="100">Through hands-on guidance and practical learning, participants understand flight controls, safety protocols, mission planning, and real-world applications, helping them unlock the full potential of modern drone technology.</p>
-      <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
+      <Link data-animate="fade-up" data-animate-delay="200" href="/training" className="common_btn">
          <ButtonFan/>
          <span>KNOW MORE</span>
         </Link>
@@ -698,7 +697,7 @@ if(mobile) return
        <div className={`topContent ${style.topContent} `}>
         <h2 data-animate="fade-up" className="common_heading">Latest Insights from the Drone Industry</h2>
         <p data-animate="fade-up" data-animate-delay="100">Our blog offers in-depth articles, case studies, and expert opinions on everything drone-related.</p>
-         <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
+         <Link data-animate="fade-up" data-animate-delay="200" href="/blog" className="common_btn">
          <ButtonFan/>
          <span>View All Articles</span>
         </Link>
@@ -747,7 +746,7 @@ if(mobile) return
           <h3>{data.title}</h3>
           <p>{data.description}</p>
 
-          <Link href="#" className={`common_btn link_btn ${style.insight_btn}`}>
+          <Link href={`/blog/${data.slug}`} className={`common_btn link_btn ${style.insight_btn}`}>
             <span>EXPLORE MORE</span>
            <LinkArrow/>
           </Link>
