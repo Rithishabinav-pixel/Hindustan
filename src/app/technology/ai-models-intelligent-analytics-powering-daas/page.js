@@ -1,4 +1,5 @@
-import AIModelsTechClient from './aiModelsTechClient'
+import AIModelsTechClient from "./AIModelsTechClient"
+
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
 
