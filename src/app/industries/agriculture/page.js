@@ -18,28 +18,27 @@ import LinkArrow from '@/app/components/UI/LinkArrow';
 // icon grid data
 
 const iconGrid = [
-    {
-        icon:`/images/industries/agriculture/ic1.svg`,
-        title:"Bridge inspection",
-        desc:"Deck, underside, piers, abutments, and expansion joints from aerial platforms"
-    },
-     {
-        icon:"/images/industries/agriculture/ic2.svg",
-        title:"Road condition mapping",
-        desc:"Pothole detection, surface cracking, and pavement distress analysis"
-    },
-     {
-        icon:"/images/industries/agriculture/ic3.svg",
-        title:"Railway embankment surveys",
-        desc:"Slope stability, erosion, and encroachment monitoring"
-    },
-     {
-        icon:"/images/industries/agriculture/ic4.svg",
-        title:"Port and jetty inspection",
-        desc:"Structural aerial assessment without vessel or diver requirement"
-    }
-]
-
+  {
+    icon: "/images/industries/agriculture/ic1.svg",
+    title: "Crop Health Monitoring",
+    desc: "Detect early signs of stress, disease, and nutrient deficiency using advanced aerial imaging and data analysis"
+  },
+  {
+    icon: "/images/industries/agriculture/ic2.svg",
+    title: "Precision Spray & Spread",
+    desc: "Ensure uniform application of fertilisers and crop protection inputs, reducing wastage and improving field effectiveness"
+  },
+  {
+    icon: "/images/industries/agriculture/ic3.svg",
+    title: "Field Mapping & Planning",
+    desc: "Generate accurate field data to support irrigation planning, crop management, and seasonal decision-making"
+  },
+  {
+    icon: "/images/industries/agriculture/ic4.svg",
+    title: "Large-Scale Coverage",
+    desc: "Monitor and manage extensive farmland efficiently with drone systems, reducing manual labour and improving operations"
+  }
+];
 // slider data
 const droneSlider = [
   {
@@ -72,29 +71,25 @@ const droneSlider = [
 
 const faqData = [
   {
-    title:"How are drones used in agriculture?",
-    content:"Drones are used in agriculture for crop monitoring, aerial spraying, field mapping, and soil analysis. They capture high-resolution aerial data that helps farmers identify crop health issues, irrigation problems, and pest infestations quickly and efficiently."
+    title:"How do drone services improve crop yield?",
+    content:"Drone services provide early insights into crop health, enabling timely intervention. This helps optimise input usage, reduce losses, and improve overall productivity across the field."
   },
    {
-    title:"What are the benefits of using drones for farming?",
-    content:"Drones are used in agriculture for crop monitoring, aerial spraying, field mapping, and soil analysis. They capture high-resolution aerial data that helps farmers identify crop health issues, irrigation problems, and pest infestations quickly and efficiently."
+    title:"Is drone spraying safe for crops and the environment?",
+    content:"Yes. Drone spraying ensures controlled and uniform application, eliminating chemical overuse and minimising exposure to soil, water, and nearby areas."
   },
    {
-    title:"Can drones help detect crop diseases early?",
-    content:"Drones are used in agriculture for crop monitoring, aerial spraying, field mapping, and soil analysis. They capture high-resolution aerial data that helps farmers identify crop health issues, irrigation problems, and pest infestations quickly and efficiently."
+    title:"Can drone services be used for small farms?",
+    content:"Yes. Our services can be scaled based on farm size. Individual farmers, FPOs, and cooperatives can all benefit from drone-based operations."
   },
    {
-    title:"Are agricultural drones suitable for large farms?",
-    content:"Drones are used in agriculture for crop monitoring, aerial spraying, field mapping, and soil analysis. They capture high-resolution aerial data that helps farmers identify crop health issues, irrigation problems, and pest infestations quickly and efficiently."
+    title:"How quickly can services be deployed on-site?",
+    content:"HDSL teams can typically mobilise within 24 to 48 hours, depending on location, ensuring timely support during critical farming periods."
   },
    {
-    title:"Do I need special training to operate agricultural drones?",
-    content:"Drones are used in agriculture for crop monitoring, aerial spraying, field mapping, and soil analysis. They capture high-resolution aerial data that helps farmers identify crop health issues, irrigation problems, and pest infestations quickly and efficiently."
-  },
-    {
-    title:"Can drones be used for pesticide and fertilizer spraying?",
-    content:"Drones are used in agriculture for crop monitoring, aerial spraying, field mapping, and soil analysis. They capture high-resolution aerial data that helps farmers identify crop health issues, irrigation problems, and pest infestations quickly and efficiently."
-  },
+    title:"What kind of data or insights do farmers receive?",
+    content:"Farmers receive actionable insights such as crop health indicators, field maps, and growth analysis to support better planning and decision-making."
+  }
 ]
 
 
@@ -107,8 +102,8 @@ export default function page() {
    <section className={style.hero_section} style={{backgroundImage:'url(/images/industries/agriculture/indutries_agriculture_hero.webp)'}}>
     <div className={`container ${style.heroContainer}`}>
           <div className={`topContent ${style.topContent}`}>
-      <h1 className={`common_heading black`} data-animate="fade-up" data-animate-delay="100">Agricultural <br className='desktop_break'/> Spray and Spread</h1>
-       <p data-animate="fade-up" data-animate-delay="100">Precision drone-based spray and spread — the most advanced crop protection and nutrition delivery system available to Indian farmers today.</p>
+      <h1 className={`common_heading black`} data-animate="fade-up" data-animate-delay="100">Smarter Agriculture <br className='desktop_break'/>Through Data and Drones</h1>
+       <p data-animate="fade-up" data-animate-delay="100">We leverage advanced drone technology and AI-driven insights to optimise farm operations, monitor crop health, and enhance productivity across every acre, ensuring your farm runs efficiently and sustainably.</p>
       <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn black">
          <ButtonFan/>
          <span>Enquire Now</span>
@@ -132,7 +127,10 @@ export default function page() {
 
              <div className={`topContent topContent_left ${style.topContent}`}>
       
-       <p data-animate="fade-up" data-animate-delay="100">India's transport infrastructure handles billions of journeys annually. Bridges, road surfaces, railway embankments, and tunnels require regular inspection to ensure structural safety and regulatory compliance. Traditional manual inspection is slow, traffic-disruptive, and exposes inspectors to risk. Backlogs lead to dangerous deferred maintenance.</p>
+       <p data-animate="fade-up" data-animate-delay="100">Agriculture operates at scale, but visibility at that scale remains limited. Farmers often rely on manual observation, leading to delayed interventions, uneven application of inputs, and inefficient use of resources.</p>
+       <p data-animate="fade-up" data-animate-delay="200">With the added challenges of weather variability, labour constraints, and rising input costs, precision and consistency are more critical than ever. That’s where we come in.
+</p>
+
       </div>
 
       <div className={style.contentImage} data-animate="fade-up" data-animate-delay="200">
@@ -158,7 +156,7 @@ export default function page() {
 <section className={`common_section ${style.industryHelp_section}` }>
     <div className={`container ${style.helpContainer} ${style.industries_commonContainer}`}>
 
-<h2 className={`common_heading`} data-animate="fade-up">How HDS Helps</h2>
+<h2 className={`common_heading`} data-animate="fade-up">How HDSL Helps</h2>
 
         <div className={`${style.row} ${style.align_center}`}>
 
@@ -166,7 +164,7 @@ export default function page() {
 
              <div className={`topContent topContent_left ${style.topContent}`}>
       
-       <p data-animate="fade-up" data-animate-delay="100">Our advanced drone systems, intelligent analytics, and expert support deliver reliable aerial operations that industries depend on for precision.</p>
+       <p data-animate="fade-up" data-animate-delay="100">At HDSL, we combine drone technology with advanced analytics to deliver precision, speed, and consistency in agricultural operations.</p>
       </div>
 
       <div className={style.contentImage} data-animate="fade-up" data-animate-delay="200">

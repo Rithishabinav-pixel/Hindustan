@@ -34,12 +34,11 @@ max-width: 990px;
 .specification_section{
     height: 100vh;
     min-height: 100vh;
-    background-size: cover;
+    background-size: 100% auto;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
     position: relative;
     background-position: right center;
-    background-image: url('/images/products/agriflow-hds40/specs_bg.webp');
 }
 
 
@@ -161,6 +160,82 @@ opacity: 0.6;
     text-align: right;
 }
 
+.service_container{
+display: flex;
+flex-direction: column;
+gap: 40px;
+}
+
+.serviceCards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
+.serviceCard:nth-child(5n + 1),
+.serviceCard:nth-child(5n + 2),
+.serviceCard:nth-child(5n + 3) {
+    width: calc(33.33% - 20px);
+}
+
+.serviceCard:nth-child(5n + 4),
+.serviceCard:nth-child(5n + 5){
+    width: calc(50% - 15px);
+}
+
+.serviceCard.full{
+width: calc(66.66% - 15px);
+}
+
+.serviceCard{
+    position: relative;
+    overflow: hidden;
+}
+
+.serviceCard img{
+    width: 100%;
+    height: auto;
+}
+
+.serviceCard .content{
+    position: absolute;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 2;
+    left: 0;
+    width: 100%;
+    max-width: 450px;
+}
+
+.serviceCard::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.serviceCard.topLeft .content{
+top: 0;
+}
+
+.serviceCard.topLeft::before{
+    background: linear-gradient(321deg, rgba(0, 0, 0, 0.00) 26.51%, rgba(0, 0, 0, 0.60) 65.48%), rgba(211, 211, 211, 0) -396.996px 0px / 252.627% 149.66% no-repeat;
+}
+
+.serviceCard.bottomTop .content,
+.serviceCard.bottomLeft .content{
+bottom: 0;
+}
+
+.serviceCard.bottomTop::before{
+background: linear-gradient(358deg, rgba(0, 0, 0, 0.60) 3.03%, rgba(0, 0, 0, 0.00) 78.46%),  rgba(211, 211, 211, 0) -10.512px 0px / 105.128% 100% no-repeat;
+}
+
+.serviceCard.bottomLeft::before{
+background: linear-gradient(13deg, rgba(0, 0, 0, 0.60) 9.42%, rgba(0, 0, 0, 0.00) 75.72%), rgba(211, 211, 211, 0) -83.402px -131px / 136.413% 129.695% no-repeat;
+}
 
 
 /* responsive */
@@ -182,6 +257,34 @@ line-height: 32px;
 /* tablet */
 @media (max-width:1200px){
 
+    
+.serviceCards{
+    gap: 20px;
+}
+
+
+.serviceCard:nth-child(5n + 1),
+.serviceCard:nth-child(5n + 2),
+.serviceCard:nth-child(5n + 3),
+.serviceCard:nth-child(5n + 4),
+.serviceCard:nth-child(5n + 5)  {
+    width: calc(50% - 10px);
+}
+
+.serviceCard{
+    aspect-ratio: 354 / 385;
+}
+
+.serviceCard img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+    .service_container{
+gap: 30px;
+}
+
     .specificationCard h3{
     font-size: 20px;
     line-height: 28px;
@@ -195,10 +298,10 @@ line-height: 32px;
     }
 
         .specification_section{
-    min-height: 800px;
-    height: 800px;
-    background-image: url('/images/products/agriflow-hds40/specs_bg_t.webp');
-
+    height: 790px;
+        min-height: 790px;
+        background-size: 100% auto;
+        background-position: top center;
 }
 
 }
@@ -207,6 +310,22 @@ line-height: 32px;
 
 /* mobile */
 @media (max-width:767px){
+
+
+.serviceCard:nth-child(5n + 1),
+.serviceCard:nth-child(5n + 2),
+.serviceCard:nth-child(5n + 3),
+.serviceCard:nth-child(5n + 4),
+.serviceCard:nth-child(5n + 5)  {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+}
+
+.serviceCard img{
+    width: 100%;
+    height: 100%;
+    object-fit: unset;
+}
 
     .tables_container{
     gap: 50px;
@@ -225,7 +344,7 @@ line-height: 32px;
       .specification_section {
         height: 840px;
         min-height: 840px;
-    background-image: url('/images/products/agriflow-hds40/specs_bg_m.webp');
+        background-position: top center;
 
     }
     

@@ -2,13 +2,13 @@
     min-height: 100vh;
     width: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: top center;
     padding-top: 240px;
 }
 
 .topContent{
     width: 100%;
-    max-width: 630px;
+    max-width: 800px;
 }
 
 .faq_section .topContent{
@@ -19,6 +19,10 @@
 color: black;
 font-size: 24px;
 line-height: 32px;
+}
+
+.hero_section .topContent p.white{
+    color: white;
 }
 
 .industries_commonContainer{
@@ -276,7 +280,8 @@ width:100%;
 
         .hero_section{
     padding-top: 120px;
-    min-height: 800px;
+height: 100vh;
+min-height: 930px;
 }
 
       .drone_slider :global(.swiper-slide-active) {

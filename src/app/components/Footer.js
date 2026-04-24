@@ -118,16 +118,16 @@ export default function Footer() {
 <div className={style.footer_links}>
     <div className={style.footer_links_single} data-accordion={openSections.has(4) ? "open" : "closed"}>
         <h3 onClick={() => toggleSection(4)}>Products<span className={style.accordion_icon} aria-hidden="true">{openSections.has(4) ? '–' : '+'}</span></h3>
-        <ul>
-            <li><Link href="/products/agriflow-hds40">AgriFlow HDS40</Link> </li>
-            <li> <Link href="#">AgriFlow HDS-SEED</Link> </li> 
-            <li> <Link href="#">SolarShine HDS40B</Link> </li>
-            <li> <Link href="#">SkyWash HDS40A</Link> </li>
-            <li> <Link href="#">CargoLift HDS20A</Link> </li>
-            <li> <Link href="#">TerraMap HDS4P</Link> </li>
-            <li> <Link href="#">VigilCore M4TD</Link> </li>
-            <li> <Link href="#">InfraScan M400</Link> </li>
-            </ul> 
+      <ul>
+  <li><Link href="/products/agriflow-hds40" className={pathname === "/products/agriflow-hds40" ? style.active : ""}>AgriFlow HDS40</Link></li>
+  <li><Link href="/products/agriflow-hds-seed" className={pathname === "/products/agriflow-hds-seed" ? style.active : ""}>AgriFlow HDS-SEED</Link></li>
+  <li><Link href="/products/solarshine-hds40b" className={pathname === "/products/solarshine-hds40b" ? style.active : ""}>SolarShine HDS40B</Link></li>
+  <li><Link href="/products/skywash-hds40a" className={pathname === "/products/skywash-hds40a" ? style.active : ""}>SkyWash HDS40A</Link></li>
+  <li><Link href="/products/cargolift-hds20a" className={pathname === "/products/cargolift-hds20a" ? style.active : ""}>CargoLift HDS20A</Link></li>
+  <li><Link href="/products/terramap-hds4p" className={pathname === "/products/terramap-hds4p" ? style.active : ""}>TerraMap HDS4P</Link></li>
+  <li><Link href="/products/vigilcore-m4td" className={pathname === "/products/vigilcore-m4td" ? style.active : ""}>VigilCore M4TD</Link></li>
+  <li><Link href="/products/infrascan-m400" className={pathname === "/products/infrascan-m400" ? style.active : ""}>InfraScan M400</Link></li>
+</ul>
         </div>
 </div>
 
@@ -141,15 +141,23 @@ export default function Footer() {
             </span>
         </h3>
         <ul>
-            <li><Link href="/industries/agriculture" className={pathname === "/industries/agriculture" ? style.active : ""}>Agriculture</Link></li>
-            <li><Link href="#">Public Safety</Link></li>
-            <li><Link href="#">Utilities</Link></li>
-            <li><Link href="#">Security</Link></li>
-            <li><Link href="#">Construction</Link></li>
-            <li><Link href="#">Engineering</Link></li>
-            <li><Link href="#">Transportation</Link></li>
-            <li><Link href="#">Oil & Gas</Link></li>
-            <li><Link href="#">Education</Link></li>
+           <li><Link href="/industries/agriculture" className={pathname === "/industries/agriculture" ? style.active : ""}>Agriculture</Link></li>
+
+<li><Link href="/industries/public-safety" className={pathname === "/industries/public-safety" ? style.active : ""}>Public Safety</Link></li>
+
+<li><Link href="/industries/utilities" className={pathname === "/industries/utilities" ? style.active : ""}>Utilities</Link></li>
+
+<li><Link href="/industries/security" className={pathname === "/industries/security" ? style.active : ""}>Security</Link></li>
+
+<li><Link href="/industries/construction" className={pathname === "/industries/construction" ? style.active : ""}>Construction</Link></li>
+
+<li><Link href="/industries/engineering" className={pathname === "/industries/engineering" ? style.active : ""}>Engineering</Link></li>
+
+<li><Link href="/industries/transportation" className={pathname === "/industries/transportation" ? style.active : ""}>Transportation</Link></li>
+
+<li><Link href="/industries/oil-and-gas" className={pathname === "/industries/oil-and-gas" ? style.active : ""}>Oil & Gas</Link></li>
+
+<li><Link href="/industries/education" className={pathname === "/industries/education" ? style.active : ""}>Education</Link></li>
         </ul>
     </div>
 </div>
