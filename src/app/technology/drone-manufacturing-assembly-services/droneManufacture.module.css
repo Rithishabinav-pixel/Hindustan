@@ -1,0 +1,235 @@
+.heroSection{
+    padding: 190px 0 0 0;
+}
+
+.heroSection .topContent{
+    width: 100%;
+    margin: auto;
+    max-width: 1050px;
+}
+
+.heroSection .topContent p{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.videoSection{
+
+    position: relative;
+}
+
+.videoSection_video{
+     mix-blend-mode: color-dodge;
+     opacity: 0.7;
+     transform: translateY(-5%);
+}
+
+.videoSection_video video{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1920 / 828;
+     object-fit: cover;
+     object-position: top;
+    
+}
+
+.integrated_drone_section{
+    padding-top: 0;
+}
+
+.integrated_drone_commonContainer{
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+
+.integrated_drone_commonContainer>h2{
+    max-width: 800px;
+}
+
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+ .row.align_start{
+    align-items: flex-start;
+}
+
+ .row.align_center{
+    align-items: center;
+}
+
+ .row .content{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+
+ .row .content .topContent{
+    width: 100%;
+    max-width: 630px;
+}
+
+
+
+
+.integrated_droneContainer .row .content .contentImage img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+.integrated_droneContainer .row .content {
+    width: 50%;
+}
+
+.integrated_droneContainer .row .content .contentImage{
+    width: 83.5%;
+}
+
+.integrated_droneContainer .row .image{
+    width: 85%;
+}
+
+.integrated_droneContainer .row .icon_grid{
+width: 50%;
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+}
+
+.integrated_droneContainer .row .icon_grid .card{
+width: calc(50% - 15px);
+display: flex;
+flex-direction: column;
+gap: 16px;
+}
+
+.integrated_droneContainer .row .icon_grid .card img{
+    width: 80px;
+    height: auto;
+}
+
+.integrated_droneContainer .row .icon_grid .card h3{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+}
+
+
+/* responsive */
+
+/* laptop */
+
+@media (max-width:1400px) {
+    .integrated_drone_commonContainer{
+    gap: 16px;
+}
+
+.integrated_droneContainer .row .icon_grid .card img{
+    width: 60px;
+}
+
+.integrated_droneContainer .row .icon_grid .card h3{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+
+}
+
+/* tablet */
+
+@media (max-width:1200px) {
+
+    
+
+     .row.align_center{
+    flex-direction: column;
+}
+
+    .heroSection .topContent p{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.integrated_droneContainer .row .content,
+.integrated_droneContainer .row .icon_grid {
+    width: 100%;
+}
+
+    .heroSection .topContent{
+    max-width: 630px;
+    margin: unset;
+}
+.heroSection {
+    padding: 170px 0 0;
+}
+
+  .row .content{
+        gap: 30px;
+     }
+
+    .integrated_droneContainer .row .content .contentImage{
+    width: 100%;
+}
+
+
+
+
+    .row{
+        gap: 30px;
+    }
+
+
+
+}
+
+
+/* mobile */
+@media (max-width:767px) {
+
+    .heroSection {
+    padding: 120px 0 0;
+}
+
+   .heroSection .topContent p{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+
+          .integrated_droneContainer .row .content,
+          .integrated_droneContainer .row .content .contentImage,
+          .integrated_droneContainer .row .image{
+    width: 100%;
+}
+
+.integrated_droneContainer .row .icon_grid{
+width: 100%;
+gap: 30px;
+}
+
+.integrated_droneContainer .row .icon_grid .card{
+width:100%;
+}
+
+
+
+    .integrated_droneContainer .row .image{
+        display: none;
+    }
+
+
+    .row{
+    flex-direction: column;
+}
+    
+   
+}
