@@ -90,7 +90,7 @@ export default function Footer() {
         <h3 onClick={() => toggleSection(1)}>Technology<span className={style.accordion_icon} aria-hidden="true">{openSections.has(1) ? '–' : '+'}</span></h3>
         <ul>
             <li><Link href="/technology/ai-models-intelligent-analytics-powering-daas" className={pathname === "/technology/ai-models-intelligent-analytics-powering-daas" ? style.active : ""}>Advanced AI Models Overview</Link></li>
-            <li><Link href="#">Drone Manufacturing, Assembly & Services</Link></li>
+            <li><Link href="/technology/drone-manufacturing-assembly-services" className={pathname === "/technology/drone-manufacturing-assembly-services"? footerStyle.active :""}>Drone Manufacturing, Assembly & Services</Link></li>
         </ul>
     </div>
 </div>

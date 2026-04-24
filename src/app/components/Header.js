@@ -153,7 +153,7 @@ export default function Header() {
                 <h3 onClick={() => toggleMenuSection(0)}>Technology<span className={footerStyle.accordion_icon} aria-hidden="true">{menuOpenSections.has(0) ? '–' : '+'}</span></h3>
                 <ul>
                     <li><Link href="/technology/ai-models-intelligent-analytics-powering-daas" className={pathname === "/technology/ai-models-intelligent-analytics-powering-daas"? footerStyle.active :""}>Advanced AI Models Overview</Link></li>
-            <li><Link href="#">Drone Manufacturing, Assembly & Services</Link></li>
+            <li><Link href="/technology/drone-manufacturing-assembly-services" className={pathname === "/technology/drone-manufacturing-assembly-services"? footerStyle.active :""}>Drone Manufacturing, Assembly & Services</Link></li>
                 </ul>
             </div>
            
