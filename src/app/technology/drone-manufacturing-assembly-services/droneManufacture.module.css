@@ -6,6 +6,8 @@
     width: 100%;
     margin: auto;
     max-width: 1050px;
+    position: relative;
+    z-index: 2;
 }
 
 .heroSection .topContent p{

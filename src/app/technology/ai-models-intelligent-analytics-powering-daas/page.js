@@ -110,7 +110,7 @@ export default function page() {
   <div className={`topContent ${style.topContent}`}>
         <h1 data-animate="fade-up" data-animate-delay="150" className="common_heading">Technology Powering The Future Of Drone Innovation</h1>
         <p data-animate="fade-up" data-animate-delay="300">Our drone technologies combine advanced engineering, intelligent analytics, and precision systems to deliver reliable aerial solutions across industries.</p>
-       <Link data-animate="fade-up" data-animate-delay="450" href="#" className="common_btn">
+       <Link data-animate="fade-up" data-animate-delay="450" href="/contact-us" className="common_btn">
          <ButtonFan/>
          <span>Enquire Now</span>
         </Link>
