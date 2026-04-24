@@ -24,7 +24,7 @@ export default function page() {
     <h3>Office Address</h3>
     <p >Hindustan Drone Services Private Limited<br></br>
 Unit No.1011A, Level 1, Sky One (Wing A), Prestige SkyTech,<br/>Financial District, Nanakramguda, Hyderabad - 500 032, Telangana.</p>
-  <a  href="#" className={`common_btn ${style.getDirection_btn}`}>
+  <a target='_blank' href="https://maps.app.goo.gl/yGesmCCMdnxSCkQ49" className={`common_btn ${style.getDirection_btn}`}>
         <svg className='fann' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
 <path d="M16 26C21.5228 26 26 21.5228 26 16C26 10.4772 21.5228 6 16 6C10.4772 6 6 10.4772 6 16C6 21.5228 10.4772 26 16 26Z" stroke="#148F3F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
 <path d="M16 20C18.2091 20 20 18.2091 20 16C20 13.7909 18.2091 12 16 12C13.7909 12 12 13.7909 12 16C12 18.2091 13.7909 20 16 20Z" stroke="#148F3F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

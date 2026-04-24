@@ -23,7 +23,7 @@ export default function page() {
             </div>
 
             <p >The page you’re looking for doesn’t exist or may have been moved. Please check the URL or return to the homepage.</p>
-   <Link href="#" className="common_btn">
+   <Link href="/" className="common_btn">
          <ButtonFan/>
          <span> GoTo Home</span>
         </Link>
