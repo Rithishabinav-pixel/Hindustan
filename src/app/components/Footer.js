@@ -68,9 +68,9 @@ export default function Footer() {
             <li>
                 <Link href="/" className={pathname === "/" ? style.active : ""}>Home</Link>
             </li>
-            <li>
-                <Link href="/#" className={pathname === "/about-us" ? style.active : ""}>About Us</Link>
-            </li>
+            // <li>
+            //     <Link href="/#" className={pathname === "/about-us" ? style.active : ""}>About Us</Link>
+            // </li>
             <li>
                 <Link href="/training" className={pathname === "/training" ? style.active : ""}>Training</Link>
             </li>
