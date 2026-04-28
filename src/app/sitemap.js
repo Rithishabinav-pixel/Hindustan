@@ -14,6 +14,7 @@ const STATIC_ROUTES = [
   { url: '/technology/ai-models-intelligent-analytics-powering-daas', priority: 0.6, changeFrequency: 'monthly' },
 ]
 
+// sitemap
 export default async function sitemap() {
   const [services, blogs, careers] = await Promise.all([
     prisma.service.findMany({
