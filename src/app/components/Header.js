@@ -142,8 +142,11 @@ export default function Header() {
             <li>
                 <Link href="/blog" className={pathname === "/blog" ? footerStyle.active : ""}>Blog</Link>
             </li>
+            <li>
+                <Link href="/case-study" className={pathname === "/case-study" ? style.active : ""}>Case Study</Link>
+               </li>
              <li>
-                <Link href="/blog" className={pathname === "/career" ? footerStyle.active : ""}>Career</Link>
+                <Link href="/career" className={pathname === "/career" ? footerStyle.active : ""}>Career</Link>
             </li>
             <li>
                 <Link href="/contact-us" className={pathname === "/contact-us" ? footerStyle.active : ""}>Contact Us</Link>
