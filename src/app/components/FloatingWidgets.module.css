@@ -1,0 +1,48 @@
+.floatingWidgets{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 99;
+}
+
+.floatingWidgets>a{
+  position: relative;
+  display: flex;
+  transition: 0.3s all;
+}
+
+.floatingWidgets>a:hover{
+  transform: scale(0.95);
+}
+
+.floatingWidgets>a#float_enquire_btn img.arrow{
+  width: 26px;
+  height: 28px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.floatingWidgets>a#float_whatsapp_btn img{
+  width: 72px;
+  height: auto;
+}
+
+.floatingWidgets>a#float_enquire_btn img{
+  width: 80px;
+  height: auto;
+}
+
+.floatingWidgets>a#float_enquire_btn img:not(.arrow){
+  animation: float_enquire_btn 10s infinite linear;
+}
+
+@keyframes float_enquire_btn {
+  to{
+    transform: rotate(360deg);
+  }
+}

@@ -98,7 +98,7 @@ display: none;
   transform: translateY(0);
 }
 
-.menuLinks_single h3{
+.menuLinks_single .menu_title{
     text-transform: uppercase;
     font-size: 32px;
     line-height: 40px;

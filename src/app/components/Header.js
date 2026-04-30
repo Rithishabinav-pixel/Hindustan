@@ -134,6 +134,9 @@ export default function Header() {
             </li>
             
             <li>
+                <Link href="/about-us" className={pathname === "/training" ? footerStyle.active : ""}>About Us</Link>
+            </li>
+            <li>
                 <Link href="/training" className={pathname === "/training" ? footerStyle.active : ""}>Training</Link>
             </li>
             <li>
@@ -148,7 +151,7 @@ export default function Header() {
                 </ul>
             </div>
              <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`} data-accordion={menuOpenSections.has(0) ? "open" : "closed"}>
-                <h3 onClick={() => toggleMenuSection(0)}>Technology<span className={footerStyle.accordion_icon} aria-hidden="true">{menuOpenSections.has(0) ? '–' : '+'}</span></h3>
+                <p className={menuStyle.menu_title} onClick={() => toggleMenuSection(0)}>Technology<span className={footerStyle.accordion_icon} aria-hidden="true">{menuOpenSections.has(0) ? '–' : '+'}</span></p>
                 <ul>
                     <li><Link href="/technology/ai-models-intelligent-analytics-powering-daas" className={pathname === "/technology/ai-models-intelligent-analytics-powering-daas"? footerStyle.active :""}>Advanced AI Models Overview</Link></li>
             <li><Link href="/technology/drone-manufacturing-assembly-services" className={pathname === "/technology/drone-manufacturing-assembly-services"? footerStyle.active :""}>Drone Manufacturing, Assembly & Services</Link></li>
@@ -160,7 +163,7 @@ export default function Header() {
         {/* footer links column */}
         <div className={`${footerStyle.footer_links} ${menuStyle.menu_link_container}`}>
            <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`} data-accordion={menuOpenSections.has(2) ? "open" : "closed"}>
-                <h3 onClick={() => toggleMenuSection(2)}>Services<span className={footerStyle.accordion_icon} aria-hidden="true">{menuOpenSections.has(2) ? '–' : '+'}</span></h3>
+                <p className={menuStyle.menu_title} onClick={() => toggleMenuSection(2)}>Services<span className={footerStyle.accordion_icon} aria-hidden="true">{menuOpenSections.has(2) ? '–' : '+'}</span></p>
                 <ul>
                     {services.length > 0 ? services.map(s => (
                       <li key={s.id}>
@@ -176,7 +179,7 @@ export default function Header() {
          {/* footer links column */}
         <div className={`${footerStyle.footer_links} ${menuStyle.menu_link_container}`}>
            <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`} data-accordion={menuOpenSections.has(3) ? "open" : "closed"}>
-                <h3 onClick={() => toggleMenuSection(3)}>Products<span className={footerStyle.accordion_icon} aria-hidden="true">{menuOpenSections.has(3) ? '–' : '+'}</span></h3>
+                <p className={menuStyle.menu_title} onClick={() => toggleMenuSection(3)}>Products<span className={footerStyle.accordion_icon} aria-hidden="true">{menuOpenSections.has(3) ? '–' : '+'}</span></p>
                <ul>
   <li><Link href="/products/agriflow-hds40" className={pathname === "/products/agriflow-hds40" ? footerStyle.active : ""}>AgriFlow HDS40</Link></li>
   <li><Link href="/products/agriflow-hds-seed" className={pathname === "/products/agriflow-hds-seed" ? footerStyle.active : ""}>AgriFlow HDS-SEED</Link></li>
@@ -193,7 +196,7 @@ export default function Header() {
         {/* footer links column */}
         <div className={`${footerStyle.footer_links} ${menuStyle.menu_link_container}`}>
             <div className={`${footerStyle.footer_links_single} ${menuStyle.menuLinks_single}`} data-accordion={menuOpenSections.has(4) ? "open" : "closed"}>
-                <h3 onClick={() => toggleMenuSection(4)}>Industries<span className={footerStyle.accordion_icon} aria-hidden="true">{menuOpenSections.has(4) ? '–' : '+'}</span></h3>
+                <p className={menuStyle.menu_title} onClick={() => toggleMenuSection(4)}>Industries<span className={footerStyle.accordion_icon} aria-hidden="true">{menuOpenSections.has(4) ? '–' : '+'}</span></p>
                 <ul>
                      <li><Link href="/industries/agriculture" className={pathname === "/industries/agriculture" ? footerStyle.active : ""}>Agriculture</Link></li>
 

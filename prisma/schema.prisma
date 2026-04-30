@@ -139,3 +139,34 @@ model BlogPost {
   seoOgImage         String?
   seoCanonicalUrl    String?
 }
+
+model CaseStudyCategory {
+  id          Int              @id @default(autoincrement())
+  name        String
+  slug        String           @unique
+  caseStudies CaseStudyPost[]
+  createdAt   DateTime         @default(now())
+}
+
+model CaseStudyPost {
+  id               Int                 @id @default(autoincrement())
+  title            String
+  slug             String              @unique
+  shortDescription String?
+  content          String
+  featuredImage    String?
+  author           String?             @default("Hindustan Drones")
+  tags             Json?
+  categories       CaseStudyCategory[]
+  publishedAt      DateTime?           @default(now())
+  createdAt        DateTime            @default(now())
+  updatedAt        DateTime            @updatedAt
+
+  seoMetaTitle       String?
+  seoMetaDescription String?
+  seoMetaKeywords    String?
+  seoOgTitle         String?
+  seoOgDescription   String?
+  seoOgImage         String?
+  seoCanonicalUrl    String?
+}

@@ -103,14 +103,14 @@ background-clip: text;
 }
 
 .common_btn svg.fan{
-  animation: btn_fan_animation 5s infinite linear;
+  animation: btn_fan_animation 4s infinite linear;
     transition: var(--transition);
 
 }
 
 @keyframes btn_fan_animation {
   to{
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 

@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react'
 import styles from './TagInput.module.css'
 
-export default function TagInput({ value = [], onChange, disabled }) {
+export default function TagInput({ value = [], onChange, disabled, tagsEndpoint = '/api/admin/tags' }) {
   const [inputVal,     setInputVal]     = useState('')
   const [suggestions,  setSuggestions]  = useState([])
   const [allTags,      setAllTags]      = useState([])
@@ -10,7 +10,7 @@ export default function TagInput({ value = [], onChange, disabled }) {
   const inputRef = useRef(null)
 
   useEffect(() => {
-    fetch('/api/admin/tags')
+    fetch(tagsEndpoint)
       .then((r) => r.json())
       .then((data) => setAllTags(Array.isArray(data) ? data : []))
       .catch(() => {})

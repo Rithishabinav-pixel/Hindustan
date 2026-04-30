@@ -65,22 +65,7 @@ import "swiper/css/navigation";
       image:"/images/team3.webp",
       name:"Sanjana Rao",
       position:"Managing Director"
-    },
-    {
-      image:"/images/team1.webp",
-      name:"Sanjana Rao",
-      position:"Managing Director"
-    },
-    {
-      image:"/images/team2.webp",
-      name:"Sanjana Rao",
-      position:"Managing Director"
-    },
-    {
-      image:"/images/team3.webp",
-      name:"Sanjana Rao",
-      position:"Managing Director"
-    },
+    }
   ]
 
 
@@ -235,10 +220,14 @@ export default function AboutClient() {
 
 
   <Swiper
-    modules={[Navigation]}
+    modules={[Navigation, Autoplay]}
     navigation={{
       prevEl: ".whyIndustriesSwiper_custom-prev",
       nextEl: ".whyIndustriesSwiper_custom-next",
+    }}
+    autoplay={{
+      delay: 2500,
+      disableOnInteraction: false,
     }}
     slidesPerView={1}
     loop={true}

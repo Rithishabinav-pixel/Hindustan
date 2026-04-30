@@ -7,6 +7,7 @@ import FloatingNotification from "./UI/FloatingNotification"
 export default function ContactForm() {
   const router = useRouter()
   const [fields, setFields] = useState({ name: "", email: "", phone: "", subject: "", message: "" })
+  const [errors, setErrors] = useState({ name: "", email: "", phone: "", message: "" })
   const [loading, setLoading] = useState(false)
   const [notification, setNotification] = useState({ show: false, type: "success", title: "", message: "" })
 
@@ -19,14 +20,44 @@ export default function ContactForm() {
     if (name === 'phone') {
       const digits = value.replace(/\D/g, '').slice(0, 10)
       setFields((prev) => ({ ...prev, phone: digits }))
+      setErrors((prev) => ({ ...prev, phone: "" }))
       return
     }
     setFields((prev) => ({ ...prev, [name]: value }))
+    if (errors[name]) setErrors((prev) => ({ ...prev, [name]: "" }))
   }
 
   async function handleSubmit(e) {
     e.preventDefault()
     if (loading) return
+
+    const newErrors = { name: "", email: "", phone: "", message: "" }
+    let hasError = false
+
+    if (!fields.name.trim()) {
+      newErrors.name = "Full name is required."
+      hasError = true
+    }
+    if (!fields.email.trim()) {
+      newErrors.email = "Email address is required."
+      hasError = true
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email)) {
+      newErrors.email = "Please enter a valid email address."
+      hasError = true
+    }
+    if (fields.phone && fields.phone.length < 10) {
+      newErrors.phone = "Phone number must be 10 digits."
+      hasError = true
+    }
+    if (!fields.message.trim()) {
+      newErrors.message = "Message is required."
+      hasError = true
+    }
+
+    if (hasError) {
+      setErrors(newErrors)
+      return
+    }
 
     setLoading(true)
 
@@ -77,6 +108,7 @@ export default function ContactForm() {
           required
           disabled={loading}
         />
+        {errors.name && <span style={{ color: "#e53e3e", fontSize: "12px", marginTop: "-8px", display: "block" }}>{errors.name}</span>}
         <input
           type="email"
           name="email"
@@ -86,6 +118,7 @@ export default function ContactForm() {
           required
           disabled={loading}
         />
+        {errors.email && <span style={{ color: "#e53e3e", fontSize: "12px", marginTop: "-8px", display: "block" }}>{errors.email}</span>}
         <input
           type="text"
           name="phone"
@@ -96,11 +129,13 @@ export default function ContactForm() {
             e.preventDefault()
             const pasted = e.clipboardData.getData('text').replace(/\D/g, '').slice(0, 10)
             setFields((prev) => ({ ...prev, phone: pasted }))
+            setErrors((prev) => ({ ...prev, phone: "" }))
           }}
           inputMode="numeric"
           maxLength={10}
           disabled={loading}
         />
+        {errors.phone && <span style={{ color: "#e53e3e", fontSize: "12px", marginTop: "-8px", display: "block" }}>{errors.phone}</span>}
         <input
           type="text"
           name="subject"
@@ -117,6 +152,7 @@ export default function ContactForm() {
           required
           disabled={loading}
         />
+        {errors.message && <span style={{ color: "#e53e3e", fontSize: "12px", marginTop: "-8px", display: "block" }}>{errors.message}</span>}
 
         <button
           type="submit"

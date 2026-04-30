@@ -3,6 +3,7 @@ import "./globals.css";
 import ConditionalFooter from "./components/ConditionalFooter";
 import AOSProvider from "./components/AOSProvider";
 import LenisProvider from "./components/LenisProvider";
+import FloatingWidgets from "./components/FloatingWidgets";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
         <LenisProvider />
         <AOSProvider />
         {children}
+        <FloatingWidgets/>
         <ConditionalFooter />
       </body>
      

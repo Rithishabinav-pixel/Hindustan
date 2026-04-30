@@ -9,7 +9,7 @@ import Counter from "./components/counter";
 
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -198,6 +198,19 @@ const [activeTech, setActiveTech] = useState(techdata[0]);
 
 const [insightdata, setInsightdata] = useState([]);
 
+const [latestCaseStudy, setLatestCaseStudy] = useState(null);
+
+useEffect(() => {
+  fetch('/api/case-studies?page=1&limit=1')
+    .then(r => r.json())
+    .then(data => {
+      if (Array.isArray(data.caseStudies) && data.caseStudies.length > 0) {
+        setLatestCaseStudy(data.caseStudies[0]);
+      }
+    })
+    .catch(() => {});
+}, []);
+
 useEffect(() => {
   fetch('/api/blogs?page=1&limit=100')
     .then(r => r.json())
@@ -365,6 +378,32 @@ if(mobile) return
 
    </section>
 
+
+
+
+   {/* Redefining Section */}
+    <section className={`common_section ${style.full_height_section} ${style.redefiningsection} ${style.sticky}`}>
+<div className={`container ${style.redefining_container}`}>
+   <h2 data-animate="fade-up" className="common_heading">Defining the Future<br className="desktop_break"/>of Drone Services</h2>
+   <div className={`topContent ${style.topContent} ${style.topContent_left}`}>
+    <p data-animate="fade-up" data-animate-delay="100">Hindustan Drone Services (HDSL) is defining the future of aerial solutions through a cutting-edge Drone-as-a-Service (DaaS) model. Our scalable, app-based platform connects businesses with certified drone pilots and service providers, offering on-demand access to precision-driven solutions across various industries. By eliminating intermediaries and streamlining workflows, we bring unmatched speed, transparency, and efficiency to traditionally fragmented operations. Positioned at the forefront of the digital service economy, HDSL is redefining how industries access and utilise aerial intelligence, empowering smarter, more efficient real-time decisions.</p>
+    <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
+         <ButtonFan/>
+         <span>KNOW MORE</span>
+        </Link>
+   </div>
+
+</div>
+{mobile && 
+<Image className={style.redefiningsection_Mobileimage} src="/images/mobile_drone.svg" width={361} height={310} alt="" />
+}
+    </section>
+
+
+
+
+    
+
    {/* New Standard Section */}
    <section className={`common_section ${style.full_height_section} ${style.standard_section} ${style.sticky}`}>
 <div className="container">
@@ -419,23 +458,7 @@ if(mobile) return
    </section>
 
 
-{/* Redefining Section */}
-    <section className={`common_section ${style.full_height_section} ${style.redefiningsection} ${style.sticky}`}>
-<div className={`container ${style.redefining_container}`}>
-   <h2 data-animate="fade-up" className="common_heading">Defining the Future<br className="desktop_break"/>of Drone Services</h2>
-   <div className={`topContent ${style.topContent} ${style.topContent_left}`}>
-    <p data-animate="fade-up" data-animate-delay="100">Hindustan Drone Services (HDSL) is defining the future of aerial solutions through a cutting-edge Drone-as-a-Service (DaaS) model. Our scalable, app-based platform connects businesses with certified drone pilots and service providers, offering on-demand access to precision-driven solutions across various industries. By eliminating intermediaries and streamlining workflows, we bring unmatched speed, transparency, and efficiency to traditionally fragmented operations. Positioned at the forefront of the digital service economy, HDSL is redefining how industries access and utilise aerial intelligence, empowering smarter, more efficient real-time decisions.</p>
-    <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
-         <ButtonFan/>
-         <span>KNOW MORE</span>
-        </Link>
-   </div>
 
-</div>
-{mobile && 
-<Image className={style.redefiningsection_Mobileimage} src="/images/mobile_drone.svg" width={361} height={310} alt="" />
-}
-    </section>
 
 
 {/* Why Hindustan */}
@@ -619,10 +642,14 @@ if(mobile) return
 
 
   <Swiper
-    modules={[Navigation]}
+    modules={[Navigation, Autoplay]}
     navigation={{
       prevEl: ".droneSwiper_custom-prev",
       nextEl: ".droneSwiper_custom-next",
+    }}
+    autoplay={{
+      delay: 2500,
+      disableOnInteraction: false,
     }}
     slidesPerView={1}
     centeredSlides={true}
@@ -703,16 +730,40 @@ if(mobile) return
         </Link>
       </div>
 
+<div className={style.insightsRow}>
+
+  {/* case study card */}
+
+  {latestCaseStudy && (
+  <div className={style.caseStudyCard}>
+    <div className={style.caseStudyImage}>
+      <Image src={latestCaseStudy.featuredImage || '/images/feature.webp'} width={850} height={632} alt={latestCaseStudy.title} />
+    </div>
+    <div className={style.caseStudyContent}>
+      <span className={style.caseStudyTag}>Case Study</span>
+      <h3>{latestCaseStudy.title}</h3>
+      <p>{latestCaseStudy.shortDescription}</p>
+      <Link href={`/case-study/${latestCaseStudy.slug}`} className={`common_btn link_btn ${style.insight_btn}`}>
+        <span>EXPLORE MORE</span>
+        <LinkArrow/>
+      </Link>
+    </div>
+  </div>
+  )}
 
 <div className={style.insight_cards} data-animate="fade-up" data-animate-delay="100">
 
 
 
   <Swiper
-  modules={[Navigation]}
+  modules={[Navigation, Autoplay]}
   navigation={{
     prevEl: ".custom-prev",
     nextEl: ".custom-next",
+  }}
+  autoplay={{
+    delay: 2500,
+    disableOnInteraction: false,
   }}
   slidesPerView={1}
   centeredSlides={false}
@@ -724,7 +775,7 @@ if(mobile) return
       spaceBetween: 20,
     },
     1201: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 30,
     },
   }}
@@ -755,6 +806,8 @@ if(mobile) return
     </SwiperSlide>
   ))}
 </Swiper>
+
+</div>
 
 </div>
 

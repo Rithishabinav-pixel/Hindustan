@@ -70,6 +70,9 @@ export default function Footer() {
             </li>
           
             <li>
+                <Link href="/about-us" className={pathname === "/training" ? style.active : ""}>About Us</Link>
+            </li>
+            <li>
                 <Link href="/training" className={pathname === "/training" ? style.active : ""}>Training</Link>
             </li>
             <li>
@@ -182,7 +185,7 @@ export default function Footer() {
             <div className={style.footer_links_single}>
                 <h3 onClick={() => toggleSection(6)}>Get in touch with us</h3>
                 <ul>
-                    <li> <a href="tel:+919154749191"> <Image src="/images/footer_call.svg" width={24} height={24} alt=''/> +91 9154749191</a> </li>
+                    <li> <a href="tel:+919154749191"> <Image src="/images/footer_call.svg" width={24} height={24} alt=''/> +91 91 5474 9191</a> </li>
                     <li> <a href="mailto:info@hindustandrones.io"><Image src="/images/footer_mail.svg" width={24} height={24} alt=''/>info@hindustandrones.io</a> </li>
                     <li> <a href="https://maps.app.goo.gl/NKNtSUGuwNSj4rLG7" target='_blank'><Image src="/images/footer_map.svg" width={24} height={24} alt=''/>Hindustan Drone Services Private Limited<br/>
 Unit No.1011A, Level 1, Sky One (Wing A), Prestige SkyTech,<br/>

@@ -7,7 +7,7 @@ import ButtonFan from '@/app/components/UI/ButtonFan'
 import Image from 'next/image'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation } from 'swiper/modules'
+import { Navigation, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 
@@ -143,8 +143,12 @@ export default function ServicePageContent({ service }) {
             {benefitItems.length > 0 && (
               <div className={style.benefits_slider}>
                 <Swiper
-                  modules={[Navigation]}
+                  modules={[Navigation, Autoplay]}
                   navigation={{ prevEl: '.benefitsSwiper_custom-prev', nextEl: '.benefitsSwiper_custom-next' }}
+                  autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }}
                   slidesPerView={1}
                   loop={true}
                   spaceBetween={30}
@@ -203,10 +207,14 @@ export default function ServicePageContent({ service }) {
 
           <div className={`product_slider ${style.productSlider}`}>
             <Swiper
-              modules={[Navigation]}
+              modules={[Navigation, Autoplay]}
               navigation={{
                 prevEl: '.droneSwiper_custom-prev',
                 nextEl: '.droneSwiper_custom-next',
+              }}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
               }}
               slidesPerView={1}
               centeredSlides={true}

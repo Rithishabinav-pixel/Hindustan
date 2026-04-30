@@ -174,10 +174,14 @@ useEffect(() => {
 
 
   <Swiper
-    modules={[Navigation]}
+    modules={[Navigation, Autoplay]}
     navigation={{
       prevEl: ".whyIndustriesSwiper_custom-prev",
       nextEl: ".whyIndustriesSwiper_custom-next",
+    }}
+    autoplay={{
+      delay: 2500,
+      disableOnInteraction: false,
     }}
     slidesPerView={1}
     loop={true}

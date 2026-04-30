@@ -7,7 +7,7 @@ import Header from '@/app/components/Header'
 import Image from 'next/image'
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -244,10 +244,14 @@ export default function PublicSafetyClient() {
 
 
   <Swiper
-    modules={[Navigation]}
+    modules={[Navigation, Autoplay]}
     navigation={{
       prevEl: ".droneSwiper_custom-prev",
       nextEl: ".droneSwiper_custom-next",
+    }}
+    autoplay={{
+      delay: 2500,
+      disableOnInteraction: false,
     }}
     slidesPerView={1}
     centeredSlides={true}
