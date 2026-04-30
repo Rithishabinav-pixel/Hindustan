@@ -78,6 +78,9 @@ export default function Footer() {
             <li>
                 <Link href="/blog" className={pathname === "/blog" ? style.active : ""}>Blog</Link>
             </li>
+            <li>
+                <Link href="/case-study" className={pathname === "/case-study" ? style.active : ""}>Case Study</Link>
+            </li>
              <li>
                 <Link href="/career" className={pathname === "/career" ? style.active : ""}>Career</Link>
             </li>
@@ -206,8 +209,8 @@ Financial District, Nanakramguda, Hyderabad - 500 032.</a> </li>
 <NewsletterForm btnClassName="form_btn" />
 
   <p className={style.footer_bottom_content_links}>
-            <span><Link href="#">Terms of Service</Link></span>
-            <span><Link href="#"> Privacy Policy</Link></span>
+            <span><Link href="/terms-and-condition">Terms of Service</Link></span>
+            <span><Link href="/privacy-policy"> Privacy Policy</Link></span>
             </p>
 </div>
 
