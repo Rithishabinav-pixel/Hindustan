@@ -343,7 +343,8 @@ export default function AboutClient() {
 
 
 {/* team section */}
-<section className={`common_section  ${style.team_section}`}>
+
+{/* <section className={`common_section  ${style.team_section}`}>
 
 <div className={`container ${style.teamContainer}`}>
 
@@ -373,7 +374,7 @@ export default function AboutClient() {
 
 </div>
 
-</section>
+</section> */}
 
 
 
