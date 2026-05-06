@@ -191,6 +191,7 @@ line-height: 32px;
 
 .teamContent{
     gap: 16px;
+    position: relative;
 }
 
 .teamContent h3{
@@ -198,9 +199,24 @@ line-height: 32px;
     line-height: 32px;
 }
 
+.teamContent .showProfile{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: 0.3s all;
+    transform-origin: top right;
+}
+
+.teamContent .showProfile:hover{
+    transform: scale(0.95);
+}
+
 .teamImage img{
     width: 100%;
-    height: auto;
+    height: auto; 
     float: left;
 }
 
