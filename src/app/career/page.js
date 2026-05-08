@@ -3,10 +3,10 @@ import CareerClient from './CareerClient'
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
 
 export const metadata = {
-  title: "AgriFlow HDS40 | Hindustan Drone Services",
-  description: "Our AgriFlow HDS40 is designed to simplify and scale modern farming operations with precision and consistency. Built for demanding field conditions, we ensure efficient coverage, reduced manual effort, and reliable performance across large agricultural landscapes.",
+  title: "Careers at Hindustan Drones",
+  description: "Explore career opportunities at Hindustan Drones in UAV operations, engineering, analytics and emerging aerial technologies.",
   alternates: {
-    canonical: `${baseUrl}/products/agriflow-hds40`,
+    canonical: `${baseUrl}/career`,
   },
 }
 

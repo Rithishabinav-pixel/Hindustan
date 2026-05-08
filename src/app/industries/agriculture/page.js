@@ -3,10 +3,10 @@ import AgricultureClient from './AgricultureClient'
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
 
 export const metadata = {
-  title: "VigilCore M4TD | Hindustan Drone Services",
-  description: "VigilCore M4TD is engineered as a rugged enterprise drone platform combining high-resolution visual and thermal imaging with intelligent navigation systems. Built for demanding inspection, safety, and emergency missions, it provides clear thermal data, precision measurement, and extended operational reach.",
+  title: "Agriculture Drone Solutions | Hindustan Drones",
+  description: "Precision drone solutions for crop monitoring, spraying, field mapping and smarter farm operations with better efficiency and visibility.",
   alternates: {
-    canonical: `${baseUrl}/products/vigilcore-m4td`,
+    canonical: `${baseUrl}/industries/agriculture`,
   },
 }
 

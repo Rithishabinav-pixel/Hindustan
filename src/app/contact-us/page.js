@@ -4,10 +4,10 @@ import ContactClient from "./ContactClient"
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
 
 export const metadata = {
-  title: "Hindustan Drone Services",
-  description: "VigilCore M4TD is engineered as a rugged enterprise drone platform combining high-resolution visual and thermal imaging with intelligent navigation systems. Built for demanding inspection, safety, and emergency missions, it provides clear thermal data, precision measurement, and extended operational reach.",
+  title: "Contact Hindustan Drones | Talk to Drone Experts",
+  description: "Contact Hindustan Drones for drone services, products, training and enterprise UAV solutions. Get expert support from our Hyderabad team.",
   alternates: {
-    canonical: `${baseUrl}/products/vigilcore-m4td`,
+    canonical: `${baseUrl}/contact-us`,
   },
 }
 

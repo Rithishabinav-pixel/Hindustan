@@ -3,10 +3,10 @@ import PrivacyPolicyClient from './PrivacyPolicyClient'
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
 
 export const metadata = {
-  title: "Hindustan Drone Services",
-  description: "VigilCore M4TD is engineered as a rugged enterprise drone platform combining high-resolution visual and thermal imaging with intelligent navigation systems. Built for demanding inspection, safety, and emergency missions, it provides clear thermal data, precision measurement, and extended operational reach.",
+  title: "Privacy Policy | Hindustan Drones",
+  description: "Read how Hindustan Drones collects, uses and protects personal information across its website, services and customer enquiries.",
   alternates: {
-    canonical: `${baseUrl}/products/vigilcore-m4td`,
+    canonical: `${baseUrl}/privacy-policy`,
   },
 }
 

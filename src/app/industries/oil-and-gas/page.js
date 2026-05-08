@@ -3,10 +3,10 @@ import OilAndGasClient from './OilAndGasClient'
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
 
 export const metadata = {
-  title: "VigilCore M4TD | Hindustan Drone Services",
-  description: "VigilCore M4TD is engineered as a rugged enterprise drone platform combining high-resolution visual and thermal imaging with intelligent navigation systems. Built for demanding inspection, safety, and emergency missions, it provides clear thermal data, precision measurement, and extended operational reach.",
+  title: "Oil & Gas Drone Inspections | Hindustan Drones",
+  description: "Inspect pipelines, flare stacks, tanks and refinery assets with safer, faster drone solutions for oil and gas operations.",
   alternates: {
-    canonical: `${baseUrl}/products/vigilcore-m4td`,
+    canonical: `${baseUrl}/industries/oil-and-gas`,
   },
 }
 
