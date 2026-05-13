@@ -364,7 +364,7 @@ if(mobile) return
 
    <div className={style.bannerContent}>
     <p  className={style.bannerContent_text}>Engineered with advanced sensors and AI analytics, our drone systems deliver real-time aerial intelligence for complex operations.</p>
-    <Link href="#" className="common_btn">
+    <Link href="/about-us" className="common_btn">
          <ButtonFan/>
          <span> KNOW MORE</span>
         </Link>
@@ -385,7 +385,7 @@ if(mobile) return
    <h2 data-animate="fade-up" className="common_heading">Defining the Future<br className="desktop_break"/>of Drone Services</h2>
    <div className={`topContent ${style.topContent} ${style.topContent_left}`}>
     <p data-animate="fade-up" data-animate-delay="100">Hindustan Drone Services (HDSL) is defining the future of aerial solutions through a cutting-edge Drone-as-a-Service (DaaS) model. Our scalable, app-based platform connects businesses with certified drone pilots and service providers, offering on-demand access to precision-driven solutions across various industries. By eliminating intermediaries and streamlining workflows, we bring unmatched speed, transparency, and efficiency to traditionally fragmented operations. Positioned at the forefront of the digital service economy, HDSL is redefining how industries access and utilise aerial intelligence, empowering smarter, more efficient real-time decisions.</p>
-    <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
+    <Link data-animate="fade-up" data-animate-delay="200" href="/about-us" className="common_btn">
          <ButtonFan/>
          <span>KNOW MORE</span>
         </Link>
@@ -409,7 +409,7 @@ if(mobile) return
   <div className={`topContent ${style.topContent}`}>
     <h2 data-animate="fade-up" className="common_heading">A New Standard in Aerial Intelligence</h2>
     <p data-animate="fade-up" data-animate-delay="100">Our growing mission footprint reflects the scale and reliability behind every aerial intelligence.</p>
-     <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
+     <Link data-animate="fade-up" data-animate-delay="200" href="/about-us" className="common_btn">
          <ButtonFan/>
          <span>KNOW MORE</span>
         </Link>
