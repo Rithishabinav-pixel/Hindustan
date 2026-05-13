@@ -46,67 +46,67 @@ const techdata = [
   {
     title: "Agricultural Drone Operations",
     description: "Our agricultural drone intelligence enables farmers to monitor crop health, map fields, and optimise spraying operations, improving yields, reducing resource use, and driving sustainable, data-driven agriculture practices.",
-    image: "agriculture_farming.mp4",
+    image: "agri-tech-acc.webp",
     slug: "/services/agricultural-drone-services"
   },
   {
     title: "Solar Panel Inspection & Cleaning",
     description: "We combine thermal imaging and precision cleaning techniques to optimise solar panel performance, detect faults and ensure maximum efficiency across large-scale installations, all while reducing maintenance costs and increasing asset longevity.",
-    image: "agriculture_farming.mp4",
+    image: "solar-panel-acc.webp",
     slug: "/services/solar-panel-inspection-cleaning"
   },
   {
     title: "High-Rise Power Wash",
     description: "Our drones provide efficient high-rise cleaning solutions, ensuring consistent, streak-free results for windows and facades while reducing safety risks and eliminating the need for scaffolding or rope access systems.",
-    image: "agriculture_farming.mp4",
+    image: "high-rise-tech-acc.webp",
     slug: "/services/high-rise-power-wash"
   },
   {
     title: "Logistics & Delivery",
     description: "We streamline logistics with fast, reliable drone delivery, enabling faster transportation to remote or hard-to-reach areas. Our services improve accessibility, reduce transit times, and ensure critical supplies reach their destinations efficiently.",
-    image: "agriculture_farming.mp4",
+    image: "logistics-acc.webp",
     slug: "/services/logistics-delivery-services"
   },
   {
     title: "Surveying & Mapping",
     description: "From 3D mapping to volumetric analysis, our drones capture precise spatial data for infrastructure, land assessment, and project planning. We help clients make faster, data-driven decisions with high-accuracy surveys and real-time insights.",
-    image: "agriculture_farming.mp4",
+    image: "survey-map-acc.webp",
     slug: "/services/surveying-mapping-services"
   },
   {
     title: "Media & Aerial Cinematography",
     description: "We provide high-quality aerial photography and videography services, offering cinematic visuals for real estate, events, and marketing. Our drones deliver dynamic perspectives that elevate content creation with seamless execution and stunning results.",
-    image: "agriculture_farming.mp4",
+    image: "media-acc.webp",
     slug: "/services/media-aerial-cinematography"
   },
   {
     title: "Security & Surveillance",
     description: "Enhance your security operations with real-time aerial monitoring, perimeter patrols, and crowd management solutions. Our drones deliver actionable insights and ensure improved response times in high-risk environments or large-scale events.",
-    image: "agriculture_farming.mp4",
+    image: "secutity-acc.webp",
     slug: "/services/security-surveillance-services"
   },
   {
     title: "Infrastructure Monitoring",
     description: "We offer continuous aerial monitoring of infrastructure projects, enabling better tracking of construction progress, identifying risks early, and ensuring regulatory compliance without disrupting ongoing operations.",
-    image: "agriculture_farming.mp4",
+    image: "infra-acc.webp",
     slug: "/services/infrastructure-monitoring"
   },
   {
     title: "Industrial Inspection",
     description: "Our drones provide detailed inspections of industrial plants, pipelines, and critical infrastructure, helping detect faults, reduce downtime, and ensure safety compliance without manual access or costly disruptions.",
-    image: "agriculture_farming.mp4",
+    image: "industrial-acc.webp",
     slug: "/services/industrial-inspection-services"
   },
   {
     title: "Public Safety & Emergency Response",
     description: "From rapid damage assessment to real-time monitoring, we support emergency teams with aerial intelligence, enabling faster response times and improved decision-making during critical incidents or large-scale events.",
-    image: "agriculture_farming.mp4",
+    image: "public-acc.webp",
     slug: "/services/public-safety-emergency-response"
   },
   {
     title: "Energy & Utilities Inspection",
     description: "We provide high-precision aerial inspection solutions for energy and utilities infrastructure, monitoring power lines, solar farms, and pipelines, ensuring reliability, safety, and regulatory compliance while reducing manual inspection risks.",
-    image: "agriculture_farming.mp4",
+    image: "energy-tech-acc.webp",
     slug: "/services/energy-utilities-inspection"
   }
 ];
@@ -522,20 +522,8 @@ if(mobile) return
           <div className={style.tech_selection_mobile}>
     
 
-             <video
-  width="1055"
-  height="776"
-  loop
-  muted
-  autoPlay
-  preload="none"
-  playsInline
-  poster={`/images/${item.feature_image}`}
-  className={style.tech_selecetdImage}
->
-  <source  src={`/images/${item.image}`} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+
+<Image className={style.tech_selecetdImage} src={`/images/${item.image}`} alt={item.title} width={1055} height={776} />
 
             <div className={`topContent ${style.tech_selection_content}`}>
               <h4>{item.title}</h4>
@@ -561,20 +549,8 @@ if(mobile) return
   <div className={style.tech_selection}>
  
 
-    <video
-  width="1920"
-  height="1029"
-  loop
-  muted
-  autoPlay
-  preload="none"
-  playsInline
-  poster={`/images/${activeTech.feature_image}`}
-  className={style.tech_selecetdImage}
->
-  <source  src={`/images/${activeTech.image}`} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<Image className={style.tech_selecetdImage} src={`/images/${activeTech.image}`} alt={activeTech.title} width={1055} height={776} />
+
 
     <div className={`topContent ${style.tech_selection_content} ${style.topContent} ${style.topContent_left}`}>
       <h4>{activeTech.title}</h4>
