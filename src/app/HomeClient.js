@@ -248,7 +248,7 @@ useEffect(() => {
     ([entry]) => {
       if (entry.isIntersecting) {
         setStartCount(true);
-        observer.disconnect(); // run only once
+        observer.disconnect();
       }
     },
     { threshold: 0.3 }
@@ -261,7 +261,6 @@ useEffect(() => {
 
 
 const handleClick = (item, e) => {
-  // Capture the li before setTimeout — React recycles synthetic events after the handler returns.
   const li = e.currentTarget.closest('li');
   setActiveTech(item);
   setTimeout(() => {
@@ -282,15 +281,14 @@ if(mobile) return
       const rect = el.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
-      // when element enters viewport → rect.top < windowHeight
-      // when reaches top → rect.top = 0
+  
 
       const progress = Math.min(
         Math.max((windowHeight - rect.top) / windowHeight, 0),
         1
       );
 
-      // 110% → 100%
+
       const scale = 110 - progress * 10;
 
       el.style.backgroundSize = `${scale}%`;
@@ -449,11 +447,11 @@ if(mobile) return
 
 </div>
 
+</div>
+
 {mobile && 
 <Image className={style.standard_section_image} src="/images/standard_img_m.webp" width={1920} height={1080} alt="" />
 }
-
-</div>
 
    </section>
 
