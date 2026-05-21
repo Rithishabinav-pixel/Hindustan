@@ -139,66 +139,20 @@ max-width: 530px;
   height: auto;
 }
 
-/* .redefiningsection{
+.redefiningsection{
   z-index: 2;
   display: flex;
   background-image: url('/images/redefine_drone.svg');
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 55vw;
-} */
+}
 
 .redefiningsection .redefining_container{
   height: 100%;
    display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-}
-
-.redefiningsection .redefining_container .leftSection,
-.redefiningsection .redefining_container .rightSection{
-  width: 50%;
-}
-
-.redefiningsection .redefining_container .leftSection{
-width: 40%;  
-}
-
-.redefiningsection .redefining_container .rightSection{
-  width: 60%;
-  overflow: hidden;
-}
-
-.redefiningsection .redefining_container .leftSection{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.redefiningsection .redefining_container .rightSection{
-  position: relative;
-}
-
-.redefiningsection .redefining_container .rightSection::before{
-      content: "";
-        background: linear-gradient(#00062400 80%, #000419 100.18%);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-
-.redefiningsection .redefining_container h2{
-  width: 100%;
-}
-
-.redefiningsection .futureDronesVideo{
-  width: 100%;
-  height: auto;
+   flex-direction: column;
+   justify-content: space-between;
 }
 
 .redefiningsection .topContent{
@@ -718,16 +672,6 @@ opacity: 1;
 
 
   .redefiningsection .redefining_container{
-    gap: 30px;
-    flex-direction: column;
-  }
-
-  .redefiningsection .redefining_container .leftSection,
-  .redefiningsection .redefining_container .rightSection{
-    width: 100%;
-  }
-
-  .redefiningsection .redefining_container .leftSection{
     gap: 16px;
   }
 

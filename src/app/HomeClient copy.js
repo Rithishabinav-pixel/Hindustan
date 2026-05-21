@@ -344,7 +344,7 @@ if(mobile) return
 
    <div className={`container ${style.bannerContent_container}`}>
 
-    <h1 className={`common_heading ${style.bannerTitle}`}>Certified Drone Services for Industrial Operations</h1>
+    <h1 className={`common_heading ${style.bannerTitle}`}>Next-Gen Drone Systems Critical Operations</h1>
     {mobile && (
       <video
   width="1920"
@@ -363,7 +363,7 @@ if(mobile) return
     )}
 
    <div className={style.bannerContent}>
-    <p  className={style.bannerContent_text}>HDSL connects businesses with certified drone operations for inspection, agriculture, surveillance, mapping, and industrial applications. </p>
+    <p  className={style.bannerContent_text}>Engineered with advanced sensors and AI analytics, our drone systems deliver real-time aerial intelligence for complex operations.</p>
     <Link href="/about-us" className="common_btn">
          <ButtonFan/>
          <span> KNOW MORE</span>
@@ -381,8 +381,7 @@ if(mobile) return
 
    {/* Redefining Section */}
     <section className={`common_section ${style.full_height_section} ${style.redefiningsection} ${style.sticky}`}>
-<div className={`container padding_left_only ${style.redefining_container}`}>
-  <div className={style.leftSection}>
+<div className={`container ${style.redefining_container}`}>
    <h2 data-animate="fade-up" className="common_heading">Defining the Future<br className="desktop_break"/>of Drone Services</h2>
    <div className={`topContent ${style.topContent} ${style.topContent_left}`}>
     <p data-animate="fade-up" data-animate-delay="100">Hindustan Drone Services (HDSL) is defining the future of aerial solutions through a cutting-edge Drone-as-a-Service (DaaS) model. Our scalable, app-based platform connects businesses with certified drone pilots and service providers, offering on-demand access to precision-driven solutions across various industries. By eliminating intermediaries and streamlining workflows, we bring unmatched speed, transparency, and efficiency to traditionally fragmented operations. Positioned at the forefront of the digital service economy, HDSL is redefining how industries access and utilise aerial intelligence, empowering smarter, more efficient real-time decisions.</p>
@@ -391,25 +390,11 @@ if(mobile) return
          <span>KNOW MORE</span>
         </Link>
    </div>
-</div>
-
-<div className={style.rightSection}>
- <video
-  className={style.futureDronesVideo}
-  autoPlay
-  loop
-  muted
-  playsInline
-  preload="metadata"
-  poster="/images/future_drone_video_poster.webp"
-  width={1112}
-  height={834}
->
-  <source src="/images/future_drone_video.mp4" type="video/mp4" />
-</video>
-   </div>
 
 </div>
+{mobile && 
+<Image className={style.redefiningsection_Mobileimage} src="/images/mobile_drone.svg" width={361} height={310} alt="" />
+}
     </section>
 
 
