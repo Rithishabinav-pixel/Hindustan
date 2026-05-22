@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef } from 'react'
+import { useRef, useEffect } from "react";
 
 import style from '../WhatClient.module.css'
 import Link from 'next/link'
