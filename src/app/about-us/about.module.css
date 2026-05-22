@@ -27,8 +27,8 @@
 }
 
 .imageContent2{
-  font-size: 48px;
-    line-height: 56px;
+  font-size: 24px;
+    line-height: 32px;
    font-weight: 400;
    text-align: left;
     width: 100%;
@@ -101,7 +101,7 @@ line-height: 32px;
 
 .whyIndustries_topContent{
     color: rgb(255, 255, 255);
-      
+ 
 }
 
 .teamContainer_topContent,
@@ -224,6 +224,19 @@ line-height: 32px;
     margin-left: auto;
 }
 
+.story_section{
+    min-height: 100vh;
+        background-image: url("/images/story.webp");
+    background-size: 100% auto;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+.story_topContent{
+    max-width: 850px;
+
+}
+
 /* responsive */
 
 /* laptop */
@@ -242,6 +255,28 @@ line-height: 32px;
 
 /* tablet */
 @media (max-width:1200px){
+
+    .story_section{
+        padding-bottom: 0;
+    }
+
+    .story_container{
+        padding: 0;
+    }
+
+    .story_topContent{
+        padding: 0 20px;
+    }
+
+    .storyImg{
+        width: 100%;
+        height: auto;
+    }
+
+    .story_section{
+        background-size: 0 !important;
+        min-height: 0;
+    }
 
     .missionVision_container,
 .teamContainer{
@@ -328,9 +363,9 @@ line-height: 28px;
 }
 
 .imageContent2{
-  font-size: 34px;
-    line-height: 42px;
-    max-width: 450px;
+  font-size: 20px;
+    line-height: 28px;
+    max-width: 550px;
 }
 
   .heroContainerImage_content{

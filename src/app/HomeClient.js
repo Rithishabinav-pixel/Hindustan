@@ -16,6 +16,40 @@ import "swiper/css/navigation";
 import ButtonFan from "./components/UI/ButtonFan";
 import LinkArrow from "./components/UI/LinkArrow";
 
+
+// steps data 
+const stepCards = [
+  {
+    image: "/images/step1.svg",
+    title: "I Buy Aerial Services",
+    description: "Enterprise teams in agri, mining, construction, environment",
+    buttonText: "Show me the value",
+    link: "/whats-in-it-for/customer",
+  },
+  {
+    image: "/images/step2.svg",
+    title: "I want to build with you",
+    description: "Channel, OEM, strategic, capital, or training partners",
+    buttonText: "Show me the value",
+    link: "/whats-in-it-for/partner",
+  },
+  {
+    image: "/images/step3.svg",
+    title: "I Fly for a Livin",
+    description: "DGCA-certified remote pilots looking for steady, paid missions.",
+    buttonText: "Show me the value",
+    link: "/whats-in-it-for/pilot",
+  },
+  {
+    image: "/images/step4.svg",
+    title: "I Work on the Ground",
+    description: "Local entrepreneurs onboarding farmers, sites, and businesses.",
+    buttonText: "Show me the value",
+    link: "/whats-in-it-for/field-agent",
+  },
+];
+
+
 // why choose hindustan data
 const whyChoose = [
   {
@@ -402,8 +436,8 @@ if(mobile) return
   playsInline
   preload="metadata"
   poster="/images/future_drone_video_poster.webp"
-  width={1112}
-  height={834}
+  width={1280}
+  height={720}
 >
   <source src="/images/future_drone_video.mp4" type="video/mp4" />
 </video>
@@ -581,6 +615,49 @@ if(mobile) return
 
   </div>
 </section>
+
+{/* Steps section  */}
+<section className={`common_section light_section ${style.full_height_section} ${style.steps_section} ${style.sticky}`}>
+
+  <div className={ `container ${style.steps_container}`}>
+       <div className={`topContent ${style.topContent} `}>
+        <h2 data-animate="fade-up" className="common_heading">What’s in it for you, exactly?</h2>
+        <p data-animate="fade-up" data-animate-delay="100">Four ways to engage with India's most regulated drone services network. Pick the role that fits — we'll show you the value, the path, and the upside on the next screen.</p>
+         <Link data-animate="fade-up" data-animate-delay="200" href="/whats-in-it-for/customer" className="common_btn">
+         <ButtonFan/>
+         <span>KNOW MORE</span>
+        </Link>
+      </div>
+
+    <div className={style.step_cards} data-animate="fade-up">
+  {stepCards.map((card, index) => (
+    <div className={style.card} key={index}>
+      <Image
+        src={card.image}
+        alt={card.title}
+        width={80}
+        height={80}
+      />
+
+      <h3>{card.title}</h3>
+
+      <p>{card.description}</p>
+
+      <Link
+        href={card.link}
+        className={`common_btn link_btn ${style.insight_btn}`}
+      >
+        <span>{card.buttonText}</span>
+        <LinkArrow />
+      </Link>
+    </div>
+  ))}
+</div>
+
+      </div>
+
+</section>
+
 
 
 {/* Drone System */}

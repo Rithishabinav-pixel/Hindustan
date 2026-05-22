@@ -156,11 +156,11 @@ const closePopup = () => {
    <div className={`container innerpage_heroContainer `}>
 
 
-<h1 data-animate="fade-up" data-animate-delay="100" className={`common_heading`}>Engineering The Future Of Aerial Innovation</h1>
+<h1 data-animate="fade-up" data-animate-delay="100" className={`common_heading`}>Powering Scalable Drone Operations Across Industries</h1>
 
 <div  className={`topContent topContent_left  innerpage_heroContainer_content`}>
 
-  <p data-animate="fade-up" data-animate-delay="150">Hindustan Drones delivers advanced UAV solutions tailored for industries that demand precision, efficiency, and reliability. From aerial intelligence to drone deployment, we help organizations unlock the full potential of drone technology.</p>
+  <p data-animate="fade-up" data-animate-delay="150">At Hindustan Drone Services Limited (HDSL), we are building a technology-driven Drone-as-a-Service (DaaS) platform serving fourteen industries, including agriculture, infrastructure, logistics, security, inspection, and media.</p>
 
    <Link data-animate="fade-up" data-animate-delay="200" href="/contact-us" className="common_btn">
          <ButtonFan/>
@@ -173,9 +173,9 @@ const closePopup = () => {
 <Image src="/images/about_hero.webp" width={1290} height={700} alt="" />
 
 <div className={style.heroContainerImage_content}>
-<p className={style.imageContent1}>From sky to insight — delivering intelligent aerial solutions for industries.</p>
+<p className={style.imageContent1}>Building the digital infrastructure behind modern aerial operations.</p>
 
-<h2 className={style.imageContent2}>Next-generation drone systems engineered for accuracy, reliability, and operational excellence.</h2>
+<h2 className={style.imageContent2}>As industries move toward technology-enabled operations, we are creating a connected ecosystem powered by cloud infrastructure, real-time telemetry, AI-driven job allocation, and a mobile-first platform designed to support seamless aerial operations across industries, use cases, and geographies.</h2>
 
 
 </div>
@@ -185,6 +185,26 @@ const closePopup = () => {
 
    </section>
 
+{/* our story section  */}
+
+ <section className={`common_section parralax_bg  ${style.story_section}`}>
+
+<div className={`container ${style.story_container}`}>
+
+<div className={`topContent ${style.story_topContent}`} >
+  <h2 data-animate="fade-up" className={`common_heading ${style.whyIndustries_title}`}>Building the Infrastructure for India’s Drone Economy</h2>
+
+  <p data-animate="fade-up" data-animate-delay="150">Backed by experienced technologists, aviation specialists, and enterprise-focused leadership, we are building scalable systems that make drone operations more accessible, efficient, and dependable for modern industries. Our mission is to make drone technology as accessible and operationally essential for enterprises as smartphones and cloud computing are today.</p>
+  
+</div>
+
+{mobile && (
+  <Image className={style.storyImg} src="/images/story-mobile.webp" height={609} width={700} alt='our-story'/>
+)}
+
+</div>
+
+ </section>
 
 
    {/* mission vision section */}

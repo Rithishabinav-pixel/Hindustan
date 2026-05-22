@@ -543,12 +543,56 @@ line-clamp: 2;
   height: 12px;
 }
 
+.steps_container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.steps_container .topContent{
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.steps_container .step_cards{
+  display: flex;
+  margin-top: auto;
+  gap: 26px;
+}
+
+.steps_container .step_cards .card{
+  width: calc(25% - 19.5px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.steps_container .step_cards .card img{
+  width: 80px;
+  height: auto;
+}
+
+.steps_container .step_cards .card h3{
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
 /* ──  responsive ── */
 
 /* for laptop */
 @media (max-width: 1400px) {
 
-  
+  .steps_container .step_cards .card img{
+  width: 60px;
+}
+
+.steps_container .step_cards .card h3{
+  font-size: 20px;
+  line-height: 28px;
+}
+
 
   .why_choose_card img{
     width: 60px;
@@ -583,6 +627,17 @@ line-height: 42px;
 /* for tablet */
 
 @media (max-width: 1200px) {
+
+  .steps_container .step_cards{
+  margin-top: 40px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.steps_container .step_cards .card{
+  width: calc(50% - 15px);
+}
+
 
   .caseStudyCard,
 .insight_cards{
@@ -802,6 +857,10 @@ opacity: 1;
 /* for mobile */
 
 @media (max-width: 767px) {
+
+  .steps_container .step_cards .card{
+  width: 100%;
+}
 
   .caseStudyCard .caseStudyImage::before{
     display: none;

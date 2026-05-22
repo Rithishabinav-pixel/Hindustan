@@ -440,6 +440,14 @@ background: none;
   color: white;
 }
 
+.light_section{
+  background-image: url('/images/light_section_bg.svg');
+  background-size: 70% auto;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+
 
 /* only dektop */
 

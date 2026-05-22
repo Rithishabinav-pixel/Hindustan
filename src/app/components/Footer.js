@@ -223,13 +223,10 @@ Financial District, Nanakramguda, Hyderabad - 500 032.</a> </li>
 
 <div className={`container ${style.footer_bottom_container} ${style.bottomBar_container}`}>
 
-    <div className={style.spacer}>
-      
-    </div>
 
     <div className={style.footer_bottom_content}>
 
-        <p> © {year} HindustanDrones, All Rights Reserved.</p>
+        <p> © {year} HindustanDrones, All Rights Reserved.<br/>Designed and developed by <a target='_blank' href='https://www.pixel-studios.com/'>Pixel Studios</a> </p>
     </div>
 
 
@@ -240,6 +237,8 @@ Financial District, Nanakramguda, Hyderabad - 500 032.</a> </li>
   <p className={style.footer_bottom_content_links}>
             <span><Link href="/terms-and-condition">Terms of Service</Link></span>
             <span><Link href="/privacy-policy"> Privacy Policy</Link></span>
+            <span><Link href="/refund-policy"> Refund Policy</Link></span>
+
             </p>
 </div>
 
