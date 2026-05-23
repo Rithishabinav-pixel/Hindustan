@@ -24,6 +24,10 @@
     line-height: 32px;
 }
 
+.privacyContent h3{
+   font-weight: 500;
+}
+
 .privacyContent ul{
     padding-left: 0;
     list-style: none;

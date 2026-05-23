@@ -5,10 +5,10 @@ import Header from '../components/Header'
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
 
 export const metadata = {
-  title: "AgriFlow HDS40 | Hindustan Drone Services",
-  description: "Our AgriFlow HDS40 is designed to simplify and scale modern farming operations with precision and consistency. Built for demanding field conditions, we ensure efficient coverage, reduced manual effort, and reliable performance across large agricultural landscapes.",
+  title: "Drone Blog & Insights | Hindustan Drones",
+  description: "Read drone industry insights, aerial technology trends, service updates and expert articles from Hindustan Drones.",
   alternates: {
-    canonical: `${baseUrl}/products/agriflow-hds40`,
+    canonical: `${baseUrl}/blog`,
   },
 }
 

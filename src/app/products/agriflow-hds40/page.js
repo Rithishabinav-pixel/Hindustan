@@ -3,8 +3,8 @@ import AgriflowHds40Client from './AgriflowHds40Client'
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
 
 export const metadata = {
-  title: "AgriFlow HDS40 | Hindustan Drone Services",
-  description: "Our AgriFlow HDS40 is designed to simplify and scale modern farming operations with precision and consistency. Built for demanding field conditions, we ensure efficient coverage, reduced manual effort, and reliable performance across large agricultural landscapes.",
+  title: "AgriFlow HDS40 | Agriculture Spraying Drone",
+  description: "40L agriculture drone for precision spraying, spreading and crop operations with smart flight control and reliable field performance.",
   alternates: {
     canonical: `${baseUrl}/products/agriflow-hds40`,
   },

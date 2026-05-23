@@ -139,20 +139,66 @@ max-width: 530px;
   height: auto;
 }
 
-.redefiningsection{
+/* .redefiningsection{
   z-index: 2;
   display: flex;
   background-image: url('/images/redefine_drone.svg');
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 55vw;
-}
+} */
 
 .redefiningsection .redefining_container{
   height: 100%;
    display: flex;
-   flex-direction: column;
-   justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.redefiningsection .redefining_container .leftSection,
+.redefiningsection .redefining_container .rightSection{
+  width: 50%;
+}
+
+.redefiningsection .redefining_container .leftSection{
+width: 40%;  
+}
+
+.redefiningsection .redefining_container .rightSection{
+  width: 60%;
+  overflow: hidden;
+}
+
+.redefiningsection .redefining_container .leftSection{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.redefiningsection .redefining_container .rightSection{
+  position: relative;
+}
+
+.redefiningsection .redefining_container .rightSection::before{
+      content: "";
+        background: linear-gradient(#00062400 80%, #000419 100.18%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.redefiningsection .redefining_container h2{
+  width: 100%;
+}
+
+.redefiningsection .futureDronesVideo{
+  width: 100%;
+  height: auto;
 }
 
 .redefiningsection .topContent{
@@ -497,12 +543,56 @@ line-clamp: 2;
   height: 12px;
 }
 
+.steps_container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.steps_container .topContent{
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.steps_container .step_cards{
+  display: flex;
+  margin-top: auto;
+  gap: 26px;
+}
+
+.steps_container .step_cards .card{
+  width: calc(25% - 19.5px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.steps_container .step_cards .card img{
+  width: 80px;
+  height: auto;
+}
+
+.steps_container .step_cards .card h3{
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
 /* ──  responsive ── */
 
 /* for laptop */
 @media (max-width: 1400px) {
 
-  
+  .steps_container .step_cards .card img{
+  width: 60px;
+}
+
+.steps_container .step_cards .card h3{
+  font-size: 20px;
+  line-height: 28px;
+}
+
 
   .why_choose_card img{
     width: 60px;
@@ -538,6 +628,17 @@ line-height: 42px;
 
 @media (max-width: 1200px) {
 
+  .steps_container .step_cards{
+  margin-top: 40px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.steps_container .step_cards .card{
+  width: calc(50% - 15px);
+}
+
+
   .caseStudyCard,
 .insight_cards{
   width: 100%;
@@ -550,7 +651,7 @@ line-height: 42px;
 }
 
   .banner_section{
- padding: 160px 0 50px 0;
+ padding: 160px 0 0px 0;
 }
 
 
@@ -672,6 +773,16 @@ opacity: 1;
 
 
   .redefiningsection .redefining_container{
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  .redefiningsection .redefining_container .leftSection,
+  .redefiningsection .redefining_container .rightSection{
+    width: 100%;
+  }
+
+  .redefiningsection .redefining_container .leftSection{
     gap: 16px;
   }
 
@@ -747,6 +858,10 @@ opacity: 1;
 
 @media (max-width: 767px) {
 
+  .steps_container .step_cards .card{
+  width: 100%;
+}
+
   .caseStudyCard .caseStudyImage::before{
     display: none;
   }
@@ -765,7 +880,7 @@ opacity: 1;
   }
 
    .banner_section{
- padding: 120px 0 50px 0;
+ padding: 120px 0 0px 0;
 }
 
 

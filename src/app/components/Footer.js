@@ -180,7 +180,14 @@ export default function Footer() {
      <Image src="/images/logo.svg" alt="logo" width={145} height={130} loading="eager" />
     </Link>
 
-        <p> © {year} HindustanDrones, All Rights Reserved.</p>
+                    <ul className={style.socialLinks}>
+                    <li> <a target="_blank" href='https://www.facebook.com/profile.php?id=61589554926751'> <Image src="/images/fb-icon.svg" alt='Facebook' width={24} height={24} /></a> </li>
+                    <li> <a target="_blank" href='https://www.instagram.com/hindustandroneservices/'> <Image src="/images/insta-icon.svg" alt='Instagram' width={24} height={24} /></a> </li>
+                    <li> <a target="_blank" href='https://www.linkedin.com/company/hindustan-drones/'> <Image src="/images/linked-in.svg" alt='Linkedin' width={24} height={24} /></a> </li>
+                    <li> <a target="_blank" href='#'> <Image src="/images/youtube-icon.svg" alt='Youtube' width={24} height={24} /></a> </li>
+                    </ul>
+
+       
     </div>
 
      {/* footer links column */}
@@ -195,6 +202,7 @@ Unit No.1011A, Level 1, Sky One (Wing A), Prestige SkyTech,<br/>
 Financial District, Nanakramguda, Hyderabad - 500 032.</a> </li>
 
                 </ul>
+            
             </div>
         </div>
 
@@ -208,9 +216,29 @@ Financial District, Nanakramguda, Hyderabad - 500 032.</a> </li>
 
 <NewsletterForm btnClassName="form_btn" />
 
+</div>
+
+</div>
+
+
+<div className={`container ${style.footer_bottom_container} ${style.bottomBar_container}`}>
+
+
+    <div className={style.footer_bottom_content}>
+
+        <p> © {year} HindustanDrones, All Rights Reserved.<br/>Designed and developed by <a target='_blank' href='https://www.pixel-studios.com/'>Pixel Studios</a> </p>
+    </div>
+
+
+
+    {/* footer bottom bar  news letter */}
+
+<div className={style.footerNewsletter}>
   <p className={style.footer_bottom_content_links}>
             <span><Link href="/terms-and-condition">Terms of Service</Link></span>
             <span><Link href="/privacy-policy"> Privacy Policy</Link></span>
+            <span><Link href="/refund-policy"> Refund Policy</Link></span>
+
             </p>
 </div>
 

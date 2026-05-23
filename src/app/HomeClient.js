@@ -16,6 +16,40 @@ import "swiper/css/navigation";
 import ButtonFan from "./components/UI/ButtonFan";
 import LinkArrow from "./components/UI/LinkArrow";
 
+
+// steps data 
+const stepCards = [
+  {
+    image: "/images/step1.svg",
+    title: "I Buy Aerial Services",
+    description: "Enterprise teams in agri, mining, construction, environment",
+    buttonText: "Show me the value",
+    link: "/whats-in-it-for/customer",
+  },
+  {
+    image: "/images/step2.svg",
+    title: "I want to build with you",
+    description: "Channel, OEM, strategic, capital, or training partners",
+    buttonText: "Show me the value",
+    link: "/whats-in-it-for/partner",
+  },
+  {
+    image: "/images/step3.svg",
+    title: "I Fly for a Livin",
+    description: "DGCA-certified remote pilots looking for steady, paid missions.",
+    buttonText: "Show me the value",
+    link: "/whats-in-it-for/pilot",
+  },
+  {
+    image: "/images/step4.svg",
+    title: "I Work on the Ground",
+    description: "Local entrepreneurs onboarding farmers, sites, and businesses.",
+    buttonText: "Show me the value",
+    link: "/whats-in-it-for/field-agent",
+  },
+];
+
+
 // why choose hindustan data
 const whyChoose = [
   {
@@ -46,67 +80,67 @@ const techdata = [
   {
     title: "Agricultural Drone Operations",
     description: "Our agricultural drone intelligence enables farmers to monitor crop health, map fields, and optimise spraying operations, improving yields, reducing resource use, and driving sustainable, data-driven agriculture practices.",
-    image: "agriculture_farming.mp4",
+    image: "agri-tech-acc.webp",
     slug: "/services/agricultural-drone-services"
   },
   {
     title: "Solar Panel Inspection & Cleaning",
     description: "We combine thermal imaging and precision cleaning techniques to optimise solar panel performance, detect faults and ensure maximum efficiency across large-scale installations, all while reducing maintenance costs and increasing asset longevity.",
-    image: "agriculture_farming.mp4",
+    image: "solar-panel-acc.webp",
     slug: "/services/solar-panel-inspection-cleaning"
   },
   {
     title: "High-Rise Power Wash",
     description: "Our drones provide efficient high-rise cleaning solutions, ensuring consistent, streak-free results for windows and facades while reducing safety risks and eliminating the need for scaffolding or rope access systems.",
-    image: "agriculture_farming.mp4",
+    image: "high-rise-tech-acc.webp",
     slug: "/services/high-rise-power-wash"
   },
   {
     title: "Logistics & Delivery",
     description: "We streamline logistics with fast, reliable drone delivery, enabling faster transportation to remote or hard-to-reach areas. Our services improve accessibility, reduce transit times, and ensure critical supplies reach their destinations efficiently.",
-    image: "agriculture_farming.mp4",
+    image: "logistics-acc.webp",
     slug: "/services/logistics-delivery-services"
   },
   {
     title: "Surveying & Mapping",
     description: "From 3D mapping to volumetric analysis, our drones capture precise spatial data for infrastructure, land assessment, and project planning. We help clients make faster, data-driven decisions with high-accuracy surveys and real-time insights.",
-    image: "agriculture_farming.mp4",
+    image: "survey-map-acc.webp",
     slug: "/services/surveying-mapping-services"
   },
   {
     title: "Media & Aerial Cinematography",
     description: "We provide high-quality aerial photography and videography services, offering cinematic visuals for real estate, events, and marketing. Our drones deliver dynamic perspectives that elevate content creation with seamless execution and stunning results.",
-    image: "agriculture_farming.mp4",
+    image: "media-acc.webp",
     slug: "/services/media-aerial-cinematography"
   },
   {
     title: "Security & Surveillance",
     description: "Enhance your security operations with real-time aerial monitoring, perimeter patrols, and crowd management solutions. Our drones deliver actionable insights and ensure improved response times in high-risk environments or large-scale events.",
-    image: "agriculture_farming.mp4",
+    image: "secutity-acc.webp",
     slug: "/services/security-surveillance-services"
   },
   {
     title: "Infrastructure Monitoring",
     description: "We offer continuous aerial monitoring of infrastructure projects, enabling better tracking of construction progress, identifying risks early, and ensuring regulatory compliance without disrupting ongoing operations.",
-    image: "agriculture_farming.mp4",
+    image: "infra-acc.webp",
     slug: "/services/infrastructure-monitoring"
   },
   {
     title: "Industrial Inspection",
     description: "Our drones provide detailed inspections of industrial plants, pipelines, and critical infrastructure, helping detect faults, reduce downtime, and ensure safety compliance without manual access or costly disruptions.",
-    image: "agriculture_farming.mp4",
+    image: "industrial-acc.webp",
     slug: "/services/industrial-inspection-services"
   },
   {
     title: "Public Safety & Emergency Response",
     description: "From rapid damage assessment to real-time monitoring, we support emergency teams with aerial intelligence, enabling faster response times and improved decision-making during critical incidents or large-scale events.",
-    image: "agriculture_farming.mp4",
+    image: "public-acc.webp",
     slug: "/services/public-safety-emergency-response"
   },
   {
     title: "Energy & Utilities Inspection",
     description: "We provide high-precision aerial inspection solutions for energy and utilities infrastructure, monitoring power lines, solar farms, and pipelines, ensuring reliability, safety, and regulatory compliance while reducing manual inspection risks.",
-    image: "agriculture_farming.mp4",
+    image: "energy-tech-acc.webp",
     slug: "/services/energy-utilities-inspection"
   }
 ];
@@ -248,7 +282,7 @@ useEffect(() => {
     ([entry]) => {
       if (entry.isIntersecting) {
         setStartCount(true);
-        observer.disconnect(); // run only once
+        observer.disconnect();
       }
     },
     { threshold: 0.3 }
@@ -261,7 +295,6 @@ useEffect(() => {
 
 
 const handleClick = (item, e) => {
-  // Capture the li before setTimeout — React recycles synthetic events after the handler returns.
   const li = e.currentTarget.closest('li');
   setActiveTech(item);
   setTimeout(() => {
@@ -282,15 +315,14 @@ if(mobile) return
       const rect = el.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
-      // when element enters viewport → rect.top < windowHeight
-      // when reaches top → rect.top = 0
+  
 
       const progress = Math.min(
         Math.max((windowHeight - rect.top) / windowHeight, 0),
         1
       );
 
-      // 110% → 100%
+
       const scale = 110 - progress * 10;
 
       el.style.backgroundSize = `${scale}%`;
@@ -346,7 +378,7 @@ if(mobile) return
 
    <div className={`container ${style.bannerContent_container}`}>
 
-    <h1 className={`common_heading ${style.bannerTitle}`}>Next-Gen Drone Systems Critical Operations</h1>
+    <h1 className={`common_heading ${style.bannerTitle}`}>Certified Drone Services for Industrial Operations</h1>
     {mobile && (
       <video
   width="1920"
@@ -365,8 +397,8 @@ if(mobile) return
     )}
 
    <div className={style.bannerContent}>
-    <p  className={style.bannerContent_text}>Engineered with advanced sensors and AI analytics, our drone systems deliver real-time aerial intelligence for complex operations.</p>
-    <Link href="#" className="common_btn">
+    <p  className={style.bannerContent_text}>HDSL connects businesses with certified drone operations for inspection, agriculture, surveillance, mapping, and industrial applications. </p>
+    <Link href="/about-us" className="common_btn">
          <ButtonFan/>
          <span> KNOW MORE</span>
         </Link>
@@ -383,20 +415,35 @@ if(mobile) return
 
    {/* Redefining Section */}
     <section className={`common_section ${style.full_height_section} ${style.redefiningsection} ${style.sticky}`}>
-<div className={`container ${style.redefining_container}`}>
+<div className={`container padding_left_only ${style.redefining_container}`}>
+  <div className={style.leftSection}>
    <h2 data-animate="fade-up" className="common_heading">Defining the Future<br className="desktop_break"/>of Drone Services</h2>
    <div className={`topContent ${style.topContent} ${style.topContent_left}`}>
     <p data-animate="fade-up" data-animate-delay="100">Hindustan Drone Services (HDSL) is defining the future of aerial solutions through a cutting-edge Drone-as-a-Service (DaaS) model. Our scalable, app-based platform connects businesses with certified drone pilots and service providers, offering on-demand access to precision-driven solutions across various industries. By eliminating intermediaries and streamlining workflows, we bring unmatched speed, transparency, and efficiency to traditionally fragmented operations. Positioned at the forefront of the digital service economy, HDSL is redefining how industries access and utilise aerial intelligence, empowering smarter, more efficient real-time decisions.</p>
-    <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
+    <Link data-animate="fade-up" data-animate-delay="200" href="/about-us" className="common_btn">
          <ButtonFan/>
          <span>KNOW MORE</span>
         </Link>
    </div>
+</div>
+
+<div className={style.rightSection}>
+ <video
+  className={style.futureDronesVideo}
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="metadata"
+  poster="/images/future_drone_video_poster.webp"
+  width={1280}
+  height={720}
+>
+  <source src="/images/future_drone_video.mp4" type="video/mp4" />
+</video>
+   </div>
 
 </div>
-{mobile && 
-<Image className={style.redefiningsection_Mobileimage} src="/images/mobile_drone.svg" width={361} height={310} alt="" />
-}
     </section>
 
 
@@ -411,7 +458,7 @@ if(mobile) return
   <div className={`topContent ${style.topContent}`}>
     <h2 data-animate="fade-up" className="common_heading">A New Standard in Aerial Intelligence</h2>
     <p data-animate="fade-up" data-animate-delay="100">Our growing mission footprint reflects the scale and reliability behind every aerial intelligence.</p>
-     <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
+     <Link data-animate="fade-up" data-animate-delay="200" href="/about-us" className="common_btn">
          <ButtonFan/>
          <span>KNOW MORE</span>
         </Link>
@@ -449,11 +496,11 @@ if(mobile) return
 
 </div>
 
+</div>
+
 {mobile && 
 <Image className={style.standard_section_image} src="/images/standard_img_m.webp" width={1920} height={1080} alt="" />
 }
-
-</div>
 
    </section>
 
@@ -522,20 +569,8 @@ if(mobile) return
           <div className={style.tech_selection_mobile}>
     
 
-             <video
-  width="1055"
-  height="776"
-  loop
-  muted
-  autoPlay
-  preload="none"
-  playsInline
-  poster={`/images/${item.feature_image}`}
-  className={style.tech_selecetdImage}
->
-  <source  src={`/images/${item.image}`} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+
+<Image className={style.tech_selecetdImage} src={`/images/${item.image}`} alt={item.title} width={1055} height={776} />
 
             <div className={`topContent ${style.tech_selection_content}`}>
               <h4>{item.title}</h4>
@@ -561,20 +596,8 @@ if(mobile) return
   <div className={style.tech_selection}>
  
 
-    <video
-  width="1920"
-  height="1029"
-  loop
-  muted
-  autoPlay
-  preload="none"
-  playsInline
-  poster={`/images/${activeTech.feature_image}`}
-  className={style.tech_selecetdImage}
->
-  <source  src={`/images/${activeTech.image}`} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<Image className={style.tech_selecetdImage} src={`/images/${activeTech.image}`} alt={activeTech.title} width={1055} height={776} />
+
 
     <div className={`topContent ${style.tech_selection_content} ${style.topContent} ${style.topContent_left}`}>
       <h4>{activeTech.title}</h4>
@@ -592,6 +615,49 @@ if(mobile) return
 
   </div>
 </section>
+
+{/* Steps section  */}
+<section className={`common_section light_section ${style.full_height_section} ${style.steps_section} ${style.sticky}`}>
+
+  <div className={ `container ${style.steps_container}`}>
+       <div className={`topContent ${style.topContent} `}>
+        <h2 data-animate="fade-up" className="common_heading">What’s in it for you, exactly?</h2>
+        <p data-animate="fade-up" data-animate-delay="100">Four ways to engage with India's most regulated drone services network. Pick the role that fits — we'll show you the value, the path, and the upside on the next screen.</p>
+         <Link data-animate="fade-up" data-animate-delay="200" href="/whats-in-it-for/customer" className="common_btn">
+         <ButtonFan/>
+         <span>KNOW MORE</span>
+        </Link>
+      </div>
+
+    <div className={style.step_cards} data-animate="fade-up">
+  {stepCards.map((card, index) => (
+    <div className={style.card} key={index}>
+      <Image
+        src={card.image}
+        alt={card.title}
+        width={80}
+        height={80}
+      />
+
+      <h3>{card.title}</h3>
+
+      <p>{card.description}</p>
+
+      <Link
+        href={card.link}
+        className={`common_btn link_btn ${style.insight_btn}`}
+      >
+        <span>{card.buttonText}</span>
+        <LinkArrow />
+      </Link>
+    </div>
+  ))}
+</div>
+
+      </div>
+
+</section>
+
 
 
 {/* Drone System */}

@@ -1,0 +1,369 @@
+.hero_section{
+    width: 100%;
+    background-size: cover;
+    background-position: top center;
+    padding-top: 200px;
+    overflow: hidden;
+    height: 900px;
+    /* max-height: 90vh; */
+    max-height: 80vh;
+
+    position: relative;
+}
+
+
+.hero_section .heroVideo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    mix-blend-mode: screen;
+    padding-top: 10px;
+}
+
+.hero_section .heroVideo::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0) 0%,
+        #00000004 80%
+    );
+    pointer-events: none;
+}
+
+.hero_section .heroVideo video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    opacity: 0.7;
+    -webkit-mask-image: linear-gradient(
+        180deg,
+        transparent 0%,
+        #0000008e 100%
+    );
+
+    mask-image: linear-gradient(
+        180deg,
+        transparent 0%,
+        #000000 100%
+    );
+
+    -webkit-mask-size: cover;
+    mask-size: cover;
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.topContent{
+    width: 100%;
+    max-width: 1045px;
+}
+
+.hero_section .topContent p{
+color: rgb(255, 255, 255);
+font-size: 24px;
+line-height: 32px;
+}
+
+.tab_section{
+        margin-top: -36px;
+}
+
+.tabContainer{
+    display: flex;
+    padding: 8px;
+    background-color: white;
+    border-radius: 150px;
+    width: 100%;
+    max-width: 1070px;
+    gap: 10px;
+    margin-top: -36px;
+    position: relative;
+    z-index: 2;
+}
+
+.tabContainer .tabBtn{
+    font-size: 24px;
+    line-height: 32px;
+    padding: 12px;
+    width: 25%;
+    border-radius: 150px;
+    color: black;
+    text-align: center;
+    border: none;
+    background: none;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+.tabContainer .tabBtn:hover{
+    background-color: rgba(0, 2, 100, 0.1);
+    transform: scale(0.97);
+}
+
+.tabContainer .tabBtn.active{
+    background-color: #000264;
+    color: white;
+}
+
+.trusted_cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.trusted_cards .card{
+    width: calc(16.66% - 25px);
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+background: linear-gradient(0deg, #404FD7 0%, rgba(64, 79, 215, 0.00) 100%);
+display: flex;
+flex-direction: column;
+gap: 70px;
+align-items: center;
+}
+
+.trusted_cards .card img{
+    height: 40px;
+    width: auto;
+}
+
+.trusted_cards .card p{
+    width: 60%;
+    text-align: center;
+    margin-top: auto;
+}
+
+.whyIndustries_section{
+    background-color: var(--productBg);
+}
+
+.whyIndustries_container{
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.whyIndustries_topContent{
+  max-width: 650px;
+}
+
+.whyIndustries_slider{
+    margin-top: auto;
+}
+
+.whyIndustriesCard{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.whyIndustriesCard h3{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+.whyIndustriesCard_img img{
+    width: 80px;
+    height: auto;
+    float: left;
+}
+
+:global(.certifiedSwiper) .whyIndustriesCard{
+    display: flex;
+    justify-content: center;
+}
+
+:global(.certifiedSwiper) .whyIndustriesCard img{
+    height:45px;
+    width: auto;
+}
+
+.operating_topContent{
+    max-width: 800px;
+}
+
+.operatingCards{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 850px;
+    margin: 40px auto 0 auto;
+}
+
+.operatingCards .card{
+    display: flex;
+    gap: 30px;
+    background-color: var(--productBg);
+    border: solid white 1px;
+    transform-origin: top center;
+}
+
+
+.operatingCards .card .card{
+    transition: 0.3s all;
+}
+
+.operatingCards .card .image{
+    width: 50%;
+}
+
+.operatingCards .card .image img{
+    width: 100%;
+    height: auto;
+}
+
+.operatingCards .card .content{
+    width: 50%;
+    padding: 24px 24px 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.operatingCards .card .content h3{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+.operatingCards .card .content ul{
+    list-style: none;
+     display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.operatingCards .card .content ul li{
+    position: relative;
+    padding-left: 32px;
+}
+
+.operatingCards .card .content ul li::before{
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url(/images/ul_point.svg);
+    background-size: cover;
+    top: 0;
+    left: 0;
+}
+
+.faq_section{
+    background-color: var(--productBg);
+}
+
+/* responsive */
+
+/* laptop */
+
+@media (max-width:1400px){
+
+.whyIndustries_container{
+    gap: 80px;
+}
+
+    .whyIndustriesCard_img img{
+    width: 60px;
+}
+
+    .hero_section .topContent p{
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+
+.hero_section{
+    padding-top: 180px;
+}
+
+}
+
+/* Tablet */
+
+@media (max-width:1200px){
+
+    .operatingCards{
+        gap: 24px;
+    }
+
+    .tab_section{
+    padding: 0 20px;
+}
+
+     .trusted_cards{
+        gap: 20px;
+     }
+
+    .trusted_cards .card{
+width: calc(33.33% - 13.33px);
+    }
+
+.whyIndustries_container{
+    gap: 40px;
+}
+
+.whyIndustriesCard h3{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+   .hero_section{
+    padding-top: 180px;
+    min-height: 450px;
+    height: 70vh;
+}
+
+}
+
+
+/* Mobile */
+
+@media (max-width:767px){
+
+    .operatingCards .card{
+    flex-direction: column;
+    gap: 0px;
+}
+
+.operatingCards .card .image,
+.operatingCards .card .content{
+    width: 100%;
+    padding: 0;
+}
+
+.operatingCards .card .content{
+    padding: 20px;
+}
+
+    .tab_section{
+     display: none;
+}
+
+     .trusted_cards .card{
+width: calc(50% - 10px);
+    }
+
+       :global(.certifiedSwiper) .whyIndustriesCard img{
+    height:35px;
+}
+
+
+
+    .hero_section{
+    padding-top: 120px;
+height: 80vh;
+min-height: 600px;
+}
+
+}

@@ -39,25 +39,25 @@ const STATIC_ROUTES = [
 // sitemap
 export default async function sitemap() {
   const [services, blogs, careers, caseStudies] = await Promise.all([
-    prisma.service.findMany({
+    (prisma.service?.findMany({
       select: { slug: true, updatedAt: true },
       orderBy: { createdAt: 'asc' },
-    }).catch(() => []),
+    }) ?? Promise.resolve([])).catch(() => []),
 
-    prisma.blogPost.findMany({
+    (prisma.blogPost?.findMany({
       select: { slug: true, updatedAt: true },
       orderBy: { publishedAt: 'desc' },
-    }).catch(() => []),
+    }) ?? Promise.resolve([])).catch(() => []),
 
-    prisma.career.findMany({
+    (prisma.career?.findMany({
       select: { slug: true, updatedAt: true },
       orderBy: { createdAt: 'desc' },
-    }).catch(() => []),
+    }) ?? Promise.resolve([])).catch(() => []),
 
-    prisma.caseStudyPost.findMany({
+    (prisma.caseStudyPost?.findMany({
       select: { slug: true, updatedAt: true },
       orderBy: { publishedAt: 'desc' },
-    }).catch(() => []),
+    }) ?? Promise.resolve([])).catch(() => []),
   ])
 
   const staticEntries = STATIC_ROUTES.map(({ url, priority, changeFrequency }) => ({

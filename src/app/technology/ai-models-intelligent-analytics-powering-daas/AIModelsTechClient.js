@@ -8,80 +8,117 @@ import Image from 'next/image'
 
 
 const AIModelsData = [
-    {
-        ai_model : "CropHealthModel",
-        function : "Analyses NDVI and multispectral indices to detect plant stress, disease, and nutrient deficiency",
-        image : "/images/crop-health-model.webp",
-        output_insight : "Health maps with zonal treatment recommendations"
-    },
-     {
-        ai_model : "PestDetectionModel",
-        function : "Identifies insects and infestation patterns through high-resolution imaging and pattern recognition",
-        image : "/images/crop-health-model.webp",
-        output_insight : "Targeted spray maps for IPM programs"
-    },
-     {
-        ai_model : "SoilAnalysisModel",
-        function : "Maps soil moisture, nutrient variability, and composition using aerial + ground-truth fusion",
-        image : "/images/crop-health-model.webp",
-        output_insight : "Variable-rate application prescriptions"
-    },
-     {
-        ai_model : "YieldPredictionModel",
-        function : "Forecasts crop yield using biomass data, weather patterns, and historical performance",
-        image : "/images/crop-health-model.webp",
-        output_insight : "Field-level yield maps with confidence intervals"
-    },
-     {
-        ai_model : "SprayPickerModel",
-        function : "Recommends optimal pesticide/fertiliser products and rates based on detected conditions",
-        image : "/images/crop-health-model.webp",
-        output_insight : "Actionable spray programs per field zone"
-    },
-     {
-        ai_model : "3DReconstructionModel",
-        function : "Builds textured 3D meshes and point clouds from photogrammetric image sets",
-        image : "/images/crop-health-model.webp",
-        output_insight : "Digital Twins for planning, inspection, and visualisation"
-    },
-     {
-        ai_model : "CropHealthModel",
-        function : "Analyses NDVI and multispectral indices to detect plant stress, disease, and nutrient deficiency",
-        image : "/images/crop-health-model.webp",
-        output_insight : "Health maps with zonal treatment recommendations"
-    },
-     {
-        ai_model : "PestDetectionModel",
-        function : "Identifies insects and infestation patterns through high-resolution imaging and pattern recognition",
-        image : "/images/crop-health-model.webp",
-        output_insight : "Targeted spray maps for IPM programs"
-    },
-     {
-        ai_model : "SoilAnalysisModel",
-        function : "Maps soil moisture, nutrient variability, and composition using aerial + ground-truth fusion",
-        image : "/images/crop-health-model.webp",
-        output_insight : "Variable-rate application prescriptions"
-    },
-     {
-        ai_model : "YieldPredictionModel",
-        function : "Forecasts crop yield using biomass data, weather patterns, and historical performance",
-        image : "/images/crop-health-model.webp",
-        output_insight : "Field-level yield maps with confidence intervals"
-    },
-     {
-        ai_model : "SprayPickerModel",
-        function : "Recommends optimal pesticide/fertiliser products and rates based on detected conditions",
-        image : "/images/crop-health-model.webp",
-        output_insight : "Actionable spray programs per field zone"
-    },
-     {
-        ai_model : "3DReconstructionModel",
-        function : "Builds textured 3D meshes and point clouds from photogrammetric image sets",
-        image : "/images/crop-health-model.webp",
-        output_insight : "Digital Twins for planning, inspection, and visualisation"
-    }
+  {
+    ai_model: "CropHealthModel",
+    function:
+      "Analyses NDVI and multispectral indices to detect plant stress, disease, and nutrient deficiency",
+    image: "/images/CropHealthModel.webp",
+    output_insight: "Health maps with zonal treatment recommendations",
+  },
 
-]
+  {
+    ai_model: "PestDetectionModel",
+    function:
+      "Identifies insects and infestation patterns through high-resolution imaging and pattern recognition",
+    image: "/images/PestDetectionModel.webp",
+    output_insight: "Targeted spray maps for IPM programs",
+  },
+
+  {
+    ai_model: "SoilAnalysisModel",
+    function:
+      "Maps soil moisture, nutrient variability, and composition using aerial + ground-truth fusion",
+    image: "/images/SoilAnalysisModel.webp",
+    output_insight: "Variable-rate application prescriptions",
+  },
+
+  {
+    ai_model: "YieldPredictionModel",
+    function:
+      "Forecasts crop yield using biomass data, weather patterns, and historical performance",
+    image: "/images/YieldPredictionModel.webp",
+    output_insight: "Field-level yield maps with confidence intervals",
+  },
+
+  {
+    ai_model: "SprayPickerModel",
+    function:
+      "Recommends optimal pesticide/fertiliser products and rates based on detected conditions",
+    image: "/images/SprayPickerModel.webp",
+    output_insight: "Actionable spray programs per field zone",
+  },
+
+  {
+    ai_model: "3DReconstructionModel",
+    function:
+      "Builds textured 3D meshes and point clouds from photogrammetric image sets",
+    image: "/images/3DReconstructionModel.webp",
+    output_insight:
+      "Digital Twins for planning, inspection, and visualisation",
+  },
+
+  {
+    ai_model: "ThermalDetectionModel",
+    function:
+      "Identifies heat anomalies in solar panels, structures, pipelines, and perimeters",
+    image: "/images/ThermalDetectionModel.webp",
+    output_insight: "Hotspot alerts with severity classification",
+  },
+
+  {
+    ai_model: "IntrusionDetectionModel",
+    function:
+      "Flags unauthorised entries within defined perimeters using thermal + optical fusion",
+    image: "/images/IntrusionDetectionModel.webp",
+    output_insight: "Real-time geotagged alerts to security teams",
+  },
+
+  {
+    ai_model: "AnomalyDetectionModel",
+    function:
+      "Identifies unusual patterns in surveillance feeds, energy systems, and environmental data",
+    image: "/images/AnomalyDetectionModel.webp",
+    output_insight:
+      "Prioritised anomaly reports with evidence clips",
+  },
+
+  {
+    ai_model: "PathPlanningModel",
+    function:
+      "Optimises drone flight paths for coverage efficiency, battery life, and safety compliance",
+    image: "/images/PathPlanningModel.webp",
+    output_insight:
+      "Mission-optimised flight plans and waypoint files",
+  },
+
+  {
+    ai_model: "ObstacleAvoidanceModel",
+    function:
+      "Enables real-time dynamic collision prevention in complex environments",
+    image: "/images/ObstacleAvoidanceModel.webp",
+    output_insight:
+      "In-flight route adjustments — zero incident rate",
+  },
+
+  {
+    ai_model: "GeoFenceModel",
+    function:
+      "Enforces virtual geographic boundaries for legal and safety compliance",
+    image: "/images/GeoFenceModel.webp",
+    output_insight:
+      "Automated flight restriction enforcement + logs",
+  },
+
+  {
+    ai_model: "ObjectDetectionModel",
+    function:
+      "Recognises specific elements: vehicles, people, structures, equipment, signage",
+    image: "/images/ObjectDetectionModel.webp",
+    output_insight:
+      "Classified, annotated image outputs for downstream use",
+  },
+
+];
 
 export default function AIModelsTechClient() {
 
@@ -108,8 +145,8 @@ export default function AIModelsTechClient() {
         <div className={`container ${style.heroSection_container}`}>
 
   <div className={`topContent ${style.topContent}`}>
-        <h1 data-animate="fade-up" data-animate-delay="150" className="common_heading">Technology Powering The Future Of Drone Innovation</h1>
-        <p data-animate="fade-up" data-animate-delay="300">Our drone technologies combine advanced engineering, intelligent analytics, and precision systems to deliver reliable aerial solutions across industries.</p>
+        <h1 data-animate="fade-up" data-animate-delay="150" className="common_heading">Advanced Systems Powering Smarter, Scalable Aerial Capabilities</h1>
+        <p data-animate="fade-up" data-animate-delay="300">Our technology ecosystem combines advanced engineering, intelligent analytics, and integrated systems to transform aerial data into reliable insights, enabling smarter decisions across industries and real-world operational environments.</p>
        <Link data-animate="fade-up" data-animate-delay="450" href="/contact-us" className="common_btn">
          <ButtonFan/>
          <span>Enquire Now</span>
@@ -156,8 +193,8 @@ export default function AIModelsTechClient() {
           <div className={`container ${style.tableSection_container}`}>
 
  <div className={`topContent ${style.topContent} `}>
-        <h2 data-animate="fade-up" className="common_heading">AI MODELS — Intelligent Analytics Powering DaaS</h2>
-        <p data-animate="fade-up" data-animate-delay="150">At the heart of every HDS operation is a proprietary suite of AI models that transform raw drone data — imagery, thermal feeds, LiDAR scans, and sensor telemetry — into precise, actionable intelligence. </p>
+        <h2 data-animate="fade-up" className="common_heading">AI Models - Intelligence Built for DaaS at Scale</h2>
+        <p data-animate="fade-up" data-animate-delay="150">At the core of HDSL lies a suite of advanced AI models that convert aerial data into precise, actionable insights across industries and operational environments.</p>
 
       </div>
 

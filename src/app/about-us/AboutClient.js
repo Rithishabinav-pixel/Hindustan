@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import TeamsPopup from '../components/TeamsPopup'
 
 
 // why industries cards data 
@@ -52,19 +53,22 @@ import "swiper/css/navigation";
   // teams data 
   const teamsData = [
     {
-      image:"/images/team1.webp",
-      name:"Sanjana Rao",
-      position:"Managing Director"
+      image:"/images/team1.png",
+      name:"Prasad E",
+      position:"Managing Director",
+      content :"Driven by a deep passion for drones, data, and digital platforms, the Managing Director of Hindustan Drone Services Prasad E brings decades of global experience in building scalable technology ecosystems and leading data-driven transformation initiatives. With a strong foundation across cloud architecture, analytics, and platform engineering, he is focused on harnessing the convergence of aerial systems, AI&ML, and software to solve real-world challenges. His vision for HDSL goes beyond drone operations to creating an intelligent, platform-led ecosystem that empowers Drone related Agritech, Security, Infrastructure, logistics etc., and  enables efficient service delivery, and unlocks new economic opportunities at the grassroots level. Combining expertise in electronics, software, and systems thinking, he is committed to building indigenous, scalable solutions that drive impact, innovation, and inclusive growth across India."
     },
     {
-      image:"/images/team2.webp",
-      name:"Sanjana Rao",
-      position:"Managing Director"
+      image:"/images/team2.png",
+      name:"Jaya E",
+      position:"Executive Director",
+      content:"As Executive Director of Hindustan Drone Services, Jaya E brings a strong blend of operational leadership, organizational discipline, and a deep commitment to building scalable, impact-driven enterprises. With a keen focus on execution excellence, she plays a pivotal role in translating HDS’s strategic vision into ground-level reality—driving operations, partnerships, and customer experience across diverse service lines. Her approach emphasizes structured growth, process rigor, and people-centric leadership, ensuring that both customers and field teams operate seamlessly within a rapidly evolving platform ecosystem. Passionate about leveraging technology for real-world impact, she is instrumental in shaping HDSL into a reliable, efficient, and trusted partner for industries and communities alike."
     },
     {
-      image:"/images/team3.webp",
-      name:"Sanjana Rao",
-      position:"Managing Director"
+      image:"/images/team3.png",
+      name:"Chandra S",
+      position:"Executive Director",
+      content:"Chandra S, Executive Director at Hindustan Drone Services, brings decades of leadership experience in the agrochemicals and agricultural inputs industry, having played a pivotal role in building and scaling BCIL, a globally active crop protection company serving markets across India, Asia, Europe, and beyond. With deep expertise across manufacturing, agri-value chains, and farmer-centric product ecosystems, he offers a strong foundation in understanding crop protection, input distribution, and large-scale operational execution. At HDSL, he leverages this experience to bridge traditional agriculture with next-generation drone and data-driven solutions, enabling more efficient, precise, and sustainable farming practices. His strategic perspective and industry depth play a critical role in shaping HDS’s agricultural offerings, partnerships, and market expansion, positioning the company to deliver meaningful impact across the farming ecosystem."
     }
   ]
 
@@ -72,6 +76,7 @@ import "swiper/css/navigation";
   
 
 export default function AboutClient() {
+
 
 
    const [mobile, setMobile] = useState(false);
@@ -121,6 +126,20 @@ export default function AboutClient() {
     }, [mobile]);
 
 
+   const [profile, setProfile] = useState(false);
+const [popupContent, setPopupContent] = useState(null);
+
+const showTeamPopup = (i) => {
+  setPopupContent(teamsData[i]);
+  setProfile(true);
+};
+
+const closePopup = () => {
+  setProfile(false);
+  setPopupContent(null);
+};
+
+
 
 
   return (
@@ -137,11 +156,11 @@ export default function AboutClient() {
    <div className={`container innerpage_heroContainer `}>
 
 
-<h1 data-animate="fade-up" data-animate-delay="100" className={`common_heading`}>Engineering The Future Of Aerial Innovation</h1>
+<h1 data-animate="fade-up" data-animate-delay="100" className={`common_heading`}>Powering Scalable Drone Operations Across Industries</h1>
 
 <div  className={`topContent topContent_left  innerpage_heroContainer_content`}>
 
-  <p data-animate="fade-up" data-animate-delay="150">Hindustan Drones delivers advanced UAV solutions tailored for industries that demand precision, efficiency, and reliability. From aerial intelligence to drone deployment, we help organizations unlock the full potential of drone technology.</p>
+  <p data-animate="fade-up" data-animate-delay="150">At Hindustan Drone Services Limited (HDSL), we are building a technology-driven Drone-as-a-Service (DaaS) platform serving fourteen industries, including agriculture, infrastructure, logistics, security, inspection, and media.</p>
 
    <Link data-animate="fade-up" data-animate-delay="200" href="/contact-us" className="common_btn">
          <ButtonFan/>
@@ -154,9 +173,9 @@ export default function AboutClient() {
 <Image src="/images/about_hero.webp" width={1290} height={700} alt="" />
 
 <div className={style.heroContainerImage_content}>
-<p className={style.imageContent1}>From sky to insight — delivering intelligent aerial solutions for industries.</p>
+<p className={style.imageContent1}>Building the digital infrastructure behind modern aerial operations.</p>
 
-<h2 className={style.imageContent2}>Next-generation drone systems engineered for accuracy, reliability, and operational excellence.</h2>
+<h2 className={style.imageContent2}>As industries move toward technology-enabled operations, we are creating a connected ecosystem powered by cloud infrastructure, real-time telemetry, AI-driven job allocation, and a mobile-first platform designed to support seamless aerial operations across industries, use cases, and geographies.</h2>
 
 
 </div>
@@ -166,6 +185,26 @@ export default function AboutClient() {
 
    </section>
 
+{/* our story section  */}
+
+ <section className={`common_section parralax_bg  ${style.story_section}`}>
+
+<div className={`container ${style.story_container}`}>
+
+<div className={`topContent ${style.story_topContent}`} >
+  <h2 data-animate="fade-up" className={`common_heading ${style.whyIndustries_title}`}>Building the Infrastructure for India’s Drone Economy</h2>
+
+  <p data-animate="fade-up" data-animate-delay="150">Backed by experienced technologists, aviation specialists, and enterprise-focused leadership, we are building scalable systems that make drone operations more accessible, efficient, and dependable for modern industries. Our mission is to make drone technology as accessible and operationally essential for enterprises as smartphones and cloud computing are today.</p>
+  
+</div>
+
+{mobile && (
+  <Image className={style.storyImg} src="/images/story-mobile.webp" height={609} width={700} alt='our-story'/>
+)}
+
+</div>
+
+ </section>
 
 
    {/* mission vision section */}
@@ -364,6 +403,7 @@ export default function AboutClient() {
 <div className={style.teamContent}>
       <h3>{team.name}</h3>
       <p>{team.position}</p>
+      <button className={style.showProfile} onClick={()=>showTeamPopup(index)}> <Image src="/images/menu_arrow.svg" width={24} height={24} alt='' /></button>
 </div>
   </div>
 ))}
@@ -376,8 +416,12 @@ export default function AboutClient() {
 
 </section> */}
 
-
-
+{profile && popupContent && (
+  <TeamsPopup
+    profile={popupContent}
+    onClose={closePopup}
+  />
+)}
 
     </>
   )

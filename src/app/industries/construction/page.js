@@ -3,10 +3,10 @@ import ConstructionClient from './ConstructionClient'
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
 
 export const metadata = {
-  title: "VigilCore M4TD | Hindustan Drone Services",
-  description: "VigilCore M4TD is engineered as a rugged enterprise drone platform combining high-resolution visual and thermal imaging with intelligent navigation systems. Built for demanding inspection, safety, and emergency missions, it provides clear thermal data, precision measurement, and extended operational reach.",
+  title: "Construction Drone Solutions | Hindustan Drones",
+  description: "Track progress, improve site visibility and create 3D maps with drone solutions for construction monitoring, safety and reporting.",
   alternates: {
-    canonical: `${baseUrl}/products/vigilcore-m4td`,
+    canonical: `${baseUrl}/industries/construction`,
   },
 }
 

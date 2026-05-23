@@ -37,6 +37,29 @@ p.contact_detailContent{
     line-height: 32px;
 }
 
+ul.socialLinks{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 20px;
+    list-style: none;
+}
+
+ul.socialLinks li a{
+    transition: 0.3s all;
+    display: flex;
+}
+
+ul.socialLinks li a:hover{
+    transform: scale(0.95);
+}
+
+ul.socialLinks li a img{
+    width: 24px;
+    height: auto;
+}
+
 
 /* responsive */
 

@@ -5,8 +5,8 @@ import Header from '../components/Header'
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
 
 export const metadata = {
-  title: "Case Studies | Hindustan Drone Services",
-  description: "Explore our case studies to see how Hindustan Drone Services solves real industry challenges with precision drone technology.",
+  title: "Drone Case Studies | Hindustan Drones",
+  description: "Explore drone project case studies, real-world applications and measurable outcomes across industries served by Hindustan Drones.",
   alternates: {
     canonical: `${baseUrl}/case-study`,
   },

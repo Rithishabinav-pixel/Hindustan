@@ -54,7 +54,7 @@ body{
 
 .padding_left_only{
   max-width: 100%;
-  padding-left: calc((100vw - 1290px) / 2);
+  padding-left: calc((100vw - 1250px) / 2);
   padding-right: 0;
 }
 
@@ -439,6 +439,14 @@ background: none;
   line-height: 24px;
   color: white;
 }
+
+.light_section{
+  background-image: url('/images/light_section_bg.svg');
+  background-size: 70% auto;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
 
 
 /* only dektop */

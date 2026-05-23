@@ -644,6 +644,20 @@ export default function ServiceForm({ serviceId }) {
             </div>
 
             {error && <p className={s.error}>{error}</p>}
+
+            <div className={s.headerActions}>
+              <button type="button" className={s.cancelBtn} onClick={() => router.push(backUrl)}>
+                Cancel
+              </button>
+              <button
+                type="submit"
+                form="serviceForm"
+                className={s.saveBtn}
+                disabled={loading || fetching}
+              >
+                {loading ? 'Saving…' : isEdit ? 'Save Changes' : 'Add Service'}
+              </button>
+            </div>
           </div>
         </form>
       )}

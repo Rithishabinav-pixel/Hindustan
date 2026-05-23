@@ -2,3 +2,8 @@
 body.admin-page footer {
   display: none !important;
 }
+
+/* Re-show scrollbar on admin pages (globals.css hides it for frontend) */
+::-webkit-scrollbar {
+  display: revert;
+}

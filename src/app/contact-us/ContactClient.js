@@ -3,6 +3,7 @@ import React from 'react'
 import style from './contact.module.css'
 import Header from '../components/Header'
 import ContactForm from '../components/ContactForm'
+import Image from 'next/image'
 
 export default function ContactClient() {
   return (
@@ -48,6 +49,13 @@ Unit No.1011A, Level 1, Sky One (Wing A), Prestige SkyTech,<br/>Financial Distri
     <h3>Email</h3>
     <a href='mailto:info@hindustandrones.io '>info@hindustandrones.io </a>
 </div>
+
+   <ul className={style.socialLinks}>
+                    <li> <a target="_blank" href='https://www.facebook.com/profile.php?id=61589554926751'> <Image src="/images/fb-icon.svg" alt='Facebook' width={24} height={24} /></a> </li>
+                    <li> <a target="_blank" href='https://www.instagram.com/hindustandroneservices/'> <Image src="/images/insta-icon.svg" alt='Instagram' width={24} height={24} /></a> </li>
+                    <li> <a target="_blank" href='https://www.linkedin.com/company/hindustan-drones/'> <Image src="/images/linked-in.svg" alt='Linkedin' width={24} height={24} /></a> </li>
+                    <li> <a target="_blank" href='#'> <Image src="/images/youtube-icon.svg" alt='Youtube' width={24} height={24} /></a> </li>
+                    </ul>
 
 </div>
 

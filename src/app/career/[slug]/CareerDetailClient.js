@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useCallback } from "react";
-import style from "../drone-engineers/careerDetail.module.css";
+import style from "./careerDetail.module.css";
 import Image from "next/image";
 import ButtonFan from "@/app/components/UI/ButtonFan";
 import FloatingNotification from "@/app/components/UI/FloatingNotification";
@@ -89,10 +89,15 @@ export default function CareerDetailClient({ career }) {
               <Image src="/images/experience.svg" width={32} height={32} alt="" />{" "}
               {career.experience}
             </div>
+
+{career.remuneration != '-' && career.remuneration &&(
             <div>
               <Image src="/images/remuneration.svg" width={32} height={32} alt="" />{" "}
               {career.remuneration}
             </div>
+)
+}
+
           </div>
         </div>
       </section>
