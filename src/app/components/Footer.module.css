@@ -117,6 +117,7 @@
 .footer_bottom_content_links{
     display: flex;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
 .footer_bottom_content_links span{
@@ -271,10 +272,10 @@ ul.socialLinks li a img{
 }
 
 .bottomBar_container.footer_bottom_container{
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
+
 
 .bottomBar_container.footer_bottom_container>div{
     width: fit-content;
