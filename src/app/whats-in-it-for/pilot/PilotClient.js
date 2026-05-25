@@ -22,8 +22,9 @@ import LinkArrow from '@/app/components/UI/LinkArrow';
 
 
 if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
+ gsap.registerPlugin(ScrollTrigger, useGSAP);
 }
+
 
 
 // operating cards data 
@@ -180,83 +181,96 @@ const operatingTitle = useRef(null);
 
 useGSAP(() => {
 
-    if (typeof window === "undefined") return;
-
   const laptop = window.innerWidth < 1400;
+
   if (window.innerWidth < 1200) return;
 
-  const cards = operatingCards.current.querySelectorAll(`.${style.card}`);
+  const cards =
+    operatingCards.current.querySelectorAll(`.${style.card}`);
+
   const lastCard = cards[cards.length - 1];
 
+  cards.forEach((card, index) => {
 
-cards.forEach((card, index) => {
+    if (index === 0) {
 
-  if(index === 0){
+      ScrollTrigger.create({
+        trigger: operatingTitle.current,
+        start: `top ${laptop ? "80px" : "120px"}`,
+        endTrigger: lastCard,
+        end: `top ${
+          (laptop ? 176 : 272) +
+          ((cards.length - 1) * 20)
+        }px`,
+        pin: true,
+        pinSpacing: false,
+        scrub: 0.5,
+        invalidateOnRefresh: true,
+        anticipatePin: 1,
+        fastScrollEnd: true,
+      });
+
+    }
 
     ScrollTrigger.create({
-      trigger: operatingTitle.current,
-      start: `top ${laptop ? "80px" : "120px"}`,
+      trigger: card,
+      start: `top ${
+        (laptop ? 176 : 272) + (index * 20)
+      }px`,
       endTrigger: lastCard,
-      end: `top ${(laptop ? 176 : 272) + ((cards.length - 1) * 20)}px`,
+      end: `top ${
+        (laptop ? 176 : 272) +
+        ((cards.length - 1) * 20)
+      }px`,
       pin: true,
       pinSpacing: false,
       scrub: 0.5,
       invalidateOnRefresh: true,
       anticipatePin: 1,
       fastScrollEnd: true,
+
+      onUpdate: (self) => {
+
+        cards.forEach((prevCard, prevIndex) => {
+
+          if (prevIndex < index) {
+
+            const targetScale =
+              self.progress > 0
+                ? 1 - ((index - prevIndex) * 0.02)
+                : 1;
+
+            gsap.to(prevCard, {
+              scale: targetScale,
+              transformOrigin: "top center",
+              force3D: true,
+              duration: 0.3,
+              ease: "power1.out",
+              overwrite: true,
+            });
+
+          }
+
+        });
+
+      }
+
     });
 
-  }
-
-  ScrollTrigger.create({
-    trigger: card,
-    start: `top ${(laptop ? 176 : 272) + (index * 20)}px`,
-    endTrigger: lastCard,
-    end: `top ${(laptop ? 176 : 272) + ((cards.length - 1) * 20)}px`,
-    pin: true,
-    pinSpacing: false,
-    scrub: 0.5,
-    invalidateOnRefresh: true,
-    anticipatePin: 1,
-    fastScrollEnd: true,
-
-    onUpdate: (self) => {
-
-      cards.forEach((prevCard, prevIndex) => {
-
-        if(prevIndex < index){
-
-          const targetScale =
-            self.progress > 0
-              ? 1 - ((index - prevIndex) * 0.02)
-              : 1;
-
-          gsap.to(prevCard, {
-            scale: targetScale,
-            transformOrigin: "top center",
-            force3D: true,
-            duration: 0.3,
-            ease: "power1.out",
-            overwrite: true,
-          });
-
-        }
-
-      });
-
-    }
-
   });
-
-});
-
-
 
   setTimeout(() => {
     ScrollTrigger.refresh();
   }, 1500);
 
+  return () => {
+    ScrollTrigger.getAll().forEach((trigger) =>
+      trigger.kill()
+    );
+  };
+
 }, []);
+
 
 
   return (

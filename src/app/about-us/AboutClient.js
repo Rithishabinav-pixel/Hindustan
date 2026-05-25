@@ -382,7 +382,8 @@ const closePopup = () => {
 
 
 {/* team section */}
-<section className={`common_section  ${style.team_section}`}>
+
+{/* <section className={`common_section  ${style.team_section}`}>
 
 <div className={`container ${style.teamContainer}`}>
 
@@ -413,7 +414,7 @@ const closePopup = () => {
 
 </div>
 
-</section>
+</section> */}
 
 {profile && popupContent && (
   <TeamsPopup
