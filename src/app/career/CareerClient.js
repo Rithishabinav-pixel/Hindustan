@@ -12,24 +12,29 @@ import Image from 'next/image'
 // team card data
 const teamsData = [
   {
-    title:"AI-powered Systems",
-    description:"Our drones combine advanced sensors, autonomous navigation, and AI-powered analytics to capture precise aerial data and deliver actionable insights across complex environments.",
+    title:"Innovative Work Environment",
+    description:"Work on challenging projects using advanced drone systems, AI tools, and data-driven solutions across multiple industries.",
     icon:"/images/ai_powered.svg"
   },
-   {
-    title:"Seamless Support & Training",
-    description:"Beyond deployment, our team provides continuous technical support, pilot guidance, and operational assistance to ensure every drone mission runs smoothly.",
+  {
+    title:"Opportunities for Growth",
+    description:"Gain hands-on experience across field operations, drone systems, data workflows, and evolving industry applications.",
     icon:"/images/seamless.svg"
   },
-   {
-    title:"Smart Data & Mobile Access",
-    description:"Mission data is processed through intelligent analytics and delivered through secure digital platforms, allowing teams to access insights anytime, anywhere.",
+  {
+    title:"Collaborative Team Culture",
+    description:"Work alongside experienced professionals in a culture that values knowledge sharing, teamwork, and practical problem-solving.",
     icon:"/images/smart.svg"
   },
-   {
-    title:"Certified Pilots & Compliance",
-    description:"Our nationwide network of certified pilots operates under strict safety and regulatory standards, ensuring reliable and compliant drone operations across industries.",
+  {
+    title:"Exposure to Advanced Technology",
+    description:"Build practical experience with drone platforms, aerial imaging systems, mapping workflows, and operational technologies.",
     icon:"/images/certified.svg"
+  },
+  {
+    title:"Pan-India Project Exposure",
+    description:"Be part of projects across diverse terrains and industries, gaining unique field experience across India.",
+    icon:"/images/ai_powered.svg"
   },
 ]
 
@@ -135,8 +140,8 @@ if(mobile) return
         <div className={style.careerTechnology_content}>
     <h2 data-animate="fade-up" className="common_heading">Grow Your Career With Emerging Drone Technology</h2>
     <p data-animate="fade-up" data-animate-delay="100">
-        At Hindustan Drones, we believe that innovation begins with talented people. Our team is driven by engineers, developers, analysts, and aviation professionals who are passionate about building the next generation of drone technology.<br/><br/>
-        Working with us means being part of an environment that encourages creativity, collaboration, and continuous learning. We are constantly exploring new possibilities in UAV systems, AI-powered analytics, and intelligent aerial solutions that help industries operate smarter and safer.
+        At Hindustan Drone Services, you’ll work on real-world drone operations across industries including infrastructure, agriculture, inspection, mapping, and surveillance. From field deployment to data processing and operational planning, every role contributes to solving practical challenges through drone technology and aerial workflows.
+
     </p>
         </div>
 
@@ -155,8 +160,8 @@ if(mobile) return
    <section className={`common_section parralax_bg  ${style.hindustanTeam_section}`}>
     <div className={`container ${style.hindustanTeamContainer}`}>
       <div className={`topContent topContent_left ${style.topContent} ${style.topContent_left}`}>
-        <h2 data-animate="fade-up" className="common_heading">Why Hindustan Drones Lead the Way</h2>
-        <p data-animate="fade-up" data-animate-delay="100">Our advanced drone systems, intelligent analytics, and expert support deliver reliable aerial operations that industries depend on for precision.</p>
+        <h2 data-animate="fade-up" className="common_heading">What You’ll Experience at HDSL</h2>
+        <p data-animate="fade-up" data-animate-delay="100">We bring together people, technology, and purpose to create an environment where meaningful work and continuous learning go hand in hand.</p>
       </div>
 
 

@@ -117,7 +117,7 @@ const faqData = [
   },
   {
     title: "What kind of reports are provided?",
-    content: "Detailed inspection reports with images, analysis, and actionable insights are shared after each operation."
+    content: "Detailed inspection reports with images, analysis, and operational findings are shared after each mission. "
   }
 ];
 
@@ -131,7 +131,7 @@ export default function UtilitiesClient() {
     <div className={`container ${style.heroContainer}`}>
           <div className={`topContent ${style.topContent}`}>
       <h1 className={`common_heading `} data-animate="fade-up" data-animate-delay="100">Inspection and Monitoring <br className='desktop_break'/>for Utility Infrastructure</h1>
-       <p data-animate="fade-up" data-animate-delay="100" className={style.white}>We use advanced drone systems to inspect and monitor power, solar, wind, and grid infrastructure, helping improve asset reliability, reduce downtime, and enable faster, informed maintenance decisions.</p>
+       <p data-animate="fade-up" data-animate-delay="100" className={style.white}>We use drone systems to inspect and monitor power, solar, wind, and grid infrastructure, helping improve asset reliability, reduce downtime, and support faster maintenance planning.</p>
       <Link data-animate="fade-up" data-animate-delay="200" href="/contact-us" className="common_btn ">
          <ButtonFan/>
          <span>Enquire Now</span>
@@ -156,7 +156,7 @@ export default function UtilitiesClient() {
              <div className={`topContent topContent_left ${style.topContent}`}>
 
        <p data-animate="fade-up" data-animate-delay="100">Utility networks are vast, complex, and often located in remote or difficult terrain. Manual inspections are time-consuming, risky, and can lead to delayed fault detection and costly outages.</p>
-       <p data-animate="fade-up" data-animate-delay="200">Limited visibility across large-scale infrastructure makes it difficult to identify issues early, increasing operational risks and impacting overall system reliability.</p>
+       <p data-animate="fade-up" data-animate-delay="200">Monitoring large-scale utility infrastructure consistently can be difficult, making early fault detection and maintenance planning more challenging.</p>
 
       </div>
 

@@ -48,7 +48,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Transmission Line Inspection",
-    desc: "We capture high-quality thermal and visual data on powerlines, detecting faults, hotspots, and potential failures to prevent downtime and enhance safety."
+    desc: "Capture thermal and visual data across transmission networks to identify faults, hotspots, and infrastructure risks."
   },
   {
     id: 2,
@@ -57,7 +57,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Substation Inspection",
-    desc: "We perform detailed aerial inspections of critical utility nodes, enabling early anomaly detection and integrity assessment without disrupting operations."
+    desc: "Aerial inspection supports anomaly detection and condition assessment across critical utility infrastructure without operational disruption."
   },
   {
     id: 3,
@@ -66,7 +66,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Industrial Plant Inspections",
-    desc: "We conduct comprehensive thermal and visual inspections across industrial plants, identifying equipment anomalies and assessing maintenance needs to avoid operational disruptions."
+    desc: "Thermal and visual inspections help identify equipment anomalies and maintenance-related issues across industrial facilities."
   },
   {
     id: 4,
@@ -75,7 +75,7 @@ const serviceData = [
     width: 630,
     height: 441,
     title: "Wildfire Monitoring",
-    desc: "We use advanced thermal sensing to detect hotspots, track fire fronts, and provide crucial support for environmental emergency response teams."
+    desc: "Thermal sensing supports hotspot detection, fire-front tracking, and aerial monitoring during wildfire response operations."
   },
   {
     id: 5,
@@ -84,7 +84,7 @@ const serviceData = [
     width: 630,
     height: 441,
     title: "Search & Rescue",
-    desc: "We leverage combined visual and thermal imaging to locate individuals or heat signatures in challenging terrains or low-visibility conditions, improving response times and success rates."
+    desc: "Combined thermal and visual imaging helps locate individuals and heat signatures in difficult terrain and low-visibility environments."
   }
 ];
 
@@ -134,8 +134,7 @@ const [device, setDevice] = useState("desktop");
 
 <div  className={`topContent  innerpage_heroContainer_content ${style.topContent}`}>
 <h1 data-animate="fade-up" data-animate-delay="0" className={`common_heading`}>Reliable Thermal and Visual Insight for High‑Risk Operations</h1>
-<p data-animate="fade-up" data-animate-delay="150">VigilCore M4TD is engineered as a rugged enterprise drone platform combining high‑resolution visual and thermal imaging with intelligent navigation systems. Built for demanding inspection, safety, and emergency missions, it provides clear thermal data, precision measurement, and extended operational reach. </p>
-<p data-animate="fade-up" data-animate-delay="300">Stable flight performance and omnidirectional sensing enhance safety in complex environments, enabling efficient aerial workflows for industrial and public safety applications.</p>
+<p data-animate="fade-up" data-animate-delay="150">VigilCore M4TD is built for thermal inspection, monitoring, and emergency-response operations across industrial and public safety environments. Combining thermal and high-resolution visual imaging with stable flight performance and long-range transmission, the system supports aerial inspection, anomaly detection, search operations, and situational monitoring in complex field conditions. </p>
 </div>
 
 

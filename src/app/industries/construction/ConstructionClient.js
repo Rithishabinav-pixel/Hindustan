@@ -132,7 +132,7 @@ export default function ConstructionClient() {
     <div className={`container ${style.heroContainer}`}>
           <div className={`topContent ${style.topContent}`}>
       <h1 className={`common_heading`} data-animate="fade-up" data-animate-delay="100">Real-Time Visibility <br className='desktop_break'/>for Construction Projects</h1>
-       <p data-animate="fade-up" className={style.white} data-animate-delay="100">We bring aerial visibility into construction workflows, helping teams track progress, maintain site oversight, and make informed decisions with accurate, data-driven insights.</p>
+       <p data-animate="fade-up" className={style.white} data-animate-delay="100">HDSL brings aerial visibility into construction workflows, helping teams track progress, maintain site oversight, and make informed decisions with accurate project data and visual updates.</p>
       <Link data-animate="fade-up" data-animate-delay="200" href="/contact-us" className="common_btn">
          <ButtonFan/>
          <span>Enquire Now</span>

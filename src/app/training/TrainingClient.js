@@ -15,7 +15,7 @@ import LinkArrow from '@/app/components/UI/LinkArrow';
 const faqData = [
   {
     title: "Do I need prior experience to enrol in these programmes?",
-    content: "No prior experience is required for most programmes. We offer structured learning paths that start with fundamentals and gradually move into advanced applications, making them suitable for both beginners and working professionals."
+    content: "No prior experience is required for most programmes. Training begins with core fundamentals before progressing into advanced applications, making it suitable for beginners and working professionals alike."
   },
   {
     title: "Will I receive certification after completing the training?",
@@ -23,7 +23,7 @@ const faqData = [
   },
   {
     title: "Are these courses focused on practical, hands-on learning?",
-    content: "Yes, the training places a strong emphasis on practical, hands-on learning. Participants work with real equipment and scenarios to build confidence in actual operating conditions."
+    content: "Yes. The programmes focus heavily on practical learning, with participants working on real equipment and operational scenarios throughout the training."
   },
   {
     title: "What kind of career opportunities can this training lead to?",
@@ -89,7 +89,7 @@ const trainingStacks = [
     tabletBg: "training_stack3t",
     mobileImg: "training_stack3m",
     desc: [
-      "Through this programme, gain expertise in conducting inspections of towers, turbines, and critical infrastructure using drones. Our training focuses on safety protocols, navigation in complex environments, and capturing inspection-grade data. Tailored for professionals working in energy, telecom, and infrastructure sectors where accuracy and safety are critical."
+      "Gain hands-on experience in inspecting towers, turbines, and industrial infrastructure using drones in operational environments. The programme focuses on inspection planning, safe navigation around complex structures, thermal and visual data capture, and reporting workflows used across utility and infrastructure sectors."
     ],
     btnText: "APPLY NOW",
     link: "/contact-us"
@@ -169,11 +169,11 @@ useEffect(() => {
    <div className={`container innerpage_heroContainer `}>
 
 
-<h1 data-animate="fade-up" data-animate-delay="100" className={`common_heading`}>Building India's Next Generation of Certified Drone Professionals</h1>
+<h1 data-animate="fade-up" data-animate-delay="100" className={`common_heading`}>Learn to Operate, Build and Deliver with Drones</h1>
 
 <div  className={`topContent topContent_left  innerpage_heroContainer_content`}>
 
-  <p data-animate="fade-up" data-animate-delay="150">HDS offers India's most comprehensive drone training and certification programs — equipping individuals, enterprises, and government teams with the skills to fly, operate, process, and deploy drone technology across real-world applications.</p>
+  <p data-animate="fade-up" data-animate-delay="150">Our training programmes are designed to go beyond basic drone operation and focus on real-world industry applications. At HDSL, we help individuals, professionals, and organisations build practical skills across flight operations, aerial data handling, mission planning, and operational execution through hands-on learning and guided instruction.</p>
 
    <Link data-animate="fade-up" data-animate-delay="200" href="/contact-us" className="common_btn">
          <ButtonFan/>

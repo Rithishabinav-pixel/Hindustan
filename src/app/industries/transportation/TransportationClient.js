@@ -132,7 +132,7 @@ export default function TransportationClient() {
     <div className={`container ${style.heroContainer}`}>
           <div className={`topContent ${style.topContent}`}>
       <h1 className={`common_heading black`} data-animate="fade-up" data-animate-delay="100">Safer Infrastructure <br className='desktop_break'/>Through Aerial Inspection</h1>
-       <p data-animate="fade-up" data-animate-delay="100">We enable faster and safer inspection of roads, railways, bridges, and transport networks through aerial intelligence, helping teams identify risks early and maintain infrastructure reliability at scale.</p>
+       <p data-animate="fade-up" data-animate-delay="100">We enable faster and safer inspection of roads, railways, bridges, and transport networks through aerial monitoring, helping teams identify risks early and maintain infrastructure reliability at scale.</p>
       <Link data-animate="fade-up" data-animate-delay="200" href="/contact-us" className="common_btn black">
          <ButtonFan/>
          <span>Enquire Now</span>
@@ -157,7 +157,7 @@ export default function TransportationClient() {
              <div className={`topContent topContent_left ${style.topContent}`}>
 
        <p data-animate="fade-up" data-animate-delay="100">Transport infrastructure spans large distances and operates under continuous load, making regular inspection essential. Traditional methods are slow, labour-intensive, and often require partial shutdowns or physical access to difficult locations.</p>
-       <p data-animate="fade-up" data-animate-delay="200">Delayed inspections and limited visibility can lead to unnoticed deterioration, increasing safety risks and long-term maintenance costs.</p>
+       <p data-animate="fade-up" data-animate-delay="200">Delayed inspections and limited visibility can make early signs of damage harder to detect, increasing safety risks and long-term maintenance costs.</p>
 
       </div>
 

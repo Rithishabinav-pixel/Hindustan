@@ -233,14 +233,83 @@ line-height: 32px;
 }
 
 .story_topContent{
-    max-width: 850px;
-
+    max-width:1000px;
 }
+
+.stepContainer{
+    margin: 60px auto 0 auto;
+    width: 100%;
+    max-width: 537px;
+    position: relative;
+}
+
+.stepContainer .step_img{
+    width: 100%;
+}
+
+.stepContainer .step_img img{
+    width: 100%;
+    height: auto;
+}
+
+.stepContainer .stepContent{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: absolute;
+    width: 347px;
+}
+
+.stepContainer .stepContent h3,
+.stepContainer .stepContent p{
+    color: white;
+}
+
+.stepContainer .stepContent h3{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.stepContainer .stepContent1,
+.stepContainer .stepContent3{
+    top: 18px;
+}
+
+.stepContainer .stepContent2,
+.stepContainer .stepContent4{
+    bottom: 18px;
+}
+
+.stepContainer .stepContent1,
+.stepContainer .stepContent2{
+    right: -20px;
+    transform: translateX(100%);
+}
+
+.stepContainer .stepContent3,
+.stepContainer .stepContent4{
+    left: -20px;
+    transform: translateX(-100%);
+    align-items: flex-end;
+    text-align: right;
+}
+
+
 
 /* responsive */
 
 /* laptop */
 @media (max-width:1400px){
+    
+    .stepContainer{
+    margin: 40px auto 0 auto;
+    max-width:350px;
+}
+
+.stepContainer .stepContent{
+    gap: 16px;
+    width: 320px;
+}
 
     .teamContent h3{
     font-size: 20px;
@@ -255,6 +324,16 @@ line-height: 32px;
 
 /* tablet */
 @media (max-width:1200px){
+
+        .stepContainer{
+    margin: 30px auto 0 auto;
+    max-width:500px;
+}
+
+       .step_mobileImg{
+        width: 100%;
+        height: auto;
+       }
 
     .story_section{
         padding-bottom: 0;
@@ -377,6 +456,8 @@ line-height: 28px;
 /* mobile */
 
 @media (max-width:767px){
+
+
 
     .teamcard{
     width: 100%;

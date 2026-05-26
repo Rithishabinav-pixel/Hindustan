@@ -49,7 +49,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Precision Crop Spraying",
-    desc: "We achieve consistent and targeted application of pesticides, fertilisers, and nutrients across large fields. Designed to minimise wastage while ensuring uniform coverage for improved crop health."
+    desc: "Supports uniform spraying of pesticides, fertilisers, and nutrients across large agricultural areas with reduced wastage and improved field coverage."
   },
   {
     id: 2,
@@ -58,7 +58,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Granular and Seed Distribution",
-    desc: "Our drones efficiently spread seeds, fertilisers, and granular materials with controlled output. Supports large-scale operations with faster turnaround and reduced manual intervention."
+    desc: "Enables controlled spreading of seeds, fertilisers, and granular materials for faster and more efficient field operations."
   },
   {
     id: 3,
@@ -67,7 +67,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Crop Health Assessment",
-    desc: "We enable you to gain real-time, actionable insights into crop conditions, detecting stress, uneven growth, or nutrient gaps early, allowing for timely intervention and better crop management."
+    desc: "Aerial monitoring helps identify crop stress, uneven growth, and nutrient-related issues across large farming environments."
   },
   {
     id: 4,
@@ -76,7 +76,7 @@ const serviceData = [
     width: 630,
     height: 441,
     title: "Orchard and Dense Crop Operations",
-    desc: "We help you navigate complex farm layouts with ease, including orchards and dense canopy areas, ensuring effective reach and consistent application in challenging environments."
+    desc: "Aerial monitoring helps identify crop stress, uneven growth, and nutrient-related issues across large farming environments."
   },
   {
     id: 5,
@@ -85,7 +85,7 @@ const serviceData = [
     width: 630,
     height: 441,
     title: "High-Efficiency Field Coverage",
-    desc: "Our drones are built for repeated missions across extensive farmland, ensuring faster operations with dependable performance, reducing cost and effort for large-scale crop management."
+    desc: "Built for repeated operations across extensive farmland with reliable performance and reduced dependency on manual labour."
   }
 ];
 

@@ -48,7 +48,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Last-Mile Hub Connectivity",
-    desc: "We bridge the gap between distribution hubs and final destinations, ensuring faster deliveries and reducing reliance on road transport for time-sensitive logistics operations."
+    desc: "Supports faster movement between distribution hubs and delivery points while reducing dependency on ground transport in time-sensitive operations."
   },
   {
     id: 2,
@@ -57,7 +57,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Remote Site Supply",
-    desc: "Our drones deliver essential materials to hard-to-access locations, such as rural areas, construction sites, and isolated facilities, ensuring continuous operations even in remote areas."
+    desc: "Enables delivery of materials and operational supplies to rural locations, construction sites, and difficult-to-access environments."
   },
   {
     id: 3,
@@ -66,7 +66,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Cold Chain Delivery",
-    desc: "We support temperature-sensitive transport, ensuring that critical medical or perishable supplies reach their destination without compromising on quality or integrity."
+    desc: "Supports transport of temperature-sensitive medical and perishable supplies across critical delivery workflows."
   },
   {
     id: 4,
@@ -75,7 +75,7 @@ const serviceData = [
     width: 630,
     height: 441,
     title: "Emergency AED Delivery",
-    desc: "We enable rapid deployment of life-saving equipment, such as automated external defibrillators (AEDs), reducing response times and increasing survival chances during emergencies."
+    desc: "Rapid aerial deployment of emergency medical equipment helps reduce response time during critical situations."
   },
   {
     id: 5,
@@ -84,7 +84,7 @@ const serviceData = [
     width: 630,
     height: 441,
     title: "Inter-Hospital Transport",
-    desc: "Our drones facilitate the quick transfer of medical supplies, samples, and critical equipment between hospitals, improving the efficiency of time-sensitive healthcare operations."
+    desc: "Supports fast transfer of medical samples, supplies, and essential equipment between healthcare facilities."
   }
 ];
 

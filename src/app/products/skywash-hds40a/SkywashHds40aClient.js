@@ -48,7 +48,7 @@ const serviceData = [
     width: 850,
     height: 441,
     title: "High-Rise Window Scrubbing",
-    desc: "We efficiently clean glass façades and windows across tall structures without the need for scaffolding or manual access, reducing both time and risks."
+    desc: "Supports cleaning of glass façades and elevated surfaces without scaffolding or manual access systems."
   },
   {
     id: 2,
@@ -57,7 +57,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Soft Wash Treatment",
-    desc: "We apply controlled low-pressure cleaning to delicate surfaces, ensuring effective cleaning while preserving structural integrity and preventing damage."
+    desc: "Controlled low-pressure cleaning helps maintain delicate exterior surfaces while reducing the risk of surface damage."
   },
   {
     id: 3,
@@ -66,7 +66,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Building Facade Cleaning",
-    desc: "Our services maintain exterior surfaces of commercial and residential buildings, enhancing aesthetics while reducing the risks associated with manual interventions."
+    desc: "Suitable for exterior maintenance across commercial, residential, and large urban structures with reduced operational disruption."
   },
   {
     id: 4,
@@ -75,7 +75,7 @@ const serviceData = [
     width: 850,
     height: 441,
     title: "Infrastructure Surface Cleaning",
-    desc: "We provide cleaning for bridges, towers, and elevated structures where traditional methods are either inefficient or unsafe. Available upon request for projects that require this specific service."
+    desc: "Supports cleaning operations for bridges, towers, and elevated infrastructure where conventional access methods are difficult or unsafe."
   }
 ];
 
@@ -255,7 +255,7 @@ export default function SkywashHds40aClient() {
 <div className={`container ${style.service_container}`}>
 
 <div className={`topContent topContent_left ${style.specification_topContent}`} >
-  <h2 data-animate="fade-up" className={`common_heading `}>Purpose-Built Services for Elevated Structure Maintenance</h2>
+  <h2 data-animate="fade-up" className={`common_heading `}>Drone-Based Services for Vertical Structure Cleaning</h2>
 </div>
 
 

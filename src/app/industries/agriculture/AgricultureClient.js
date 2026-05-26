@@ -26,7 +26,7 @@ const iconGrid = [
   {
     icon: "/images/industries/agriculture/ic2.svg",
     title: "Precision Spray & Spread",
-    desc: "Ensure uniform application of fertilisers and crop protection inputs, reducing wastage and improving field effectiveness"
+    desc: "We carry out uniform spraying and spreading operations with reduced wastage and improved field coverage."
   },
   {
     icon: "/images/industries/agriculture/ic3.svg",
@@ -36,7 +36,7 @@ const iconGrid = [
   {
     icon: "/images/industries/agriculture/ic4.svg",
     title: "Large-Scale Coverage",
-    desc: "Monitor and manage extensive farmland efficiently with drone systems, reducing manual labour and improving operations"
+    desc: "Monitor and manage large agricultural areas more efficiently with our advanced drone systems, while reducing dependency on manual field operations."
   }
 ];
 // slider data
@@ -111,7 +111,7 @@ const faqData = [
   },
    {
     title:"What kind of data or insights do farmers receive?",
-    content:"Farmers receive actionable insights such as crop health indicators, field maps, and growth analysis to support better planning and decision-making."
+    content:"Farmers receive field-level insights such as crop health indicators, field maps, and growth analysis to support better planning and decision-making."
   }
 ]
 
@@ -126,7 +126,7 @@ export default function AgricultureClient() {
     <div className={`container ${style.heroContainer}`}>
           <div className={`topContent ${style.topContent}`}>
       <h1 className={`common_heading black`} data-animate="fade-up" data-animate-delay="100">Smarter Agriculture <br className='desktop_break'/>Through Data and Drones</h1>
-       <p data-animate="fade-up" data-animate-delay="100">We leverage advanced drone technology and AI-driven insights to optimise farm operations, monitor crop health, and enhance productivity across every acre, ensuring your farm runs efficiently and sustainably.</p>
+       <p data-animate="fade-up" data-animate-delay="100">We leverage drone-based monitoring and aerial data analysis to help farmers improve crop visibility, optimise field operations, and manage resources more efficiently across large agricultural environments.</p>
       <Link data-animate="fade-up" data-animate-delay="200" href="/contact-us" className="common_btn black">
          <ButtonFan/>
          <span>Enquire Now</span>

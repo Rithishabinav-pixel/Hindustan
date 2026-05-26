@@ -48,7 +48,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Dry Brush Cleaning",
-    desc: "We offer non-invasive dry brush cleaning to remove loose dust, making it ideal for areas where water conservation is critical, or in dry environments where traditional cleaning methods fall short."
+    desc: "Supports removal of loose dust and surface particles in dry environments where water usage is limited."
   },
   {
     id: 2,
@@ -57,7 +57,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "De-ionised Water Cleaning",
-    desc: "Our de-ionised water cleaning method ensures residue-free cleaning that prevents streaks or mineral deposits, helping maintain solar panel efficiency and longevity."
+    desc: "Residue-free cleaning helps prevent streaks and mineral deposits that can affect solar panel efficiency over time."
   },
   {
     id: 3,
@@ -66,7 +66,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Thermal Fault Inspection",
-    desc: "We use thermal imaging to identify underperforming panels or hotspots early, enabling you to prevent energy loss and address potential issues before they escalate."
+    desc: "Thermal imaging helps identify hotspots and underperforming panels before they lead to larger operational issues."
   },
   {
     id: 4,
@@ -75,7 +75,7 @@ const serviceData = [
     width: 630,
     height: 441,
     title: "Solar PV Thermal Diagnostics",
-    desc: "We provide in-depth thermal diagnostics to give you insights into your solar system's performance, helping you make informed decisions on maintenance and repairs across large installations."
+    desc: "Detailed thermal analysis supports performance monitoring and maintenance planning across large solar installations."
   },
   {
     id: 5,
@@ -84,7 +84,7 @@ const serviceData = [
     width: 630,
     height: 441,
     title: "Solar Plant Mapping",
-    desc: "We provide in-depth thermal diagnostics to give you insights into your solar system's performance, helping make informed decisions on maintenance and repairs across large installations."
+    desc: "Aerial mapping provides visibility across large solar assets, supporting inspection planning, monitoring, and operational assessment."
   }
 ];
 
@@ -136,8 +136,8 @@ const tech_bgImage =
 
 <div  className={`topContent  innerpage_heroContainer_content ${style.topContent}`}>
 <h1 data-animate="fade-up" data-animate-delay="0" className={`common_heading`}>High-Efficiency Cleaning for Scalable Solar Plant Operations</h1>
-<p data-animate="fade-up" data-animate-delay="150">HDSL's SolarShine HDS40B is designed to simplify large-scale solar panel maintenance through efficient aerial cleaning and inspection. Our drone systems ensure consistent performance, enabling uniform cleaning across extensive installations while reducing manual effort and downtime.</p>
-<p data-animate="fade-up" data-animate-delay="300">With stable flight control and optimised cleaning systems, we help maintain panel efficiency, improve energy output, and ensure reliable, repeatable maintenance operations.</p>
+<p data-animate="fade-up" data-animate-delay="150">HDSL’s SolarShine HDS40B is developed for aerial cleaning and inspection across utility-scale solar installations where manual maintenance is time-intensive and operationally demanding. </p>
+<p data-animate="fade-up" data-animate-delay="300">The system supports consistent panel cleaning, thermal inspection, and large-area coverage while reducing dependency on manual access methods across active solar environments.</p>
 </div>
 
 

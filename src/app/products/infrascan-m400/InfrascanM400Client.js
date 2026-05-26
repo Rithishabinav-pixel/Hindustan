@@ -48,7 +48,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Transmission Line Inspection",
-    desc: "We conduct high-precision aerial inspections of power transmission networks, detecting faults, hotspots, and potential failures early, ensuring that your infrastructure remains safe and operational."
+    desc: "High-precision aerial inspection supports detection of faults, hotspots, and infrastructure risks across transmission networks."
   },
   {
     id: 2,
@@ -57,7 +57,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Substation Inspection",
-    desc: "We capture detailed visual and sensor data at utility substations, enabling early detection of anomalies and helping maintenance teams make informed decisions to reduce risks."
+    desc: "Visual and sensor-based inspection helps identify anomalies and assess operational condition across utility substations."
   },
   {
     id: 3,
@@ -66,7 +66,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Industrial Plant Inspections",
-    desc: "We perform thermal, visual, and sensor-based inspections across industrial plants, identifying equipment anomalies, assessing maintenance needs, and ensuring operational continuity in critical environments."
+    desc: "Thermal, visual, and sensor-based inspections support maintenance assessment and operational monitoring across industrial facilities."
   },
   {
     id: 4,
@@ -75,7 +75,7 @@ const serviceData = [
     width: 630,
     height: 441,
     title: "Bridge, Flyover, and Tunnel Inspections",
-    desc: "We map and inspect critical infrastructure such as bridges, flyovers, and tunnels, using superior vantage point to gather structural insights safely and efficiently."
+    desc: "Aerial inspection and mapping support structural assessment across transport and civil infrastructure environments."
   },
   {
     id: 5,
@@ -84,7 +84,7 @@ const serviceData = [
     width: 630,
     height: 441,
     title: "3D Digital Twin Creation",
-    desc: "We generate detailed digital twins of industrial sites or construction areas, enabling better planning, analysis, and progress tracking over time. This helps teams visualise the entire site and make data-driven decisions for project execution."
+    desc: "Generate detailed digital twins of industrial sites and infrastructure projects for planning, analysis, monitoring, and progress tracking."
   }
 ];
 

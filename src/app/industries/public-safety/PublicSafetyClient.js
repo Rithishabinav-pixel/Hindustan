@@ -114,7 +114,7 @@ const faqData = [
   },
   {
     title: "How quickly can drones be deployed during emergencies?",
-    content: "Teams can typically mobilise within 24–48 hours, with faster deployment possible for urgent requirements."
+    content: "Drone teams can typically be deployed within 24–48 hours, with faster mobilisation possible during urgent situations."
   },
   {
     title: "Is the captured data secure?",
@@ -158,8 +158,7 @@ export default function PublicSafetyClient() {
              <div className={`topContent topContent_left ${style.topContent}`}>
 
        <p data-animate="fade-up" data-animate-delay="100">Public safety teams operate under pressure, often with limited visibility and time. Ground-based response and fixed surveillance systems cannot always deliver the speed, flexibility, or coverage required during emergencies and large-scale events.</p>
-       <p data-animate="fade-up" data-animate-delay="200">In such situations, delayed situational awareness affects response time and coordination, while challenging terrains and low-visibility conditions make accurate assessment even more difficult.
-</p>
+       <p data-animate="fade-up" data-animate-delay="200">In such situations, limited visibility and delayed information can slow response efforts, while difficult terrain and low-visibility conditions make assessment more challenging.</p>
 
       </div>
 
@@ -194,7 +193,7 @@ export default function PublicSafetyClient() {
 
              <div className={`topContent topContent_left ${style.topContent}`}>
 
-       <p data-animate="fade-up" data-animate-delay="100">At HDSL, our drone systems provide real-time visibility and rapid response support, helping emergency teams act with greater speed, clarity, and control in critical situations.</p>
+       <p data-animate="fade-up" data-animate-delay="100">At HDSL, our drone systems provide real-time visibility and rapid-response support, helping emergency teams act more quickly, clearly, and with greater control in critical situations.</p>
       </div>
 
       <div className={style.contentImage} data-animate="fade-up" data-animate-delay="200">

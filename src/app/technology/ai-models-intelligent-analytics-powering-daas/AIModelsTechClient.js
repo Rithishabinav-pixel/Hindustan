@@ -97,7 +97,7 @@ const AIModelsData = [
       "Enables real-time dynamic collision prevention in complex environments",
     image: "/images/ObstacleAvoidanceModel.webp",
     output_insight:
-      "In-flight route adjustments — zero incident rate",
+      "In-flight route adjustments, zero incident rate",
   },
 
   {
@@ -145,8 +145,8 @@ export default function AIModelsTechClient() {
         <div className={`container ${style.heroSection_container}`}>
 
   <div className={`topContent ${style.topContent}`}>
-        <h1 data-animate="fade-up" data-animate-delay="150" className="common_heading">Advanced Systems Powering Smarter, Scalable Aerial Capabilities</h1>
-        <p data-animate="fade-up" data-animate-delay="300">Our technology ecosystem combines advanced engineering, intelligent analytics, and integrated systems to transform aerial data into reliable insights, enabling smarter decisions across industries and real-world operational environments.</p>
+        <h1 data-animate="fade-up" data-animate-delay="150" className="common_heading">Technology Supporting Real-World Drone Operations</h1>
+        <p data-animate="fade-up" data-animate-delay="300">Our technology systems support drone inspections, mapping, monitoring, and operational analysis by processing aerial data into usable outputs across industrial and field environments.</p>
        <Link data-animate="fade-up" data-animate-delay="450" href="/contact-us" className="common_btn">
          <ButtonFan/>
          <span>Enquire Now</span>
@@ -193,8 +193,8 @@ export default function AIModelsTechClient() {
           <div className={`container ${style.tableSection_container}`}>
 
  <div className={`topContent ${style.topContent} `}>
-        <h2 data-animate="fade-up" className="common_heading">AI Models - Intelligence Built for DaaS at Scale</h2>
-        <p data-animate="fade-up" data-animate-delay="150">At the core of HDSL lies a suite of advanced AI models that convert aerial data into precise, actionable insights across industries and operational environments.</p>
+        <h2 data-animate="fade-up" className="common_heading">AI Models for Monitoring, Inspection, and Analysis</h2>
+        <p data-animate="fade-up" data-animate-delay="150">HDSL uses AI models to analyse aerial imagery, thermal data, and operational inputs to support inspections, monitoring, crop analysis, surveillance, and industrial decision-making.</p>
 
       </div>
 

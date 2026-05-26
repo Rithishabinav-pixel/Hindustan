@@ -131,8 +131,8 @@ export default function OilAndGasClient() {
    <section className={style.hero_section} style={{backgroundImage:'url(/images/industries/oil-gas/hero_banner.webp)'}}>
     <div className={`container ${style.heroContainer}`}>
           <div className={`topContent ${style.topContent}`}>
-      <h1 className={`common_heading`} data-animate="fade-up" data-animate-delay="100">Safer Infrastructure <br className='desktop_break'/>Through Aerial Inspection</h1>
-       <p data-animate="fade-up" className={style.white} data-animate-delay="100">We use advanced drone systems to inspect pipelines, refineries, and offshore assets with greater speed and safety, helping reduce operational risk, minimise downtime, and support compliance across complex environments.</p>
+      <h1 className={`common_heading`} data-animate="fade-up" data-animate-delay="100">Aerial Inspection for <br className='desktop_break'/>Critical Oil & Gas Infrastructure</h1>
+       <p data-animate="fade-up" className={style.white} data-animate-delay="100">At HDSL, we use advanced drone systems to inspect pipelines, refineries, and offshore assets with greater speed and safety, helping reduce operational risk, minimise downtime, and support compliance across complex environments.</p>
       <Link data-animate="fade-up" data-animate-delay="200" href="/contact-us" className="common_btn">
          <ButtonFan/>
          <span>Enquire Now</span>

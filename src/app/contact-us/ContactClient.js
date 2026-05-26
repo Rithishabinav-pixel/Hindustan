@@ -17,8 +17,8 @@ export default function ContactClient() {
 
 {/* content */}
 <div className={`${style.contactContent}`}>
-  <h1 className="common_heading">Get In Touch With Our Drone Experts</h1>
-   <p className={style.contact_detailContent} >Have questions about our drone solutions, services, or training programs? Our team is here to help you find the right UAV solution for your needs.</p>
+  <h1 className="common_heading">Start Your Next Drone Project</h1>
+   <p className={style.contact_detailContent} >Have a requirement or a challenge to solve? Our team will guide you with the right drone and AI-powered solution.</p>
 
 {/* address */}
 <div className={style.contact_detail}>
@@ -63,7 +63,7 @@ Unit No.1011A, Level 1, Sky One (Wing A), Prestige SkyTech,<br/>Financial Distri
 <div className={`common_form ${style.contactForm}`}>
 
 <h3>Send Us Your Enquiry</h3>
-<p>Fill out the form below and our team will get back to you shortly. Whether you need consultation, product information, or service support, we're here to help.</p>
+<p>Tell us about your requirement, and we will connect you with the right expert to take it forward.</p>
 
 <ContactForm />
 

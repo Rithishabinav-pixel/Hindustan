@@ -48,7 +48,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Granular Spreading",
-    desc: "Our drones achieve controlled and uniform distribution of seeds, fertilisers, and soil nutrients across large fields. Designed for efficiency, we reduce manual effort and ensure optimal ground coverage."
+    desc: "Supports controlled distribution of seeds, fertilisers, and granular materials across large agricultural areas with consistent field coverage."
   },
   {
     id: 2,
@@ -57,7 +57,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Swarm Seeding",
-    desc: "We deploy multiple drones simultaneously to accelerate large-scale seeding operations. This coordinated coverage enables faster turnaround times, improving operational efficiency across extensive farmland or forestry."
+    desc: "Multiple drones can be deployed simultaneously to support faster seeding operations across extensive farmland and forestry environments."
   },
   {
     id: 3,
@@ -66,7 +66,7 @@ const serviceData = [
     width: 410,
     height: 441,
     title: "Precision Spraying",
-    desc: "We support targeted spraying applications when necessary, enabling controlled application of nutrients or crop protection inputs with minimal retreatment and reduced resource wastage."
+    desc: "Supports targeted spraying applications with controlled input distribution and reduced retreatment requirements."
   },
   {
     id: 4,
@@ -75,7 +75,7 @@ const serviceData = [
     width: 630,
     height: 441,
     title: "Crop Health Monitoring",
-    desc: "We provide aerial insights to assess crop conditions, detect irregular growth patterns, and identify areas requiring intervention. Our drones enable timely, informed decision-making."
+    desc: "Aerial monitoring helps identify irregular crop growth, stress conditions, and field areas requiring intervention."
   },
   {
     id: 5,
@@ -84,7 +84,7 @@ const serviceData = [
     width: 630,
     height: 441,
     title: "Orchard Canopy Management",
-    desc: "Our drones operate efficiently within dense plantation layouts and orchards, ensuring effective reach and distribution across complex canopy structures without disrupting crop integrity."
+    desc: "Suitable for orchard environments and dense plantation layouts where controlled reach and accurate distribution are required."
   }
 ];
 
@@ -132,9 +132,8 @@ useEffect(() => {
 
 <div  className={`topContent  innerpage_heroContainer_content ${style.topContent}`}>
 <h1 data-animate="fade-up" data-animate-delay="0" className={`common_heading`}>Smarter Seed Distribution for Faster Field Coverage</h1>
-<p data-animate="fade-up" data-animate-delay="150">AgriFlow HDS-SEED is purpose-built for high-efficiency seed and granular distribution across modern agricultural landscapes. Designed for controlled output and uniform spread, it enables faster coverage while eliminating dependency on manual labour. </p>
-<p data-animate="fade-up" data-animate-delay="300">With intelligent dispensing systems and stable flight control, it ensures consistent application across uneven terrain as well. The result is a predictable, scalable, and input-efficient approach to seeding operations.
-</p>
+<p data-animate="fade-up" data-animate-delay="150">AgriFlow HDS-SEED is built for large-scale seed and granular distribution across agricultural environments. With controlled spreading systems and stable flight performance, it supports faster field coverage, reduced manual effort, and consistent material distribution across uneven terrain and plantation layouts.</p>
+
 </div>
 
 

@@ -92,7 +92,7 @@ export default function BlogClient() {
         <div className={`container ${style.herosection_Container}`}>
           <div className={style.herosection_Container_content}>
             <div className={`topContent topContent_left ${style.topContent}`}>
-              <h1 className="common_heading">Case Studies That Demonstrate Real Impact</h1>
+              <h1 className="common_heading">Perspectives from the Frontlines of Aerial Operations</h1>
               <p>See how our drones solve real industry challenges.</p>
             </div>
 

@@ -17,7 +17,7 @@ const iconGrid = [
   {
     icon: "/images/drone_manufacture_ic2.svg",
     title: "System Integration and Assembly",
-    desc: "We integrate advanced components, including LiDAR, thermal sensors, and RTK modules, into reliable drone systems, ensuring performance, compatibility, and compliance with regulatory standards."
+    desc: "We integrate LiDAR, thermal imaging, RTK modules, and other advanced components into drone systems designed for reliable field performance and operational compatibility."
   },
   {
     icon: "/images/drone_manufacture_ic3.svg",
@@ -57,8 +57,8 @@ export default function DroneManufactureClient() {
         <div className={`container ${style.heroSection_container}`}>
 
   <div className={`topContent ${style.topContent}`}>
-        <h1 data-animate="fade-up" data-animate-delay="150" className="common_heading">Technology Powering The Future Of Drone Innovation</h1>
-        <p data-animate="fade-up" data-animate-delay="300">Our drone technologies combine advanced engineering, intelligent analytics, and precision systems to deliver reliable aerial solutions across industries.</p>
+        <h1 data-animate="fade-up" data-animate-delay="150" className="common_heading">Elevating Industries with High-Performance Drone Systems</h1>
+        <p data-animate="fade-up" data-animate-delay="300">At Hindustan Drone Services, we design and integrate drone systems for inspection, mapping, surveillance, agriculture, logistics, and industrial field operations. Our platforms are built to support reliable performance, operational flexibility, and efficient deployment across different environments and industry requirements.</p>
        <Link data-animate="fade-up" data-animate-delay="450" href="/contact-us" className="common_btn">
          <ButtonFan/>
          <span>Enquire Now</span>
@@ -107,7 +107,7 @@ export default function DroneManufactureClient() {
 
              <div className={`topContent topContent_left ${style.topContent}`}>
       
-       <p data-animate="fade-up" data-animate-delay="100">We work with global component manufacturers and technology partners to design, integrate, and deploy advanced drone systems. Our capabilities span the full lifecycle, enabling tailored solutions with consistent performance across diverse operational environments.</p>
+       <p data-animate="fade-up" data-animate-delay="100">We work with global component manufacturers and technology partners to design, integrate, and deploy drone systems for inspection, mapping, surveillance, agriculture, and industrial operations. Our capabilities span the full lifecycle, enabling tailored solutions with consistent performance across diverse operational environments.</p>
       </div>
 
       <div className={style.contentImage} data-animate="fade-up" data-animate-delay="200">

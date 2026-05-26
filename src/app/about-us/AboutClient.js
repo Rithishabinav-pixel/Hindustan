@@ -14,28 +14,33 @@ import TeamsPopup from '../components/TeamsPopup'
 
 
 // why industries cards data 
-  const whyIndustriesdata = [
-    {
-      icon:"/images/about_us_dummy_icon.svg",
-      title:"Industry-Focused Drone Solutions",
-      description:"We understand the unique challenges of different industries and provide drone systems tailored to specific operational needs."
-    },
-     {
-      icon:"/images/about_us_dummy_icon.svg",
-      title:"Advanced Technology Integration",
-      description:"Our drones leverage modern technologies including AI analytics, precision sensors, and intelligent flight systems."
-    },
-     {
-      icon:"/images/about_us_dummy_icon.svg",
-      title:"End-To-End Drone Support",
-      description:"From consultation and deployment to training and maintenance, we provide complete support for your drone ecosystem."
-    },
-     {
-      icon:"/images/about_us_dummy_icon.svg",
-      title:"Reliable Performance In Real Environments",
-      description:"Our solutions are designed to operate efficiently across challenging terrains, industrial sites, and large operational areas."
-    }
-  ]
+ const whyIndustriesdata = [
+  {
+    icon:"/images/about_us_dummy_icon.svg",
+    title:"Certified and Compliant Operations",
+    description:"Our pilots are DGCA-certified, with every mission fully insured and compliant with regulatory and safety standards."
+  },
+  {
+    icon:"/images/about_us_dummy_icon.svg",
+    title:"Intelligence Beyond Visual Data",
+    description:"Advanced AI-driven analysis transforms aerial data into actionable insights, enabling smarter decisions across operations."
+  },
+  {
+    icon:"/images/about_us_dummy_icon.svg",
+    title:"Rapid Deployment Capability",
+    description:"Field teams are mobilised within 24 to 48 hours, ensuring quick response across locations and time-sensitive requirements."
+  },
+  {
+    icon:"/images/about_us_dummy_icon.svg",
+    title:"Secure and Reliable Data Handling",
+    description:"Encrypted systems and controlled access ensure all operational data remains protected, organised, and accessible when required."
+  },
+  {
+    icon:"/images/about_us_dummy_icon.svg",
+    title:"Scalable Nationwide Coverage",
+    description:"A strong network across India enables consistent service delivery across diverse terrains, industries, and operational conditions."
+  }
+]
 
   // certificate datas
 
@@ -160,7 +165,7 @@ const closePopup = () => {
 
 <div  className={`topContent topContent_left  innerpage_heroContainer_content`}>
 
-  <p data-animate="fade-up" data-animate-delay="150">At Hindustan Drone Services Limited (HDSL), we are building a technology-driven Drone-as-a-Service (DaaS) platform serving fourteen industries, including agriculture, infrastructure, logistics, security, inspection, and media.</p>
+  <p data-animate="fade-up" data-animate-delay="150">Hindustan Drone Services Limited (HDSL) is building India’s first horizontal Drone-as-a-Service (DaaS) platform, connecting businesses, operators, fleet capabilities, and aerial intelligence across fourteen industries through a single scalable operational ecosystem.</p>
 
    <Link data-animate="fade-up" data-animate-delay="200" href="/contact-us" className="common_btn">
          <ButtonFan/>
@@ -175,7 +180,7 @@ const closePopup = () => {
 <div className={style.heroContainerImage_content}>
 <p className={style.imageContent1}>Building the digital infrastructure behind modern aerial operations.</p>
 
-<h2 className={style.imageContent2}>As industries move toward technology-enabled operations, we are creating a connected ecosystem powered by cloud infrastructure, real-time telemetry, AI-driven job allocation, and a mobile-first platform designed to support seamless aerial operations across industries, use cases, and geographies.</h2>
+<h2 className={style.imageContent2}>As industries move toward technology-enabled operations, our platform combines cloud infrastructure, real-time telemetry, AI-driven job allocation, and mobile-first accessibility to support efficient aerial operations across industries, use cases, and geographies.</h2>
 
 
 </div>
@@ -192,9 +197,12 @@ const closePopup = () => {
 <div className={`container ${style.story_container}`}>
 
 <div className={`topContent ${style.story_topContent}`} >
-  <h2 data-animate="fade-up" className={`common_heading ${style.whyIndustries_title}`}>Building the Infrastructure for India’s Drone Economy</h2>
+  <h2 data-animate="fade-up" className={`common_heading ${style.whyIndustries_title}`}>The Operational Backbone of India’s Drone Economy</h2>
 
-  <p data-animate="fade-up" data-animate-delay="150">Backed by experienced technologists, aviation specialists, and enterprise-focused leadership, we are building scalable systems that make drone operations more accessible, efficient, and dependable for modern industries. Our mission is to make drone technology as accessible and operationally essential for enterprises as smartphones and cloud computing are today.</p>
+  <p data-animate="fade-up" data-animate-delay="150">While most drone companies in India focus on a single vertical, HDSL takes a fundamentally different approach by building a connected platform that aggregates demand, operators, fleet networks, and aerial intelligence across multiple industries, including agriculture, infrastructure, logistics, public safety, inspection, mapping, media, energy, and high-rise operations.<br/><br/>
+As enterprise adoption accelerates and industries move from pilot projects to large-scale deployment, HDSL is building the operational and technology infrastructure required to support long-term drone adoption across India. 
+Backed by technologists, aviation specialists, agri-tech experts, and enterprise platform experience, our mission is to make drone operations as accessible and indispensable for Indian businesses as smartphones and cloud computing.
+</p>
   
 </div>
 
@@ -223,12 +231,12 @@ const closePopup = () => {
 
     <div data-animate="fade-up" data-animate-delay="200" className={`${style.missionVision_contentText}`}>
     <h3>Vision</h3>
-    <p>To become a trusted leader in drone technology by enabling industries with intelligent aerial solutions that improve efficiency, safety, and operational capabilities.</p>
+    <p>To be India’s most trusted, technology-led aerial intelligence partner, empowering every industry with the transformative potential of drones and AI by 2030.</p>
   </div>
 
    <div data-animate="fade-up" data-animate-delay="300" className={`${style.missionVision_contentText}`}>
     <h3>Mission</h3>
-    <p>Our mission is to provide reliable and advanced drone solutions that empower businesses with better insights, smarter operations, and scalable aerial technologies for real-world challenges.</p>
+    <p>To make advanced, AI-powered drone technology accessible, affordable, and impactful across India, driving efficiency, safety, and sustainable growth across every sector we serve.</p>
   </div>
 
 </div>
@@ -244,9 +252,9 @@ const closePopup = () => {
 <div className={`container ${style.whyIndustries_container}`}>
 
 <div className={`topContent topContent_left ${style.whyIndustries_topContent}`} >
-  <h2 data-animate="fade-up" className={`common_heading ${style.whyIndustries_title}`}>Why Industries Trust Hindustan Drones</h2>
+  <h2 data-animate="fade-up" className={`common_heading ${style.whyIndustries_title}`}>Why Industries Trust Hindustan Drone Services</h2>
 
-  <p data-animate="fade-up" data-animate-delay="150">We combine advanced drone technology with industry expertise to deliver reliable and efficient aerial solutions.</p>
+  <p data-animate="fade-up" data-animate-delay="150">Built on safety, expertise, and scale, we deliver dependable aerial solutions tailored to real operational demands.</p>
   
 </div>
 
@@ -317,13 +325,66 @@ const closePopup = () => {
  </section>
 
 
+   <section className={`common_section light_section no_padding_bottom  ${style.steps_section}`}>
+<div className={`container  ${style.stepsContainer}`}>
+
+  <div className={`topContent ${style.topContent} `}>
+    <h2 data-animate="fade-up" className="common_heading">Get Drone Services in <br className='desktop_break'/>4 Simple Steps</h2>
+    <p data-animate="fade-up" data-animate-delay="100">Connect with verified drone operators through a clear and efficient four-step process.</p>
+  </div>
+
+
+<div className={style.stepContainer}>
+  {mobile &&  <Image className={style.step_mobileImg} src="/images/step-img-mobile.svg" width={735} height={1100} alt=''/>}
+
+  {!mobile && 
+  <>
+  <div className={style.step_img}>
+    <Image src="/images/step-info-img.svg" width={537} height={540} alt=''/>
+  </div>
+
+<div className={`${style.stepContent} ${style.stepContent1}`}>
+  <h3>Raise a request</h3>
+  <p>Tell us what you need and where.</p>
+</div>
+
+<div className={`${style.stepContent} ${style.stepContent2}`}>
+  <h3>Get matched</h3>
+  <p>We connect you with a verified drone operator.</p>
+</div>
+
+<div className={`${style.stepContent} ${style.stepContent3}`}>
+  <h3>Job execution</h3>
+  <p>The service is carried out on-site.</p>
+</div>
+
+<div className={`${style.stepContent} ${style.stepContent4}`}>
+  <h3>Delivery & review</h3>
+  <p>Receive output and rate the service.</p>
+</div>
+</>
+  }
+
+  
+
+</div>
+
+
+
+
+</div>
+
+   </section>
+
+
+
 {/* certified section */}
  <section className={`common_section no_padding_bottom  ${style.certified_section}`}>
 <div className={`container  ${style.certifiedContainer}`}>
 
   <div className={`topContent ${style.topContent} `}>
-    <h2 data-animate="fade-up" className="common_heading">Certified Drone Systems <br className='desktop_break'/>Built For Compliance</h2>
-    <p data-animate="fade-up" data-animate-delay="100">Hindustan Drones adheres to strict industry standards to ensure safety, reliability, and regulatory compliance. Our drone solutions follow approved operational frameworks and technology standards that meet the requirements of modern </p>
+    <h2 data-animate="fade-up" className="common_heading">Certified Drone Systems <br className='desktop_break'/>Built for Safe and Compliance</h2>
+    <p data-animate="fade-up" data-animate-delay="100">All our operations are carried out by DGCA-certified pilots and supported by active liability insurance. With strict adherence to regulatory standards and safety protocols, we ensure reliable, compliant, and risk-managed execution across every project.</p>
   </div>
 
  <div className={style.certified_slider}>
@@ -380,16 +441,20 @@ const closePopup = () => {
 
    </section>
 
+   {/* steps section  */}
+
+ 
+
 
 {/* team section */}
 
-{/* <section className={`common_section  ${style.team_section}`}>
+<section className={`common_section  ${style.team_section}`}>
 
 <div className={`container ${style.teamContainer}`}>
 
     <div className={`topContent topContent_left ${style.teamContainer_topContent} `}>
-    <h2 data-animate="fade-up" className="common_heading">Leadership Driving Innovation And Growth</h2>
-    <p data-animate="fade-up" data-animate-delay="100">Our leadership team brings together expertise from technology, engineering, aviation, and industry operations. With a shared commitment to innovation and excellence, the team drives the strategic vision of Hindustan Drones while ensuring that our solutions continue to evolve with the needs of modern industries.</p>
+    <h2 data-animate="fade-up" className="common_heading">Leadership That Shapes Vision and Promotes Growth</h2>
+    <p data-animate="fade-up" data-animate-delay="100">Our leadership team brings together deep industry experience, operational expertise, and a clear understanding of real-world challenges. With a focus on building reliable systems and scalable solutions, our leaders steer the organisation with clarity, ensuring every engagement reflects consistency, accountability, and long-term value.</p>
   </div>
 
 
@@ -414,7 +479,7 @@ const closePopup = () => {
 
 </div>
 
-</section> */}
+</section>
 
 {profile && popupContent && (
   <TeamsPopup

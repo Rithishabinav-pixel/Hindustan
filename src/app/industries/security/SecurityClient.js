@@ -26,7 +26,7 @@ const iconGrid = [
   {
     icon: "/images/industries/security/ic2.svg",
     title: "AI-Based Threat Detection",
-    desc: "We use AI-powered analytics to identify and classify intrusions in real time, enabling faster and accurate threat response."
+    desc: "We use AI-powered analytics to identify and classify intrusions in real time, enabling faster and more accurate threat response."
   },
   {
     icon: "/images/industries/security/ic3.svg",
