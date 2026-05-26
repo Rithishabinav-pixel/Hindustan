@@ -34,6 +34,18 @@ const STATIC_ROUTES = [
   { url: '/products/solarshine-hds40b', priority: 0.6, changeFrequency: 'monthly' },
   { url: '/products/terramap-hds4p',    priority: 0.6, changeFrequency: 'monthly' },
   { url: '/products/vigilcore-m4td',    priority: 0.6, changeFrequency: 'monthly' },
+
+// What's in it for 
+  { url: '/whats-in-it-for/customer',    priority: 0.6, changeFrequency: 'monthly' },
+  { url: '/whats-in-it-for/partner',    priority: 0.6, changeFrequency: 'monthly' },
+  { url: '/whats-in-it-for/pilot',    priority: 0.6, changeFrequency: 'monthly' },
+  { url: '/whats-in-it-for/field-agent',    priority: 0.6, changeFrequency: 'monthly' },
+
+  // listing pages 
+  { url: '/products',    priority: 0.6, changeFrequency: 'monthly' },
+  { url: '/services',    priority: 0.6, changeFrequency: 'monthly' },
+
+
 ]
 
 // sitemap

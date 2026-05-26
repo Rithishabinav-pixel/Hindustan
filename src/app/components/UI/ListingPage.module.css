@@ -1,0 +1,182 @@
+.hero_section{
+    padding: 190px 0 0px 0;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.herosection_Container_content .topContent{
+    width: 100%;
+    max-width: 800px;
+}
+
+.herosection_Container_content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+.herosection_Container_content p{
+       font-size: 24px;
+    line-height: 32px;
+}
+
+.listingCards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.listingCards .card{
+    width: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transition: 0.3s all;
+}
+
+.listingCards .card .image img{
+    width: 90%;
+    height: auto;
+    float: left;
+    transition: 0.3s all;
+
+}
+
+.productListingCards.listingCards .card .image{
+border: solid white 1px;
+height: auto;
+aspect-ratio: 1 / 1;
+display: grid;
+place-items: center;
+overflow: hidden;
+
+}
+
+.listingCards .card:hover .image img{
+    transform: scale(1.05);
+    transition: 0.3s all;
+}
+
+
+.listingCards .card .content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.listingCards .card .content p{
+    width: 80%;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.listingCards .card .content a{
+    transition: 0.3s all;
+}
+
+.listingCards .card .content a img{
+    width: 24px;
+    height: auto;
+}
+
+.listingCards .card .content a:hover img{
+    transform: scale(0.95);
+}
+
+/* responsive */
+
+/* laptop */
+@media (max-width:1400px) {
+
+
+    .hero_section {
+    padding: 190px 0 0px 0;
+}
+
+}
+
+
+
+
+/* tablet */
+
+@media (max-width:1200px){
+
+    .listingCards .card .content a img{
+    width: 20px;
+    height: auto;
+}
+
+    .listingCards{
+    gap: 20px;
+}
+
+.listingCards .card{
+    width: calc(33..33% - 13.33px);
+    gap: 16px;
+}
+
+.serviceListingCards .card{
+    width: calc(50% - 10px);
+}
+
+.listingCards .card .content p{
+    font-size: 18px;
+    line-height: 26px;
+}
+
+       .hero_section {
+    padding: 170px 0 0px 0;
+}
+
+.herosection_Container_content p{
+       font-size: 20px;
+    line-height: 26px;
+}
+
+}
+
+
+/* mobile */
+@media (max-width:767px) {
+
+
+
+    .herosection_Container_content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .listingCards .card{
+    width: calc(50% - 10px);
+    gap: 16px;
+}
+
+    .serviceListingCards.listingCards .card{
+    width:100%;
+}
+
+.serviceListingCards.listingCards .card .image img{
+    width: 100%;
+}
+
+.listingCards .card .content p{
+    font-size: 18px;
+    line-height: 26px;
+}
+
+
+.herosection_Container_content p{
+       font-size: 16px;
+    line-height: 24px;
+}
+
+        .hero_section {
+    padding: 120px 0 0 0;
+}
+
+
+
+}

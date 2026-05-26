@@ -246,7 +246,7 @@ useEffect(() => {
 }, []);
 
 useEffect(() => {
-  fetch('/api/blogs?page=1&limit=100')
+  fetch('/api/blogs?page=1&limit=6')
     .then(r => r.json())
     .then(data => {
       if (Array.isArray(data.blogs)) {
