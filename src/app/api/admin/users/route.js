@@ -8,7 +8,8 @@ export async function GET() {
       orderBy: { createdAt: 'asc' },
     })
     return NextResponse.json(users)
-  } catch {
+  } catch (err) {
+    console.error('[API /admin/users GET]', err)
     return NextResponse.json({ error: 'Failed to fetch users' }, { status: 500 })
   }
 }
