@@ -5,6 +5,7 @@ import ConditionalFooter from "./components/ConditionalFooter";
 import AOSProvider from "./components/AOSProvider";
 import LenisProvider from "./components/LenisProvider";
 import FloatingWidgets from "./components/FloatingWidgets";
+import DisableRightClick from "./admin/components/DisableRightClick";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,7 +43,8 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable}`}
     >
-      <body suppressHydrationWarning>
+      <body suppressHydrationWarning >
+          <DisableRightClick />
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
