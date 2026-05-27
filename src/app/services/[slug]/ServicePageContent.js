@@ -198,7 +198,7 @@ export default function ServicePageContent({ service }) {
               {service.productsDescription && (
                 <p data-animate="fade-up" data-animate-delay="100">{service.productsDescription}</p>
               )}
-              <Link data-animate="fade-up" data-animate-delay="200" href={service.productsLink || '#'} className="common_btn">
+              <Link data-animate="fade-up" data-animate-delay="200" href={service.productsLink || '/products'} className="common_btn">
                 <ButtonFan />
                 <span>KNOW MORE</span>
               </Link>

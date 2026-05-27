@@ -174,7 +174,7 @@ const droneSlider = [
   {
     title: "AgriFlow HDS-SEED",
     image: "/images/products/agriflow-hds40.png",
-    slug:"/products/agriflow-hds40"
+    slug:"/products/agriflow-hds-seed"
 
   },
   {
@@ -420,7 +420,7 @@ if(mobile) return
    <h2 data-animate="fade-up" className="common_heading">Defining the Future<br className="desktop_break"/>of Drone Services</h2>
    <div className={`topContent ${style.topContent} ${style.topContent_left}`}>
     <p data-animate="fade-up" data-animate-delay="100">Hindustan Drone Services (HDSL) is defining the future of aerial solutions through a cutting-edge Drone-as-a-Service (DaaS) model. Our scalable, app-based platform connects businesses with certified drone pilots and service providers, offering on-demand access to precision-driven solutions across various industries. By eliminating intermediaries and streamlining workflows, we bring unmatched speed, transparency, and efficiency to traditionally fragmented operations. Positioned at the forefront of the digital service economy, HDSL is redefining how industries access and utilise aerial intelligence, empowering smarter, more efficient real-time decisions.</p>
-    <Link data-animate="fade-up" data-animate-delay="200" href="/about-us" className="common_btn">
+    <Link data-animate="fade-up" data-animate-delay="200" href="/services" className="common_btn">
          <ButtonFan/>
          <span>KNOW MORE</span>
         </Link>
@@ -695,10 +695,10 @@ if(mobile) return
     <div className={`topContent ${style.topContent}`}>
         <h2 data-animate="fade-up" className="common_heading">Explore Our Advanced Drone Models</h2>
         <p data-animate="fade-up" data-animate-delay="100">Discover the perfect drone solution for your industry needs. </p>
-         {/* <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
+         <Link data-animate="fade-up" data-animate-delay="200" href="/products" className="common_btn">
          <ButtonFan/>
          <span>KNOW MORE</span>
-        </Link> */}
+        </Link>
       </div>
 </div>
 
@@ -796,7 +796,7 @@ if(mobile) return
         </Link>
       </div>
 
-{/* <div className={style.insightsRow}>
+<div className={style.insightsRow}>
 
 
   {latestCaseStudy && (
@@ -874,7 +874,7 @@ if(mobile) return
 
 </div>
 
-</div> */}
+</div>
 
 {/* <div className="slider_nav">
   <div className={`custom-prev custom_slider_btn `}>

@@ -76,10 +76,10 @@ export default function Footer() {
                 <Link href="/training" className={pathname === "/training" ? style.active : ""}>Training</Link>
             </li>
             <li>
-                <Link href="/blog" className={pathname === "/products" ? style.active : ""}>Products</Link>
+                <Link href="/products" className={pathname === "/products" ? style.active : ""}>Products</Link>
             </li>
              <li>
-                <Link href="/blog" className={pathname === "/services" ? style.active : ""}>Services</Link>
+                <Link href="/services" className={pathname === "/services" ? style.active : ""}>Services</Link>
             </li>
              <li>
                 <Link href="/blog" className={pathname === "/blog" ? style.active : ""}>Blog</Link>
@@ -190,7 +190,7 @@ export default function Footer() {
                     <li> <a target="_blank" href='https://www.facebook.com/profile.php?id=61589554926751'> <Image src="/images/fb-icon.svg" alt='Facebook' width={24} height={24} /></a> </li>
                     <li> <a target="_blank" href='https://www.instagram.com/hindustandroneservices/'> <Image src="/images/insta-icon.svg" alt='Instagram' width={24} height={24} /></a> </li>
                     <li> <a target="_blank" href='https://www.linkedin.com/company/hindustan-drones/'> <Image src="/images/linked-in.svg" alt='Linkedin' width={24} height={24} /></a> </li>
-                    <li> <a target="_blank" href='#'> <Image src="/images/youtube-icon.svg" alt='Youtube' width={24} height={24} /></a> </li>
+                    <li> <a target="_blank" href='https://www.youtube.com/@hindustandroneservices'> <Image src="/images/youtube-icon.svg" alt='Youtube' width={24} height={24} /></a> </li>
                     </ul>
 
        

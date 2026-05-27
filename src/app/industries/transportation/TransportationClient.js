@@ -229,10 +229,10 @@ export default function TransportationClient() {
     <div className={`topContent ${style.topContent}`}>
         <h2 data-animate="fade-up" className="common_heading">Explore Our Advanced Drone Models</h2>
         <p data-animate="fade-up" data-animate-delay="100">Discover the perfect drone solution for your industry needs. </p>
-         {/* <Link data-animate="fade-up" data-animate-delay="200" href="#" className="common_btn">
+         <Link data-animate="fade-up" data-animate-delay="200" href="/products" className="common_btn">
          <ButtonFan/>
          <span>KNOW MORE</span>
-        </Link> */}
+        </Link>
       </div>
 </div>
 
