@@ -5,13 +5,13 @@ import CareerDetailClient from "./CareerDetailClient";
 export default async function CareerDetailPage({ params }) {
   const { slug } = await params;
 
-  console.log("[CareerDetail] Slug:", slug);
+  // console.log("[CareerDetail] Slug:", slug);
 
   const career = await prisma.career.findUnique({
     where: { slug },
   });
 
-  console.log("[CareerDetail] Career found:", career ? career.jobTitle : "null");
+  // console.log("[CareerDetail] Career found:", career ? career.jobTitle : "null");
 
   if (!career) {
     return (

@@ -1,5 +1,8 @@
 import CareerForm from '../../../../components/CareerForm';
 
-export default function EditCareerPage({ params }) {
-  return <CareerForm careerId={params.id} />
+export default async function EditCareerPage({ params }) {
+
+  const { id } = await params;
+
+  return <CareerForm careerId={id} />
 }

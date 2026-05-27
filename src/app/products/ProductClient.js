@@ -63,8 +63,8 @@ export default function ProductClient() {
         <div className={`container ${ListingStyle.herosection_Container}`}>
           <div className={ListingStyle.herosection_Container_content}>
             <div className={`topContent topContent_left ${ListingStyle.topContent}`}>
-              <h1 className="common_heading">Perspectives from the Frontlines of Aerial Operations</h1>
-              <p>See how our drones solve real industry challenges.</p>
+              <h1 className="common_heading">Drone Platforms Designed for Field Performance</h1>
+              <p>Our drone platforms support large-scale agricultural operations, infrastructure inspection, aerial mapping, surveillance, and logistics. Designed for operational reliability and flexible deployment, HDSL systems are built to perform consistently across challenging environments. </p>
             </div>
 
           </div>

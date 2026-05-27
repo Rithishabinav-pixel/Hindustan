@@ -796,9 +796,8 @@ if(mobile) return
         </Link>
       </div>
 
-<div className={style.insightsRow}>
+{/* <div className={style.insightsRow}>
 
-  {/* case study card */}
 
   {latestCaseStudy && (
   <div className={style.caseStudyCard}>
@@ -875,17 +874,16 @@ if(mobile) return
 
 </div>
 
-</div>
+</div> */}
 
-<div className="slider_nav">
+{/* <div className="slider_nav">
   <div className={`custom-prev custom_slider_btn `}>
-    {/* <Image src="/images/slider_arrow_left.svg" width={12} height={12} alt=""/> */}
     <LinkArrow/>
   </div>
   <div className={`custom-next custom_slider_btn `}>
    <LinkArrow/>
   </div>
-  </div>
+  </div> */}
 
 
     </div>

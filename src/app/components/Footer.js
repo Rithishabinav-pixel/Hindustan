@@ -70,12 +70,18 @@ export default function Footer() {
             </li>
           
             <li>
-                <Link href="/about-us" className={pathname === "/training" ? style.active : ""}>About Us</Link>
+                <Link href="/about-us" className={pathname === "/about-us" ? style.active : ""}>About Us</Link>
             </li>
             <li>
                 <Link href="/training" className={pathname === "/training" ? style.active : ""}>Training</Link>
             </li>
             <li>
+                <Link href="/blog" className={pathname === "/products" ? style.active : ""}>Products</Link>
+            </li>
+             <li>
+                <Link href="/blog" className={pathname === "/services" ? style.active : ""}>Services</Link>
+            </li>
+             <li>
                 <Link href="/blog" className={pathname === "/blog" ? style.active : ""}>Blog</Link>
             </li>
             <li>

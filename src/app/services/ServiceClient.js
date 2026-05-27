@@ -7,8 +7,7 @@ import Link from 'next/link'
 
 export default function ServiceClient({allservice}) {
 
-    console.log(allservice)
-
+   
     const [services,setServices] = useState([])
 
 useEffect(()=>{
@@ -24,8 +23,8 @@ setServices(allservice)
         <div className={`container ${ListingStyle.herosection_Container}`}>
           <div className={ListingStyle.herosection_Container_content}>
             <div className={`topContent topContent_left ${ListingStyle.topContent}`}>
-              <h1 className="common_heading">Perspectives from the Frontlines of Aerial Operations</h1>
-              <p>See how our drones solve real industry challenges.</p>
+              <h1 className="common_heading">Scalable Drone Services for Complex Field Operations</h1>
+              <p>While most drone services focus only on flying missions, HDSL supports operations beyond aerial deployment, from inspection and monitoring to analysis, reporting, logistics, and field response. The result is faster execution, better visibility, and dependable outcomes across industries.</p>
             </div>
 
           </div>

@@ -13,6 +13,15 @@ async function getService() {
 }
 
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
+
+export const metadata = {
+  title: "Drone Services for Surveying, Inspection & Mapping | Hindustan Drones",
+  description: "Explore Hindustan Drones’ advanced UAV services including aerial inspections, drone mapping, surveying, analytics, training, and intelligent drone solutions for industries across India.",
+  alternates: {
+    canonical: `${baseUrl}/services`,
+  },
+}
 
 
 export default async function page() {
