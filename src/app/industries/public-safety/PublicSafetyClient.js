@@ -39,7 +39,7 @@ const iconGrid = [
     desc: "Locate individuals in difficult terrain and low visibility using thermal imaging and precision navigation"
   },
   {
-    icon: "/images/industries/public-safety/ic1.svg",
+    icon: "/images/industries/public-safety/ic5.svg",
     title: "Evidence Documentation",
     desc: "Secure, time-stamped aerial footage for investigation, reporting, and post-incident analysis"
   }
