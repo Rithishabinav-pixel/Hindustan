@@ -12,6 +12,8 @@ const STATIC_ROUTES = [
   { url: '/career',        priority: 0.7, changeFrequency: 'weekly'  },
   { url: '/privacy-policy',       priority: 0.3, changeFrequency: 'yearly'  },
   { url: '/terms-and-condition',  priority: 0.3, changeFrequency: 'yearly'  },
+  { url: '/refund-policy',  priority: 0.3, changeFrequency: 'yearly'  },
+
   // Industries
   { url: '/industries/agriculture',   priority: 0.7, changeFrequency: 'monthly' },
   { url: '/industries/construction',  priority: 0.7, changeFrequency: 'monthly' },
