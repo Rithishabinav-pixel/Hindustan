@@ -55,6 +55,7 @@ Unit No.1011A, Level 1, Sky One (Wing A), Prestige SkyTech,<br/>Financial Distri
                     <li> <a target="_blank" href='https://www.instagram.com/hindustandroneservices/'> <Image src="/images/insta-icon.svg" alt='Instagram' width={24} height={24} /></a> </li>
                     <li> <a target="_blank" href='https://www.linkedin.com/company/hindustan-drones/'> <Image src="/images/linked-in.svg" alt='Linkedin' width={24} height={24} /></a> </li>
                     <li> <a target="_blank" href='https://www.youtube.com/@hindustandroneservices'> <Image src="/images/youtube-icon.svg" alt='Youtube' width={24} height={24} /></a> </li>
+                    <li> <a target="_blank" href='https://x.com/HindustanDrones'> <Image src="/images/x-icon.svg" alt='Youtube' width={24} height={24} /></a> </li>
                     </ul>
 
 </div>
