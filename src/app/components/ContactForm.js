@@ -3,6 +3,7 @@ import { useState, useCallback } from "react"
 import { useRouter } from "next/navigation"
 import ButtonFan from "./UI/ButtonFan"
 import FloatingNotification from "./UI/FloatingNotification"
+import Link from "next/link"
 
 export default function ContactForm() {
   const router = useRouter()
@@ -176,7 +177,7 @@ export default function ContactForm() {
 
         <div className="checkbox_verification">
           <input type="checkbox" name="verify"  checked={fields.verify}  onChange={handleCheckboxChange}  disabled={loading}/>
-           <p>I hereby authorize to send notifications via SMS, Email, RCS and others as per  Terms of Service | Privacy Policy</p>
+           <p>I hereby authorize to send notifications via SMS, Email, RCS and others as per <Link href="/terms-and-condition">Terms of Service</Link>  | <Link href="/privacy-policy">Privacy Policy</Link></p>
         </div>
         {errors.verify && <span style={{ color: "#e53e3e", fontSize: "12px", marginTop: "-8px", display: "block" }}>{errors.verify}</span>}
 

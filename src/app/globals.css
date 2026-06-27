@@ -470,6 +470,10 @@ background: none;
   gap: 8px;
 }
 
+.common_form form .checkbox_verification a{
+  color: var(--green);
+}
+
 .common_form form .checkbox_verification input {
     width: 16px;
     min-width: 16px;
