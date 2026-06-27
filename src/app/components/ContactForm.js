@@ -6,14 +6,26 @@ import FloatingNotification from "./UI/FloatingNotification"
 
 export default function ContactForm() {
   const router = useRouter()
-  const [fields, setFields] = useState({ name: "", email: "", phone: "", subject: "", message: "" })
-  const [errors, setErrors] = useState({ name: "", email: "", phone: "", message: "" })
+  const [fields, setFields] = useState({ name: "", email: "", phone: "", subject: "", message: "",verify:true })
+  const [errors, setErrors] = useState({ name: "", email: "", phone: "", message: "",verify:"" })
   const [loading, setLoading] = useState(false)
   const [notification, setNotification] = useState({ show: false, type: "success", title: "", message: "" })
 
   const hideNotification = useCallback(() => {
     setNotification((prev) => ({ ...prev, show: false }))
   }, [])
+
+
+  function handleCheckboxChange(e) {
+  const checked = e.target.checked;
+
+  setFields((prev) => ({ ...prev, verify: checked,}));
+
+  if (checked) {
+    setErrors((prev) => ({...prev,verify: "",}));
+  }
+}
+
 
   function handleChange(e) {
     const { name, value } = e.target
@@ -23,6 +35,7 @@ export default function ContactForm() {
       setErrors((prev) => ({ ...prev, phone: "" }))
       return
     }
+  
     setFields((prev) => ({ ...prev, [name]: value }))
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: "" }))
   }
@@ -31,8 +44,10 @@ export default function ContactForm() {
     e.preventDefault()
     if (loading) return
 
-    const newErrors = { name: "", email: "", phone: "", message: "" }
+    const newErrors = { name: "", email: "", phone: "", message: "",verify:"" }
     let hasError = false
+
+    
 
     if (!fields.name.trim()) {
       newErrors.name = "Full name is required."
@@ -53,6 +68,11 @@ export default function ContactForm() {
       newErrors.message = "Message is required."
       hasError = true
     }
+
+   if (!fields.verify) {
+  newErrors.verify = "Please accept the Terms of Service and Privacy Policy.";
+  hasError = true;
+}
 
     if (hasError) {
       setErrors(newErrors)
@@ -153,6 +173,14 @@ export default function ContactForm() {
           disabled={loading}
         />
         {errors.message && <span style={{ color: "#e53e3e", fontSize: "12px", marginTop: "-8px", display: "block" }}>{errors.message}</span>}
+
+        <div className="checkbox_verification">
+          <input type="checkbox" name="verify"  checked={fields.verify}  onChange={handleCheckboxChange}  disabled={loading}/>
+           <p>I hereby authorize to send notifications via SMS, Email, RCS and others as per  Terms of Service | Privacy Policy</p>
+        </div>
+        {errors.verify && <span style={{ color: "#e53e3e", fontSize: "12px", marginTop: "-8px", display: "block" }}>{errors.verify}</span>}
+
+       
 
         <button
           type="submit"

@@ -464,6 +464,44 @@ background: none;
   background-repeat: no-repeat;
 }
 
+.common_form form .checkbox_verification{
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.common_form form .checkbox_verification input {
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    min-height: 16px;
+    border: 1px solid #fff;
+    background: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    border-radius: 3px;
+}
+
+.common_form form .checkbox_verification input:checked {
+    background: #fff;
+}
+
+.common_form form .checkbox_verification input:checked::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -58%);
+    font-size: 12px;
+    line-height: 23px;
+    color: #000;
+    font-weight: bold;
+}
+
+
 
 
 /* only dektop */
