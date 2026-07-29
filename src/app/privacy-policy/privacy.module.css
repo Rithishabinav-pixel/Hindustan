@@ -50,6 +50,16 @@ padding-left: 24px;
     left: 0;
 }
 
+.privacyContent table{
+    border-collapse: collapse;
+}
+
+.privacyContent table th,
+.privacyContent table td{
+    padding: 10px;
+    border: solid white 1px;
+}
+
 /* responsive */
 
 /* laptop */
