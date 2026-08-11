@@ -151,8 +151,8 @@ max-width: 530px;
 .redefiningsection .redefining_container{
   height: 100%;
    display: flex;
-  justify-content: space-between;
-  align-items: center;
+ flex-direction: column;
+ align-items: center;
   gap: 30px;
 }
 
@@ -162,11 +162,16 @@ max-width: 530px;
 }
 
 .redefiningsection .redefining_container .leftSection{
-width: 40%;  
+width: 100%;  
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+gap: 24px;
 }
 
 .redefiningsection .redefining_container .rightSection{
-  width: 60%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -174,7 +179,7 @@ width: 40%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+ align-items: center;
 }
 
 .redefiningsection .redefining_container .rightSection{
@@ -201,9 +206,6 @@ width: 40%;
   height: auto;
 }
 
-.redefiningsection .topContent{
-  max-width: 520px;
-}
 
 .why_hindustan_container .topContent,
 .tech_container .topContent,
@@ -557,7 +559,7 @@ line-clamp: 2;
 
 .steps_container .step_cards{
   display: flex;
-  margin-top: auto;
+  margin-top: 20vh;
   gap: 26px;
 }
 
@@ -646,6 +648,10 @@ line-height: 42px;
 /* for tablet */
 
 @media (max-width: 1200px) {
+
+  .redefiningsection .redefining_container .leftSection{
+    text-align: left;
+  }
 
   .steps_section::before{
     display: none;
@@ -795,6 +801,9 @@ opacity: 1;
   background-size: auto 100% !important;
 }
 
+.redefiningsection{
+  padding-top: 0;
+}
 
   .redefiningsection .redefining_container{
     gap: 30px;
@@ -904,7 +913,7 @@ opacity: 1;
   }
 
    .banner_section{
- padding: 120px 0 0px 0;
+ padding: 120px 0 50px 0;
 }
 
 
