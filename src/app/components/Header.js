@@ -132,9 +132,11 @@ export default function Header() {
                      <li>
                 <Link href="/" className={pathname === "/" ? footerStyle.active : ""}>Home</Link>
             </li>
-            
-            <li>
+             <li>
                 <Link href="/about-us" className={pathname === "/training" ? footerStyle.active : ""}>About Us</Link>
+            </li>
+            <li>
+                <Link href="https://hindustandrones.io#how-it-works" className={pathname === "https://hindustandrones.io" ? footerStyle.active : ""}>How It Works</Link>
             </li>
             <li>
                 <Link href="/training" className={pathname === "/training" ? footerStyle.active : ""}>Training</Link>

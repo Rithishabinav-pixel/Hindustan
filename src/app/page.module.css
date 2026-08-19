@@ -600,6 +600,11 @@ line-clamp: 2;
   opacity: 0.05;
 }
 
+.highlightText{
+  font-size: 24px;
+  line-height: 32px;
+}
+
 /* ──  responsive ── */
 
 /* for laptop */
@@ -648,6 +653,11 @@ line-height: 42px;
 /* for tablet */
 
 @media (max-width: 1200px) {
+
+  .highlightText{
+  font-size: 22px;
+  line-height: 30px;
+}
 
   .redefiningsection .redefining_container .leftSection{
     text-align: left;

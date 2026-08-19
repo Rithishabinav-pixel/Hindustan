@@ -125,33 +125,39 @@ export async function POST(request) {
       },
     })
 
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.ADMIN_MAIL,
-        pass: process.env.MAIL_APP_PASSWORD,
-      },
-    })
+    // Send notification emails — a mail failure must not fail a submission
+    // that has already been saved to the database.
+    try {
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: process.env.ADMIN_MAIL,
+          pass: process.env.MAIL_APP_PASSWORD,
+        },
+      })
 
-    const dateTime = new Date().toLocaleString('en-IN', {
-      timeZone: 'Asia/Kolkata',
-      dateStyle: 'long',
-      timeStyle: 'medium',
-    })
+      const dateTime = new Date().toLocaleString('en-IN', {
+        timeZone: 'Asia/Kolkata',
+        dateStyle: 'long',
+        timeStyle: 'medium',
+      })
 
-    await transporter.sendMail({
-      from:    `"Hindustan Drones" <${process.env.ADMIN_MAIL}>`,
-      to:      process.env.ADMIN_MAIL,
-      subject: `New Contact Enquiry — ${name} (${email})`,
-      html:    adminEmailTemplate({ name, email, phone, subject, message, dateTime }),
-    })
+      await transporter.sendMail({
+        from:    `"Hindustan Drones" <${process.env.ADMIN_MAIL}>`,
+        to:      process.env.ADMIN_MAIL,
+        subject: `New Contact Enquiry — ${name} (${email})`,
+        html:    adminEmailTemplate({ name, email, phone, subject, message, dateTime }),
+      })
 
-    await transporter.sendMail({
-      from:    `"Hindustan Drone Services" <${process.env.ADMIN_MAIL}>`,
-      to:      email,
-      subject: 'We received your enquiry — Hindustan Drone Services',
-      html:    userEmailTemplate({ name, email }),
-    })
+      await transporter.sendMail({
+        from:    `"Hindustan Drone Services" <${process.env.ADMIN_MAIL}>`,
+        to:      email,
+        subject: 'We received your enquiry — Hindustan Drone Services',
+        html:    userEmailTemplate({ name, email }),
+      })
+    } catch (mailError) {
+      console.error('[Contact] Email send failed (enquiry was still saved):', mailError)
+    }
 
     return NextResponse.json({ success: true })
   } catch (error) {

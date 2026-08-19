@@ -419,7 +419,7 @@ if(mobile) return
   <div className={style.leftSection}>
    <h2 data-animate="fade-up" className="common_heading">Defining the Future<br className="desktop_break"/>of Drone Services</h2>
    <div className={`topContent ${style.topContent}`}>
-    <p data-animate="fade-up" data-animate-delay="100">Hindustan Drone Services (HDSL) is defining the future of aerial solutions through a cutting-edge Drone-as-a-Service (DaaS) model. Our scalable, app-based platform connects businesses with certified drone pilots and service providers, offering on-demand access to precision-driven solutions across various industries. By eliminating intermediaries and streamlining workflows, we bring unmatched speed, transparency, and efficiency to traditionally fragmented operations. Positioned at the forefront of the digital service economy, HDSL is redefining how industries access and utilise aerial intelligence, empowering smarter, more efficient real-time decisions.</p>
+    <p className={style.highlightText} data-animate="fade-up" data-animate-delay="100">Hindustan Drone Services (HDSL) is defining the future of aerial solutions through a cutting-edge Drone-as-a-Service (DaaS) model. Our scalable, app-based platform connects businesses with certified drone pilots and service providers, offering on-demand access to precision-driven solutions across various industries. By eliminating intermediaries and streamlining workflows, we bring unmatched speed, transparency, and efficiency to traditionally fragmented operations. Positioned at the forefront of the digital service economy, HDSL is redefining how industries access and utilise aerial intelligence, empowering smarter, more efficient real-time decisions.</p>
     <Link data-animate="fade-up" data-animate-delay="200" href="/services" className="common_btn">
          <ButtonFan/>
          <span>KNOW MORE</span>
@@ -617,7 +617,7 @@ if(mobile) return
 </section>
 
 {/* Steps section  */}
-<section className={`common_section light_section ${style.full_height_section} ${style.steps_section} ${style.sticky}`}>
+<section className={`common_section light_section ${style.full_height_section} ${style.steps_section} ${style.sticky}`} id="how-it-works">
 
   <div className={ `container ${style.steps_container}`}>
        <div className={`topContent ${style.topContent} `}>
