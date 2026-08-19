@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import menuStyle from "./Menu.module.css";
 import footerStyle from "./Footer.module.css"
 import { usePathname } from "next/navigation";
+import { scrollToSection } from "../utils/scrollToSection";
 
 
 export default function Header() {
@@ -136,16 +137,18 @@ export default function Header() {
                 <Link href="/about-us" className={pathname === "/training" ? footerStyle.active : ""}>About Us</Link>
             </li>
             <li>
-                <Link href="https://hindustandrones.io#how-it-works" className={pathname === "https://hindustandrones.io" ? footerStyle.active : ""}>How It Works</Link>
+                <Link href="/whats-in-it-for/customer" className={pathname.includes("whats-in-it-for") ? footerStyle.active : ""}>How It Works</Link>
             </li>
-            <li>
-                <Link href="/training" className={pathname === "/training" ? footerStyle.active : ""}>Training</Link>
-            </li>
+       
+          
              <li>
                 <Link href="/products" className={pathname === "/products" ? footerStyle.active : ""}>Products</Link>
             </li>
              <li>
                 <Link href="/services" className={pathname === "/services" ? footerStyle.active : ""}>Services</Link>
+            </li>
+              <li>
+                <Link href="/training" className={pathname === "/training" ? footerStyle.active : ""}>Training</Link>
             </li>
             <li>
                 <Link href="/blog" className={pathname === "/blog" ? footerStyle.active : ""}>Blog</Link>

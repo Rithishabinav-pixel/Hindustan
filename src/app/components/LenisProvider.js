@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import scrollConfig from "../config/scroll";
+import { scrollToSection } from "../utils/scrollToSection";
 
 export default function LenisProvider() {
   const pathname = usePathname();
@@ -25,6 +26,7 @@ export default function LenisProvider() {
       });
 
       lenisRef.current = lenis;
+      window.lenis = lenis;
 
       function raf(time) {
         lenis.raf(time);
@@ -38,11 +40,27 @@ export default function LenisProvider() {
       if (lenis) lenis.destroy();
       if (rafId) cancelAnimationFrame(rafId);
       lenisRef.current = null;
+      if (window.lenis === lenis) window.lenis = null;
     };
   }, [isAdmin]);
 
   useEffect(() => {
     if (isAdmin) return;
+
+    const hash = window.location.hash.replace(/^#/, "");
+    if (hash) {
+      // Target section may not be mounted yet right after navigation, so
+      // retry briefly until it appears (or give up after ~2s).
+      let attempts = 0;
+      let timeoutId;
+      const tryScroll = () => {
+        if (scrollToSection(hash) || attempts++ >= 20) return;
+        timeoutId = setTimeout(tryScroll, 100);
+      };
+      tryScroll();
+      return () => clearTimeout(timeoutId);
+    }
+
     if (lenisRef.current) {
       lenisRef.current.scrollTo(0, { immediate: true });
     } else {
