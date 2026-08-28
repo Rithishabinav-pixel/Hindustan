@@ -60,19 +60,19 @@ import TeamsPopup from '../components/TeamsPopup'
     {
       image:"/images/team1.png",
       name:"Prasad E",
-      position:"Managing Director",
+      position:"Director",
       content :"Driven by a deep passion for drones, data, and digital platforms, the Managing Director of Hindustan Drone Services Prasad E brings decades of global experience in building scalable technology ecosystems and leading data-driven transformation initiatives. With a strong foundation across cloud architecture, analytics, and platform engineering, he is focused on harnessing the convergence of aerial systems, AI&ML, and software to solve real-world challenges. His vision for HDSL goes beyond drone operations to creating an intelligent, platform-led ecosystem that empowers Drone related Agritech, Security, Infrastructure, logistics etc., and  enables efficient service delivery, and unlocks new economic opportunities at the grassroots level. Combining expertise in electronics, software, and systems thinking, he is committed to building indigenous, scalable solutions that drive impact, innovation, and inclusive growth across India."
     },
     {
       image:"/images/team2.png",
       name:"Jaya E",
-      position:"Executive Director",
+      position:"Director",
       content:"As Executive Director of Hindustan Drone Services, Jaya E brings a strong blend of operational leadership, organizational discipline, and a deep commitment to building scalable, impact-driven enterprises. With a keen focus on execution excellence, she plays a pivotal role in translating HDS’s strategic vision into ground-level reality—driving operations, partnerships, and customer experience across diverse service lines. Her approach emphasizes structured growth, process rigor, and people-centric leadership, ensuring that both customers and field teams operate seamlessly within a rapidly evolving platform ecosystem. Passionate about leveraging technology for real-world impact, she is instrumental in shaping HDSL into a reliable, efficient, and trusted partner for industries and communities alike."
     },
     {
       image:"/images/team3.png",
       name:"Chandra S",
-      position:"Executive Director",
+      position:"Non Executive Director",
       content:"Chandra S, Executive Director at Hindustan Drone Services, brings decades of leadership experience in the agrochemicals and agricultural inputs industry, having played a pivotal role in building and scaling BCIL, a globally active crop protection company serving markets across India, Asia, Europe, and beyond. With deep expertise across manufacturing, agri-value chains, and farmer-centric product ecosystems, he offers a strong foundation in understanding crop protection, input distribution, and large-scale operational execution. At HDSL, he leverages this experience to bridge traditional agriculture with next-generation drone and data-driven solutions, enabling more efficient, precise, and sustainable farming practices. His strategic perspective and industry depth play a critical role in shaping HDS’s agricultural offerings, partnerships, and market expansion, positioning the company to deliver meaningful impact across the farming ecosystem."
     }
   ]
