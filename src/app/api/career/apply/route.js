@@ -182,7 +182,7 @@ export async function POST(request) {
 
       await transporter.sendMail({
         from:    `"Hindustan Drones" <${process.env.ADMIN_MAIL}>`,
-        to:      process.env.ADMIN_MAIL,
+        to: `${process.env.ADMIN_MAIL},${process.env.TO_MAIL}`,
         subject: `New Career Application — ${jobTitle} — ${name} (${email})`,
         html:    adminEmailTemplate({ name, email, phone, subject, message, jobTitle, resumeUrl, dateTime }),
       })

@@ -179,7 +179,7 @@ export async function POST(request) {
     // Send admin notification email
     await transporter.sendMail({
       from: `"Hindustan Drones" <${process.env.ADMIN_MAIL}>`,
-      to: process.env.ADMIN_MAIL,
+      to: `${process.env.ADMIN_MAIL},${process.env.TO_MAIL}`,
       subject: `New Newsletter Subscription — ${email}`,
       html: adminEmailTemplate(email, dateTime),
     });
